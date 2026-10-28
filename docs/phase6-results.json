@@ -1,0 +1,178 @@
+{
+ "widths": {
+  "390": {
+   "total": 5412,
+   "kids": [
+    5412,
+    661,
+    894,
+    502,
+    842,
+    467,
+    194,
+    381,
+    921,
+    398,
+    76,
+    28
+   ],
+   "broken": [],
+   "hOverflow": 0,
+   "wideEls": 27,
+   "fonts": [
+    "Cormorant Garamond",
+    "EB Garamond",
+    "Ms Madi",
+    "The Nautigal"
+   ],
+   "net": [],
+   "cons": [],
+   "realTotal": 5413,
+   "deltaTotal": -1,
+   "deltaSecs": [
+    4751,
+    -233,
+    392,
+    -340,
+    375,
+    273,
+    -187,
+    -540,
+    523,
+    322,
+    48
+   ]
+  },
+  "768": {
+   "total": 6524,
+   "kids": [
+    6522,
+    1056,
+    968,
+    682,
+    944,
+    594,
+    222,
+    405,
+    1118,
+    398,
+    60,
+    28
+   ],
+   "broken": [],
+   "hOverflow": 0,
+   "wideEls": 16,
+   "fonts": [
+    "Cormorant Garamond",
+    "EB Garamond",
+    "Ms Madi",
+    "The Nautigal"
+   ],
+   "net": [],
+   "cons": [],
+   "realTotal": 6524,
+   "deltaTotal": 0
+  },
+  "1440": {
+   "total": 6544,
+   "kids": [
+    6542,
+    1056,
+    968,
+    682,
+    944,
+    594,
+    222,
+    405,
+    1138,
+    398,
+    60,
+    28
+   ],
+   "broken": [],
+   "hOverflow": 0,
+   "wideEls": 10,
+   "fonts": [
+    "Cormorant Garamond",
+    "EB Garamond",
+    "Ms Madi",
+    "The Nautigal"
+   ],
+   "net": [],
+   "cons": [],
+   "realTotal": 6544,
+   "deltaTotal": 0
+  }
+ },
+ "interactions": {
+  "albumNext": {
+   "before": "1 / 8"
+  },
+  "albumAfter": "2 / 8",
+  "wishBefore": 10,
+  "wishAfter": {
+   "n": 11,
+   "first": "Chúc mừng!",
+   "cleared": true
+  },
+  "giftModal": {
+   "open": true,
+   "visible": "visible",
+   "cards": 2
+  },
+  "giftClosed": true,
+  "links": {
+   "cal": "https://www.google.com/calendar/render?action=TEMPLATE&text=%C4%90%C3%",
+   "dir": "https://www.google.com/maps/search/?api=1&query=White+Palace+Convention+Center+1"
+  },
+  "rsvp": {
+   "modal": true
+  },
+  "music": {
+   "btn": true,
+   "audio": true
+  },
+  "guestParam": true,
+  "health": {
+   "net": [],
+   "cons": []
+  }
+ },
+ "editor": {
+  "fields": {
+   "groom": "ok",
+   "bride": "ok"
+  },
+  "previewHasNames": true,
+  "previewDefaults": {
+   "date": true,
+   "lunar": true
+  },
+  "health": {
+   "net": [],
+   "cons": []
+  },
+  "persistedAfterReload": true,
+  "mobileOverflow": 0
+ },
+ "covers": {
+  "390": {
+   "btn": true,
+   "overflow": 0,
+   "net": [],
+   "cons": []
+  },
+  "768": {
+   "btn": true,
+   "overflow": 0,
+   "net": [],
+   "cons": []
+  },
+  "1440": {
+   "btn": true,
+   "overflow": 0,
+   "net": [],
+   "cons": []
+  }
+ }
+}

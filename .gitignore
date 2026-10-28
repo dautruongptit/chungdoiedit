@@ -67,3 +67,4 @@ src/features/invitation/styles/*.resolved.tmp.css
 docs/reference/
 docs/survey/frames/
 scripts/_*
+docs/survey/raw/local_*

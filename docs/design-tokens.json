@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "template": "minimalism_brown (chungdoi.com/vi/mau-thiep/minimalism-nau/demo)",
+    "source": "computed styles đo trực tiếp trên bản gốc; chỉ dùng học tập trên localhost"
+  },
+  "color": {
+    "text": "#7c6a60",
+    "textMuted": "#918077",
+    "textOnDark": "#ded9d7",
+    "pageBg": "#fff7f3",
+    "primary": "#7c6a60",
+    "cardBg": "rgba(255,255,255,0.55)",
+    "cardBorder": "rgba(124,106,96,0.333)",
+    "coverBg": "linear-gradient(to right bottom, #f3e6da, #e8d5c4, #dcc6b2)",
+    "coverText": "rgba(124,106,96,0.72)"
+  },
+  "font": {
+    "heading": "'Times New Roman', serif",
+    "body": "Baskerville, serif",
+    "names": "'EB Garamond', serif",
+    "caption": "'Cormorant Garamond', serif",
+    "script": ["'The Nautigal'", "'Ms Madi'"],
+    "cover": "Lora, serif"
+  },
+  "type": {
+    "sectionTitle": { "family": "heading", "size": 20, "weight": 700, "transform": "uppercase", "letterSpacing": "0.48-0.6px" },
+    "time": { "family": "heading", "size": 16, "weight": 300, "letterSpacing": "0.4px" },
+    "body": { "family": "body", "size": 12, "weight": 300 },
+    "names": { "family": "names", "size": 27, "weight": 400 },
+    "headerNames": { "family": "heading", "size": 32.76, "style": "italic" },
+    "weddingOf": { "family": "caption", "size": 13, "weight": 600, "letterSpacing": "2.08px" },
+    "role": { "family": "caption", "size": 10, "letterSpacing": "1.4px" },
+    "coverNames": { "family": "names", "size": 30, "weight": 400 },
+    "coverButton": { "family": "cover", "size": 18, "weight": 600 }
+  },
+  "radius": { "card": 8, "pill": 9999 },
+  "shadow": { "coverCard": "0 25px 60px -12px rgba(0,0,0,.45)" },
+  "layout": {
+    "rootMaxWidth": { "mobile": 480, "desktop": 900 },
+    "infoPanel": { "widthPct": 88, "maxWidth": { "mobile": 420, "desktop": 560 } },
+    "breakpoints": [390, 768, 1440],
+    "pageHeight": { "390": 5413, "768": 6524, "1440": 6544 },
+    "coverCard": { "w": 310, "h": 443 }
+  },
+  "component": {
+    "button": { "bg": "#7c6a60", "color": "#fff", "padding": "8px 24px", "radius": 9999, "height": 36, "rsvpWidth": 196, "sendWidth": 149 },
+    "wishCard": { "w": 304, "h": 108, "padding": 16 },
+    "calendarBox": { "bg": "#7c6a60", "w": 280, "h": 260, "radius": 8 }
+  },
+  "motion": {
+    "float": "mbFloat 6.5s linear infinite (0/100% translateY(0), 50% translateY(-10px))",
+    "leafFall": "ambient-fall 19-25s linear infinite, negative delays",
+    "autoScroll": "~50px/s until wheel/touch/mouse"
+  },
+  "assets": {
+    "themeDir": "/images/themes/minimalism-brown/",
+    "files": ["cake", "couple", "flower2-decoration", "frame-avatar", "gate", "house-background", "leaf-background", "paper", "paper-note", "water"],
+    "giftbox": "/images/giftbox/minimalism_brown.webp",
+    "music": "cdn.chungdoi.com/music/la-anh.mp3"
+  }
+}

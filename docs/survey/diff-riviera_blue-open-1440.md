@@ -1,0 +1,206 @@
+# Diff phần tử — riviera_blue / open / 1440px
+
+Ký hiệu: `thuộc tính: local→gốc`. Dung sai hình học 1px.
+
+- Root: local 900×8226.2 · gốc 900×8602.9
+- Phần tử: gốc 240, local 236, ghép được 235
+- Lệch hình học: 186; lệch kiểu: 0; chỉ có ở gốc: 5; chỉ có ở local: 1
+- Theo thuộc tính: y=185, h=1
+
+## Chỉ có ở gốc
+- img:ship.webp#1
+- img:line-decoration.webp#1
+- img:swing.webp#1
+- t:422 ngày 19 giờ 44 phút 54 giây#1
+- img:line-decoration.webp#2
+
+## Chỉ có ở local
+- t:421 ngày 18 giờ 50 phút 0 giây#1
+
+## Lệch (theo vị trí dọc)
+- y1 `img:paper-background.webp#1` [pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover] h: 8224.2→8600.9
+- y3010.3 `t:Album Ảnh#1` [] y: 2723.1→3010.3
+- y3085.1 `b:div:rgba(0, 0, 0, 0):16px#1` [absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer ] y: 2797.9→3085.1
+- y3085.1 `img:cbf029ed13a63710b491f34444378e0c721ac904#1` [h-full w-full object-cover] y: 2797.9→3085.1
+- y3116.3 `b:div:rgba(0, 0, 0, 0):16px#2` [absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer ] y: 2829.1→3116.3
+- y3116.3 `img:f134c07ce29c9494a15999324657f573638565e8#1` [h-full w-full object-cover] y: 2829.1→3116.3
+- y3116.3 `b:div:rgba(0, 0, 0, 0):16px#5` [absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer ] y: 2829.1→3116.3
+- y3116.3 `img:5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b#1` [h-full w-full object-cover] y: 2829.1→3116.3
+- y3172 `b:div:rgba(0, 0, 0, 0):16px#3` [absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer ] y: 2884.8→3172
+- y3172 `img:c21d21a8be1e85ea7545498eae71e234047d0965#1` [h-full w-full object-cover] y: 2884.8→3172
+- y3172 `b:div:rgba(0, 0, 0, 0):16px#4` [absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer ] y: 2884.8→3172
+- y3172 `img:30e1cba2f33b019b3105ad50d759595573135b43#1` [h-full w-full object-cover] y: 2884.8→3172
+- y3308.3 `b:button:oklab(0.14 0.00261104 0.00303026 / 0.6):9999px#1` [hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-[200] w-8 h-] y: 3021.1→3308.3
+- y3308.3 `b:button:oklab(0.14 0.00261104 0.00303026 / 0.6):9999px#2` [hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-[200] w-8 h] y: 3021.1→3308.3
+- y3316.3 `svg:16x16#1` [] y: 3029.1→3316.3
+- y3316.3 `svg:16x16#2` [] y: 3029.1→3316.3
+- y3596.3 `b:button:rgb(0, 0, 0):9999px#1` [rounded-full transition-all duration-300 w-6 h-2 bg-current opacity-70] y: 3309.1→3596.3
+- y3596.3 `b:button:rgb(0, 0, 0):9999px#2` [rounded-full transition-all duration-300 w-2 h-2 bg-current opacity-25] y: 3309.1→3596.3
+- y3596.3 `b:button:rgb(0, 0, 0):9999px#3` [rounded-full transition-all duration-300 w-2 h-2 bg-current opacity-25] y: 3309.1→3596.3
+- y3596.3 `b:button:rgb(0, 0, 0):9999px#4` [rounded-full transition-all duration-300 w-2 h-2 bg-current opacity-25] y: 3309.1→3596.3
+- y3596.3 `b:button:rgb(0, 0, 0):9999px#5` [rounded-full transition-all duration-300 w-2 h-2 bg-current opacity-25] y: 3309.1→3596.3
+- y3725.4 `t:THÔNG TIN TIỆC CƯỚI#1` [] y: 3393.5→3725.4
+- y3732 `img:flower-spray.webp#3` [pointer-events-none absolute z-0 h-auto max-w-none object-contain] y: 3400.1→3732
+- y3816.5 `t:Tiệc cưới sẽ diễn ra vào lúc:#1` [] y: 3484.7→3816.5
+- y3867.7 `t:19:00#1` [text-[20px] md:text-[26px] mt-5] y: 3535.8→3867.7
+- y3906.7 `t:24#3` [text-[34px] md:text-[46px] leading-none] y: 3574.8→3906.7
+- y3910.7 `b:div:rgb(0, 0, 0):0px#5` [h-[28px] w-[1px] md:h-[38px]] y: 3578.8→3910.7
+- y3910.7 `b:div:rgb(0, 0, 0):0px#6` [h-[28px] w-[1px] md:h-[38px]] y: 3578.8→3910.7
+- y3918.5 `t:THỨ SÁU#3` [] y: 3586.6→3918.5
+- y3918.5 `t:THÁNG 12#3` [] y: 3586.6→3918.5
+- y3952.7 `t:2027#3` [text-[20px] md:text-[26px]] y: 3620.8→3952.7
+- y3991.7 `t:( Tức ngày 27 tháng 11 năm Đinh #3` [text-xs md:text-sm uppercase tracking-normal] y: 3659.8→3991.7
+- y4030.7 `t:Đón khách#1` [] y: 3698.8→4030.7
+- y4030.7 `t:Khai tiệc#1` [] y: 3698.8→4030.7
+- y4048.7 `t:18:00#1` [text-[20px] md:text-[26px]] y: 3716.8→4048.7
+- y4048.7 `t:20:30#1` [text-[20px] md:text-[26px]] y: 3716.8→4048.7
+- y4103.7 `t:Cùng đếm ngược#1` [] y: 3771.8→4103.7
+- y4230 `img:calendar-frame.webp#1` [pointer-events-none absolute inset-0 z-0 h-full w-full object-fill] y: 3898.1→4230
+- y4336.3 `t:Tháng 12 / 2027#1` [text-center py-2.5 text-[13px] md:text-[14px] font-semibold tracking-w] y: 4004.5→4336.3
+- y4386.3 `t:T2#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:T3#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:T4#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:T5#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:T6#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:T7#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4386.3 `t:CN#1` [text-center py-1.5 text-[10px] md:text-[11px] font-medium opacity-60] y: 4054.5→4386.3
+- y4430.1 `t:1#1` [text-[12px] md:text-[13px]] y: 4098.2→4430.1
+- y4430.1 `t:2#1` [text-[12px] md:text-[13px]] y: 4098.2→4430.1
+- y4430.1 `t:3#1` [text-[12px] md:text-[13px]] y: 4098.2→4430.1
+- y4430.1 `t:4#1` [text-[12px] md:text-[13px]] y: 4098.2→4430.1
+- y4430.1 `t:5#1` [text-[12px] md:text-[13px]] y: 4098.2→4430.1
+- y4466.1 `t:6#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:7#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:8#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:9#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:10#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:11#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4466.1 `t:12#1` [text-[12px] md:text-[13px]] y: 4134.2→4466.1
+- y4502.1 `t:13#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:14#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:15#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:16#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:17#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:18#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4502.1 `t:19#1` [text-[12px] md:text-[13px]] y: 4170.2→4502.1
+- y4533.8 `svg:30x28#1` [] y: 4202→4533.8
+- y4538.1 `t:20#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.1 `t:21#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.1 `t:22#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.1 `t:23#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.1 `t:25#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.1 `t:26#1` [text-[12px] md:text-[13px]] y: 4206.2→4538.1
+- y4538.8 `t:24#4` [relative z-10 text-[11px] md:text-[12px] font-bold] y: 4207→4538.8
+- y4574.1 `t:27#1` [text-[12px] md:text-[13px]] y: 4242.2→4574.1
+- y4574.1 `t:28#1` [text-[12px] md:text-[13px]] y: 4242.2→4574.1
+- y4574.1 `t:29#1` [text-[12px] md:text-[13px]] y: 4242.2→4574.1
+- y4574.1 `t:30#1` [text-[12px] md:text-[13px]] y: 4242.2→4574.1
+- y4574.1 `t:31#1` [text-[12px] md:text-[13px]] y: 4242.2→4574.1
+- y4704.8 `t:Thêm vào lịch#1` [] y: 4373→4704.8
+- y4771.8 `b:button:rgb(0, 88, 133):9999px#1` [text-[13px] md:text-[17px] tracking-wider inline-flex items-center jus] y: 4439.9→4771.8
+- y4777.8 `t:XÁC NHẬN THAM DỰ#1` [] y: 4445.9→4777.8
+- y4905.1 `t:Tiệc cưới sẽ tổ chức tại#1` [] y: 4573.2→4905.1
+- y4947.6 `t:Nhà hàng Queen Palace Hưng Yên#1` [] y: 4615.7→4947.6
+- y5412.8 `t:Chỉ đường#1` [] y: 5080.9→5412.8
+- y5416.8 `svg:16x16#3` [] y: 5084.9→5416.8
+- y5632.3 `t:DRESS CODE#1` [] y: 5255.7→5632.3
+- y5673.3 `t:Trang phục dự tiệc#1` [] y: 5296.7→5673.3
+- y5701 `img:flower-dress.webp#1` [pointer-events-none absolute z-0 h-auto max-w-none object-contain] y: 5324.4→5701
+- y5715.8 `b:div:rgb(47, 42, 38):9999px#1` [w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md] y: 5339.2→5715.8
+- y5715.8 `b:div:rgb(160, 139, 116):9999px#1` [w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md] y: 5339.2→5715.8
+- y5715.8 `b:div:rgb(244, 239, 231):9999px#1` [w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md] y: 5339.2→5715.8
+- y5863.8 `t:LỊCH TRÌNH NGÀY CƯỚI#1` [] y: 5487.1→5863.8
+- y5909.8 `t:15:00#1` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 5533.2→5909.8
+- y5912.8 `t:Lễ gia tiên tại nhà gái#1` [] y: 5536.1→5912.8
+- y5917.5 `b:span:rgb(0, 88, 133):9999px#1` [relative block h-2.5 w-2.5 rounded-full] y: 5540.9→5917.5
+- y5922.5 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#1` [absolute left-1/2 -translate-x-1/2 w-px top-1/2 -bottom-8 md:-bottom-1] y: 5545.9→5922.5
+- y5935.3 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#2` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5558.6→5935.3
+- y5975.3 `t:16:30#1` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 5598.7→5975.3
+- y5978.3 `t:Đón dâu#1` [] y: 5601.6→5978.3
+- y5983 `b:span:rgb(0, 88, 133):9999px#2` [relative block h-2.5 w-2.5 rounded-full] y: 5606.4→5983
+- y6000.8 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#3` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5624.1→6000.8
+- y6040.8 `t:18:00#2` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 5664.2→6040.8
+- y6043.8 `t:Lễ gia tiên tại nhà trai#1` [] y: 5667.1→6043.8
+- y6048.5 `b:span:rgb(0, 88, 133):9999px#3` [relative block h-2.5 w-2.5 rounded-full] y: 5671.9→6048.5
+- y6066.3 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#4` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5689.6→6066.3
+- y6092 `img:bird.webp#1` [block h-10 w-10 shrink-0 object-contain md:h-14 md:w-14] y: 5715.4→6092
+- y6108.3 `t:19:00#2` [relative inline-block] y: 5731.7→6108.3
+- y6109.3 `t:Đón khách#2` [] y: 5732.6→6109.3
+- y6114 `b:span:rgb(0, 88, 133):9999px#4` [relative block h-2.5 w-2.5 rounded-full] y: 5737.4→6114
+- y6131.8 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#5` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5755.1→6131.8
+- y6157.5 `img:gate.webp#1` [block h-10 w-10 shrink-0 object-contain md:h-14 md:w-14] y: 5780.9→6157.5
+- y6173.8 `t:19:30#1` [relative inline-block] y: 5797.2→6173.8
+- y6174.8 `t:Nghi thức thành hôn#1` [] y: 5798.1→6174.8
+- y6179.5 `b:span:rgb(0, 88, 133):9999px#5` [relative block h-2.5 w-2.5 rounded-full] y: 5802.9→6179.5
+- y6197.3 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#6` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5820.6→6197.3
+- y6235.8 `img:fountain.webp#1` [block h-10 w-10 shrink-0 object-contain md:h-14 md:w-14] y: 5859.1→6235.8
+- y6240.3 `t:Rót rượu giao bôi và cắt bánh#1` [] y: 5863.6→6240.3
+- y6252.1 `t:20:00#1` [relative inline-block] y: 5875.4→6252.1
+- y6257.8 `b:span:rgb(0, 88, 133):9999px#6` [relative block h-2.5 w-2.5 rounded-full] y: 5881.1→6257.8
+- y6288.3 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#7` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5911.6→6288.3
+- y6328.3 `t:20:30#2` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 5951.7→6328.3
+- y6331.3 `t:Khai tiệc#2` [] y: 5954.6→6331.3
+- y6336 `b:span:rgb(0, 88, 133):9999px#7` [relative block h-2.5 w-2.5 rounded-full] y: 5959.4→6336
+- y6353.8 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#8` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 -bottom-8 md] y: 5977.1→6353.8
+- y6396.8 `t:Cô dâu chú rể chúc mừng từng bàn#1` [] y: 6020.1→6396.8
+- y6406.6 `t:21:30#1` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 6029.9→6406.6
+- y6414.3 `b:span:rgb(0, 88, 133):9999px#8` [relative block h-2.5 w-2.5 rounded-full] y: 6037.6→6414.3
+- y6444.8 `b:span:color(srgb 0 0.345098 0.521569 / 0.4):0px#9` [absolute left-1/2 -translate-x-1/2 w-px -top-8 md:-top-10 bottom-1/2] y: 6068.1→6444.8
+- y6484.8 `t:23:00#1` [pt-0.5 text-right text-[13px] md:text-[17px] tabular-nums tracking-wid] y: 6108.2→6484.8
+- y6487.8 `t:Kết thúc tiệc#1` [] y: 6111.1→6487.8
+- y6492.5 `b:span:rgb(0, 88, 133):9999px#9` [relative block h-2.5 w-2.5 rounded-full] y: 6115.9→6492.5
+- y6557.2 `img:guestbook-frame.webp#1` [pointer-events-none absolute inset-x-0 top-0 z-0 w-full object-fill] y: 6180.5→6557.2
+- y6635.7 `t:Sổ lưu bút#1` [] y: 6259→6635.7
+- y6685.7 `b:input:rgba(0, 0, 0, 0):6px#1` [w-full rounded-[6px] border px-3 py-2 text-[12px] focus:outline-none m] y: 6309→6685.7
+- y6742.2 `b:textarea:rgba(0, 0, 0, 0):6px#1` [w-full rounded-[6px] border px-3 py-2 text-[12px] focus:outline-none m] y: 6365.5→6742.2
+- y6821.2 `b:button:rgb(0, 88, 133):7px#1` [rounded-[7px] px-5 py-1.5 text-[13px] text-white transition-transform ] y: 6444.5→6821.2
+- y6821.8 `t:🪄#1` [p-2 rounded-lg transition-all duration-200 hover:scale-110 text-base l] y: 6445.2→6821.8
+- y6829.2 `t:GỬI LỜI CHÚC#1` [] y: 6452.5→6829.2
+- y7007.8 `b:div:rgba(255, 255, 255, 0.667):12px#1` [rounded-xl border p-4 text-sm] y: 6631.2→7007.8
+- y7024.8 `t:Nhóm phượt Tây Bắc#1` [font-semibold] y: 6648.2→7024.8
+- y7024.8 `t:16:00:00 27/6/2027#1` [text-xs opacity-70] y: 6648.2→7024.8
+- y7052.8 `t:Chúc hai bạn mỗi năm lại thương #1` [mt-2 leading-relaxed] y: 6676.2→7052.8
+- y7104.6 `b:div:rgba(255, 255, 255, 0.667):12px#2` [rounded-xl border p-4 text-sm] y: 6727.9→7104.6
+- y7121.6 `t:Hàng xóm nhà bên#1` [font-semibold] y: 6744.9→7121.6
+- y7121.6 `t:17:00:00 28/6/2027#1` [text-xs opacity-70] y: 6744.9→7121.6
+- y7149.6 `t:Mong tổ ấm của hai em luôn ngập #1` [mt-2 leading-relaxed] y: 6772.9→7149.6
+- y7201.3 `b:div:rgba(255, 255, 255, 0.667):12px#3` [rounded-xl border p-4 text-sm] y: 6824.7→7201.3
+- y7218.3 `t:Nguyễn Minh Tuấn#1` [font-semibold] y: 6841.7→7218.3
+- y7218.3 `t:18:00:00 29/6/2027#1` [text-xs opacity-70] y: 6841.7→7218.3
+- y7246.3 `t:Chúc mừng hai bạn, xứng đôi vừa #1` [mt-2 leading-relaxed] y: 6869.7→7246.3
+- y7298.1 `b:div:rgba(255, 255, 255, 0.667):12px#4` [rounded-xl border p-4 text-sm] y: 6921.4→7298.1
+- y7315.1 `t:Trần Thị Hồng Nhung#1` [font-semibold] y: 6938.4→7315.1
+- y7315.1 `t:19:00:00 30/6/2027#1` [text-xs opacity-70] y: 6938.4→7315.1
+- y7343.1 `t:Chúc hai em bình an và luôn có n#1` [mt-2 leading-relaxed] y: 6966.4→7343.1
+- y7394.8 `b:div:rgba(255, 255, 255, 0.667):12px#5` [rounded-xl border p-4 text-sm] y: 7018.2→7394.8
+- y7411.8 `t:Lê Quốc Bảo#1` [font-semibold] y: 7035.2→7411.8
+- y7411.8 `t:20:00:00 1/7/2027#1` [text-xs opacity-70] y: 7035.2→7411.8
+- y7439.8 `t:Mừng cho hai đứa. Cả nhà ai cũng#1` [mt-2 leading-relaxed] y: 7063.2→7439.8
+- y7487.6 `img:leaf.webp#3` [w-[60.73%] max-w-none rotate-[-44.25deg] object-contain opacity-10] y: 7110.9→7487.6
+- y7491.6 `b:div:rgba(255, 255, 255, 0.667):12px#6` [rounded-xl border p-4 text-sm] y: 7114.9→7491.6
+- y7508.6 `t:Phạm Thu Hà#1` [font-semibold] y: 7131.9→7508.6
+- y7508.6 `t:21:00:00 2/7/2027#1` [text-xs opacity-70] y: 7131.9→7508.6
+- y7536.6 `t:Chúc hai bạn luôn giữ được tiếng#1` [mt-2 leading-relaxed] y: 7159.9→7536.6
+- y7586.8 `t:Hộp Quà Mừng#1` [] y: 7210.1→7586.8
+- y7588.3 `b:div:rgba(255, 255, 255, 0.667):12px#7` [rounded-xl border p-4 text-sm] y: 7211.7→7588.3
+- y7605.3 `t:Võ Hoàng Long#1` [font-semibold] y: 7228.7→7605.3
+- y7605.3 `t:22:00:00 3/7/2027#1` [text-xs opacity-70] y: 7228.7→7605.3
+- y7633.3 `t:Mong hai em thương nhau bền lâu,#1` [mt-2 leading-relaxed] y: 7256.7→7633.3
+- y7655.3 `img:leaf.webp#2` [w-[60.73%] max-w-none rotate-[-135.75deg] -scale-y-100 object-contain ] y: 7278.7→7655.3
+- y7663.1 `img:riviera_blue.webp#2` [jsx-1370451c15a89ae2 ienv-card absolute inset-0 pointer-events-none] y: 7286.5→7663.1
+- y7685.1 `b:div:rgba(255, 255, 255, 0.667):12px#8` [rounded-xl border p-4 text-sm] y: 7308.4→7685.1
+- y7691.1 `img:riviera_blue.webp#1` [jsx-1370451c15a89ae2 ienv-back absolute inset-0 pointer-events-none] y: 7314.4→7691.1
+- y7691.7 `t:✦#1` [jsx-1370451c15a89ae2 ienv-sparkle-2 absolute pointer-events-none z-20] y: 7315.1→7691.7
+- y7702.1 `t:Đặng Khánh Linh#1` [font-semibold] y: 7325.4→7702.1
+- y7702.1 `t:23:00:00 4/7/2027#1` [text-xs opacity-70] y: 7325.4→7702.1
+- y7727.4 `t:✦#3` [jsx-1370451c15a89ae2 ienv-sparkle-4 absolute pointer-events-none z-20] y: 7350.8→7727.4
+- y7730.1 `t:Chúc mừng hạnh phúc, mong mọi đi#1` [mt-2 leading-relaxed] y: 7353.4→7730.1
+- y7763.1 `t:✦#2` [jsx-1370451c15a89ae2 ienv-sparkle-3 absolute pointer-events-none z-20] y: 7386.5→7763.1
+- y7781.8 `b:div:rgba(255, 255, 255, 0.667):12px#9` [rounded-xl border p-4 text-sm] y: 7405.2→7781.8
+- y7798.8 `t:Bùi Anh Khoa#1` [font-semibold] y: 7422.2→7798.8
+- y7798.8 `t:0:00:00 6/7/2027#1` [text-xs opacity-70] y: 7422.2→7798.8
+- y7826.8 `t:Hôm nay đẹp quá. Chúc hai bạn th#1` [mt-2 leading-relaxed] y: 7450.2→7826.8
+- y7945.8 `b:div:rgba(0, 0, 0, 0.45):50%#1` [jsx-1370451c15a89ae2 ienv-shadow absolute pointer-events-none] y: 7569.1→7945.8
+- y7982.8 `t:Nhấn để mở#1` [] y: 7606.1→7982.8
+- y8077.7 `t:Sự hiện diện của quý khách là ni#1` [] y: 7701→8077.7
+- y8147.1 `t:♡ chungdoi.com#1` [text-xs opacity-50 hover:opacity-70 transition-opacity ] y: 7770.5→8147.1

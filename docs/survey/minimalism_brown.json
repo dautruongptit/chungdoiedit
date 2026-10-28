@@ -1,0 +1,703 @@
+{
+ "id": "minimalism_brown",
+ "slug": "minimalism-nau",
+ "name": "Minimalism - Nâu",
+ "tags": "Tối giản, Nâu, Thanh lịch",
+ "cover": {
+  "components": 12,
+  "text": "Hoàng Nam / & / Thảo Vy / ❦ / 3 tháng 1, 2026 / Thân Mời / Mở thiệp / Chat với chúng tôi! / cdc-REDACTED",
+  "seal": "heart",
+  "particleLocal": "petal",
+  "ambient": "ambient-fall",
+  "fonts": [
+   "Lora 100 900 normal",
+   "EB Garamond 400 800 normal"
+  ]
+ },
+ "open": {
+  "button": "Mở thiệp",
+  "tag": "A",
+  "href": "?autoscroll=0&open=1",
+  "flyBox": true,
+  "phases": [
+   {
+    "at": 22,
+    "name": "seal-pulse",
+    "dur": 2000,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 22,
+    "name": "shine",
+    "dur": 3000,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 22,
+    "name": "ping",
+    "dur": 1000,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 65,
+    "name": "seal-break",
+    "dur": 500,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 65,
+    "name": "seal-ring",
+    "dur": 600,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 65,
+    "name": "dragon-fly-forward",
+    "dur": 1200,
+    "delay": 0,
+    "ease": "linear"
+   },
+   {
+    "at": 555,
+    "name": "particle-burst",
+    "dur": 1400,
+    "delay": 76,
+    "ease": "linear"
+   },
+   {
+    "at": 556,
+    "name": "envelope-away",
+    "dur": 800,
+    "delay": 0,
+    "ease": "linear"
+   }
+  ],
+  "domEvents": [
+   {
+    "at": 26,
+    "op": "added",
+    "el": "div.jsx-353cb38c53e4a74a.absolute.left-1/2.rounded"
+   },
+   {
+    "at": 26,
+    "op": "added",
+    "el": "div.jsx-353cb38c53e4a74a.absolute.inset-0.pointer-"
+   },
+   {
+    "at": 26,
+    "op": "added",
+    "el": "div.jsx-353cb38c53e4a74a.absolute.pointer-events-n"
+   },
+   {
+    "at": 26,
+    "op": "added",
+    "el": "div.jsx-353cb38c53e4a74a.absolute.pointer-events-n"
+   },
+   {
+    "at": 526,
+    "op": "added",
+    "el": "div.jsx-353cb38c53e4a74a.absolute.inset-0.pointer-"
+   },
+   {
+    "at": 984,
+    "op": "removed",
+    "el": "div.jsx-5db65d816a97458c.absolute.right-16.bottom-"
+   },
+   {
+    "at": 1356,
+    "op": "added",
+    "el": "div.jsx-96d6f55b08df8af4.fixed.bottom-14.right-4"
+   },
+   {
+    "at": 1516,
+    "op": "added",
+    "el": "span"
+   },
+   {
+    "at": 1516,
+    "op": "removed",
+    "el": "span"
+   },
+   {
+    "at": 1516,
+    "op": "added",
+    "el": "span"
+   },
+   {
+    "at": 1516,
+    "op": "removed",
+    "el": "span"
+   },
+   {
+    "at": 1516,
+    "op": "added",
+    "el": "span"
+   }
+  ],
+  "contentAtMs": 984
+ },
+ "features": {
+  "audio": [
+   "la-anh.mp3"
+  ],
+  "mapEmbed": true,
+  "countdown": false,
+  "rsvpInline": false,
+  "album": "coverflow 3D + bộ đếm n / N",
+  "giftKind": "hộp 3D (igb*)",
+  "giftDialog": "HỘP QUÀ MỪNG / Chú Rể - TRAN TUAN KIET / Vietcombank / 1023456789 / TRAN TUAN KIET / Lưu QR / Cô Dâu - LE MINH ANH / Techcombank / 9988776655 / LE MINH ANH / Lưu QR / close",
+  "giftAnims": [
+   "mbFloat:5000",
+   "igbSparkleAnim:2000",
+   "igbSparkleAnim:2000",
+   "igbSparkleAnim:2000",
+   "igbSparkleAnim:2000",
+   "igbGiftBob:3000",
+   "igbShadowPulse:3000",
+   "igbHintPulse:2000",
+   "ping-slow:1500",
+   "ping:1000",
+   "background-color:300",
+   "background-color:300"
+  ]
+ },
+ "motion": {
+  "libs": {},
+  "hints": [],
+  "dataAos": 0,
+  "ownKeyframes": [
+   "igbGiftBob",
+   "igbShadowPulse",
+   "igbSparkleAnim",
+   "igbHintPulse",
+   "igbBoxPop",
+   "igbConfettiFly1",
+   "igbConfettiFly2",
+   "igbConfettiFly3",
+   "igbConfettiFly4",
+   "igbConfettiFly5",
+   "igbConfettiFly6",
+   "igbConfettiFly7",
+   "igbConfettiFly8",
+   "igbDecorFlyUp1",
+   "igbDecorFlyUp2",
+   "igbDecorFlyUp3",
+   "igbDecorFlyUp4",
+   "igbDecorFlyUp5",
+   "igbDecorFlyUp6",
+   "igbDecorFlyUp7",
+   "mbFloat"
+  ],
+  "scrollDriven": 12,
+  "scrollSample": [
+   {
+    "el": "span.pointer-events-none.absolute.block.bottom-[-6%]",
+    "from": "1|matrix(1, 0, 0, 1, 0, -8.96863)|visible",
+    "to": "1|matrix(1, 0, 0, 1, 0, -0.181898)|visible"
+   },
+   {
+    "el": "span.pointer-events-none.absolute.block.bottom-[-6%]",
+    "from": "1|matrix(1, 0, 0, 1, 0, -1.94308)|visible",
+    "to": "1|matrix(1, 0, 0, 1, 0, -4.90424)|visible"
+   },
+   {
+    "el": "span.pointer-events-none.absolute.block.left-[-16%]",
+    "from": "1|matrix(1, 0, 0, 1, 0, -0.932136)|visible",
+    "to": "1|matrix(1, 0, 0, 1, 0, -7.95238)|visible"
+   },
+   {
+    "el": "span.pointer-events-none.absolute.block.right-[-16%]",
+    "from": "1|matrix(1, 0, 0, 1, 0, -0.785979)|visible",
+    "to": "1|matrix(1, 0, 0, 1, 0, -6.73749)|visible"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "title": "",
+   "h390": 5412
+  },
+  {
+   "title": "THE WEDDING OF Hoàng Nam & Th",
+   "h390": 661
+  },
+  {
+   "title": "THÔNG TIN LỄ CƯỚI",
+   "h390": 894
+  },
+  {
+   "title": "Album Ảnh",
+   "h390": 502
+  },
+  {
+   "title": "THÔNG TIN TIỆC CƯỚI",
+   "h390": 842
+  },
+  {
+   "title": "Tiệc cưới sẽ tổ chức tại",
+   "h390": 467
+  },
+  {
+   "title": "DRESS CODE",
+   "h390": 194
+  },
+  {
+   "title": "LỊCH TRÌNH NGÀY CƯỚI",
+   "h390": 381
+  },
+  {
+   "title": "Sổ lưu bút",
+   "h390": 921
+  },
+  {
+   "title": "Hộp Quà Mừng",
+   "h390": 398
+  },
+  {
+   "title": "Sự hiện diện của quý khách là",
+   "h390": 76
+  },
+  {
+   "title": "♡ chungdoi.com",
+   "h390": 28
+  },
+  {
+   "title": "",
+   "h390": 844
+  }
+ ],
+ "widths": {
+  "390": {
+   "rootW": 375,
+   "rootH": 5412,
+   "docH": 5413,
+   "kids": [
+    5412,
+    661,
+    894,
+    502,
+    842,
+    467,
+    194,
+    381,
+    921,
+    398,
+    76,
+    28,
+    844
+   ]
+  },
+  "768": {
+   "rootW": 753,
+   "rootH": 6523,
+   "docH": 6524,
+   "kids": [
+    6521,
+    1056,
+    968,
+    682,
+    944,
+    594,
+    222,
+    405,
+    1118,
+    398,
+    60,
+    28,
+    900
+   ]
+  },
+  "1440": {
+   "rootW": 900,
+   "rootH": 6543,
+   "docH": 6544,
+   "kids": [
+    6541,
+    1056,
+    968,
+    682,
+    944,
+    594,
+    222,
+    405,
+    1138,
+    398,
+    60,
+    28,
+    900
+   ]
+  }
+ },
+ "styles": {
+  "fonts": [
+   "Ms Madi 400 normal",
+   "The Nautigal 400 normal",
+   "Cormorant Garamond 300 700 normal",
+   "EB Garamond 400 800 normal",
+   "Montserrat 500 normal",
+   "Montserrat 500 normal"
+  ],
+  "headings": [
+   {
+    "t": "THÔNG TIN LỄ CƯỚI",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "fontSize": "16px",
+    "fontWeight": "700",
+    "lineHeight": "24px",
+    "letterSpacing": "0.48px",
+    "textTransform": "uppercase",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   },
+   {
+    "t": "Nguyễn Hoàng Nam",
+    "fontFamily": "\"EB Garamond\", ChungDoiIndic, serif",
+    "fontSize": "27px",
+    "fontWeight": "400",
+    "lineHeight": "52px",
+    "letterSpacing": "normal",
+    "textTransform": "none",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   },
+   {
+    "t": "Trần Thảo Vy",
+    "fontFamily": "\"EB Garamond\", ChungDoiIndic, serif",
+    "fontSize": "27px",
+    "fontWeight": "400",
+    "lineHeight": "52px",
+    "letterSpacing": "normal",
+    "textTransform": "none",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   },
+   {
+    "t": "Album Ảnh",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "lineHeight": "30px",
+    "letterSpacing": "0.6px",
+    "textTransform": "uppercase",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   },
+   {
+    "t": "THÔNG TIN TIỆC CƯỚI",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "fontSize": "16px",
+    "fontWeight": "700",
+    "lineHeight": "24px",
+    "letterSpacing": "0.48px",
+    "textTransform": "uppercase",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   },
+   {
+    "t": "Tiệc cưới sẽ diễn ra vào lúc",
+    "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+    "fontSize": "20px",
+    "fontWeight": "400",
+    "lineHeight": "30px",
+    "letterSpacing": "normal",
+    "textTransform": "uppercase",
+    "color": "rgb(124, 106, 96)",
+    "textAlign": "center"
+   }
+  ],
+  "buttons": [
+   {
+    "t": "Thêm vào lịch",
+    "w": 81,
+    "h": 20,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(124, 106, 96)",
+    "borderRadius": "0px",
+    "fontSize": "14px",
+    "fontWeight": "300",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "border": "0px solid rgb(124, 106, 96)",
+    "padding": "0px",
+    "boxShadow": "none"
+   },
+   {
+    "t": "XÁC NHẬN THAM DỰ",
+    "w": 196,
+    "h": 36,
+    "backgroundColor": "rgb(124, 106, 96)",
+    "color": "rgb(222, 217, 215)",
+    "borderRadius": "3.35544e+07px",
+    "fontSize": "14px",
+    "fontWeight": "300",
+    "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+    "border": "0px solid rgb(222, 217, 215)",
+    "padding": "8px 24px",
+    "boxShadow": "none"
+   },
+   {
+    "t": "Chỉ đường",
+    "w": 128,
+    "h": 36,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(145, 128, 119)",
+    "borderRadius": "3.35544e+07px",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+    "border": "0px solid rgb(145, 128, 119)",
+    "padding": "8px 20px",
+    "boxShadow": "none"
+   },
+   {
+    "t": "🪄",
+    "w": 38,
+    "h": 32,
+    "backgroundColor": "rgba(124, 106, 96, 0.1)",
+    "color": "rgb(124, 106, 96)",
+    "borderRadius": "8px",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "border": "0px solid rgb(124, 106, 96)",
+    "padding": "8px",
+    "boxShadow": "none"
+   },
+   {
+    "t": "GỬI LỜI CHÚC",
+    "w": 149,
+    "h": 36,
+    "backgroundColor": "rgb(124, 106, 96)",
+    "color": "rgb(222, 217, 215)",
+    "borderRadius": "3.35544e+07px",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "fontFamily": "\"Times New Roman\", ChungDoiIndic, serif",
+    "border": "0px solid rgb(222, 217, 215)",
+    "padding": "8px 24px",
+    "boxShadow": "none"
+   },
+   {
+    "t": "✦✦✦✦Nhấn để mở",
+    "w": 260,
+    "h": 280,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(124, 106, 96)",
+    "borderRadius": "0px",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "border": "0px none rgb(124, 106, 96)",
+    "padding": "0px",
+    "boxShadow": "none"
+   }
+  ],
+  "images": 27,
+  "bgImages": [
+   "url(\"/images/themes/minimalism-brown/paper.webp\")"
+  ]
+ },
+ "editor": [
+  {
+   "title": "Thông tin cơ bản",
+   "toggle": true,
+   "on": false,
+   "h": 550,
+   "fields": 7,
+   "buttons": [
+    "Collapse section",
+    "Đặt lại mặc định",
+    "Nhà trai trước",
+    "Nhà gái trước"
+   ]
+  },
+  {
+   "title": "Ảnh đầu thiệp",
+   "toggle": true,
+   "on": true,
+   "h": 400,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "Tải lên",
+    "✕",
+    "Huỷ",
+    "Áp dụng",
+    "close"
+   ]
+  },
+  {
+   "title": "Thư viện ảnh",
+   "toggle": true,
+   "on": true,
+   "h": 340,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "Lưới",
+    "Ghép ảnh",
+    "3D",
+    "Thêm ảnh"
+   ]
+  },
+  {
+   "title": "Thông tin gia đình",
+   "toggle": true,
+   "on": true,
+   "h": 722,
+   "fields": 8,
+   "buttons": [
+    "Collapse section"
+   ]
+  },
+  {
+   "title": "Lời thông báo",
+   "toggle": true,
+   "on": true,
+   "h": 194,
+   "fields": 1,
+   "buttons": [
+    "Collapse section"
+   ]
+  },
+  {
+   "title": "Lễ",
+   "toggle": false,
+   "on": null,
+   "h": 298,
+   "fields": 1,
+   "buttons": [
+    "Collapse section",
+    "Thêm lễ"
+   ]
+  },
+  {
+   "title": "Tiệc cưới",
+   "toggle": true,
+   "on": true,
+   "h": 932,
+   "fields": 5,
+   "buttons": [
+    "Collapse section",
+    "Tiệc cưới",
+    "Tiệc báo hỷ",
+    "Tiệc đính hôn",
+    "24 giờ",
+    "Sáng/Chiều",
+    "Thay đổi"
+   ]
+  },
+  {
+   "title": "Xác nhận tham dự (RSVP)",
+   "toggle": true,
+   "on": true,
+   "h": 425,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "Nút bấm",
+    "Hiện trực tiếp",
+    "Khách tự chọn",
+    "Giới hạn",
+    "Thêm câu hỏi"
+   ]
+  },
+  {
+   "title": "Dress Code",
+   "toggle": true,
+   "on": false,
+   "h": 122,
+   "fields": 0,
+   "buttons": [
+    "Collapse section"
+   ]
+  },
+  {
+   "title": "Lịch trình ngày cưới",
+   "toggle": true,
+   "on": false,
+   "h": 142,
+   "fields": 0,
+   "buttons": [
+    "Collapse section"
+   ]
+  },
+  {
+   "title": "Sổ lưu bút",
+   "toggle": true,
+   "on": true,
+   "h": 134,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "0 lời chúcXem và quản lý"
+   ]
+  },
+  {
+   "title": "Hộp Quà Mừng",
+   "toggle": true,
+   "on": true,
+   "h": 242,
+   "fields": 2,
+   "buttons": [
+    "Collapse section",
+    "Hộp Quà Mừng: Hộp Quà Mừng",
+    "✕",
+    "Đặt lại mặc định",
+    "Lưu",
+    "close",
+    "Thêm tài khoản ngân hàng",
+    "Phương thức khác"
+   ]
+  },
+  {
+   "title": "Lời cảm ơn",
+   "toggle": true,
+   "on": true,
+   "h": 194,
+   "fields": 1,
+   "buttons": [
+    "Collapse section"
+   ]
+  },
+  {
+   "title": "Nhạc nền",
+   "toggle": false,
+   "on": null,
+   "h": 258,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "Chọn nhạc"
+   ]
+  },
+  {
+   "title": "Phong bì",
+   "toggle": false,
+   "on": null,
+   "h": 174,
+   "fields": 1,
+   "buttons": [
+    "Collapse section",
+    "Quản lý khách mời"
+   ]
+  },
+  {
+   "title": "Ảnh xem trước khi chia sẻ",
+   "toggle": false,
+   "on": null,
+   "h": 682,
+   "fields": 0,
+   "buttons": [
+    "Collapse section",
+    "Phong bì thiệp",
+    "Ảnh của bạn",
+    "xem hướng dẫn tại đây."
+   ]
+  }
+ ]
+}

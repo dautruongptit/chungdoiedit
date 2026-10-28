@@ -1,0 +1,752 @@
+[
+ {
+  "slug": "minimalism-do-dam",
+  "id": "minimalism_darkred",
+  "name": "Minimalism - Đỏ Đậm",
+  "tags": "Tối giản, Đỏ Đậm, Sang trọng",
+  "cover": "MinimalismCover",
+  "particle": "heart",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "minimalism-nau",
+  "id": "minimalism_brown",
+  "name": "Minimalism - Nâu",
+  "tags": "Tối giản, Nâu, Thanh lịch",
+  "cover": "MinimalismCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-hy-xanh",
+  "id": "song_hy_green",
+  "name": "Song Hỷ - Xanh",
+  "tags": "Truyền thống, Xanh, Chữ Hỷ",
+  "cover": "SongHyClassicCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoa-moc-xanh",
+  "id": "boho_floral_green",
+  "name": "Hoa Mộc - Xanh",
+  "tags": "Hoa Mộc, Xanh, Hoa",
+  "cover": "HoaMocXanhCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-hy-do",
+  "id": "song_hy_red",
+  "name": "Song Hỷ - Đỏ",
+  "tags": "Truyền thống, Đỏ, Chữ Hỷ",
+  "cover": "SongHyClassicCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "minimalism-xanh",
+  "id": "minimalism_green",
+  "name": "Minimalism - Xanh",
+  "tags": "Tối giản, Xanh, Thanh lịch",
+  "cover": "MinimalismCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "song-hy-v2-do",
+  "id": "song_hy_v2_red",
+  "name": "Song Hỷ V2 - Đỏ",
+  "tags": "Truyền thống, Đỏ, Chữ Hỷ",
+  "cover": "TraditionalV2Cover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "envelope"
+ },
+ {
+  "slug": "to-duyen-xanh",
+  "id": "silk_ribbon_green",
+  "name": "Tơ Duyên - Xanh",
+  "tags": "Hoa rum, Xanh, Lụa",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "vuonkinh-hong",
+  "id": "glass_garden_pink",
+  "name": "Vườn Kính - Hồng",
+  "tags": "Vườn, Hồng, Hoa",
+  "cover": "GlassGardenCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "mai-lan-trang",
+  "id": "jasmine_white",
+  "name": "Mai Lan - Trắng",
+  "tags": "Tối giản, Hoa, Thanh lịch",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-v3-do",
+  "id": "dragon_phoenix_v3_red",
+  "name": "Long Phụng V3 - Đỏ",
+  "tags": "Cổ điển, Đỏ, Rồng phượng",
+  "cover": "TraditionalV2Cover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "minimalism-nau-dam",
+  "id": "minimalism_darkbrown",
+  "name": "Minimalism - Nâu Đậm",
+  "tags": "Tối giản, Nâu đậm, Thanh lịch",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-phung-do",
+  "id": "double_phoenix_red",
+  "name": "Song Phụng - Đỏ",
+  "tags": "Truyền thống, Đỏ, Thanh lịch",
+  "cover": "TraditionalRoyalCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "envelope"
+ },
+ {
+  "slug": "song-long-do",
+  "id": "double_dragon_red",
+  "name": "Song Long - Đỏ",
+  "tags": "Truyền thống, Đỏ, Trang trọng",
+  "cover": "SongLongDoCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "vuonkinh-xanh",
+  "id": "glass_garden_green",
+  "name": "Vườn Kính - Xanh",
+  "tags": "Vườn, Xanh, Hoa",
+  "cover": "GlassGardenCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "baroque-v2-do-dam",
+  "id": "baroque_v2_darkred",
+  "name": "Baroque V2 - Đỏ Đậm",
+  "tags": "Baroque, Đỏ đậm, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "to-duyen-do-dam",
+  "id": "silk_ribbon_darkred",
+  "name": "Tơ Duyên - Đỏ Đậm",
+  "tags": "Hoa phong quỳ, Đỏ đậm, Lụa",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-v2-do",
+  "id": "dragon_phoenix_v2_red",
+  "name": "Long Phụng V2 - Đỏ",
+  "tags": "Cổ điển, Đỏ, Rồng phượng",
+  "cover": "LongPhungV2BesCover",
+  "particle": "xi",
+  "seal": "none",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-v4-do",
+  "id": "dragon_phoenix_v4_red",
+  "name": "Long Phụng V4 - Đỏ",
+  "tags": "Cổ điển, Đỏ, Rồng phượng",
+  "cover": "TraditionalV2Cover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-do",
+  "id": "dragon_phoenix_red",
+  "name": "Long Phụng - Đỏ",
+  "tags": "Cổ điển, Đỏ, Rồng phượng",
+  "cover": "LongPhungClassicCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "minimalism-lam-dam",
+  "id": "minimalism_darkblue",
+  "name": "Minimalism - Lam Đậm",
+  "tags": "Tối giản, Xanh navy, Thanh lịch",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "lien-hoa-v2-xanh",
+  "id": "lien_hoa_v2_green",
+  "name": "Liên Hoa V2 - Xanh",
+  "tags": "Hoa sen, Xanh, Màu nước",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "minimalism-do",
+  "id": "minimalism_red",
+  "name": "Minimalism - Đỏ",
+  "tags": "Tối giản, Đỏ, Thanh lịch",
+  "cover": "MinimalismRedCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-hac-do",
+  "id": "song_hac_red",
+  "name": "Song Hạc - Đỏ",
+  "tags": "Cổ điển, Đỏ, Hạc",
+  "cover": "SongHacCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "envelope"
+ },
+ {
+  "slug": "chibi-red",
+  "id": "chibi_red",
+  "name": "Chibi - Đỏ",
+  "tags": "Dễ thương, Chibi, Minh họa",
+  "cover": "ChibiRedCover",
+  "particle": "confetti",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "thanh-diep-xanh",
+  "id": "elegant_leaf_green",
+  "name": "Thanh Diệp - Xanh",
+  "tags": "Thanh lịch, Xanh lá, Hiện đại",
+  "cover": "ThanhDiepCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "to-duyen-hong",
+  "id": "silk_ribbon_pink",
+  "name": "Tơ Duyên - Hồng",
+  "tags": "Hoa sen, Hồng, Lụa",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-xanh",
+  "id": "dragon_phoenix_green",
+  "name": "Long Phụng - Xanh",
+  "tags": "Cổ điển, Xanh, Rồng phượng",
+  "cover": "LongPhungImperialCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoang-kim-do",
+  "id": "royal_red",
+  "name": "Hoàng Kim - Đỏ",
+  "tags": "Sang trọng, Đỏ, Vàng kim",
+  "cover": "RoyalGoldCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "vuon-xuan-xanh",
+  "id": "spring_garden_green",
+  "name": "Vườn Xuân - Xanh",
+  "tags": "Thiên nhiên, Xanh lá, Thanh bình",
+  "cover": "MinimalismCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoang-gia-vang",
+  "id": "baroque_gold",
+  "name": "Baroque - Vàng",
+  "tags": "Baroque, Vàng, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-phung-xanh",
+  "id": "double_phoenix_green",
+  "name": "Song Phụng - Xanh",
+  "tags": "Truyền thống, Xanh lá, Thanh lịch",
+  "cover": "TraditionalRoyalCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "anh-dao-hong",
+  "id": "cherry_blossom_pink",
+  "name": "Anh Đào - Hồng",
+  "tags": "Lãng mạn, Hoa anh đào, Hiện đại",
+  "cover": "AnhDaoCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoa-tinh-do",
+  "id": "hoa_tinh_red",
+  "name": "Hoạ Tình - Đỏ",
+  "tags": "Nghệ thuật, Đỏ, Comic",
+  "cover": "HoaTinhDoCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoa-lua-nau",
+  "id": "silk_flora_brown",
+  "name": "Hoa Lụa - Nâu",
+  "tags": "Tối giản, Typography, Nâu",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoa-moc-hong",
+  "id": "boho_floral_pink",
+  "name": "Hoa Mộc - Hồng",
+  "tags": "Hoa Mộc, Hồng, Hoa",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "nhat-binh-do",
+  "id": "nhat_binh_red",
+  "name": "Nhật Bình - Đỏ",
+  "tags": "Cổ phục, Đỏ, Giấy kem",
+  "cover": "TraditionalRoyalCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoa-moc-nau",
+  "id": "boho_floral_brown",
+  "name": "Hoa Mộc - Nâu",
+  "tags": "Hoa Mộc, Nâu, Hoa",
+  "cover": "HoaMocNauCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "ren-theu-trang",
+  "id": "applique_lace_white",
+  "name": "Ren Thêu - Trắng",
+  "tags": "Ren thêu, Trắng, Lụa đen",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "lau-dai-xanh",
+  "id": "chateau_green",
+  "name": "Lâu Đài - Xanh",
+  "tags": "Lâu đài, Xanh lá, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-long-xanh",
+  "id": "double_dragon_green",
+  "name": "Song Long - Xanh",
+  "tags": "Truyền thống, Xanh lá, Thanh lịch",
+  "cover": "SongLongCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "lien-hoa-hong",
+  "id": "lien_hoa_pink",
+  "name": "Liên Hoa - Hồng",
+  "tags": "Hoa sen, Hồng, Thanh lịch",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "vuon-xuan-do",
+  "id": "spring_garden_red",
+  "name": "Vườn Xuân - Đỏ",
+  "tags": "Thiên nhiên, Đỏ, Ấm áp",
+  "cover": "MinimalismCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "long-phung-lam",
+  "id": "dragon_phoenix_blue",
+  "name": "Long Phụng - Lam",
+  "tags": "Cổ điển, Lam, Rồng phượng",
+  "cover": "LongPhungImperialCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "vuon-xuan-lam",
+  "id": "spring_garden_blue",
+  "name": "Vườn Xuân - Lam",
+  "tags": "Thiên nhiên, Xanh dương, Thanh lịch",
+  "cover": "VuonXuanLamCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "baroque-v2-xanh-dam",
+  "id": "baroque_v2_darkgreen",
+  "name": "Baroque V2 - Xanh Đậm",
+  "tags": "Baroque, Xanh đậm, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-thuy-tinh-lam",
+  "id": "crystal_floral_blue",
+  "name": "Hoa Thuỷ Tinh - Lam",
+  "tags": "Hoa pha lê, Lam, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "bach-su-v2-hong",
+  "id": "porcelain_v2_pink",
+  "name": "Bạch Sứ V2 - Hồng",
+  "tags": "Hoa mẫu đơn, Hồng phấn, Cổ điển",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "lau-dai-lam",
+  "id": "chateau_blue",
+  "name": "Lâu Đài - Lam",
+  "tags": "Lâu đài, Lam, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "bach-su-v2-xanh",
+  "id": "porcelain_v2_green",
+  "name": "Bạch Sứ V2 - Xanh",
+  "tags": "Hoa trắng, Xanh ô liu, Cổ điển",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "florence-nau",
+  "id": "florence_brown",
+  "name": "Florence - Nâu",
+  "tags": "Florence, Nâu, Màu nước",
+  "cover": "ArchitecturalCover",
+  "particle": "blossom",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-kho-v2-lam",
+  "id": "hoa_kho_v2_blue",
+  "name": "Hoa Khô V2 - Lam",
+  "tags": "Hoa khô, Lam, Boho",
+  "cover": "HoaKhoV2LamCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "co-ba-do",
+  "id": "co_ba_red",
+  "name": "Cô Ba - Đỏ",
+  "tags": "Cổ phục, Đỏ, Giấy kem",
+  "cover": "CoBaCover",
+  "particle": "confetti",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "song-long-lam",
+  "id": "double_dragon_blue",
+  "name": "Song Long - Lam",
+  "tags": "Truyền thống, Xanh dương, Lãng mạn",
+  "cover": "SongLongCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoang-kim-xanh",
+  "id": "royal_green",
+  "name": "Hoàng Kim - Xanh",
+  "tags": "Sang trọng, Xanh lá, Vàng kim",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "minimalism-tim",
+  "id": "minimalism_purple",
+  "name": "Minimalism - Tím",
+  "tags": "Tối giản, Tím, Lavender",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-kho-v2-xanh",
+  "id": "dried_flower_v2_green",
+  "name": "Hoa Khô V2 - Xanh",
+  "tags": "Hoa khô, Xanh, Boho",
+  "cover": "HoaKhoV2XanhCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-dai-hong",
+  "id": "hoa_dai_pink",
+  "name": "Hoa Dại - Hồng",
+  "tags": "Hoa dại, Hồng, Màu nước",
+  "cover": "WildflowerCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "baroque-lam",
+  "id": "baroque_blue",
+  "name": "Baroque - Lam",
+  "tags": "Baroque, Lam, Châu Âu",
+  "cover": "BaroqueLamCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoang-kim-ii-xanh",
+  "id": "royal_v2_green",
+  "name": "Hoàng Kim II - Xanh",
+  "tags": "Sang trọng, Xanh lá, Hoa hồng trắng",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "long-phung-huyen",
+  "id": "dragon_phoenix_black",
+  "name": "Long Phụng - Huyền",
+  "tags": "Cổ điển, Huyền, Rồng phượng",
+  "cover": "LongPhungClassicCover",
+  "particle": "xi",
+  "seal": "xi",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "hoang-kim-lam",
+  "id": "royal_blue",
+  "name": "Hoàng Kim - Lam",
+  "tags": "Sang trọng, Lam, Vàng kim",
+  "cover": "HoangKimLamCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "riviera-lam",
+  "id": "riviera_blue",
+  "name": "Riviera - Lam",
+  "tags": "Riviera, Lam, Màu nước",
+  "cover": "ArchitecturalCover",
+  "particle": "blossom",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "baroque-v2-lam-dam",
+  "id": "baroque_v2_darkblue",
+  "name": "Baroque V2 - Lam Đậm",
+  "tags": "Baroque, Lam đậm, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "bach-su-nau",
+  "id": "porcelain_brown",
+  "name": "Bạch Sứ - Nâu",
+  "tags": "Hoa văn vàng, Nâu kem, Cổ điển",
+  "cover": "PorcelainTileCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-thuy-tinh-xanh",
+  "id": "crystal_floral_green",
+  "name": "Hoa Thuỷ Tinh - Xanh",
+  "tags": "Hoa pha lê, Xanh, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-huong-duong",
+  "id": "sunflower_yellow",
+  "name": "Hoa Hướng Dương",
+  "tags": "Hướng dương, Vàng, Màu nước",
+  "cover": "WildflowerCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "bach-su-v2-do",
+  "id": "porcelain_v2_red",
+  "name": "Bạch Sứ II - Đỏ",
+  "tags": "Hoa đỏ, Sứ kem, Cổ điển",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-thuy-tinh-do",
+  "id": "crystal_floral_red",
+  "name": "Hoa Thuỷ Tinh - Đỏ",
+  "tags": "Hoa pha lê, Đỏ, Châu Âu",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "bach-su-lam",
+  "id": "porcelain_blue",
+  "name": "Bạch Sứ - Lam",
+  "tags": "Hoa văn xanh, Trắng lam, Cổ điển",
+  "cover": "PorcelainTileCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "3d-box"
+ },
+ {
+  "slug": "bach-su-do",
+  "id": "porcelain_red",
+  "name": "Bạch Sứ - Đỏ",
+  "tags": "Hoa văn đỏ, Trắng đỏ, Cổ điển",
+  "cover": "BachSuDoCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "san-miguel-vang",
+  "id": "san_miguel_yellow",
+  "name": "San Miguel - Vàng",
+  "tags": "San Miguel, Vàng, Màu nước",
+  "cover": "ArchitecturalCover",
+  "particle": "blossom",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "vuonkinh-lam",
+  "id": "glass_garden_blue",
+  "name": "Vườn Kính - Lam",
+  "tags": "Vườn, Lam, Hoa",
+  "cover": "GlassGardenCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoang-kim-ii-tim",
+  "id": "royal_v2_purple",
+  "name": "Hoàng Kim II - Tím",
+  "tags": "Sang trọng, Tím, Hoa mẫu đơn",
+  "cover": "FloralBouquetCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ },
+ {
+  "slug": "hoa-kho-cam",
+  "id": "hoa_kho_orange",
+  "name": "Hoa Khô - Cam",
+  "tags": "Hoa khô, Cam, Boho",
+  "cover": "BaroquePorcelainCover",
+  "particle": "petal",
+  "seal": "heart",
+  "gift": "envelope"
+ }
+]

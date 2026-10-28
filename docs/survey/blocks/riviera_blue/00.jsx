@@ -1,0 +1,1 @@
+<img alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover" src="/images/themes/riviera-blue/paper-background.webp" />
