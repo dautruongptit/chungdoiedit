@@ -3,15 +3,21 @@ import type { Inv } from "@/types/invitation";
 import { defaultInv, blankInv } from "@/features/editor/data/defaultData";
 import Header, { type Mode } from "@/features/editor/components/Header";
 import Preview from "@/features/invitation/components/Preview";
-import * as S from "@/features/editor/components/Sections";
+import BanquetV2 from "@/features/editor/components/v2/BanquetV2";
+import * as V from "@/features/editor/components/v2/SectionsV2";
 import TopNav from "@/components/layout/TopNav";
-import HeroPhoto from "@/features/editor/components/HeroPhoto";
+import EditorTopBar from "@/features/editor/components/EditorTopBar";
+import { useAuth } from "@/features/auth/hooks/useAuth";
+import { BasicV2 } from "@/features/editor/components/v2/BasicV2";
+import AlbumV2 from "@/features/editor/components/v2/AlbumV2";
+import HeroPhoto from "@/features/editor/components/v2/HeroV2";
 import TutorialTour from "@/features/editor/components/TutorialTour";
 import ShareModal from "@/components/common/ShareModal";
 import PublishCheckModal from "@/features/editor/components/PublishCheckModal";
 import { loadCards, saveCards, loadInv, saveInv } from "@/services/storage/store";
 import { TPL_CDN, templateById, templateByIdOrSlug, introDefaultFor, TEMPLATES } from "@/features/templates/data/templates";
 import { TEMPLATE_THEMES } from "@/features/invitation/config/templateThemes";
+import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
 
 export default function EditorPage() {
   const cardId = typeof window !== "undefined" ? window.location.pathname.replace(/^\/edit\//, "").split("?")[0] : "";
@@ -50,12 +56,14 @@ export default function EditorPage() {
         templateThumb: TPL_CDN + tpl.img,
         introText: introDefaultFor(tpl.id),
         dressColors,
+        giftDisplayMode: getGiftboxConfig(tpl.id).giftboxType === "envelope" ? "envelope" : "gift_box",
       };
     }
 
     return defaultInv;
   });
   const [mode, setMode] = useState<Mode>("edit");
+  const { loggedIn } = useAuth();
   const [dirty, setDirty] = useState(0);
   const [toast, setToast] = useState("");
   const [shareOpen, setShareOpen] = useState(false);
@@ -110,7 +118,8 @@ export default function EditorPage() {
 
   return (
     <div className="editor-page-root">
-      <TopNav />
+      {loggedIn ? <TopNav /> : <EditorTopBar />}
+      <div className="inv-root"><div className="min-h-screen bg-base-200 pb-14 lg:pb-0">
       <Header
         mode={mode}
         onMode={setMode}
@@ -140,30 +149,29 @@ export default function EditorPage() {
           }
         }}
       />
-      <main>
-        {mode === "edit" ? (
-          <div className="body">
-            <S.Basic d={d} set={set} />
+      {mode === "edit" ? (
+        <main className="max-w-4xl mx-auto"><div className="body">
+            <BasicV2 d={d} set={set} />
             <HeroPhoto d={d} set={set} />
-            <S.Family d={d} set={set} />
-            <S.Announce d={d} set={set} />
-            <S.Ceremony d={d} set={set} />
-            <S.Album d={d} set={set} />
-            <S.Banquet d={d} set={set} />
-            <S.Rsvp d={d} set={set} />
-            <S.Dress d={d} set={set} />
-            <S.Schedule d={d} set={set} />
-            <S.Guestbook d={d} set={set} />
-            <S.GiftBox d={d} set={set} />
-            <S.Thanks d={d} set={set} />
-            <S.Music d={d} set={set} />
-            <S.Envelope d={d} set={set} />
-            <S.Share d={d} set={set} />
-          </div>
-        ) : (
-          <Preview d={d} set={set} initialOpen={true} />
-        )}
-      </main>
+            <AlbumV2 d={d} set={set} />
+            <V.Family d={d} set={set} />
+            <V.Announce d={d} set={set} />
+            <V.Ceremony d={d} set={set} />
+            <BanquetV2 d={d} set={set} />
+            <V.Rsvp d={d} set={set} />
+            <V.Dress d={d} set={set} />
+            <V.Schedule d={d} set={set} />
+            <V.Guestbook d={d} set={set} />
+            <V.GiftBox d={d} set={set} />
+            <V.Thanks d={d} set={set} />
+            <V.Music d={d} set={set} />
+            <V.Envelope d={d} set={set} />
+            <V.Share d={d} set={set} />
+          </div></main>
+      ) : (
+        <main className="editor-main"><Preview d={d} set={set} initialOpen={true} /></main>
+      )}
+      </div></div>
       {toast && <div className="toast">{toast}</div>}
       {showPublishCheck && (
         <PublishCheckModal

@@ -69,7 +69,7 @@ export function Section({
     <section className="card">
       <div className="card-h">
         <button type="button" className="collapse-btn" aria-expanded={open} onClick={() => setOpen(!open)}>
-          <span className={"chev" + (open ? " open" : "")}>{Icon.chevronRight(16)}</span>
+          <span className={"chev" + (open ? " open" : "")}>{Icon.chevronRight(12)}</span>
         </button>
         {icon && <span className="sec-icon">{icon}</span>}
         {onTitle ? (
@@ -137,37 +137,40 @@ export function Segmented<T extends string>({
   options,
   onChange,
   inline,
+  size,
 }: {
   value: T;
   options: { value: T; label: string; icon?: ReactNode }[];
   onChange: (v: T) => void;
   /** icon nằm cùng hàng với chữ (Hộp quà / Phong bì / Hiện QR) */
   inline?: boolean;
+  /** "sm": thanh chọn thấp 32px như trang gốc (loại tiệc, định dạng giờ) */
+  size?: "sm";
 }) {
   const idx = Math.max(0, options.findIndex((o) => o.value === value));
   return (
-    <div className={"seg" + (inline ? " inline" : "")} style={{ gridTemplateColumns: `repeat(${options.length}, 1fr)` }}>
-      <div className="seg-thumb" style={{ width: `calc((100% - 8px) / ${options.length})`, transform: `translateX(${idx * 100}%)` }} />
+    <div className={"seg" + (inline ? " seg-row" : "") + (size === "sm" ? " sm" : "")} style={{ gridTemplateColumns: `repeat(${options.length}, 1fr)` }}>
+      <div className="seg-thumb" style={{ width: `calc((100% - ${size === "sm" ? 4 : 8}px) / ${options.length})`, transform: `translateX(${idx * 100}%)` }} />
       {options.map((o) => (
         <button type="button" key={o.value} className={o.value === value ? "active" : ""} onClick={() => onChange(o.value)}>
           {o.icon}
-          <span>{o.label}</span>
+          {o.icon ? <span>{o.label}</span> : o.label}
         </button>
       ))}
     </div>
   );
 }
 
-export function OutlineButton({ children, onClick }: { children: ReactNode; onClick?: () => void }) {
+export function OutlineButton({ children, onClick, style }: { children: ReactNode; onClick?: () => void; style?: React.CSSProperties }) {
   return (
-    <button type="button" className="btn-outline" onClick={onClick}>
+    <button type="button" className="btn-outline" onClick={onClick} style={style}>
       {children}
     </button>
   );
 }
 
-export function Helper({ children }: { children: ReactNode }) {
-  return <p className="helper">{children}</p>;
+export function Helper({ children, style }: { children: ReactNode; style?: React.CSSProperties }) {
+  return <p className="helper" style={style}>{children}</p>;
 }
 
 export function Modal({

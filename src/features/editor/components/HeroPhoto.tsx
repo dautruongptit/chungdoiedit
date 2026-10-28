@@ -91,18 +91,20 @@ export default function HeroPhoto({ d, set }: P) {
         </div>
       ) : !d.heroPhoto ? (
         <div className="hero-empty-container">
-          <span className="hero-lbl">Ảnh đầu thiệp</span>
-          <div className="hero-empty-thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
-              <path d="M21 15l-5-5L5 21" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+          <div className="hero-empty-group">
+            <span className="hero-lbl">Ảnh đầu thiệp</span>
+            <div className="hero-empty-thumb">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+                <path d="M21 15l-5-5L5 21" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <button type="button" className="hero-upload-btn-outline" onClick={() => file.current?.click()}>
+              Tải lên
+            </button>
+            <p className="hero-help">JPG, PNG, GIF, WebP, HEIC</p>
           </div>
-          <button type="button" className="hero-upload-btn-outline" onClick={() => file.current?.click()}>
-            Tải lên
-          </button>
-          <p className="hero-help">JPG, PNG, GIF, WebP, HEIC</p>
           <p className="hero-help2">Nên dùng ảnh dọc hoặc ảnh cặp đôi toàn thân</p>
         </div>
       ) : (

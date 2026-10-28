@@ -5,8 +5,10 @@ import type { Inv, Gift } from "@/types/invitation";
 import { groomShown, brideShown } from "@/utils/format";
 import { Field, Helper, Hint, Input, Modal, OutlineButton, ResetInput, Row, Section, Segmented, Textarea, Toggle, Icon } from "@/components/ui/ui";
 import { introDefaultFor } from "@/features/templates/data/templates";
+import { TEMPLATE_THEMES } from "@/features/invitation/config/templateThemes";
 import { VN_BANKS } from "@/features/editor/constants/banks";
 import { PAYMENT_METHODS } from "@/features/editor/constants/paymentMethods";
+import GiftMethodModal, { isMethodForm, giftLines } from "@/features/editor/components/GiftMethodModal";
 
 type P = { d: Inv; set: (p: Partial<Inv>) => void };
 
@@ -33,7 +35,7 @@ export function Basic({ d, set }: P) {
         </div>
       ) : (
         <div className="basic-intro-hint">
-          <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24" strokeWidth="2" style={{ flex: "none", marginTop: 2 }}>
+          <svg width="16" height="16" fill="none" stroke="#f59e0b" viewBox="0 0 24 24" strokeWidth="2" style={{ flex: "none", marginTop: 2 }}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
           </svg>
           <div>
@@ -43,6 +45,7 @@ export function Basic({ d, set }: P) {
         </div>
       )}
 
+      <div>
       <Row>
         <Field label="Họ tên chú rể" half>
           <Input placeholder="VD: Nguyễn Thế Bảo" value={d.groomFull} onChange={(e) => set({ groomFull: e.target.value })} />
@@ -51,15 +54,18 @@ export function Basic({ d, set }: P) {
           <Input placeholder="VD: Trần Ngọc Ánh" value={d.brideFull} onChange={(e) => set({ brideFull: e.target.value })} />
         </Field>
       </Row>
+      </div>
 
-      <Row>
-        <Field label="Tên ngắn chú rể" half>
-          <ResetInput value={d.groomNick} onChange={(v) => set({ groomNick: v })} placeholder={d.groomFull} />
-        </Field>
-        <Field label="Tên ngắn cô dâu" half>
-          <ResetInput value={d.brideNick} onChange={(v) => set({ brideNick: v })} placeholder={d.brideFull} />
-        </Field>
-      </Row>
+      <div style={{ marginBottom: 4 }}>
+        <Row>
+          <Field label="Tên ngắn chú rể" half>
+            <ResetInput value={d.groomNick} onChange={(v) => set({ groomNick: v })} placeholder={d.groomFull} />
+          </Field>
+          <Field label="Tên ngắn cô dâu" half>
+            <ResetInput value={d.brideNick} onChange={(v) => set({ brideNick: v })} placeholder={d.brideFull} />
+          </Field>
+        </Row>
+      </div>
 
       <Row>
         <Field label="Danh xưng chú rể" half>
@@ -386,7 +392,7 @@ export function Ceremony({ d, set }: P) {
       <Field label="Tiêu đề mục"><Input value={d.ceremonyTitle} onChange={(e) => set({ ceremonyTitle: e.target.value })} /></Field>
       <Helper>Tiêu đề in phía trên mục này trên thiệp. Để trống nếu bạn muốn bỏ hẳn.</Helper>
       {d.ceremonies.length === 0 && (
-        <div className="section-disabled-hint" style={{ margin: "14px 0" }}>
+        <div className="section-disabled-hint">
           <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24" strokeWidth="2" style={{ flex: "none", marginTop: 2 }}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
           </svg>
@@ -438,7 +444,6 @@ export function Ceremony({ d, set }: P) {
       <button
         type="button"
         className="btn-outline-pill-full"
-        style={{ marginTop: 12 }}
         onClick={() => set({ ceremonies: [...d.ceremonies, { title: "", date: "", time: "", place: "" }] })}
       >
         <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -491,6 +496,7 @@ export function Banquet({ d, set }: P) {
       ) : (
         <>
           <Segmented
+            size="sm"
             value={d.banquetType}
             onChange={changeType}
             options={[
@@ -502,7 +508,7 @@ export function Banquet({ d, set }: P) {
           <Field label="Tiêu đề mục">
             <Input value={d.banquetTitle} onChange={(e) => set({ banquetTitle: e.target.value })} />
           </Field>
-          <Helper>Tiêu đề in phía trên mục này trên thiệp. Để trống nếu bạn muốn bỏ hẳn.</Helper>
+          <Helper style={{ marginBottom: -4 }}>Tiêu đề in phía trên mục này trên thiệp. Để trống nếu bạn muốn bỏ hẳn.</Helper>
           <Field label="Ngày tổ chức">
             <input
               type="date"
@@ -535,10 +541,11 @@ export function Banquet({ d, set }: P) {
               }}
             />
           </Field>
-          <Helper>Giờ chính hiển thị lớn trên thiệp, dùng cho đếm ngược và thêm vào lịch.</Helper>
+          <Helper style={{ marginBottom: -4 }}>Giờ chính hiển thị lớn trên thiệp, dùng cho đếm ngược và thêm vào lịch.</Helper>
 
           <Field label="Định dạng giờ">
             <Segmented
+              size="sm"
               value={d.clock}
               onChange={(v) => set({ clock: v })}
               options={[
@@ -641,6 +648,18 @@ export function Banquet({ d, set }: P) {
 }
 
 function MapBox({ d, set }: P) {
+  // Mặc định bản đồ tự lấy theo địa chỉ tiệc cưới; chỉ hiện ô nhập khi bấm "Thay đổi" (hoặc đã có link tuỳ chỉnh).
+  const [editing, setEditing] = useState(!!d.mapUrl);
+  if (!editing) {
+    return (
+      <div className="banquet-map-card">
+        <div className="banquet-map-content">
+          <p className="banquet-map-text">Bản đồ tự động hiển thị theo địa chỉ tiệc cưới. Chỉ nên thay đổi nếu vị trí trên bản đồ không chính xác.</p>
+          <button type="button" className="banquet-map-link" onClick={() => setEditing(true)}>Thay đổi</button>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="banquet-map-card edit-mode">
       <div className="banquet-map-edit-header">
@@ -648,7 +667,7 @@ function MapBox({ d, set }: P) {
         <button
           type="button"
           className="banquet-map-cancel"
-          onClick={() => set({ mapUrl: "" })}
+          onClick={() => { set({ mapUrl: "" }); setEditing(false); }}
         >
           Hủy
         </button>
@@ -709,25 +728,25 @@ export function Rsvp({ d, set }: P) {
             </div>
           </div>
           <Field label="Kiểu hiển thị" cap>
-            <Segmented value={d.rsvpDisplay} onChange={(v) => set({ rsvpDisplay: v })} options={[{ value: "button", label: "Nút bấm" }, { value: "inline", label: "Hiện trực tiếp" }]} />
+            <Segmented size="sm" value={d.rsvpDisplay} onChange={(v) => set({ rsvpDisplay: v })} options={[{ value: "button", label: "Nút bấm" }, { value: "inline", label: "Hiện trực tiếp" }]} />
             <Helper>{d.rsvpDisplay === "button" ? "Khách bấm nút để mở form xác nhận trong cửa sổ popup" : "Form xác nhận hiển thị trực tiếp trên thiệp"}</Helper>
           </Field>
           <Field label="Số người mỗi thiệp" cap>
-            <Segmented value={d.partyMode} onChange={(v) => set({ partyMode: v })} options={[{ value: "free", label: "Khách tự chọn" }, { value: "limit", label: "Giới hạn" }]} />
+            <Segmented size="sm" value={d.partyMode} onChange={(v) => set({ partyMode: v })} options={[{ value: "free", label: "Khách tự chọn" }, { value: "limit", label: "Giới hạn" }]} />
             <Helper>{d.partyMode === "free" ? "Khách tự điền số người sẽ đến." : "Giới hạn số người tối đa cho mỗi thiệp."}</Helper>
           </Field>
           {d.partyMode === "limit" && (
             <Field label="Giới hạn tối đa"><Input type="number" min={1} value={d.partyLimit} onChange={(e) => set({ partyLimit: Math.max(1, Number(e.target.value) || 1) })} /></Field>
           )}
           <Field label="Câu hỏi thêm cho khách mời" cap>
-            <Helper>Khách trả lời khi xác nhận tham dự trên thiệp</Helper>
+            <Helper style={{ marginBottom: 0 }}>Khách trả lời khi xác nhận tham dự trên thiệp</Helper>
             {d.questions.map((q, i) => (
               <Row key={i}>
                 <Input value={q} placeholder="Nhập câu hỏi" onChange={(e) => upd(i, e.target.value)} />
                 <button className="icon-ghost sm" aria-label="Xoá câu hỏi" onClick={() => set({ questions: d.questions.filter((_, j) => j !== i) })}>{Icon.trash()}</button>
               </Row>
             ))}
-            <OutlineButton onClick={() => set({ questions: [...d.questions, ""] })}>{Icon.plus(16)} Thêm câu hỏi</OutlineButton>
+            <OutlineButton onClick={() => set({ questions: [...d.questions, ""] })} style={{ marginTop: -2 }}>{Icon.plus(16)} Thêm câu hỏi</OutlineButton>
           </Field>
         </>
       )}
@@ -890,6 +909,8 @@ export function Dress({ d, set }: P) {
 }
 
 export function Schedule({ d, set }: P) {
+  // Xóa hoạt động cần bấm xác nhận ngay trên thẻ ("Xóa" / "Hủy") như trang gốc
+  const [confirmDel, setConfirmDel] = useState<number | null>(null);
   const upd = (i: number, p: Partial<{ time: string; text: string }>) =>
     set({ sched: d.sched.map((s, j) => (j === i ? { ...s, ...p } : s)) });
 
@@ -925,7 +946,7 @@ export function Schedule({ d, set }: P) {
           <span>Bật để hiển thị lịch trình các hoạt động trong ngày cưới (đón khách, lễ gia tiên, khai tiệc...) cho khách dễ theo dõi.</span>
         </div>
       ) : (
-        <div className="space-y-3 pt-2">
+        <div className="sched-wrap">
           <Field label="Tiêu đề">
             <Input
               value={d.schedTitle || "LỊCH TRÌNH NGÀY CƯỚI"}
@@ -964,10 +985,16 @@ export function Schedule({ d, set }: P) {
                     </svg>
                   </button>
                 )}
+                {confirmDel === i ? (
+                  <>
+                    <button type="button" className="sched-btn-confirm" onClick={() => { remove(i); setConfirmDel(null); }}>Xóa</button>
+                    <button type="button" className="sched-btn-cancel" onClick={() => setConfirmDel(null)}>Hủy</button>
+                  </>
+                ) : (
                 <button
                   type="button"
                   className="sched-btn-icon delete"
-                  onClick={() => remove(i)}
+                  onClick={() => setConfirmDel(i)}
                   aria-label="Xóa hoạt động"
                   title="Xóa"
                 >
@@ -975,6 +1002,7 @@ export function Schedule({ d, set }: P) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                   </svg>
                 </button>
+                )}
               </div>
             </div>
             <div className="sched-card-body">
@@ -1013,7 +1041,7 @@ export function Schedule({ d, set }: P) {
         <button
           type="button"
           className="btn-outline-pill-full"
-          onClick={() => set({ sched: [...d.sched, { time: "18:00", text: "" }] })}
+          onClick={() => set({ sched: [...d.sched, { time: "", text: "" }] })}
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
@@ -1074,10 +1102,17 @@ export function GiftBox({ d, set }: P) {
   const [openModal, setOpenModal] = useState(false);
   const [openOtherModal, setOpenOtherModal] = useState(false);
   const [editId, setEditId] = useState<string | null>(null);
+  // Hộp thoại của các phương thức khác ngoài VietQR (PayPal, Wise, SEPA, Lời nhắn...)
+  const [methodModal, setMethodModal] = useState<{ method: string; initial?: Gift } | null>(null);
+  const saveMethod = (g: Omit<Gift, "id">) => {
+    const initial = methodModal?.initial;
+    set({ gifts: initial ? d.gifts.map((x) => (x.id === initial.id ? { ...x, ...g } : x)) : [...d.gifts, { id: "gift-" + Date.now(), ...g }] });
+    setMethodModal(null);
+  };
 
   const [who, setWho] = useState<Gift["who"]>("groom");
   const [customLabel, setCustomLabel] = useState("");
-  const [selectedBank, setSelectedBank] = useState(VN_BANKS[0]);
+  const [selectedBank, setSelectedBank] = useState<(typeof VN_BANKS)[number] | null>(null);
   const [bankSearch, setBankSearch] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
   const [accountName, setAccountName] = useState("");
@@ -1087,7 +1122,7 @@ export function GiftBox({ d, set }: P) {
     setEditId(null);
     setWho("groom");
     setCustomLabel("");
-    setSelectedBank(VN_BANKS[0]);
+    setSelectedBank(null);
     setAccountNumber("");
     setAccountName("");
     setBankSearch("");
@@ -1095,6 +1130,10 @@ export function GiftBox({ d, set }: P) {
   };
 
   const handleEdit = (g: Gift) => {
+    if (isMethodForm(g.type)) {
+      setMethodModal({ method: g.type!, initial: g });
+      return;
+    }
     setEditId(g.id);
     setWho(g.who);
     setCustomLabel(g.customLabel || "");
@@ -1117,10 +1156,16 @@ export function GiftBox({ d, set }: P) {
   };
 
   const handleSave = () => {
-    if (!accountNumber.trim() || !accountName.trim()) return;
+    // Như trang gốc: cho lưu cả khi chưa nhập gì (thành mục "VietQR" trống, điền sau)
     const cleanNum = accountNumber.trim().replace(/[\s-]+/g, "");
     const cleanName = accountName.trim().toUpperCase();
-    const qrUrl = `https://api.vietqr.io/image/${selectedBank.bin || "970415"}-${cleanNum}-print.png?accountName=${encodeURIComponent(cleanName)}`;
+    const qrUrl = selectedBank && cleanNum ? `https://api.vietqr.io/image/${selectedBank.bin || "970415"}-${cleanNum}-print.png?accountName=${encodeURIComponent(cleanName)}` : "";
+    const bankFields = {
+      bankName: selectedBank?.name ?? "",
+      bankCode: selectedBank?.code ?? "",
+      bankBin: selectedBank?.bin ?? "",
+      bankLogo: selectedBank ? `https://api.vietqr.io/img/${selectedBank.code}.png` : "",
+    };
 
     if (editId) {
       set({
@@ -1130,10 +1175,7 @@ export function GiftBox({ d, set }: P) {
                 ...g,
                 who,
                 customLabel: who === "custom" ? customLabel.trim() : undefined,
-                bankName: selectedBank.name,
-                bankCode: selectedBank.code,
-                bankBin: selectedBank.bin,
-                bankLogo: `https://api.vietqr.io/img/${selectedBank.code}.png`,
+                ...bankFields,
                 accountNumber: cleanNum,
                 accountName: cleanName,
                 qrUrl,
@@ -1146,10 +1188,7 @@ export function GiftBox({ d, set }: P) {
         id: "gift-" + Date.now(),
         who,
         customLabel: who === "custom" ? customLabel.trim() : undefined,
-        bankName: selectedBank.name,
-        bankCode: selectedBank.code,
-        bankBin: selectedBank.bin,
-        bankLogo: `https://api.vietqr.io/img/${selectedBank.code}.png`,
+        ...bankFields,
         accountNumber: cleanNum,
         accountName: cleanName,
         qrUrl,
@@ -1198,24 +1237,39 @@ export function GiftBox({ d, set }: P) {
           <div className="space-y-3 pt-2">
             <div className="gift-bank-list">
               {d.gifts.length === 0 ? (
-                <div className="empty-box">Chưa có tài khoản nào. Nhấn nút bên dưới để thêm.</div>
+                <div className="empty-box">Chưa có phương thức nào. Nhấn nút bên dưới để thêm.</div>
               ) : (
                 d.gifts.map((g) => (
                   <div className="gift-bank-card" key={g.id}>
-                    <div className="gift-bank-logo">
-                      <img
-                        alt={g.bankName}
-                        src={g.bankLogo || `https://api.vietqr.io/img/${g.bankCode}.png`}
-                        onError={(e) => {
-                          (e.currentTarget as HTMLElement).style.display = "none";
-                        }}
-                      />
+                    <div className={"gift-bank-logo" + (g.bankCode || isMethodForm(g.type) ? "" : " gift-bank-logo-qr")}>
+                      {isMethodForm(g.type) ? (
+                        <img alt={g.bankName} src={PAYMENT_METHODS.find((m) => m.id === g.type)?.icon} />
+                      ) : g.bankCode ? (
+                        <img
+                          alt={g.bankName}
+                          src={g.bankLogo || `https://api.vietqr.io/img/${g.bankCode}.png`}
+                          onError={(e) => {
+                            (e.currentTarget as HTMLElement).style.display = "none";
+                          }}
+                        />
+                      ) : (
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10-2h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2z" /></svg>
+                      )}
                     </div>
                     <div className="gift-bank-info">
                       <p className="gift-bank-title">{getWhoTitle(g)}</p>
-                      <p className="gift-bank-name">{g.accountName}</p>
-                      <p className="gift-bank-num">{g.accountNumber}</p>
-                      <p className="gift-bank-org">{g.bankName}</p>
+                      {isMethodForm(g.type) ? (
+                        <>
+                          {giftLines(g)[0] && <p className="gift-bank-num">{giftLines(g)[0]}</p>}
+                          <p className="gift-bank-org">{giftLines(g)[1]}</p>
+                        </>
+                      ) : (
+                        <>
+                          {g.accountName && <p className="gift-bank-name">{g.accountName}</p>}
+                          {g.accountNumber && <p className="gift-bank-num">{g.accountNumber}</p>}
+                          <p className="gift-bank-org">{g.bankName || (g.accountNumber || g.accountName ? "" : "VietQR")}</p>
+                        </>
+                      )}
                     </div>
                     <div className="gift-bank-actions">
                       <button
@@ -1270,7 +1324,7 @@ export function GiftBox({ d, set }: P) {
             </div>
           </div>
 
-          <Field label="Kiểu hiển thị">
+          {d.gifts.length > 0 && <Field label="Kiểu hiển thị">
             <Segmented inline
               value={d.giftDisplayMode || "gift_box"}
               onChange={(v) => set({ giftDisplayMode: v })}
@@ -1313,14 +1367,14 @@ export function GiftBox({ d, set }: P) {
                 },
               ]}
             />
-          </Field>
+          </Field>}
         </>
       )}
 
       {/* MODAL 1: ADD / EDIT VIETQR BANK */}
       {openModal && (
         <Modal
-          title={editId ? `Chỉnh sửa ${selectedBank.shortName || selectedBank.name}` : "Thêm tài khoản ngân hàng"}
+          title={editId ? `Chỉnh sửa ${selectedBank?.shortName || selectedBank?.name || "VietQR"}` : "Thêm VietQR"}
           onClose={() => setOpenModal(false)}
           className="bank-edit-modal-box"
         >
@@ -1369,9 +1423,10 @@ export function GiftBox({ d, set }: P) {
             {/* Ngân hàng */}
             <div className="bank-form-group" style={{ position: "relative" }}>
               <label className="bank-form-label">Ngân hàng</label>
+              <svg className="bank-search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
               <input
                 type="text"
-                className="bank-form-input"
+                className="bank-form-input bank-search-input"
                 placeholder="Tìm kiếm ngân hàng..."
                 value={bankSearch}
                 onChange={(e) => {
@@ -1382,7 +1437,7 @@ export function GiftBox({ d, set }: P) {
               />
 
               {/* Selected Bank Card (pink container matching media_1792176413994_26d8bd95.png) */}
-              <div className="bank-selected-pink-card">
+              {selectedBank && <div className="bank-selected-pink-card">
                 <div className="bank-logo-white-box">
                   <img
                     src={`https://api.vietqr.io/img/${selectedBank.code}.png`}
@@ -1396,7 +1451,7 @@ export function GiftBox({ d, set }: P) {
                   <div className="bank-selected-short">{selectedBank.shortName || selectedBank.name}</div>
                   <div className="bank-selected-full">{selectedBank.fullName || selectedBank.name}</div>
                 </div>
-              </div>
+              </div>}
 
               {/* Bank dropdown options */}
               {showBankDropdown && bankSearch.trim() && (
@@ -1428,7 +1483,7 @@ export function GiftBox({ d, set }: P) {
               <input
                 type="text"
                 className="bank-form-input"
-                placeholder="1023456789"
+                placeholder="Nhập số tài khoản"
                 value={accountNumber}
                 onChange={(e) => setAccountNumber(e.target.value)}
               />
@@ -1440,7 +1495,7 @@ export function GiftBox({ d, set }: P) {
               <input
                 type="text"
                 className="bank-form-input"
-                placeholder="TRAN TUAN KIET"
+                placeholder="Nhập tên chủ tài khoản"
                 value={accountName}
                 onChange={(e) => setAccountName(e.target.value.toUpperCase())}
               />
@@ -1458,7 +1513,6 @@ export function GiftBox({ d, set }: P) {
               <button
                 type="button"
                 className="bank-btn-save"
-                disabled={!accountNumber.trim() || !accountName.trim()}
                 onClick={handleSave}
               >
                 Lưu
@@ -1468,107 +1522,54 @@ export function GiftBox({ d, set }: P) {
         </Modal>
       )}
 
-      {/* MODAL 2: OTHER PAYMENT METHODS */}
+      {/* MODAL 2: OTHER PAYMENT METHODS (thứ tự và nhóm như trang gốc) */}
       {openOtherModal && (
         <Modal
           title="Chọn phương thức nhận quà"
           onClose={() => setOpenOtherModal(false)}
+          className="payment-modal-box"
         >
-          <div className="space-y-4 pt-1 max-h-[70vh] overflow-y-auto pr-1">
-            {/* Phổ biến tại Việt Nam */}
-            <div>
-              <p className="text-xs uppercase opacity-60 font-semibold mb-2">Phổ biến tại Việt Nam</p>
-              <div className="payment-methods-grid">
-                {PAYMENT_METHODS.filter((m) => m.category === "vietnam").map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    className="payment-method-card"
-                    title={m.description}
-                    onClick={() => {
-                      setOpenOtherModal(false);
-                      handleOpenAdd();
-                    }}
-                  >
-                    <div
-                      className="payment-icon-wrap"
-                      style={{ backgroundColor: `${m.accent}14` }}
+          <div className="space-y-4 pt-1">
+            {[
+              { label: "Phổ biến", ids: ["vietqr", "paypal", "wise", "registry"] },
+              { label: "Khác", ids: ["upload_qr", "venmo", "cashapp", "revolut", "zelle", "sepa", "bank_generic", "note"] },
+            ].map((group) => (
+              <div key={group.label}>
+                <p className="text-xs uppercase opacity-60 font-semibold mb-2">{group.label}</p>
+                <div className="payment-methods-grid">
+                  {group.ids.map((id) => PAYMENT_METHODS.find((x) => x.id === id)!).map((m) => (
+                    <button
+                      key={m.id}
+                      type="button"
+                      className="payment-method-card"
+                      title={m.description}
+                      onClick={() => {
+                        setOpenOtherModal(false);
+                        if (m.id === "vietqr") handleOpenAdd();
+                        else setMethodModal({ method: m.id });
+                      }}
                     >
-                      <img
-                        alt={m.name}
-                        className="w-full h-full object-contain p-1"
-                        src={m.icon}
-                      />
-                    </div>
-                    <span className="payment-title">{m.name}</span>
-                  </button>
-                ))}
+                      <div className="payment-icon-wrap" style={{ backgroundColor: `${m.accent}14` }}>
+                        <img alt={m.name} className="w-full h-full object-contain p-1" src={m.icon} />
+                      </div>
+                      <span className="payment-title">{m.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Phương thức quốc tế */}
-            <div>
-              <p className="text-xs uppercase opacity-60 font-semibold mb-2">Phương thức quốc tế</p>
-              <div className="payment-methods-grid">
-                {PAYMENT_METHODS.filter((m) => m.category === "international").map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    className="payment-method-card"
-                    title={m.description}
-                    onClick={() => {
-                      setOpenOtherModal(false);
-                      handleOpenAdd();
-                    }}
-                  >
-                    <div
-                      className="payment-icon-wrap"
-                      style={{ backgroundColor: `${m.accent}14` }}
-                    >
-                      <img
-                        alt={m.name}
-                        className="w-full h-full object-contain p-1"
-                        src={m.icon}
-                      />
-                    </div>
-                    <span className="payment-title">{m.name}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Khác */}
-            <div>
-              <p className="text-xs uppercase opacity-60 font-semibold mb-2">Tùy chọn khác</p>
-              <div className="payment-methods-grid">
-                {PAYMENT_METHODS.filter((m) => m.category === "other").map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    className="payment-method-card"
-                    title={m.description}
-                    onClick={() => {
-                      setOpenOtherModal(false);
-                      handleOpenAdd();
-                    }}
-                  >
-                    <div
-                      className="payment-icon-wrap"
-                      style={{ backgroundColor: `${m.accent}14` }}
-                    >
-                      <img
-                        alt={m.name}
-                        className="w-full h-full object-contain p-1"
-                        src={m.icon}
-                      />
-                    </div>
-                    <span className="payment-title">{m.name}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </Modal>
+      )}
+
+      {methodModal && (
+        <GiftMethodModal
+          key={methodModal.method + (methodModal.initial?.id ?? "new")}
+          method={methodModal.method}
+          initial={methodModal.initial}
+          onClose={() => setMethodModal(null)}
+          onSave={saveMethod}
+        />
       )}
     </Section>
   );
@@ -1606,10 +1607,8 @@ export function Music({ d, set }: P) {
     <Section
       title="Nhạc nền"
       icon={
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-          <path d="M9 18V5l12-2v13" strokeLinecap="round" strokeLinejoin="round" />
-          <circle cx="6" cy="18" r="3" />
-          <circle cx="18" cy="16" r="3" />
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
         </svg>
       }
     >
@@ -1655,18 +1654,14 @@ export function Music({ d, set }: P) {
       ) : (
         <div className="music-box-container">
           <div className="music-disc-large">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 18V5l12-2v13" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="6" cy="18" r="3" />
-              <circle cx="18" cy="16" r="3" />
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
             </svg>
           </div>
           <p className="music-track-name">Chưa chọn nhạc nền</p>
           <button type="button" className="music-choose-btn" onClick={() => setPick(true)}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-              <path d="M9 18V5l12-2v13" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="6" cy="18" r="3" />
-              <circle cx="18" cy="16" r="3" />
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
             </svg>
             Chọn nhạc
           </button>
@@ -1683,7 +1678,7 @@ export function Envelope({ d, set }: P) {
       <Field label="Lời mời">
         <Input placeholder="VD: Kính Mời" value={d.envelopeInviteMessage} onChange={(e) => set({ envelopeInviteMessage: e.target.value })} />
       </Field>
-      <Helper>Áp dụng cho tất cả khách. Để thay đổi riêng từng khách, chỉnh trong phần <a className="link-btn" href="/guests">Quản lý khách mời</a>.</Helper>
+      <Helper style={{ marginTop: 0 }}>Áp dụng cho tất cả khách. Để thay đổi riêng từng khách, chỉnh trong phần <a className="link-btn" href="/guests">Quản lý khách mời</a>.</Helper>
     </Section>
   );
 }
@@ -1694,6 +1689,38 @@ const shareEnvelopeIcon = (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
+
+/** Hoa trang trí của ảnh chia sẻ theo mẫu; mẫu chưa khai báo dùng hoa gradient theo màu chủ đạo. */
+const SHARE_DECOR: Record<string, string> = {
+  minimalism_darkred: "/images/themes/minimalism-dark-red/flower2-decoration.webp",
+};
+
+/** Ảnh phong bì xem trước khi chia sẻ: dựng theo bảng màu của mẫu đang chọn (không dùng ảnh tĩnh chung). */
+function ShareEnvelopeCover({ templateId }: { templateId: string }) {
+  const theme = TEMPLATE_THEMES[templateId];
+  const ink = theme?.ink ?? "#43221c";
+  const decor = SHARE_DECOR[templateId];
+  return (
+    <div className="share-og-envelope-cover share-og-themed" role="img" aria-label="Phong bì thiệp" style={{ background: theme?.cover ?? "#f6efe9", color: ink }}>
+      <div className="share-og-themed-veil" />
+      {decor ? (
+        <>
+          <img alt="" aria-hidden="true" className="share-og-decor tl" src={decor} />
+          <img alt="" aria-hidden="true" className="share-og-decor br" src={decor} />
+        </>
+      ) : (
+        <>
+          <span className="share-og-floral left" style={{ backgroundImage: `radial-gradient(circle at 20% 50%, ${ink} 12%, transparent 65%)` }} />
+          <span className="share-og-floral right" style={{ backgroundImage: `radial-gradient(circle at 80% 50%, ${ink} 12%, transparent 65%)` }} />
+        </>
+      )}
+      <div className="share-og-themed-center">
+        <span className="share-og-themed-title">Thiệp Cưới</span>
+        <span className="share-og-themed-symbol">❦</span>
+      </div>
+    </div>
+  );
+}
 
 export function Share({ d, set }: P) {
   const [showCrop, setShowCrop] = useState(false);
@@ -1711,7 +1738,7 @@ export function Share({ d, set }: P) {
 
   return (
     <Section title="Ảnh xem trước khi chia sẻ" icon={shareEnvelopeIcon}>
-      <Helper>Ảnh hiển thị khi bạn gửi link thiệp qua Zalo, Facebook, Messenger. Chọn 1 trong 2 kiểu bên dưới.</Helper>
+      <Helper style={{ fontSize: 14, lineHeight: "20px", opacity: 0.7 }}>Ảnh hiển thị khi bạn gửi link thiệp qua Zalo, Facebook, Messenger. Chọn 1 trong 2 kiểu bên dưới.</Helper>
       <Segmented
         value={d.shareStyle || "photo"}
         onChange={(v) => set({ shareStyle: v })}
@@ -1720,7 +1747,7 @@ export function Share({ d, set }: P) {
           { value: "photo", label: "Ảnh của bạn" },
         ]}
       />
-      <Helper>
+      <Helper style={{ marginTop: -8, marginBottom: -4 }}>
         {d.shareStyle === "photo"
           ? "Ảnh bạn chọn, kèm tên cô dâu chú rể và ngày cưới."
           : "Phong bì thiệp của bạn. Với link mời riêng, ảnh sẽ hiện tên khách được mời."}
@@ -1784,7 +1811,7 @@ export function Share({ d, set }: P) {
               </div>
             </div>
           ) : (
-            <div className="share-og-envelope-cover" role="img" aria-label="Phong bì thiệp" />
+            <ShareEnvelopeCover templateId={d.templateId} />
           )}
         </div>
         <div className="share-og-meta">
@@ -1795,9 +1822,11 @@ export function Share({ d, set }: P) {
       </div>
 
       <div className="share-foot-notes">
-        <p className="share-foot-note">
-          {!d.customSharePhoto ? "Chưa chọn ảnh, thiệp đang dùng phong bì." : "Đã chọn ảnh tùy chỉnh cho xem trước."}
-        </p>
+        {d.shareStyle === "photo" && (
+          <p className="share-foot-note">
+            {!d.customSharePhoto ? "Chưa chọn ảnh, thiệp đang dùng phong bì." : "Đã chọn ảnh tùy chỉnh cho xem trước."}
+          </p>
+        )}
         <p className="share-foot-note">
           Dòng chữ dưới ảnh gồm lời mời, tên hai bạn, ngày tổ chức và địa chỉ trong phần tiệc. Thiệp chỉ lưu một địa chỉ, nên phần xem trước luôn hiện nơi đó, không hiện nơi làm lễ.
         </p>

@@ -39,7 +39,7 @@ export const PAYMENT_METHODS: PaymentMethodConfig[] = [
   },
   {
     id: "upload_qr",
-    name: "Tải lên mã QR riêng",
+    name: "Ảnh mã QR",
     category: "vietnam",
     icon: "/icons/payments/upload-qr.svg",
     accent: "#4F46E5",
@@ -124,7 +124,7 @@ export const PAYMENT_METHODS: PaymentMethodConfig[] = [
   // Khác
   {
     id: "note",
-    name: "Lời chúc & Tin nhắn",
+    name: "Lời nhắn",
     category: "other",
     icon: "/icons/payments/note.svg",
     accent: "#B45309",
