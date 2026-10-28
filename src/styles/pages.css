@@ -2155,8 +2155,8 @@ button.gst-chip { border: 0; font-family: inherit; cursor: pointer; }
 .min-env-screen .min-card-wrap > div { width: 540px; max-width: 92vw; }
 
 /* Thư viện ảnh rỗng: chỉ một ô "Thêm ảnh" vuông ở giữa (ảnh 210307) */
-.album-empty-add { width: 108px; height: 108px; margin: 8px auto 0; border: 0; border-radius: 12px; background: var(--s3); box-shadow: 0 0 0 1px rgba(var(--fgrgb), 0.06) inset; flex-direction: column; gap: 6px; color: rgba(var(--bcrgb), 0.6); display: flex; align-items: center; justify-content: center; cursor: pointer; }
-.album-empty-add svg { width: 28px; height: 28px; opacity: 0.7; }
+.album-empty-add { width: 120px; height: 120px; margin: 0 auto; border: 0; border-radius: 8px; font-size: 12px; font-weight: 400; background: var(--s3); box-shadow: 0 0 0 1px rgba(var(--fgrgb), 0.06) inset; flex-direction: column; gap: 6px; color: rgba(var(--bcrgb), 0.6); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.album-empty-add svg { width: 24px; height: 24px; opacity: 0.7; }
 /* Modal chọn nhạc / cắt ảnh phải nằm trên thanh dock mobile (z-index 990) */
 .mp-back { z-index: 1200; }
 .modal-back { z-index: 1200; }
@@ -2169,11 +2169,11 @@ button.gst-chip { border: 0; font-family: inherit; cursor: pointer; }
 .share-og-envelope-cover { background: #f6efe9 url("/images/share-envelope-default.png") no-repeat 42.4% 57.8% / 106.06% auto; padding: 0; }
 
 /* RSVP: khung thông tin xanh theo ảnh chuẩn; Thông tin gia đình: tiêu đề nhỏ, vạch ngăn */
-.rsvp-info { display: flex; gap: 12px; padding: 14px 16px; border-radius: 12px; background: #131110; margin-bottom: 12px; }
-.rsvp-info b { display: block; font-size: 13px; font-weight: 700; color: var(--fg); }
-.rsvp-info p { margin: 2px 0 0; font-size: 12px; color: rgba(var(--bcrgb), 0.55); }
-.card-b .sub { font-size: 12px; font-weight: 600; color: rgba(var(--bcrgb), 0.55); margin: 4px 0 8px; }
-.card-b hr.divider { border: 0; border-top: 1px solid rgba(var(--fgrgb), 0.08); margin: 16px 0; height: 0; }
+.rsvp-info { display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: #131110; margin-bottom: 0; }
+.rsvp-info b { display: block; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--fg); }
+.rsvp-info p { margin: 0; line-height: 16px; font-size: 12px; color: rgba(var(--bcrgb), 0.55); }
+.card-b .sub { font-size: 12px; line-height: 16px; font-weight: 600; color: rgba(var(--bcrgb), 0.55); margin: 0 0 -4px; }
+.card-b hr.divider { border: 0; border-top: 1px solid rgba(var(--fgrgb), 0.08); margin: 4px 0 -1px; height: 0; }
 .btn-outline { gap: 8px; }
 
 /* Long Phụng V2: khung thiệp rộng 900px như trang thật (md:max-w-[900px]) */
@@ -2182,3 +2182,15 @@ button.gst-chip { border: 0; font-family: inherit; cursor: pointer; }
 /* Song Phụng: khung thiệp rộng 900px ở màn hình md trở lên như trang thật (max-w-[900px]); mobile giữ 480px */
 .theme-songphung .songphung-template { max-width: 900px; }
 @media (max-width: 767px) { .theme-songphung .songphung-template, .theme-longphung-v2 .songphung-template { max-width: 480px; } }
+
+/* Thanh điều hướng: kích thước đo từ trang gốc (logo 151×40, nút Đăng Nhập 106×40 từ md) */
+.topnav { height: 65px; }
+.topnav .brand-logo { height: 40px; padding: 0 16px; border-radius: 8px; font-family: "Pattaya", cursive; font-style: normal; font-weight: 600; }
+.topnav-links { gap: 24px; }
+.topnav-right { gap: 0; }
+@media (min-width: 769px) {
+  .btn-login { height: 40px; padding: 0 16px; font-size: 14px; }
+}
+@media (max-width: 768px) {
+  .topnav { height: 64px; }
+}

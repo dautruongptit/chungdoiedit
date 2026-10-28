@@ -55,3 +55,15 @@ Desktop.ini
 .playwright-mcp/
 
 .chrome_profile/
+
+# tài nguyên tham chiếu từ trang gốc (chỉ dùng localhost)
+public/assets/_reference/
+
+# CSS thiệp sinh bởi scripts/build-invitation-css.mjs
+src/features/invitation/styles/invitation.generated.css
+src/features/invitation/styles/*.resolved.tmp.css
+
+# ảnh chụp tham chiếu từ trang gốc (chỉ dùng localhost) và script nháp
+docs/reference/
+docs/survey/frames/
+scripts/_*

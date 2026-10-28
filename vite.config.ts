@@ -26,6 +26,10 @@ export default defineConfig({
       },
     },
   ],
+  server: {
+    // profile Chrome của script chụp ảnh nằm trong repo; Chrome khóa file nên watcher sẽ crash (EBUSY).
+    watch: { ignored: ["**/.chrome_profile/**"] },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

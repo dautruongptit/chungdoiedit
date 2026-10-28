@@ -6,6 +6,7 @@ import "@/styles/fonts.css";
 import "@/styles/styles.css";
 import "@/styles/pages.css";
 import "@/styles/tw.css";
+import "@/features/invitation/styles/invitation.generated.css";
 import "@/features/invitation/components/generated/headers.css";
 
 initTheme();

@@ -1,0 +1,24 @@
+/* Nguồn CSS riêng của thiệp: Tailwind v4 + daisyUI v5 (giống trang gốc chungdoi.com).
+   Không import trực tiếp: `npm run css:inv` biên dịch + gắn tiền tố `.inv-root` -> invitation.generated.css */
+/* "tw4-index" được script thay bằng đường dẫn tới Tailwind v4 (vị trí đổi theo cách npm gom gói) */
+@import "tw4-index";
+@plugin "../../../../node_modules/daisyui" {
+  themes: halloween --default;
+}
+@source "../../invitation/shell";
+@source "../components/BrownRsvpDialog.tsx";
+@source "../../editor/components";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Trang gốc: tiêu đề h1–h6 dùng Gotham/Montserrat khi không có font riêng */
+h1, h2, h3, h4, h5, h6 { font-family: Gotham, Montserrat; }
+
+/* Token chủ đề của trang gốc: theme halloween nhưng primary/secondary tùy chỉnh (đo từ :root của chungdoi.com) */
+.inv-root.inv-root {
+  --color-primary: oklch(64% 0.26 1.68);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(62% 0.265 303.9);
+}
