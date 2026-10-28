@@ -31,4 +31,13 @@ export interface CoverConfig {
   rgb: string;
   btnBg: string;
   btnTextColor: string;
+  /** Tên cô dâu chú rể lên cỡ lớn từ breakpoint sm (640px) thay vì md (768px), như trang gốc. */
+  nameFromSm?: boolean;
+  /** Hiệu ứng chuyển cảnh riêng khi bấm "Mở thiệp" (mặc định: hạt tuôn từ dấu sáp + 2 vòng sóng). */
+  openFx?: "center-hearts";
+  /** Màu chữ ngày/khách mời khi trang gốc không dùng mặc định chung (mặc định: textColor + opacity 0.85 / nâu 0.72). */
+  dateColor?: string;
+  guestColor?: string;
+  /** Font dấu "&" giữa tên (mặc định Baskerville) */
+  ampFont?: string;
 }

@@ -1,3 +1,4 @@
+import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
 import { TPL_CDN, introDefaultFor, type Tpl } from "@/features/templates/data/templates";
 import type { Inv } from "@/types/invitation";
 import type { Card } from "@/types/card";
@@ -48,6 +49,8 @@ export function createDraft(t: Tpl): string {
     templateThumb: TPL_CDN + t.img,
     introText: introDefaultFor(t.id),
     dressColors,
+    // Kiểu hộp quà mặc định theo mẫu (phong bì hay hộp quà 3D) như trang gốc
+    giftDisplayMode: getGiftboxConfig(t.id).giftboxType === "envelope" ? "envelope" : "gift_box",
   };
   saveInv(id, initialInv);
   return id;

@@ -1,0 +1,15 @@
+{
+  "assets": "/images/themes/riviera-blue",
+  "colors": {
+    "ink": "rgb(0, 88, 133)",
+    "inkRgb": "0, 88, 133",
+    "text": "rgb(0, 0, 0)",
+    "paper": "rgb(253, 251, 245)",
+    "edge": "#00588522",
+    "cream": "#FFFFFF",
+    "rsvpBtnText": "rgb(255, 255, 255)"
+  },
+  "tokens": {
+    "scheduleIcons": "bird,gate,fountain"
+  }
+}

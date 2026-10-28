@@ -12,6 +12,10 @@ export type GiftMethod = {
   accountName: string;
   customLabel?: string;
   qrUrl?: string;
+  /** Giá trị các ô của form phương thức (PayPal, Wise, SEPA...) theo khóa ô nhập. */
+  fields?: Record<string, string>;
+  /** Ẩn mã QR, chỉ hiện thông tin chữ / nút bấm. */
+  hideQr?: boolean;
 };
 
 export type Gift = GiftMethod;

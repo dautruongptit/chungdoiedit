@@ -1,7 +1,8 @@
 import React from "react";
+import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
 import type { CoverProps, CoverConfig } from "./types";
 import { AmbientParticles } from "./AmbientParticles";
-import { OpenTransitionBurst, useEnvelopeOpen } from "./OpenTransition";
+import { OpenTransitionBurst, OpenTransitionBurstCenter, useEnvelopeOpen } from "./OpenTransition";
 import { groomShown, brideShown } from "@/utils/format";
 import { parseDate } from "@/utils/date";
 
@@ -17,6 +18,8 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
   const dateText = `${dt.getDate()} tháng ${dt.getMonth() + 1}, ${dt.getFullYear()}`;
 
   const { isOpening, showBurst, triggerOpen } = useEnvelopeOpen(onOpen);
+  // Trang gốc: hoa trang trí "bay về phía trước" chỉ khi hộp quà là hộp 3D (phong bì thì không)
+  const flyDecor = getGiftboxConfig(d.templateId).giftboxType === "3d-box";
 
   // Seal radial gradient
   const sealBg = config.sealBg || (config.sealType === "xi"
@@ -41,7 +44,8 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
       <AmbientParticles type={config.particleType} color={`rgba(${config.rgb}, 0.5)`} count={12} />
 
       {/* Burst Particles and Ripple Rings during open transition */}
-      {showBurst && (
+      {showBurst && config.openFx === "center-hearts" && <OpenTransitionBurstCenter />}
+      {showBurst && config.openFx !== "center-hearts" && (
         <OpenTransitionBurst type={config.particleType} baseColor={config.accentColor} sealPosition={{ top: config.sealTop !== undefined ? config.sealTop : 50 }} />
       )}
 
@@ -54,6 +58,39 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
           animation: showBurst ? "0.8s ease-in 0s 1 normal forwards running envelope-away" : undefined,
         }}
       >
+        {/* Vòng sóng quanh dấu sáp, chạy ngay khi bấm (chỉ mẫu có openFx) */}
+        {config.openFx === "center-hearts" && isOpening && (
+          <div
+            className="absolute left-1/2 rounded-full pointer-events-none"
+            style={{
+              top: config.sealTop !== undefined ? config.sealTop : 50,
+              width: 56,
+              height: 56,
+              transform: "translate(-50%, -50%)",
+              border: `3px solid ${config.accentColor}`,
+              zIndex: 29,
+              animation: "0.6s ease-out 0s 1 normal forwards running seal-ring",
+            }}
+          />
+        )}
+
+        {/* Vòng sóng ngay lúc bấm (trang gốc: 56px, viền 3px, 0.6s) */}
+        {isOpening && config.sealType !== "none" && (
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 rounded-full pointer-events-none"
+            style={{
+              top: config.sealTop !== undefined ? config.sealTop : 50,
+              width: 56,
+              height: 56,
+              transform: "translate(-50%, -50%)",
+              border: `3px solid ${config.accentColor}`,
+              zIndex: 29,
+              animation: "0.6s ease-out 0s 1 normal forwards running seal-ring",
+            }}
+          />
+        )}
+
         {/* Seal Button on top */}
         {config.sealType !== "none" && (
           <div
@@ -67,7 +104,8 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
               height: 56,
               transform: "translate(-50%, -50%)",
               background: sealBg,
-              boxShadow: isOpening ? "none" : `0 4px 20px rgba(${config.rgb}, 0.5), inset 0 2px 4px rgba(255,255,255,0.3)`,
+              ["--shadow-color" as any]: `rgba(${config.rgb}, 0.5)`,
+              boxShadow: `0 4px 20px rgba(${config.rgb}, 0.5), inset 0 2px 4px rgba(255,255,255,0.3)`,
               zIndex: 30,
               animation: isOpening
                 ? "0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s 1 normal forwards running seal-break"
@@ -81,7 +119,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
                   color: sealColor,
                   fontFamily: "serif",
                   transformOrigin: "center center",
-                  animation: isOpening ? "0.36s ease-out 0s 1 normal forwards running seal-flower-bloom" : undefined,
+                  
                 }}
                 aria-hidden="true"
               >
@@ -92,7 +130,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
                 style={{
                   fill: sealColor,
                   transformOrigin: "center center",
-                  animation: isOpening ? "0.36s ease-out 0s 1 normal forwards running seal-flower-bloom" : undefined,
+                  
                 }}
                 viewBox="0 0 24 24"
                 className="w-7 h-7"
@@ -128,7 +166,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
                 className={img.className}
                 style={{
                   ...img.style,
-                  ...(isOpening ? {
+                  ...(isOpening && flyDecor ? {
                     ["--fly-scale-x" as any]: i === 0 ? 1 : -1,
                     animation: "1.2s ease-in 0s 1 normal forwards running dragon-fly-forward",
                   } : {}),
@@ -143,13 +181,13 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
           {/* Card Content */}
           <div className="relative z-10 text-center px-6 pt-28 pb-14 md:pt-24 md:pb-8">
             <h1
-              className="mb-2 flex flex-col items-center text-[30px] leading-[37.5px] md:text-[36px] md:leading-[45px] font-normal"
+              className={`mb-2 flex flex-col items-center text-[30px] leading-[37.5px] font-normal ${config.nameFromSm ? "sm:text-[36px] sm:leading-[45px]" : "md:text-[36px] md:leading-[45px]"}`}
               style={{ color: textColor, fontFamily: config.nameFont, fontWeight: 400 }}
             >
               <span className="block w-full text-center font-normal">{gName}</span>
               <span
-                style={{ fontFamily: '"Baskerville", "Times New Roman", serif' }}
-                className="block w-full text-center text-[18px] leading-[18px] md:text-[20px] md:leading-[20px]"
+                style={{ fontFamily: config.ampFont || '"Baskerville", "Times New Roman", serif' }}
+                className={`block w-full text-center text-[18px] leading-[18px] ${config.nameFromSm ? "sm:text-[20px] sm:leading-[20px]" : "md:text-[20px] md:leading-[20px]"}`}
               >
                 &amp;
               </span>
@@ -174,7 +212,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
             {/* Date */}
             <div
               className="text-[18px] leading-[27px] mb-5 flex flex-col items-center"
-              style={{ color: textColor, opacity: 0.85, fontFamily: '"Lora", "Times New Roman", serif' }}
+              style={{ color: config.dateColor || textColor, opacity: config.dateColor ? 1 : 0.85, fontFamily: '"Lora", "Times New Roman", serif' }}
             >
               <span className="inline-block">{dateText}</span>
             </div>
@@ -183,7 +221,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
             <div className="mb-6 max-w-[300px] md:max-w-[380px] lg:max-w-[440px] mx-auto">
               <p
                 className="text-[18px] leading-[27px] font-light mb-2"
-                style={{ color: "rgba(124, 106, 96, 0.72)", fontFamily: '"Lora", "Times New Roman", serif' }}
+                style={{ color: config.guestColor || "rgba(124, 106, 96, 0.72)", fontFamily: '"Lora", "Times New Roman", serif' }}
               >
                 <span dir="auto">{d.envelopeGuest || "Thân Mời"}</span>
               </p>

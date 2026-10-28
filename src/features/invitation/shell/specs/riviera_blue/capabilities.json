@@ -1,0 +1,57 @@
+{
+  "id": "riviera_blue",
+  "family": "riviera",
+  "testId": "riviera-blue-template",
+  "rootClass": "st-card",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Family",
+    "Album",
+    "LineDecoration",
+    "Banquet",
+    "RsvpBridge",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Thanks",
+    "Credit",
+    "Stone",
+    "RsvpDialogHost",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "blossom",
+    "skin": "architectural"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "none",
+    "introLine": true
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "carousel"
+  },
+  "countdown": true,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "stretch",
+    "parallaxDecor": true
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": false,
+      "coupleHero": false,
+      "introLine": true
+    }
+  },
+  "music": "my-love-westlife.mp3"
+}

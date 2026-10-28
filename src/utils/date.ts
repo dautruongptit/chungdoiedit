@@ -12,8 +12,15 @@ export const WEEKDAYS_FULL = [
 ];
 export const WEEKDAYS_SHORT = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
 
+/** Ngày mặc định khi thiệp chưa nhập ngày: thứ Bảy đầu tiên từ 30 ngày nữa (giống trang gốc). */
+export function defaultWeddingDate(now = new Date()) {
+  const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 30);
+  while (d.getDay() !== 6) d.setDate(d.getDate() + 1);
+  return d;
+}
+
 export function parseDate(s: string) {
-  if (!s) return new Date(2026, 4, 3);
+  if (!s) return defaultWeddingDate();
   const [y, m, d] = s.split("-").map(Number);
   return new Date(y, (m || 1) - 1, d || 1);
 }

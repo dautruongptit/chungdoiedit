@@ -34,6 +34,17 @@ export interface GiftboxConfig {
 export const GIFTBOX_CONFIGS: Record<string, GiftboxConfig> = {
   "minimalism_darkred": {
     giftboxType: "envelope",
+    // Mẫu mặc định dùng phong bì, nhưng người dùng vẫn chọn được kiểu "Hộp quà" nên cần đủ ảnh hộp quà 3D.
+    mainBoxSrc: "/images/giftbox/minimalism_darkred.webp",
+    miniImgs: [
+      { src: "/images/giftbox/mini/royal_v2_green.webp", style: "left: -20px; top: 10px; width: 34px; z-index: 1; transform: rotate(-22deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/song_hy_green.webp", style: "left: 168px; top: 2px; width: 38px; z-index: 1; transform: rotate(20deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/santorini_blue.webp", style: "left: -16px; top: 120px; width: 26px; z-index: 1; transform: rotate(-18deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/royal_v2_purple.webp", style: "left: 182px; top: 114px; width: 24px; z-index: 1; transform: rotate(14deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/qasr_blue.webp", style: "left: -8px; top: 172px; width: 44px; z-index: 3; transform: rotate(8deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/brocade_flower_red.webp", style: "left: 26px; top: 182px; width: 26px; z-index: 3; transform: rotate(-10deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+      { src: "/images/giftbox/mini/hoa_dai_pink.webp", style: "left: 118px; top: 176px; width: 40px; z-index: 3; transform: rotate(-14deg); filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 2px 3px); will-change: transform, opacity;", className: "igb-decor absolute pointer-events-none" },
+    ],
     sectionTitle: "HỘP QUÀ MỪNG",
     sectionTitleColor: "rgb(81, 20, 25)",
     sectionTitleFont: "\"Times New Roman\", serif",

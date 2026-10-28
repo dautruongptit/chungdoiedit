@@ -1,0 +1,14 @@
+{
+  "assets": "/images/themes/minimalism-brown",
+  "colors": {
+    "ink": "rgb(124, 106, 96)",
+    "inkRgb": "124, 106, 96",
+    "sub": "rgb(145, 128, 119)",
+    "muted": "rgb(130, 119, 113)",
+    "paper": "rgb(255, 247, 243)",
+    "line": "rgb(222, 217, 215)",
+    "accent": "rgb(246, 234, 221)",
+    "edge": "#7c6a6022",
+    "cream": "#FFFAF7"
+  }
+}

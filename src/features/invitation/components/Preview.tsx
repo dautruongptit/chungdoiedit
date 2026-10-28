@@ -7,11 +7,15 @@ import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
 import { GENERATED_HEADERS } from "@/features/invitation/components/generated/headers";
 import AlbumGallery from "@/features/invitation/components/AlbumGallery";
 import { HoaMocXanh } from "@/features/invitation/components/HoaMocXanh";
-import { MinimalismBrown } from "@/features/invitation/components/MinimalismBrown";
+import { InvitationShell } from "@/features/invitation/shell/InvitationShell";
+import { getTemplateSpec } from "@/features/invitation/shell/specs";
+import { DarkRedAlbum, DarkRedBanquet, DarkRedGuestbook, DarkRedHeader, DarkRedInfoFrame, DarkRedSchedule, DarkRedVenue } from "@/features/invitation/components/MinimalismDarkRed";
 import { getThemeBackgroundUrl, getThemeDecorations, getTemplateManifest } from "@/features/templates/data/themeManifest";
 import { assetUrl } from "@/services/asset";
 import type { Inv } from "@/types/invitation";
 import { brideShown, groomShown } from "@/utils/format";
+import { lunarLabel } from "@/utils/lunar";
+import { googleCalendarUrl } from "@/utils/calendar";
 import {
   WEEKDAYS_FULL,
   WEEKDAYS_SHORT,
@@ -21,8 +25,17 @@ import {
   parseDate,
 } from "@/utils/date";
 
+/** Ảnh đại diện xám hiện trong phong bì khi chưa có ảnh đầu thiệp (cùng tệp với trang gốc). */
+const AVATAR_PLACEHOLDER = assetUrl("/images/avatar-placeholder.jpeg");
+
+/** Tên khách từ liên kết riêng (?guest=Tên); chỉ áp dụng khi xem thiệp độc lập, không ảnh hưởng editor. */
+function guestFromUrl(standalone: boolean): string {
+  if (!standalone || typeof location === "undefined") return "";
+  return (new URLSearchParams(location.search).get("guest") || "").trim().slice(0, 60);
+}
+
 export default function Preview({
-  d,
+  d: dProp,
   set,
   standalone = false,
   initialOpen,
@@ -34,6 +47,8 @@ export default function Preview({
   initialOpen?: boolean;
   onEnvelopeOpen?: () => void;
 }) {
+  const urlGuest = guestFromUrl(standalone);
+  const d = urlGuest ? { ...dProp, envelopeGuest: urlGuest } : dProp;
   const [isOpen, setIsOpen] = useState(() => {
     if (initialOpen !== undefined) return initialOpen;
     if (standalone) {
@@ -50,6 +65,7 @@ export default function Preview({
 
   const intro = d.introCustom && d.introText.trim() ? d.introText.trim() : introDefaultFor(d.templateId);
   const isDarkRed = d.templateId === "minimalism_darkred";
+  const shellSpec = getTemplateSpec(d.templateId);
   const isMinimalismBrown = d.templateId === "minimalism_brown";
   const isMinimalism = isMinimalismBrown;
   const palette = TEMPLATE_THEMES[d.templateId];
@@ -62,6 +78,8 @@ export default function Preview({
   const themeBgUrl = getThemeBackgroundUrl(d.templateId);
   const themeDecos = getThemeDecorations(d.templateId);
   const giftConfig = getGiftboxConfig(d.templateId);
+  // Kiểu hiển thị hộp quà: theo lựa chọn của người dùng; chưa chọn thì theo kiểu mặc định của mẫu
+  const giftMode = d.giftDisplayMode || (giftConfig.giftboxType === "envelope" ? "envelope" : "gift_box");
   const [rsvpForm, setRsvpForm] = useState({
     name: d.envelopeGuest || "",
     phone: "",
@@ -106,6 +124,8 @@ export default function Preview({
   const g = monthGrid(d.date);
   const daysDiff = Math.ceil((dt.getTime() - Date.now()) / 86400000);
   const days = Math.max(0, daysDiff);
+  // Chỉ đếm ngược khi đã nhập ngày và ngày đó chưa qua (không hiện "CÒN 0 NGÀY" cho ngày mặc định/đã qua)
+  const showCountdown = !!d.date && daysDiff >= 0;
 
   const handleOpenEnvelope = () => {
     setIsOpen(true);
@@ -322,12 +342,12 @@ export default function Preview({
       {isOpen && (
         d.templateId === "boho_floral_green" ? (
           <HoaMocXanh d={d} set={set} standalone={standalone} />
-        ) : d.templateId === "minimalism_brown" ? (
-          <MinimalismBrown d={d} set={set} standalone={standalone} />
+        ) : shellSpec ? (
+          <InvitationShell d={d} set={set} spec={shellSpec} standalone={standalone} />
         ) : (
         <div
           className={`songphung-template ${isDarkRed ? "is-minimalism-darkred-body" : isMinimalismBrown ? "is-minimalism-body" : isSongHy ? "is-songhy-body" : ""}`}
-          style={{ animation: "fadeIn 0.5s ease-out forwards" }}
+          style={undefined}
         >
           {/* Floating background audio button */}
           {d.musicUrl && (
@@ -361,9 +381,9 @@ export default function Preview({
           {/* Theme Decorations Layer */}
           {themeDecos && themeDecos.length > 0 && (
             <div className="theme-decorations-layer pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true" style={{ zIndex: 1 }}>
-              {themeDecos.map((deco) => (
+              {themeDecos.map((deco, di) => (
                 <img
-                  key={deco.id}
+                  key={`${deco.id}-${di}`}
                   src={deco.path}
                   alt=""
                   className={`theme-deco theme-deco-${deco.id} pointer-events-none`}
@@ -393,7 +413,9 @@ export default function Preview({
           )}
 
           {/* -------------------- HERO SECTION -------------------- */}
-          {GENERATED_HEADERS[d.templateId] ? (
+          {isDarkRed ? (
+            <DarkRedHeader groom={gName} bride={bName} intro={intro} crop={{ x: d.heroX, y: d.heroY, z: d.heroZoom }} photo={!d.heroOn ? undefined : d.heroPhoto || d.photos[0] || AVATAR_PLACEHOLDER} />
+          ) : GENERATED_HEADERS[d.templateId] ? (
             GENERATED_HEADERS[d.templateId]({ groom: gName, bride: bName, intro, photo: !d.heroOn ? undefined : d.heroPhoto || d.photos[0] || assetUrl("/images/photo-library/design/cdecf6cfe2eeb3cfd63829abde62f1066f10a364ec27d4c997c0f51012c8803e.webp") })
           ) : isLongPhungV2 ? (
             <LongPhungHeader groom={gName} bride={bName} />
@@ -543,16 +565,32 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 1: LỄ CƯỚI & GIA ĐÌNH -------------------- */}
-          {(d.familyOn || d.announceOn || d.ceremonies.length > 0) && (
+          {(d.familyOn || d.announceOn || d.ceremonies.length > 0) && isDarkRed && (
+            <DarkRedInfoFrame
+              heading={d.ceremonyTitle || "THÔNG TIN LỄ CƯỚI"}
+              fams={d.familyOn ? fams.map((f) => { const who = f.label === "Nhà Trai" ? "Chú Rể" : "Cô Dâu"; return { title: f.title, f: f.f || `Họ Tên Cha ${who}`, m: f.m || `Họ Tên Mẹ ${who}`, addr: f.addr }; }) : undefined}
+              announce={d.announceOn ? { line1: d.announcementLine1 || "TRÂN TRỌNG BÁO TIN", line2: d.announcementLine2 || "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI" } : undefined}
+              couple={d.announceOn ? {
+                n1: (brideFirst ? d.brideFull : d.groomFull) || (brideFirst ? "Họ Tên Cô Dâu" : "Họ Tên Chú Rể"), r1,
+                n2: (brideFirst ? d.groomFull : d.brideFull) || (brideFirst ? "Họ Tên Chú Rể" : "Họ Tên Cô Dâu"), r2,
+              } : undefined}
+              ceremonies={d.ceremonies.map((c) => {
+                const cd = parseDate(c.date);
+                return {
+                  title: c.title,
+                  place: c.place,
+                  time: formatTime(c.time, d.clock),
+                  weekday: WEEKDAYS_FULL[cd.getDay()].toUpperCase(),
+                  day: String(cd.getDate()).padStart(2, "0"),
+                  month: String(cd.getMonth() + 1).padStart(2, "0"),
+                  year: String(cd.getFullYear()),
+                  lunar: c.lunar,
+                };
+              })}
+            />
+          )}
+          {(d.familyOn || d.announceOn || d.ceremonies.length > 0) && !isDarkRed && (
             <section className="sp-section sp-family-sec relative overflow-x-clip">
-              {isDarkRed && (
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  className="pointer-events-none absolute max-w-none object-contain opacity-[0.1] left-1/2 top-[-6%] w-[150%] -translate-x-1/2 z-0"
-                  src="/images/themes/minimalism-dark-red/castle-background.webp"
-                />
-              )}
               {/* Flower Accent top-right only for double_phoenix_red */}
               {d.templateId === "double_phoenix_red" && (
                 <div className="absolute right-0 top-[-220px] md:top-[-270px] lg:top-[-290px] w-[192px] md:w-[360px] lg:w-[360px] h-auto opacity-100 pointer-events-none z-[5]">
@@ -634,7 +672,14 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 2: ALBUM HÌNH CƯỚI -------------------- */}
-          {d.albumOn && d.photos.length > 0 && (
+          {d.albumOn && d.photos.length > 0 && isDarkRed && (
+            <DarkRedAlbum photos={d.photos} title="Album Ảnh" crops={d.photoCrops} onPhotoClick={(url) => setLightboxImg(url)}>
+              {d.albumLayout === "3d" ? undefined : (
+                <AlbumGallery photos={d.photos} photoCrops={d.photoCrops} layout={d.albumLayout} onPhotoClick={(url) => setLightboxImg(url)} />
+              )}
+            </DarkRedAlbum>
+          )}
+          {d.albumOn && d.photos.length > 0 && !isDarkRed && (
             <section className="sp-section sp-gallery-sec">
               <h2 className="sp-sec-title">ALBUM HÌNH CƯỚI</h2>
               <AlbumGallery
@@ -647,7 +692,27 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 3: TIỆC CƯỚI (BANQUET) -------------------- */}
-          {d.partyOn && (
+          {d.partyOn && isDarkRed && (
+            <DarkRedBanquet
+              heading={d.banquetTitle.trim() || "THÔNG TIN TIỆC CƯỚI"}
+              title="Tiệc cưới sẽ diễn ra vào lúc:"
+              time={formatTime(d.startTime || d.time, d.clock)}
+              weekday={WEEKDAYS_FULL[dt.getDay()].toUpperCase()}
+              day={String(dt.getDate()).padStart(2, "0")}
+              month={String(dt.getMonth() + 1).padStart(2, "0")}
+              year={String(dt.getFullYear())}
+              lunar={lunarLabel(dt)}
+              countdownTo={d.countdown && d.date && d.time ? new Date(`${d.date}T${d.time}`) : undefined}
+              welcome={!d.hideWelcomeTimes && d.welcomeTime ? formatTime(d.welcomeTime, d.clock) : undefined}
+              start={!d.hideWelcomeTimes && (d.startTime || d.time) ? formatTime(d.startTime || d.time, d.clock) : undefined}
+              cal={g}
+              calLabels={WEEKDAYS_SHORT}
+              calendarHref={googleCalendarUrl(d)}
+              rsvpInline={d.rsvpOn && d.rsvpDisplay === "inline" ? <div className="sp-rsvp-inline">{rsvpBox}</div> : undefined}
+              onRsvp={d.rsvpOn && d.rsvpDisplay !== "inline" ? () => { setRsvpOpen(true); setRsvpSubmitted(false); } : undefined}
+            />
+          )}
+          {d.partyOn && !isDarkRed && (
             <section className="sp-section sp-banquet-sec relative overflow-x-clip">
               {isDarkRed && (
                 <img
@@ -677,7 +742,7 @@ export default function Preview({
               )}
 
               {/* Countdown badge */}
-              {d.countdown && (
+              {d.countdown && showCountdown && (
                 <div className="sp-countdown-box">
                   <span className="sp-cd-text">CÒN</span>
                   <span className="sp-cd-days">{days}</span>
@@ -753,7 +818,15 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 4: ĐỊA ĐIỂM (VENUE & MAP) -------------------- */}
-          {d.address && (
+          {d.address && isDarkRed && (
+            <DarkRedVenue
+              title={d.locTitle || "Tiệc cưới sẽ tổ chức tại"}
+              address={d.address}
+              mapSrc={d.showMap ? `https://maps.google.com/maps?q=${encodeURIComponent(d.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed` : undefined}
+              directionsHref={d.showMap ? d.mapUrl || `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(d.address)}` : undefined}
+            />
+          )}
+          {d.address && !isDarkRed && (
             <section className="sp-section sp-venue-sec relative overflow-x-clip">
               {isDarkRed && (
                 <img
@@ -824,7 +897,13 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 6: LỊCH TRÌNH (TIMELINE) -------------------- */}
-          {d.schedOn && d.sched.length > 0 && (
+          {d.schedOn && d.sched.length > 0 && isDarkRed && (
+            <DarkRedSchedule
+              title={d.schedTitle || "LỊCH TRÌNH NGÀY CƯỚI"}
+              events={d.sched.map((s) => ({ time: formatTime(s.time, d.clock), text: s.text }))}
+            />
+          )}
+          {d.schedOn && d.sched.length > 0 && !isDarkRed && (
             <section className="sp-section sp-timeline-sec">
               <h2 className="sp-sec-title">{d.schedTitle || "LỊCH TRÌNH NGÀY CƯỚI"}</h2>
               <div className="sp-timeline">
@@ -844,7 +923,10 @@ export default function Preview({
           )}
 
           {/* -------------------- SECTION 7: SỔ LƯU BÚT (GUESTBOOK) -------------------- */}
-          {d.guestOn && (
+          {d.guestOn && isDarkRed && (
+            <DarkRedGuestbook wishes={d.wishes} name={wishName} msg={wishMsg} onName={setWishName} onMsg={setWishMsg} onSend={sendWish} />
+          )}
+          {d.guestOn && !isDarkRed && (
             <section className="sp-section sp-guestbook-sec relative overflow-x-clip">
               {(isDarkRed || isMinimalismBrown) && (
                 <img
@@ -898,19 +980,31 @@ export default function Preview({
               className="sp-section"
               style={{
                 backgroundColor: "transparent",
-                padding: "32px 16px",
+                padding: isDarkRed ? "32px 24px 40px" : "32px 16px",
                 position: "relative",
                 zIndex: 10,
+                ...(isDarkRed ? { overflowX: "clip" as const } : {}),
               }}
             >
+              {isDarkRed && (
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute max-w-none object-contain opacity-[0.1] left-1/2 top-[6%] w-[155%]"
+                  style={{ transform: "translateX(-50%)" }}
+                  src="/images/themes/minimalism-dark-red/castle-background.webp"
+                />
+              )}
               <h2
-                className="mb-4 text-[21px] md:text-[25px] lg:text-[32px] flex flex-col items-center"
+                className={isDarkRed ? "mb-4 uppercase text-[20px] flex flex-col items-center" : "mb-4 text-[21px] md:text-[25px] lg:text-[32px] flex flex-col items-center"}
                 style={{
                   color: giftConfig.sectionTitleColor || (d.giftDisplayMode === "gift_box" ? "rgb(84, 46, 8)" : "rgb(255, 223, 175)"),
                   fontFamily: giftConfig.sectionTitleFont || (d.giftDisplayMode === "gift_box" ? "Oswald, sans-serif" : '"Times New Roman", serif'),
-                  fontWeight: 600,
-                  letterSpacing: "0.02em",
+                  fontWeight: isDarkRed ? 700 : 600,
+                  letterSpacing: isDarkRed ? "0.03em" : "0.02em",
+                  marginTop: isDarkRed ? 0 : undefined,
                   marginBottom: d.giftDisplayMode === "qr_inline" ? "24px" : "16px",
+                  ...(isDarkRed ? { position: "relative" as const, zIndex: 10 } : {}),
                 }}
               >
                 <span dir="auto">{d.giftTitle || giftConfig.sectionTitle || "Hộp Quà Mừng"}</span>
@@ -941,12 +1035,14 @@ export default function Preview({
                         <h3 className="sp-qr-card-unified-title">
                           {title} - {g.accountName}
                         </h3>
-                        <div className="sp-qr-box-unified">
-                          <img
-                            alt={`QR - ${title} - ${g.accountName}`}
-                            src={g.qrUrl}
-                          />
-                        </div>
+                        {g.qrUrl && !g.hideQr && (
+                          <div className="sp-qr-box-unified">
+                            <img
+                              alt={`QR - ${title} - ${g.accountName}`}
+                              src={g.qrUrl}
+                            />
+                          </div>
+                        )}
                         <div className="sp-qr-unified-texts">
                           <p>{g.bankName}</p>
                           <p className="acc-num">{g.accountNumber}</p>
@@ -982,7 +1078,7 @@ export default function Preview({
               )}
 
               {/* MODE: ENVELOPE (Phong bì thư tối giản) */}
-              {(d.giftDisplayMode === "envelope" || (!d.giftDisplayMode && giftConfig.giftboxType === "envelope") || (giftConfig.giftboxType === "envelope" && d.giftDisplayMode !== "qr_inline")) && (
+              {giftMode === "envelope" && (
                 <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
                   <button
                     type="button"
@@ -1024,7 +1120,7 @@ export default function Preview({
               )}
 
               {/* MODE: 3D GIFT BOX (Hộp quà 3D chuyển động kèm hộp mini trang trí) */}
-              {giftConfig.giftboxType !== "envelope" && (d.giftDisplayMode === "gift_box" || !d.giftDisplayMode) && (
+              {giftMode === "gift_box" && (
                 <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
                   <button
                     type="button"
@@ -1076,7 +1172,7 @@ export default function Preview({
                           loading="lazy"
                           decoding="async"
                           className="igb-box absolute pointer-events-none"
-                          src={assetUrl(giftConfig.mainBoxSrc || "/images/giftbox/nhat_binh_red.webp")}
+                          src={assetUrl(giftConfig.mainBoxSrc || `/images/giftbox/${d.templateId}.webp`)}
                           style={{ left: "50%", bottom: "0px", width: "170px", maxHeight: "220px", objectFit: "contain", marginLeft: "-85px", zIndex: 2, filter: "drop-shadow(rgba(0, 0, 0, 0.25) 0px 10px 18px)", willChange: "transform" }}
                         />
                       </div>
@@ -1091,15 +1187,25 @@ export default function Preview({
           )}
 
           {/* -------------------- FOOTER -------------------- */}
-          {d.thanksOn && (
+          {d.thanksOn && (isDarkRed ? (
+            <footer className="relative z-10 flex flex-col items-center px-6 pb-10 text-center">
+              <span className="whitespace-pre-line flex flex-col items-center gap-1 text-[12px] md:text-[13px] mx-auto" style={{ color: "rgb(81, 20, 25)", fontFamily: '"Times New Roman", serif' }}>{d.thanks}</span>
+            </footer>
+          ) : (
             <footer className="sp-footer">
               <p className="sp-thanks-msg">{d.thanks}</p>
             </footer>
-          )}
+          ))}
 
-          <div className="sp-brand-bottom">
-            <span>ChungDoi · Tạo thiệp cưới online miễn phí</span>
-          </div>
+          {isDarkRed ? (
+            <div className="relative z-20 flex items-center justify-center pb-3">
+              <span className="text-xs opacity-50" style={{ color: "rgb(81, 20, 25)" }}>ChungDoi · Tạo thiệp cưới online miễn phí</span>
+            </div>
+          ) : (
+            <div className="sp-brand-bottom">
+              <span>ChungDoi · Tạo thiệp cưới online miễn phí</span>
+            </div>
+          )}
         </div>
         )
       )}
@@ -1188,22 +1294,24 @@ export default function Preview({
                       >
                         {title} - {g.accountName}
                       </h3>
-                      <div
-                        className="w-44 h-44 sm:w-48 sm:h-48 bg-white rounded-xl p-2 shadow-lg flex items-center justify-center"
-                        style={{
-                          border: `2px solid ${
-                            giftConfig.modal.headerBg
-                              ? giftConfig.modal.headerBg.replace("rgb", "rgba").replace(")", ", 0.15)")
-                              : "rgba(195, 42, 41, 0.125)"
-                          }`,
-                        }}
-                      >
-                        <img
-                          alt={`QR - ${title} - ${g.accountName}`}
-                          className="w-full h-full object-contain"
-                          src={g.qrUrl}
-                        />
-                      </div>
+                      {g.qrUrl && !g.hideQr && (
+                        <div
+                          className="w-44 h-44 sm:w-48 sm:h-48 bg-white rounded-xl p-2 shadow-lg flex items-center justify-center"
+                          style={{
+                            border: `2px solid ${
+                              giftConfig.modal.headerBg
+                                ? giftConfig.modal.headerBg.replace("rgb", "rgba").replace(")", ", 0.15)")
+                                : "rgba(195, 42, 41, 0.125)"
+                            }`,
+                          }}
+                        >
+                          <img
+                            alt={`QR - ${title} - ${g.accountName}`}
+                            className="w-full h-full object-contain"
+                            src={g.qrUrl}
+                          />
+                        </div>
+                      )}
                       <div className="mt-3 text-center space-y-0.5">
                         <p className="text-xs" style={{ color: "rgb(84, 46, 8)" }}>
                           {g.bankName}

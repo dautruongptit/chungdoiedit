@@ -98,6 +98,7 @@ export const TEMPLATES: Tpl[] = [
 /** Chữ mở đầu mặc định theo mẫu, đo từ ảnh chuẩn. Mẫu chưa có ảnh dùng "Save The Date". */
 const INTRO_BY_ID: Record<string, string> = {
   minimalism_darkred: "Save The Date",
+  riviera_blue: "WELCOME TO OUR WEDDING",
   song_hy_green: "WELCOME TO OUR WEDDING",
   song_hy_red: "WELCOME TO OUR WEDDING",
   minimalism_brown: "The Wedding Of",

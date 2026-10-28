@@ -68,28 +68,6 @@ export function OpenTransitionBurst({ type, baseColor, sealPosition = { top: 50 
       style={{ zIndex: 40 }}
       aria-hidden="true"
     >
-      {/* Expanding Ripple Rings */}
-      <div
-        className="absolute left-1/2 rounded-full border border-current pointer-events-none"
-        style={{
-          top: sealPosition.top,
-          width: 64,
-          height: 64,
-          color: baseColor,
-          animation: "seal-ring 0.5s ease-out forwards",
-        }}
-      />
-      <div
-        className="absolute left-1/2 rounded-full border border-current pointer-events-none"
-        style={{
-          top: sealPosition.top,
-          width: 64,
-          height: 64,
-          color: "#ffffff",
-          animation: "seal-ring 0.65s ease-out 0.1s forwards",
-        }}
-      />
-
       {/* 32 Burst Particles */}
       {particles.map((p, i) => (
         <div
@@ -165,4 +143,51 @@ export function useEnvelopeOpen(onOpen: () => void) {
   }, [isOpening, onOpen]);
 
   return { isOpening, showBurst, triggerOpen };
+}
+
+const HEART_PATH = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
+const CENTER_PALETTE = ["#a8323b", "#ece4d8", "#c9a24a", "#7a1f26"];
+
+/** Tim bung ra từ tâm màn hình (Minimalism - Đỏ Đậm): 32 hạt, không có vòng sóng, z-index 100. */
+export function OpenTransitionBurstCenter() {
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 32 }, (_, i) => {
+        const angle = (i / 32) * 2 * Math.PI + (Math.random() - 0.5) * 0.3;
+        const distance = 120 + Math.random() * 260;
+        return {
+          dx: `${(Math.cos(angle) * distance).toFixed(1)}px`,
+          dy: `${(Math.sin(angle) * distance).toFixed(1)}px`,
+          rotStart: `${((Math.random() - 0.5) * 30).toFixed(1)}deg`,
+          rotEnd: `${((Math.random() - 0.5) * 360).toFixed(1)}deg`,
+          color: CENTER_PALETTE[Math.floor(Math.random() * CENTER_PALETTE.length)],
+          size: 10 + Math.random() * 16,
+          delay: Math.random() * 0.15,
+        };
+      }),
+    [],
+  );
+  return (
+    <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 100 }} aria-hidden="true">
+      {particles.map((p, i) => (
+        <div
+          key={i}
+          className="absolute left-1/2"
+          style={{
+            top: "50%",
+            color: p.color,
+            fontSize: p.size,
+            textShadow: `0 0 10px ${p.color}`,
+            ["--dx" as any]: p.dx,
+            ["--dy" as any]: p.dy,
+            ["--rot-start" as any]: p.rotStart,
+            ["--rot-end" as any]: p.rotEnd,
+            animation: `particle-burst 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${p.delay.toFixed(3)}s 1 normal forwards running`,
+          }}
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d={HEART_PATH} /></svg>
+        </div>
+      ))}
+    </div>
+  );
 }

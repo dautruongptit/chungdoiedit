@@ -1,0 +1,174 @@
+{
+  "_note": "Dữ liệu demo của trang gốc (Riviera - Lam), đo ngày 2026-10-27. Ghi đè lên dữ liệu demo chung.",
+  "order": "groom",
+  "groomNick": "Thanh Tùng",
+  "brideNick": "Ngọc Hân",
+  "groomFull": "Đỗ Thanh Tùng",
+  "brideFull": "Hoàng Ngọc Hân",
+  "groomRole": "",
+  "brideRole": "",
+  "heroOn": false,
+  "heroPhoto": "",
+  "introCustom": false,
+  "albumOn": true,
+  "photos": [
+    "/images/photo-library/design/cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+    "/images/photo-library/design/f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+    "/images/photo-library/design/c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+    "/images/photo-library/design/30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+    "/images/photo-library/design/5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp"
+  ],
+  "familyOn": true,
+  "groomFamTitle": "Ông Bà",
+  "brideFamTitle": "Ông Bà",
+  "groomFather": "Đỗ Hoàng Phúc",
+  "groomMother": "Đỗ Lan Anh",
+  "groomAddr": "Số 27 Phố Bạch Đằng, phường Minh Khai, thành phố Hưng Yên",
+  "brideFather": "Hoàng Anh Tuấn",
+  "brideMother": "Hoàng Hà Vy",
+  "brideAddr": "Thôn Đại Từ, xã Đại Đồng, huyện Văn Lâm, tỉnh Hưng Yên",
+  "announceOn": true,
+  "ceremonyTitle": "",
+  "ceremonies": [
+    {
+      "title": "LỄ THÀNH HÔN",
+      "date": "2027-12-24",
+      "time": "19:00",
+      "place": "Nhà hàng Queen Palace",
+      "lunar": "Tức ngày 27 tháng 11 năm Đinh Mùi"
+    },
+    {
+      "title": "TIỆC CƯỚI",
+      "date": "2027-12-24",
+      "time": "20:30",
+      "place": "Nhà hàng Queen Palace",
+      "lunar": "Tức ngày 27 tháng 11 năm Đinh Mùi"
+    }
+  ],
+  "partyOn": true,
+  "banquetTitle": "",
+  "date": "2027-12-24",
+  "time": "19:00",
+  "hideWelcomeTimes": false,
+  "welcomeTime": "18:00",
+  "startTime": "20:30",
+  "countdown": true,
+  "locTitle": "",
+  "address": "Nhà hàng Queen Palace\nHưng Yên",
+  "showMap": true,
+  "mapUrl": "",
+  "rsvpOn": true,
+  "dressOn": true,
+  "dressText": "Trang phục dự tiệc",
+  "dressColors": [
+    "#2f2a26",
+    "#a08b74",
+    "#f4efe7"
+  ],
+  "schedOn": true,
+  "sched": [
+    {
+      "time": "15:00",
+      "text": "Lễ gia tiên tại nhà gái"
+    },
+    {
+      "time": "16:30",
+      "text": "Đón dâu"
+    },
+    {
+      "time": "18:00",
+      "text": "Lễ gia tiên tại nhà trai"
+    },
+    {
+      "time": "19:00",
+      "text": "Đón khách"
+    },
+    {
+      "time": "19:30",
+      "text": "Nghi thức thành hôn"
+    },
+    {
+      "time": "20:00",
+      "text": "Rót rượu giao bôi và cắt bánh"
+    },
+    {
+      "time": "20:30",
+      "text": "Khai tiệc"
+    },
+    {
+      "time": "21:30",
+      "text": "Cô dâu chú rể chúc mừng từng bàn"
+    },
+    {
+      "time": "23:00",
+      "text": "Kết thúc tiệc"
+    }
+  ],
+  "guestOn": true,
+  "wishes": [
+    {
+      "name": "Nhóm phượt Tây Bắc",
+      "msg": "Chúc hai bạn mỗi năm lại thương nhau hơn một chút.",
+      "at": "16:00:00 27/6/2027"
+    },
+    {
+      "name": "Hàng xóm nhà bên",
+      "msg": "Mong tổ ấm của hai em luôn ngập nắng.",
+      "at": "17:00:00 28/6/2027"
+    },
+    {
+      "name": "Nguyễn Minh Tuấn",
+      "msg": "Chúc mừng hai bạn, xứng đôi vừa lứa.",
+      "at": "18:00:00 29/6/2027"
+    },
+    {
+      "name": "Trần Thị Hồng Nhung",
+      "msg": "Chúc hai em bình an và luôn có nhau.",
+      "at": "19:00:00 30/6/2027"
+    },
+    {
+      "name": "Lê Quốc Bảo",
+      "msg": "Mừng cho hai đứa. Cả nhà ai cũng mong ngày này.",
+      "at": "20:00:00 1/7/2027"
+    },
+    {
+      "name": "Phạm Thu Hà",
+      "msg": "Chúc hai bạn luôn giữ được tiếng cười trong nhà.",
+      "at": "21:00:00 2/7/2027"
+    },
+    {
+      "name": "Võ Hoàng Long",
+      "msg": "Mong hai em thương nhau bền lâu, sống vui khỏe.",
+      "at": "22:00:00 3/7/2027"
+    },
+    {
+      "name": "Đặng Khánh Linh",
+      "msg": "Chúc mừng hạnh phúc, mong mọi điều tốt đẹp đến với hai bạn.",
+      "at": "23:00:00 4/7/2027"
+    },
+    {
+      "name": "Bùi Anh Khoa",
+      "msg": "Hôm nay đẹp quá. Chúc hai bạn thật nhiều niềm vui.",
+      "at": "0:00:00 6/7/2027"
+    }
+  ],
+  "giftOn": true,
+  "giftTitle": "",
+  "giftDisplayMode": "envelope",
+  "gifts": [
+    {
+      "id": "g1",
+      "who": "groom",
+      "bankName": "Vietcombank",
+      "bankCode": "VCB",
+      "bankBin": "970436",
+      "accountNumber": "0000000000",
+      "accountName": "THIEP CUOI DEMO",
+      "qrUrl": ""
+    }
+  ],
+  "thanksOn": true,
+  "thanks": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "announcementLine1": "Chúng tôi sắp về chung một nhà, và rất mong có bạn ở đó",
+  "announcementLine2": ""
+}
