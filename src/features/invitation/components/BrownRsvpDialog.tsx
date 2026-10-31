@@ -44,14 +44,14 @@ export function BrownRsvpDialog({
   );
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 transition-all duration-300 bg-black/60 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[85vh] relative overflow-hidden transition-all duration-300 scale-100 opacity-100" onClick={(e) => e.stopPropagation()}>
+    <dialog className="modal modal-bottom sm:modal-middle modal-open" open>
+      <div className="modal-box max-w-md p-0 max-h-[90vh] overflow-y-auto bg-white rounded-2xl">
         <div className="relative px-6 pt-6 pb-4">
-          <button className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors" aria-label="Đóng" onClick={onClose}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          <button type="button" onClick={onClose} className="btn btn-sm btn-circle btn-ghost absolute right-3 top-3 text-gray-500 hover:text-gray-700">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
-        <div className="px-6 pb-6 overflow-y-auto max-h-[calc(85vh-72px)]">
+        <div className="px-6 pb-6 overflow-y-auto max-h-[calc(90vh-72px)]">
           {sent ? (
             <div>
               <h2 className="text-xl font-semibold text-gray-900 mb-1"><span dir="auto">Cảm ơn bạn!</span></h2>
@@ -112,6 +112,7 @@ export function BrownRsvpDialog({
           )}
         </div>
       </div>
-    </div>
+      <div className="modal-backdrop" onClick={onClose}><button type="button">close</button></div>
+    </dialog>
   );
 }

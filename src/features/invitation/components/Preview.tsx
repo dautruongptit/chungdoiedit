@@ -338,13 +338,18 @@ export default function Preview({
         return <CoverComponent d={d} onOpen={handleOpenEnvelope} />;
       })()}
 
+      {/* Thiệp dựng bằng khuôn chung được dựng sẵn phía sau bìa (ẩn) như trang gốc: lúc bìa biến mất thiệp hiện ngay, không khựng để dựng */}
+      {shellSpec && (
+        <div style={isOpen ? { width: "100%" } : { width: "100%", visibility: "hidden", height: "100vh", overflow: "hidden" }}>
+          <InvitationShell d={d} set={set} spec={shellSpec} standalone={standalone} active={isOpen} />
+        </div>
+      )}
+
       {/* ==================== 2. NỘI DUNG THIỆP ĐÃ MỞ (OPENED) ==================== */}
       {isOpen && (
         d.templateId === "boho_floral_green" ? (
           <HoaMocXanh d={d} set={set} standalone={standalone} />
-        ) : shellSpec ? (
-          <InvitationShell d={d} set={set} spec={shellSpec} standalone={standalone} />
-        ) : (
+        ) : shellSpec ? null : (
         <div
           className={`songphung-template ${isDarkRed ? "is-minimalism-darkred-body" : isMinimalismBrown ? "is-minimalism-body" : isSongHy ? "is-songhy-body" : ""}`}
           style={undefined}

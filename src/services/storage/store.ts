@@ -70,11 +70,7 @@ export function loadInv(cardId: string): Inv | null {
 }
 
 export function saveInv(cardId: string, inv: Inv) {
-  try {
-    localStorage.setItem(INV_KEY(cardId), JSON.stringify(inv));
-  } catch {
-    /* quota hoặc private mode: dữ liệu vẫn nằm trong state */
-  }
+  localStorage.setItem(INV_KEY(cardId), JSON.stringify(inv));
 }
 
 export function removeInv(cardId: string) {
@@ -116,3 +112,29 @@ export function removeGuests(cardId: string) {
 
 /** Link riêng của một khách: luôn gắn với thiệp, dùng chung cho hiển thị, sao chép và CSV. */
 export const guestUrl = (cardId: string, g: Guest) => `https://chungdoi.com/i/${cardId.slice(0, 8)}/${g.slug}`;
+
+/** Thiệp nháp hiện có: mỗi lúc chỉ giữ một thiệp nháp (như trang gốc). */
+export function getDraftCard(): Card | undefined {
+  return loadCards().find((c) => c.status === "draft");
+}
+
+/** Phần dữ liệu đổi theo mẫu khi chuyển mẫu; mọi thông tin người dùng đã nhập được giữ nguyên. */
+export function templatePatch(t: Tpl, d: Pick<Inv, "introCustom" | "introText" | "dressColors">): Partial<Inv> {
+  const palette = TEMPLATE_THEMES[t.id];
+  return {
+    templateId: t.id,
+    templateName: t.name,
+    templateThumb: TPL_CDN + t.img,
+    introText: d.introCustom ? d.introText : introDefaultFor(t.id),
+    dressColors: palette ? [palette.ink, palette.bg, "#d6c5b3", "#ece5dd"] : d.dressColors,
+  };
+}
+
+/** Áp mẫu mới vào thiệp nháp đang có: giữ dữ liệu đã nhập, chỉ đổi giao diện. Trả về id thiệp. */
+export function applyTemplateToDraft(card: Card, t: Tpl): string {
+  const [template, ...rest] = t.name.split(" - ");
+  saveCards(loadCards().map((c) => (c.id === card.id ? { ...c, template, color: rest.join(" - "), tplId: t.id } : c)));
+  const inv = loadInv(card.id);
+  if (inv) saveInv(card.id, { ...inv, ...templatePatch(t, inv) });
+  return card.id;
+}

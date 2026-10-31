@@ -2,13 +2,58 @@
   "id": "minimalism_brown",
   "family": "minimalism",
   "testId": "minimalism-brown-template",
-  "blocks": ["Backdrop", "Hero", "Family", "Album", "Banquet", "Venue", "Dress", "Schedule", "Guestbook", "Gifts", "Thanks", "Credit", "RsvpDialogHost", "Lightbox"],
-  "cover": { "seal": "heart", "ambient": "fall", "particle": "petal", "skin": "card" },
-  "gift": { "widget": "box3d" },
-  "hero": { "kind": "photo", "introLine": true },
-  "album": { "indicator": "counter", "defaultLayout": "3d" },
+  "blocks": [
+    "Backdrop",
+    "Hero",
+    "Family",
+    "Album",
+    "Banquet",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Thanks",
+    "Credit",
+    "RsvpDialogHost",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "petal",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "box3d"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "counter",
+    "defaultLayout": "3d"
+  },
   "countdown": false,
-  "layout": { "contentMaxMd": 900, "behaviorMd": "padded", "parallaxDecor": false },
-  "editor": { "albumCardAfter": "hero", "cards": { "hero": true, "coupleHero": false, "introLine": true } },
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "hero",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": true
+    },
+    "sections": {
+      "heroPhoto": true,
+      "guestbook": true,
+      "envelope": false
+    }
+  },
   "music": "my-love-westlife.mp3"
 }

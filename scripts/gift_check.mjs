@@ -1,0 +1,22 @@
+// Kiểm tra mục Hộp quà trong editor local: mở form "Thêm VietQR", lưu trống, lưu có dữ liệu, sửa, xóa.
+import { ChromeController } from "./cdp_helper.mjs";
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+await c.setViewport({ width: 1707, height: 898 });
+await c.navigate(`http://localhost:5173/edit/gift-${Date.now()}?template=minimalism_darkred`, 6000);
+const wait = (ms) => new Promise(r => setTimeout(r, ms));
+const clickTxt = (txt) => c.eval(`(() => { const b=[...document.querySelectorAll('button')].filter(b=>b.getBoundingClientRect().width>0).find(b=>b.innerText.replace(/\s+/g,' ').trim().includes(${JSON.stringify(txt)})); if(!b) return 'NO BUTTON ${txt}'; b.click(); return 'ok'; })()`);
+const list = async (l) => console.log(l, await c.eval(`[...document.querySelectorAll('.gift-bank-card')].map(e=>e.innerText.replace(/\s+/g,' ').trim()).join(' || ') || '(trống)'`));
+await c.eval(`document.querySelectorAll('[class*=tour]').forEach(e=>e.remove())`);
+console.log("add:", await clickTxt("Thêm tài khoản ngân hàng")); await wait(500);
+await c.screenshot(`${process.argv[2]}/gift_modal_new.png`);
+console.log("save empty:", await clickTxt("Lưu")); await wait(500); await list("list:");
+console.log("add again:", await clickTxt("Thêm tài khoản ngân hàng")); await wait(400);
+await c.eval(`(() => { const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,"value").set; const ins=[...document.querySelectorAll(".modal input")]; const fire=(i,v)=>{set.call(i,v); i.dispatchEvent(new Event("input",{bubbles:true}));}; fire(ins[0],"viet"); fire(ins[1],"0399554682"); fire(ins[2],"tran the bao"); })()`);
+await wait(400);
+await c.screenshot(`${process.argv[2]}/gift_modal_search.png`);
+console.log("pick bank:", await c.eval(`(() => { const r=document.querySelector('.bank-dropdown-row'); if(!r) return 'no dropdown'; r.click(); return 'picked '+r.innerText.replace(/\s+/g,' ').slice(0,40); })()`));
+await wait(300); await c.screenshot(`${process.argv[2]}/gift_modal_filled.png`);
+console.log("save:", await clickTxt("Lưu")); await wait(500); await list("list:");
+console.log("other:", await clickTxt("Phương thức khác")); await wait(600);
+await c.screenshot(`${process.argv[2]}/gift_other_clone.png`);
+process.exit(0);

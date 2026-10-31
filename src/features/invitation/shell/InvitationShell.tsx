@@ -11,11 +11,13 @@ export interface InvitationShellProps {
   standalone?: boolean;
   /** Mở hộp thoại xác nhận tham dự của trang (chỉ truyền khi RSVP bật). */
   onRsvp?: () => void;
+  /** false khi thiệp được dựng sẵn phía sau bìa (chưa mở): chưa phát nhạc */
+  active?: boolean;
 }
 
 /** Khuôn chung của thiệp đã mở: dữ liệu (`Inv`) + chủ đề (`theme.json`) + danh sách khối (`capabilities.json`). */
-export function InvitationShell({ d, set, spec }: InvitationShellProps) {
-  const ctx = useInvitationCtx(d, set, spec.theme);
+export function InvitationShell({ d, set, spec, active = true }: InvitationShellProps) {
+  const ctx = useInvitationCtx(d, set, spec.theme, active);
   const t = spec.theme;
   const BLOCKS = blocksForFamily(spec.capabilities.family);
   return (

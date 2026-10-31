@@ -21,7 +21,7 @@ export const defaultInv: Inv = {
   brideRole: "Út Nữ",
   order: "bride", // ChungDoi template demo shows bride first
   albumOn: true,
-  albumLayout: "grid",
+  albumLayout: "3d",
   photos: [
     assetUrl("/images/photo-library/design/2e494e0b7ab193dde9575183fa33982e4df2c2a69e3424edb4864146fcd797c6.webp"),
     assetUrl("/images/photo-library/design/7f27e96680eccfbd182328d905e010b578c1b76ed0a9ee445b6c3a818ee6da57.webp"),

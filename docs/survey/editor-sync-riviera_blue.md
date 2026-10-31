@@ -1,6 +1,6 @@
 # Editor ↔ xem trước — riviera_blue
 
-Bản local, 2026-10-28. **23 đạt, 0 lỗi, 17 bỏ qua.**
+Bản local, 2026-10-31. **23 đạt, 0 lỗi, 17 bỏ qua.**
 
 | Thẻ | Kiểm tra | Kết quả | Ghi chú |
 |---|---|---|---|
@@ -28,7 +28,7 @@ Bản local, 2026-10-28. **23 đạt, 0 lỗi, 17 bỏ qua.**
 | Sổ lưu bút | Công tắc ẩn/hiện | skip | thẻ không có công tắc |
 | Hộp Quà Mừng | Công tắc ẩn/hiện | skip | thẻ không có công tắc |
 | Lời cảm ơn | Công tắc ẩn/hiện | skip | thẻ không có công tắc |
-| (thứ tự khối) | Thứ tự tiêu đề khối tăng dần sau tắt/bật | pass | ALBUM ẢNH > SỔ LƯU BÚT |
+| (thứ tự khối) | Thứ tự tiêu đề khối tăng dần sau tắt/bật | pass | SỔ LƯU BÚT |
 | Lễ | Thêm lễ -> xuất hiện thêm khối lễ | pass | 0 -> 1 |
 | Thư viện ảnh | Kiểu album "3D" -> xem trước vẫn dựng được | pass |  |
 | Thư viện ảnh | Kiểu album "Lưới" -> xem trước vẫn dựng được | pass |  |

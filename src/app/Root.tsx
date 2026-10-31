@@ -11,7 +11,7 @@ import Templates from "@/pages/Templates";
 import Demo from "@/pages/Demo";
 import { Link, navigate, usePath } from "@/app/router";
 import { templateByIdOrSlug } from "@/features/templates/data/templates";
-import { createDraft } from "@/services/storage/store";
+import { createDraft, getDraftCard } from "@/services/storage/store";
 
 function Redirect({ to }: { to: string }) {
   useEffect(() => navigate(to), [to]);
@@ -55,6 +55,7 @@ export default function Root() {
         </div>
       );
     }
+    if (getDraftCard()) return <Redirect to={`/vi/mau-thiep/${tpl.slug}/demo`} />;
     const draftId = createDraft(tpl);
     history.replaceState({}, "", `/edit/${draftId}?template=${tpl.id}`);
     return <EditorPage />;

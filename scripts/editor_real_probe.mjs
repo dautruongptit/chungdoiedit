@@ -1,0 +1,11 @@
+import { ChromeController } from "./cdp_helper.mjs";
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+const dir = process.argv[2];
+await c.setViewport({ width: 1440, height: 900 });
+await c.navigate("https://chungdoi.com/vi/mau-thiep/minimalism-do-dam", 5000);
+await c.eval(`[...document.querySelectorAll('button,a')].find(b=>b.innerText.trim()==='Tạo thiệp').click()`);
+await new Promise(r => setTimeout(r, 6000));
+console.log(await c.eval("location.href"));
+console.log(await c.eval("document.body.innerText.slice(0,2500)"));
+await c.screenshot(`${dir}/real_after_create.png`);
+process.exit(0);

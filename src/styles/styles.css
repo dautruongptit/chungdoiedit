@@ -3398,6 +3398,8 @@ button:hover .igb-c8 { animation: igbConfettiFly8 1.1s ease-out 0.55s infinite; 
 .crop-stage:active { cursor: grabbing; }
 .crop-frame { max-width: 94%; max-height: 94%; overflow: hidden; border-radius: 4px; position: relative; box-shadow: 0 0 0 9999px rgba(0,0,0,.6); }
 .crop-frame img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.crop-frame-round { border-radius: 9999px; }
+.crop-frame-round .crop-grid { display: none; }
 .crop-grid { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; border: 1px solid rgba(var(--fgrgb), 0.45); pointer-events: none; }
 .crop-grid > div { border: 1px solid rgba(var(--fgrgb), 0.25); }
 .crop-zoom { display: flex; align-items: center; gap: 14px; padding: 12px 20px; background: #13100e; border-top: 1px solid rgba(var(--fgrgb), 0.08); border-bottom: 1px solid rgba(var(--fgrgb), 0.08); font-size: 13px; font-weight: 600; color: var(--fg); }

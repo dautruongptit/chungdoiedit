@@ -1,0 +1,17 @@
+{
+  "assets": "/images/themes/longphung-v4-red",
+  "colors": {
+    "ink": "rgb(255, 211, 144)",
+    "inkRgb": "255, 211, 144",
+    "cream": "rgb(255, 232, 196)",
+    "light": "rgb(254, 251, 244)",
+    "paper": "rgb(140, 0, 0)",
+    "dialog": "rgb(90, 0, 0)",
+    "edge": "#FFD39033",
+    "rsvpBtnText": "rgb(255, 211, 144)"
+  },
+  "tokens": {
+    "albumAspect": "0.664062 / 1",
+    "scheduleIcons": "cake,home,music"
+  }
+}

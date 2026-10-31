@@ -105,6 +105,10 @@ Khi mẫu có cấu trúc khác (không chỉ khác màu), dựng bộ khối m�
 - **Phần tử đổi theo thời gian** (đếm ngược, hạt rơi ở bìa, ảnh lazy dưới cùng) luôn nằm trong "chỉ gốc / chỉ local"; bỏ qua có chủ đích.
 - Font: gốc không nạp `Libre Baskerville`; bản local từng nạp nên chữ rộng hơn (đã bỏ khỏi `index.html`). Khi lệch bề rộng chữ hàng loạt, so danh sách font thật gốc nạp (`document.fonts`).
 
+
+**Họ thứ hai đã làm: "traditional" (Long Phụng V4 - Đỏ, `dragon_phoenix_v4_red`).** Phần dùng chung của bộ sinh nằm ở `scripts/clone/genkit.cjs` (token, loading ảnh, ghi khối); `gen_traditional.cjs` chỉ khai báo token và phép gắn dữ liệu của họ. Họ mới tiếp theo: copy `gen_traditional.cjs`, đổi ID/token/phép gắn. Việc thêm sau Riviera mất ít hơn nhiều nhờ: (1) `cut_blocks` + `compact` đọc nhanh cấu trúc; (2) bộ khối `traditional` có cùng thứ tự với Nâu nên phép gắn dữ liệu gần như chép lại; (3) `openfull` loại nhiễu lazy. Các mẫu cùng bố cục (song_hy_v2_red, dragon_phoenix_v3_red ...) chỉ cần `specs/<id>/` mới.
+Engine bìa hỗ trợ thêm `sealImg`/`sealSize` (con dấu là ảnh, vd song hỷ 64px) và `ampFont`.
+
 ### 4.3 Editor (đã dùng chung cho mọi mẫu)
 - Khung: `EditorPage.tsx` (wrapper `inv-root > div.min-h-screen.bg-base-200.pb-14.lg:pb-0` chứa `Header` + `main.max-w-4xl > .body`), `Header.tsx`, `EditorTopBar.tsx`.
 - Thẻ: `components/v2/` — `CardV2` (vỏ thẻ), `ui2.tsx` (`Field2`, `Row2`, `Input2`, `Textarea2`, `Seg2`, `Hint2`, `Helper2`, `Toggle2`, `OutlineButton2`, `Divider2`), `BasicV2`, `HeroV2`, `AlbumV2`, `BanquetV2`, `SectionsV2` (các thẻ còn lại).

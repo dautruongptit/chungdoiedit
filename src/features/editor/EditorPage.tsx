@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Inv } from "@/types/invitation";
 import { defaultInv, blankInv } from "@/features/editor/data/defaultData";
 import Header, { type Mode } from "@/features/editor/components/Header";
@@ -10,14 +10,18 @@ import EditorTopBar from "@/features/editor/components/EditorTopBar";
 import { useAuth } from "@/features/auth/hooks/useAuth";
 import { BasicV2 } from "@/features/editor/components/v2/BasicV2";
 import AlbumV2 from "@/features/editor/components/v2/AlbumV2";
+import MusicV2 from "@/features/editor/components/v2/MusicV2";
+import { getCapabilities, getEditorSections } from "@/features/invitation/shell/specs";
 import HeroPhoto from "@/features/editor/components/v2/HeroV2";
 import TutorialTour from "@/features/editor/components/TutorialTour";
 import ShareModal from "@/components/common/ShareModal";
 import PublishCheckModal from "@/features/editor/components/PublishCheckModal";
-import { loadCards, saveCards, loadInv, saveInv } from "@/services/storage/store";
+import { loadCards, saveCards, loadInv, saveInv, templatePatch } from "@/services/storage/store";
 import { TPL_CDN, templateById, templateByIdOrSlug, introDefaultFor, TEMPLATES } from "@/features/templates/data/templates";
 import { TEMPLATE_THEMES } from "@/features/invitation/config/templateThemes";
 import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
+import { persistInvImages, resolveInvImages } from "@/services/storage/imageStore";
+import { albumCardAfter } from "@/features/editor/config/editorSections";
 
 export default function EditorPage() {
   const cardId = typeof window !== "undefined" ? window.location.pathname.replace(/^\/edit\//, "").split("?")[0] : "";
@@ -29,8 +33,8 @@ export default function EditorPage() {
 
     const saved = cardId ? loadInv(cardId) : null;
     if (saved) {
-      // blob: URL của ảnh vừa tải lên chỉ sống trong phiên trước, không dùng lại được sau khi tải trang.
-      const alive = (u: string) => !u.startsWith("blob:");
+      // blob: URL chỉ sống trong phiên trước; idb: URL sẽ được resolve async sau mount
+      const keep = (u: string) => !u.startsWith("blob:");
       const curTplId = tpl ? tpl.id : saved.templateId;
       const curTpl = templateByIdOrSlug(curTplId);
       return {
@@ -39,8 +43,8 @@ export default function EditorPage() {
         templateId: curTplId,
         templateName: curTpl ? curTpl.name : saved.templateName,
         templateThumb: curTpl ? TPL_CDN + curTpl.img : saved.templateThumb,
-        photos: (saved.photos || []).filter(alive),
-        heroPhoto: alive(saved.heroPhoto) ? saved.heroPhoto : "",
+        photos: (saved.photos || []).filter(keep),
+        heroPhoto: keep(saved.heroPhoto) ? saved.heroPhoto : "",
       };
     }
 
@@ -81,8 +85,19 @@ export default function EditorPage() {
     setDirty((n) => n + 1);
   }, []);
 
+  const saveSeq = useRef(0);
+
+  // Sau mount: resolve idb: → object URL để hiển thị ảnh đã lưu
   useEffect(() => {
-    // Tự động đồng bộ thẻ vào danh sách nếu chưa có (ví dụ truy cập trực tiếp từ route tạo thiệp)
+    let cancelled = false;
+    resolveInvImages(d).then((resolved) => {
+      if (!cancelled) setD(resolved);
+    });
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     if (cardId && !loadCards().some((c) => c.id === cardId)) {
       const t = templateByIdOrSlug(d.templateId) || TEMPLATES[0];
       const [template, ...rest] = t.name.split(" - ");
@@ -93,8 +108,17 @@ export default function EditorPage() {
   }, [cardId, d.templateId]);
 
   useEffect(() => {
-    // chỉ ghi cho thiệp có thật trong danh sách, tránh tạo khóa lưu trữ theo id tùy ý trên URL
-    if (dirty > 0 && loadCards().some((c) => c.id === cardId)) saveInv(cardId, d);
+    if (dirty <= 0 || !loadCards().some((c) => c.id === cardId)) return;
+    const seq = ++saveSeq.current;
+    persistInvImages(d).then((persisted) => {
+      if (seq !== saveSeq.current) return;
+      try {
+        saveInv(cardId, persisted);
+        if (toast === "Lưu thất bại – bộ nhớ trình duyệt đầy!") setToast("");
+      } catch {
+        setToast("Lưu thất bại – bộ nhớ trình duyệt đầy!");
+      }
+    });
   }, [d, dirty, cardId]);
 
   const handlePublishRequest = () => {
@@ -116,6 +140,8 @@ export default function EditorPage() {
     setShareOpen(true);
   };
 
+  const albumAfter = getCapabilities(d.templateId)?.editor.albumCardAfter ?? albumCardAfter(d.templateId);
+  const vis = getEditorSections(d.templateId);
   return (
     <div className="editor-page-root">
       {loggedIn ? <TopNav /> : <EditorTopBar />}
@@ -131,17 +157,7 @@ export default function EditorPage() {
         templateName={d.templateName}
         templateThumb={d.templateThumb}
         onSelectTemplate={(tpl) => {
-          const palette = TEMPLATE_THEMES[tpl.id];
-          const dressColors = palette
-            ? [palette.ink, palette.bg, "#d6c5b3", "#ece5dd"]
-            : d.dressColors;
-          set({
-            templateId: tpl.id,
-            templateName: tpl.name,
-            templateThumb: TPL_CDN + tpl.img,
-            introText: d.introCustom ? d.introText : introDefaultFor(tpl.id),
-            dressColors,
-          });
+          set(templatePatch(tpl, d));
           // giữ bản ghi thiệp (Dashboard, Khách Mời) khớp với mẫu vừa chọn
           const [template, ...rest] = tpl.name.split(" - ");
           if (activeCardId) {
@@ -152,20 +168,21 @@ export default function EditorPage() {
       {mode === "edit" ? (
         <main className="max-w-4xl mx-auto"><div className="body">
             <BasicV2 d={d} set={set} />
-            <HeroPhoto d={d} set={set} />
-            <AlbumV2 d={d} set={set} />
+            {vis.heroPhoto && <HeroPhoto d={d} set={set} />}
+            {albumAfter === "hero" && <AlbumV2 d={d} set={set} />}
             <V.Family d={d} set={set} />
             <V.Announce d={d} set={set} />
             <V.Ceremony d={d} set={set} />
+            {albumAfter === "ceremony" && <AlbumV2 d={d} set={set} />}
             <BanquetV2 d={d} set={set} />
             <V.Rsvp d={d} set={set} />
             <V.Dress d={d} set={set} />
             <V.Schedule d={d} set={set} />
-            <V.Guestbook d={d} set={set} />
+            {vis.guestbook && <V.Guestbook d={d} set={set} />}
             <V.GiftBox d={d} set={set} />
             <V.Thanks d={d} set={set} />
-            <V.Music d={d} set={set} />
-            <V.Envelope d={d} set={set} />
+            <MusicV2 d={d} set={set} />
+            {vis.envelope && <V.Envelope d={d} set={set} />}
             <V.Share d={d} set={set} />
           </div></main>
       ) : (

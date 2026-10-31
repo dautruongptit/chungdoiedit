@@ -1,0 +1,9 @@
+import React from "react";
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Footer({ ctx }: { ctx: InvitationCtx }) {
+  const { d, t } = ctx;
+  return (
+    <footer className="relative isolate overflow-x-clip"><div className="relative mx-auto w-full max-w-[441px] md:max-w-[600px]"><div className="relative z-10 flex flex-col items-center px-[37px] md:px-[50px]">{d.thanksOn && (<span className="whitespace-pre-line flex flex-col items-center gap-1 px-2 text-center text-[11px] leading-relaxed md:text-[15px] mx-auto md:max-w-[560px]" style={{ fontFamily: "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif", color: t.ink }}><span>{d.thanks}</span></span>)}<div className="mt-6 flex items-center justify-center"><a href="https://chungdoi.com" target="_blank" rel="noopener noreferrer" className="text-xs opacity-50 hover:opacity-70 transition-opacity block mt-4" style={{ color: t.ink }}>♡ chungdoi.com</a></div></div><div className="relative -mb-[80px] mt-4 flex w-full justify-center md:-mb-[130px]"><img alt="" aria-hidden="true" className="pointer-events-none w-[161.2%] max-w-none" loading="lazy" decoding="async" src={`${t.assets}/cloud4-bottom.webp`} /></div></div></footer>
+  );
+}

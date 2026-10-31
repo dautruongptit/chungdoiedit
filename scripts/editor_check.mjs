@@ -1,0 +1,16 @@
+import { ChromeController } from "./cdp_helper.mjs";
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+await c.setViewport({ width: 1440, height: 900 });
+await c.navigate("http://localhost:5173/invitations/create/minimalism-do-dam",5000);
+const setField = (label, value) => `(() => { const lab=[...document.querySelectorAll('label,div,span')].find(e=>e.children.length<3 && (e.innerText||'').trim()===${JSON.stringify(label)}); if(!lab) return 'nolabel '+${JSON.stringify(label)}; let f=lab.parentElement.querySelector('input,textarea'); if(!f) f=lab.nextElementSibling&&lab.nextElementSibling.querySelector&&lab.nextElementSibling.querySelector('input,textarea'); if(!f) return 'nofield'; const proto=f.tagName==='TEXTAREA'?HTMLTextAreaElement.prototype:HTMLInputElement.prototype; Object.getOwnPropertyDescriptor(proto,'value').set.call(f,${JSON.stringify(value)}); f.dispatchEvent(new Event('input',{bubbles:true})); return 'ok'; })()`;
+console.log(await c.eval(setField("Họ tên chú rể","Nguyễn Văn An")));
+console.log(await c.eval(setField("Họ tên cô dâu","Trần Thị Bình")));
+console.log(await c.eval(setField("Tiêu đề mục","TEST TIÊU ĐỀ LỄ")));
+console.log(await c.eval(setField("Tiêu đề mục địa điểm","TEST ĐỊA ĐIỂM")));
+console.log(await c.eval(setField("Địa chỉ","123 Đường Thử Nghiệm")));
+await new Promise(r=>setTimeout(r,500));
+await c.eval(`[...document.querySelectorAll('button')].find(b=>/Xem trước/.test(b.innerText)).click()`); await new Promise(r=>setTimeout(r,2500));
+const t = await c.eval(`document.body.innerText`);
+console.log(t.slice(0,1800).split(String.fromCharCode(10)).filter(x=>x.trim()).join(" | "));
+for (const k of ["Nguyễn Văn An","Trần Thị Bình","TEST TIÊU ĐỀ LỄ","TEST ĐỊA ĐIỂM","123 Đường Thử Nghiệm","ALBUM ẢNH","SỔ LƯU BÚT","HỘP QUÀ MỪNG","THÔNG TIN TIỆC CƯỚI"]) console.log(k, t.includes(k)?"✔":"✘ MISSING");
+process.exit(0);

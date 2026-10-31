@@ -15,7 +15,7 @@ Ký hiệu: `thuộc tính: local→gốc`. Dung sai hình học 1px.
 - img:line-decoration.webp#2
 
 ## Chỉ có ở local
-- t:421 ngày 18 giờ 50 phút 8 giây#1
+- t:419 ngày 21 giờ 33 phút 52 giây#1
 
 ## Lệch (theo vị trí dọc)
 - y1 `img:paper-background.webp#1` [pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover] h: 7823.9→8144.5

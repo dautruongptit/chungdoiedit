@@ -122,7 +122,7 @@ export function OpenTransitionBurst({ type, baseColor, sealPosition = { top: 50 
   );
 }
 
-export function useEnvelopeOpen(onOpen: () => void) {
+export function useEnvelopeOpen(onOpen: () => void, burstDelay = 500) {
   const [isOpening, setIsOpening] = useState(false);
   const [showBurst, setShowBurst] = useState(false);
 
@@ -131,16 +131,16 @@ export function useEnvelopeOpen(onOpen: () => void) {
 
     setIsOpening(true);
 
-    // Phase 2: Seal breaks, card flies away at 500ms
+    // Phase 2: dấu sáp vỡ, hạt nổ và phong bì bay đi (mặc định sau 500ms; mẫu có rồng phượng bay thì sau 780ms như trang gốc)
     setTimeout(() => {
       setShowBurst(true);
-    }, 500);
+    }, burstDelay);
 
     // Phase 3: Transition finishes at 1300ms -> mount opened invitation
     setTimeout(() => {
       onOpen();
     }, 1300);
-  }, [isOpening, onOpen]);
+  }, [isOpening, onOpen, burstDelay]);
 
   return { isOpening, showBurst, triggerOpen };
 }

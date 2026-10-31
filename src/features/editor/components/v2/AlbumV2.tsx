@@ -153,7 +153,7 @@ export default function AlbumV2({ d, set }: P) {
       )}
     </CardV2>
       {crop !== null && d.photos[crop] && (
-        <CropModal title="Điều chỉnh ảnh" aspect={1} src={d.photos[crop]} zoom0={d.photoCrops[d.photos[crop]]?.z ?? 1} x0={d.photoCrops[d.photos[crop]]?.x ?? 50} y0={d.photoCrops[d.photos[crop]]?.y ?? 50} onApply={(z, x, y) => set({ photoCrops: { ...d.photoCrops, [d.photos[crop]]: { z, x, y } } })} onClose={() => setCrop(null)} />
+        <CropModal title="Điều chỉnh vị trí ảnh" aspect={1} src={d.photos[crop]} zoom0={d.photoCrops[d.photos[crop]]?.z ?? 1} x0={d.photoCrops[d.photos[crop]]?.x ?? 50} y0={d.photoCrops[d.photos[crop]]?.y ?? 50} onApply={(z, x, y) => set({ photoCrops: { ...d.photoCrops, [d.photos[crop]]: { z, x, y } } })} onClose={() => setCrop(null)} />
       )}
     </>
   );

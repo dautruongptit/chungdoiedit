@@ -140,6 +140,10 @@ for (const [card, re, alt, startsOff] of TOGGLES) {
   const ok = await run(`const s = sec('Lễ'); if (!s) return 'no-card'; open(s); const b = [...s.querySelectorAll('button')].find((b) => norm(b.textContent).includes('Thêm lễ')); if (!b) return 'no-btn'; b.click(); await sleep(400); return 'ok'`);
   if (ok === "ok") { const n1 = await run(`const t = await preview(); await back(); return (t.match(/VÀO LÚC/gi) || []).length`); rec("Lễ", "Thêm lễ -> xuất hiện thêm khối lễ", n1 === n0 + 1, `${n0} -> ${n1}`); } else rec("Lễ", "Thêm lễ", null, ok);
 }
+{ // như trang gốc: chưa có ảnh thì không có mục Album trong thiệp -> nạp một ảnh vào thư viện trước khi thử các kiểu album
+  const up = await run(`const s = sec('Thư viện ảnh'); if (!s) return 'no-card'; open(s); const inp = s.querySelector('input[type=file]'); if (!inp) return 'no-input'; const blob = await (await fetch('/images/photo-library/design/58e369ba11052cdcdea00d593a99b37c2eebf74c2dc827425f655b4056e9253d.webp')).blob(); const dt = new DataTransfer(); dt.items.add(new File([blob], 'a.webp', { type: 'image/webp' })); inp.files = dt.files; inp.dispatchEvent(new Event('change', { bubbles: true })); await sleep(1200); return 'ok'`);
+  if (up !== "ok") rec("Thư viện ảnh", "Nạp ảnh mẫu để thử kiểu album", null, up);
+}
 for (const [card, label, probe] of [["Thư viện ảnh", "3D", /album ảnh/i], ["Thư viện ảnh", "Lưới", /album ảnh/i], ["Thư viện ảnh", "Ghép ảnh", /album ảnh/i]]) {
   const ok = await run(`const s = sec(${JSON.stringify(card)}); if (!s) return 'no-card'; open(s); const b = [...s.querySelectorAll('button')].find((b) => norm(b.textContent).trim() === ${JSON.stringify(label)}); if (!b) return 'no-btn'; b.click(); await sleep(400); return 'ok'`);
   if (ok === "ok") { const t = await run(`const t = await preview(); await back(); return t`); rec(card, `Kiểu album "${label}" -> xem trước vẫn dựng được`, probe.test(t)); } else rec(card, `Kiểu album "${label}"`, null, ok);

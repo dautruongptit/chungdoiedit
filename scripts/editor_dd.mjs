@@ -1,0 +1,16 @@
+import { ChromeController } from "./cdp_helper.mjs";
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+const dir=process.argv[2];
+await c.setViewport({ width: 1440, height: 900 });
+await c.send("Runtime.enable");
+const errs=[];
+c.ws.addEventListener("message", (ev)=>{ try{ const m=JSON.parse(ev.data); if(m.method==="Runtime.exceptionThrown") errs.push("EXC "+JSON.stringify(m.params.exceptionDetails.exception?.description||m.params.exceptionDetails.text).slice(0,300)); if(m.method==="Runtime.consoleAPICalled" && m.params.type==="error") errs.push("ERR "+m.params.args.map(a=>a.value||a.description||'').join(' ').slice(0,300)); }catch{} });
+await c.navigate("http://localhost:5173/invitations/create/minimalism-do-dam",5000);
+console.log(await c.eval("location.href"));
+console.log(JSON.stringify(await c.eval(`({title:document.title, text:document.body.innerText.slice(0,300), h:document.documentElement.scrollHeight, iframes:document.querySelectorAll('iframe').length})`)));
+await c.screenshot(dir+"/editor.png");
+await c.eval(`[...document.querySelectorAll('button')].find(b=>/Xem trước/.test(b.innerText)).click()`); await new Promise(r=>setTimeout(r,2500));
+await c.eval(`window.scrollTo(0,0)`); await c.screenshot(dir+"/editor_preview.png");
+console.log(JSON.stringify(await c.eval(`({h:document.documentElement.scrollHeight, text:document.body.innerText.slice(0,500)})`)));
+console.log(errs.join("\n")||"no errors");
+process.exit(0);

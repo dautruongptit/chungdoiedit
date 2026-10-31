@@ -58,6 +58,8 @@ Desktop.ini
 
 # tài nguyên tham chiếu từ trang gốc (chỉ dùng localhost)
 public/assets/_reference/
+public/images/template-previews/
+public/images/templates/
 
 # CSS thiệp sinh bởi scripts/build-invitation-css.mjs
 src/features/invitation/styles/invitation.generated.css
@@ -68,3 +70,6 @@ docs/reference/
 docs/survey/frames/
 scripts/_*
 docs/survey/raw/local_*
+
+# Nhạc nền lấy từ trang gốc (bản quyền, chỉ localhost; my-love-westlife.mp3 đã bị theo dõi từ trước)
+public/music/

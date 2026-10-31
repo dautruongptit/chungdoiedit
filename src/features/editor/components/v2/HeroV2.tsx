@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type { Inv } from "@/types/invitation";
 import { CropModal } from "@/components/common/CropModal";
+import { getCapabilities } from "@/features/invitation/shell/specs";
 import { CardV2 } from "@/features/editor/components/v2/CardV2";
 
 type P = { d: Inv; set: (p: Partial<Inv>) => void };
@@ -11,6 +12,7 @@ const imageIcon = (
 
 /** Thẻ "Ảnh đầu thiệp" — dựng theo HTML đo từ trang gốc (trạng thái chưa có ảnh); các trạng thái khác dùng cùng bộ lớp. */
 export default function HeroV2({ d, set }: P) {
+  const circle = getCapabilities(d.templateId)?.hero.shape === "circle";
   const [crop, setCrop] = useState(false);
   const [uploading, setUploading] = useState(false);
   const file = useRef<HTMLInputElement>(null);
@@ -37,7 +39,7 @@ export default function HeroV2({ d, set }: P) {
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-col items-center gap-2">
               <span className="text-sm text-base-content/70">Ảnh đầu thiệp</span>
-              <div className="relative overflow-hidden bg-base-200 ring ring-offset-base-100 ring-offset-2 ring-base-300 w-[120px] max-w-full rounded-lg" style={{ aspectRatio: "0.594595 / 1" }}>
+              <div className={"relative overflow-hidden bg-base-200 ring ring-offset-base-100 ring-offset-2 ring-base-300 " + (circle ? "w-24 h-24 rounded-full" : "w-[120px] max-w-full rounded-lg")} style={circle ? undefined : { aspectRatio: "0.594595 / 1" }}>
                 {d.heroPhoto ? (
                   <img src={d.heroPhoto} alt="Ảnh đầu thiệp" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: `${d.heroX}% ${d.heroY}%`, transform: `scale(${d.heroZoom})`, transformOrigin: `${d.heroX}% ${d.heroY}%` }} />
                 ) : (
@@ -58,7 +60,7 @@ export default function HeroV2({ d, set }: P) {
         )}
       </CardV2>
       {crop && d.heroPhoto && (
-        <CropModal src={d.heroPhoto} zoom0={d.heroZoom} x0={d.heroX} y0={d.heroY} onApply={(z, x, y) => set({ heroZoom: z, heroX: x, heroY: y })} onClose={() => setCrop(false)} />
+        <CropModal aspect={circle ? 1 : undefined} round={circle} src={d.heroPhoto} zoom0={d.heroZoom} x0={d.heroX} y0={d.heroY} onApply={(z, x, y) => set({ heroZoom: z, heroX: x, heroY: y })} onClose={() => setCrop(false)} />
       )}
     </>
   );

@@ -1,0 +1,3 @@
+(() => { const sec=[...document.querySelectorAll('section.card')].find(s=>/Hộp Quà/.test(s.innerText)); sec.scrollIntoView({block:'center'}); const out=[];
+sec.querySelectorAll('button,label,input,a').forEach(b=>{ const r=b.getBoundingClientRect(); if(!r.width||!r.height) return; const cx=r.left+r.width/2, cy=r.top+r.height/2; const top=document.elementFromPoint(cx,cy); const ok= top===b||b.contains(top)||(top&&top.contains(b)); out.push((ok?'ok  ':'BLOCKED ')+b.tagName.toLowerCase()+' ['+(b.innerText||b.getAttribute('aria-label')||b.className).toString().replace(/\s+/g,' ').slice(0,28)+'] '+(ok?'':'by '+top.tagName+'.'+String(top.className).slice(0,30))); });
+return out.join('\n'); })()

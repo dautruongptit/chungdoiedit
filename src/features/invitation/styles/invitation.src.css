@@ -8,6 +8,8 @@
 @source "../../invitation/shell";
 @source "../components/BrownRsvpDialog.tsx";
 @source "../../editor/components";
+@source "../../templates/components/DraftPrompt.tsx";
+@source "../../templates/components/TemplateModal.tsx";
 
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,3 +24,21 @@ h1, h2, h3, h4, h5, h6 { font-family: Gotham, Montserrat; }
   --color-primary-content: oklch(100% 0 0);
   --color-secondary: oklch(62% 0.265 303.9);
 }
+
+/* Cửa sổ chi tiết mẫu: animation đo từ chungdoi.com */
+@keyframes modalSlideUp { 0% { opacity: 0; transform: translateY(100%); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes modalScaleIn { 0% { opacity: 0; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes staggerFadeIn { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
+.animate-modal-scale-in { animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal forwards; }
+.animate-stagger-1, .animate-stagger-2, .animate-stagger-3, .animate-stagger-4 { opacity: 1; }
+@media (min-width: 768px) {
+  .animate-modal-scale-in { animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal forwards; }
+  .animate-stagger-1 { opacity: 0; animation: staggerFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s 1 normal forwards; }
+  .animate-stagger-2 { opacity: 0; animation: staggerFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s 1 normal forwards; }
+  .animate-stagger-3 { opacity: 0; animation: staggerFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s 1 normal forwards; }
+  .animate-stagger-4 { opacity: 0; animation: staggerFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s 1 normal forwards; }
+}
+
+/* Bộ chọn nhạc nền: animation đo từ chungdoi.com */
+@keyframes slideUp { 0% { transform: translateY(100%); } 100% { transform: translateY(0); } }
+.animate-slide-up { animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal forwards; }

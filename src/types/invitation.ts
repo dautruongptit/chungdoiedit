@@ -111,6 +111,9 @@ export interface Inv {
   musicName: string;
   musicUrl: string;
   musicAutoPlay: boolean;
+  /** Đoạn nhạc phát (giây): bắt đầu / kết thúc; bỏ trống = cả bài */
+  musicStart?: number;
+  musicEnd?: number;
   envelopeGuest: string;
   envelopeInviteMessage: string;
   envelopeText: string;

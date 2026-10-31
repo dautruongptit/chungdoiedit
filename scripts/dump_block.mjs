@@ -1,0 +1,10 @@
+import { ChromeController } from "./cdp_helper.mjs";
+import { writeFileSync } from "node:fs";
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+const [,, key, W, out, which] = process.argv; await c.setViewport({ width: +W, height: 900, mobile: +W<500 });
+const u = which==="clone" ? "http://localhost:5173/demo?template=minimalism-do-dam" : "https://chungdoi.com/vi/mau-thiep/minimalism-do-dam/demo";
+await c.navigate(u,3500); await c.eval(`(() => { const b=[...document.querySelectorAll('button,a')].find(x=>/mở thiệp/i.test(x.innerText||'')); b.click(); })()`); await new Promise(r=>setTimeout(r,3500));
+const html = await c.eval(`(() => { const k=${JSON.stringify(key)}; const col=document.querySelector('header').parentElement; const top=col.children.length<3?col.parentElement:col; const el=[...top.children].find(x=>(x.innerText||'').trim().toUpperCase().startsWith(k)); if(!el) return 'NOTFOUND'; el.scrollIntoView(); return el.outerHTML; })()`);
+writeFileSync(out, html); console.log(html.length);
+await new Promise(r=>setTimeout(r,800)); await c.screenshot(out.replace(/\.html$/,'.png'));
+process.exit(0);

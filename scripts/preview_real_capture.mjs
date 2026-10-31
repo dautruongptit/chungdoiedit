@@ -1,0 +1,28 @@
+// Một lượt duy nhất trên trang thật: tạo thiệp mới từ mẫu Đỏ Đậm → Xem trước → lưu ảnh/văn bản/HTML. Không lặp lại để tránh bị chặn.
+import fs from "node:fs";
+import { ChromeController } from "./cdp_helper.mjs";
+const dir = process.argv[2];
+const c = new ChromeController(); await c.start({ headless: true }); await c.newPage();
+await c.setViewport({ width: 1440, height: 900 });
+await c.navigate("https://chungdoi.com/vi/mau-thiep/minimalism-do-dam", 7000);
+await new Promise(r => setTimeout(r, 3000));
+await c.eval(`[...document.querySelectorAll('button,a')].find(b=>b.innerText.trim()==='Tạo thiệp').click()`);
+for (let i = 0; i < 25 && !(await c.eval("location.pathname")).startsWith("/edit/"); i++) await new Promise(r => setTimeout(r, 1000));
+await new Promise(r => setTimeout(r, 6000));
+await new Promise(r => setTimeout(r, 4000));
+console.log("url", await c.eval("location.href"));
+await c.eval(`[...document.querySelectorAll('button')].find(b=>/Xem trước/.test(b.innerText)).click()`);
+await new Promise(r => setTimeout(r, 4000));
+await c.screenshot(`${dir}/prev_real_open.png`);
+fs.writeFileSync(`${dir}/prev_real_a.txt`, await c.eval("document.body.innerText"));
+await c.eval(`(()=>{const b=[...document.querySelectorAll('button')].find(b=>/Mở thiệp/i.test(b.innerText)); if(b) b.click();})()`);
+await new Promise(r => setTimeout(r, 5000));
+await c.screenshot(`${dir}/prev_real_after_open.png`);
+const h = await c.eval("document.documentElement.scrollHeight");
+await c.setViewport({ width: 1440, height: Math.min(h, 8000) });
+await new Promise(r => setTimeout(r, 1500));
+await c.screenshot(`${dir}/prev_real_full.png`);
+fs.writeFileSync(`${dir}/prev_real_b.txt`, await c.eval("document.body.innerText"));
+fs.writeFileSync(`${dir}/prev_real.html`, await c.eval("document.documentElement.outerHTML"));
+console.log("height", h);
+process.exit(0);

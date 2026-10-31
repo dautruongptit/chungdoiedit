@@ -15,6 +15,7 @@ import { Credit } from "./Credit";
 import { RsvpDialogHost } from "./RsvpDialogHost";
 import { Lightbox } from "./Lightbox";
 import { RIVIERA_BLOCKS } from "./riviera";
+import { TRADITIONAL_BLOCKS } from "./traditional";
 
 export type BlockComponent = ComponentType<{ ctx: InvitationCtx }>;
 
@@ -28,4 +29,4 @@ export const COMMON_BLOCKS: Record<string, BlockComponent> = { Credit, RsvpDialo
 
 /** Họ bố cục -> bản đồ khối; `capabilities.family` chọn bản đồ, `capabilities.blocks` chọn khối & thứ tự. */
 export const blocksForFamily = (family: string): Record<string, BlockComponent> =>
-  ({ ...COMMON_BLOCKS, ...(family === "riviera" ? RIVIERA_BLOCKS : MINIMALISM_BLOCKS) });
+  ({ ...COMMON_BLOCKS, ...(family === "riviera" ? RIVIERA_BLOCKS : family === "traditional" ? TRADITIONAL_BLOCKS : MINIMALISM_BLOCKS) });

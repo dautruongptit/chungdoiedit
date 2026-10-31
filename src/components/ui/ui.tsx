@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export const Icon = {
   chevronRight: (s = 16) => (
@@ -189,7 +190,8 @@ export function Modal({
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
   }, [onClose]);
-  return (
+  // Vẽ ra document.body: hộp thoại này dùng class `.modal` của CSS cũ, nếu nằm trong vùng `.inv-root` (thẻ editor) thì bị luật `.modal` của daisyUI đè (ẩn, sai vị trí).
+  return createPortal(
     <div className="modal-back" onMouseDown={onClose}>
       <div className={`modal ${className}`} role="dialog" aria-modal="true" onMouseDown={(e) => e.stopPropagation()}>
         <div className="modal-head">
@@ -198,6 +200,7 @@ export function Modal({
         </div>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

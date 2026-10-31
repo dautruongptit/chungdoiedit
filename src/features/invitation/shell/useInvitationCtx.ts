@@ -9,7 +9,6 @@ import { introDefaultFor } from "@/features/templates/data/templates";
 import type { ThemeTokens } from "@/features/invitation/shell/theme";
 import { useIsMd, useViewportWidth } from "@/features/invitation/shell/useMedia";
 
-const SAMPLE_ALBUM = ["1e0986014ff4206f135df254987fb52eb45ae964e8cce6f0dba29a905e0e0b67","cea4d58014368af2908a492045ec39a91ab5ed17d4544eb6520733a40beb078a","6c5d0a317cc97ce46cf6798f0248ceb3d97739840e1f27fc5040798c21ad55c6","3f8b94b89026dc3738bb80e625b8ee993ce93949e595ef9539b9c41d17898671","6f6851cc63126158d802563c047297dd76ba3f532c1e3809a556ab617c312000","1c177f9721cd1802abf4fa62e6f22113bb477130cbc30b138c7a42cd995bb670","0c4b3896fb70a7e08523a1299f851735fa4544c530ad41ab5ce1a6dc4677173c","1bbb42e6ee9c2736341c2a79759bae02176bbb899bfca22cc71c0fa860f64a9e"].map((h) => `/images/photo-library/design/${h}.webp`);
 
 export const isLightColor = (hex: string) => {
   const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
@@ -18,7 +17,7 @@ export const isLightColor = (hex: string) => {
   return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255 > 0.85;
 };
 
-export function useInvitationCtx(d: Inv, set: (p: Partial<Inv>) => void, t: ThemeTokens) {
+export function useInvitationCtx(d: Inv, set: (p: Partial<Inv>) => void, t: ThemeTokens, active = true) {
   const isMd = useIsMd();
   const vw = useViewportWidth();
   /** Nội suy tuyến tính giữa giá trị đo ở 768px và ở 1440px (giá trị trang trí parallax phụ thuộc bề rộng) */
@@ -50,7 +49,8 @@ export function useInvitationCtx(d: Inv, set: (p: Partial<Inv>) => void, t: Them
   
   const g = monthGrid(d.date);
   
-  const albumPhotos = d.photos.length > 0 ? d.photos : SAMPLE_ALBUM;
+  // Như trang gốc: chưa có ảnh thì không có mục Album (không dùng ảnh mẫu)
+  const albumPhotos = d.photos;
   
   const heroSrc = (d.heroOn ? d.heroPhoto : "") || d.photos[0] || assetUrl("/images/avatar-placeholder.jpeg");
   
@@ -101,11 +101,13 @@ export function useInvitationCtx(d: Inv, set: (p: Partial<Inv>) => void, t: Them
   
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
+  // Tự phát nhạc khi thiệp được mở (thiệp được dựng sẵn phía sau bìa nên không phát từ lúc mount)
   useEffect(() => {
+      if (!active) return;
       if (audioRef.current) {
         audioRef.current.play().then(() => setIsPlayingMusic(true)).catch(() => {});
       }
-    }, []);
+    }, [active]);
   
   const toggleMusic = () => {
       if (!audioRef.current) return;

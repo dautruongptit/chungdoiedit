@@ -3,9 +3,9 @@
 Dự án: **clone giao diện thiệp cưới chungdoi.com sang bản chạy localhost**, khớp từng px (hình học + kiểu) theo từng mẫu. Ngôn ngữ làm việc với chủ dự án: tiếng Việt.
 
 ## 1. Việc đang làm
-- Nhánh `fix/clone-match`. Đã đạt: **minimalism_brown** (Nâu) và **riviera_blue** (Riviera - Lam) ở bìa, thiệp đã mở, hộp quà, RSVP; editor đã dựng theo markup gốc (16 thẻ) và khớp mẫu Nâu ở 390/768/1280.
+- Nhánh `fix/clone-match`. Đã đạt: **minimalism_brown** (Nâu), **riviera_blue** (Riviera - Lam) và **dragon_phoenix_v4_red** (Long Phụng V4 - Đỏ) ở bìa, thiệp đã mở, hộp quà, RSVP; editor đã dựng theo markup gốc (16 thẻ) và khớp mẫu Nâu ở 390/768/1280.
 - Còn lại (xem `docs/clone-playbook.md` mục 8): đo editor thật của Riviera; parallax khi cuộn của Riviera; nối `getCapabilities()` vào editor; 71 mẫu chưa clone (đang đi đường `Preview.tsx` cũ, lệch lớn).
-- Đọc theo thứ tự: `docs/clone-playbook.md` (quy trình) → `docs/clone-rules.md` (rule, capabilities) → `docs/clone-plan.md` (kế hoạch 75 mẫu) → `docs/brown-fix-plan.md` (ví dụ làm hết một mẫu).
+- Đọc theo thứ tự: `docs/clone-playbook.md` (quy trình) → `docs/clone-rules.md` (rule, capabilities) → `docs/clone-plan-88.md` (kế hoạch 88 mẫu, thay `clone-plan.md` cũ) → `docs/brown-fix-plan.md` (ví dụ làm hết một mẫu).
 
 ## 2. Kiến trúc cần biết
 - Stack: React 18 + Vite 5 + TypeScript; router tự viết; dữ liệu thiệp ở localStorage (`Inv` trong `src/types/invitation.ts`).
@@ -24,7 +24,8 @@ node scripts/survey/diff_dump.mjs  <id> <state> <width>     # ghi docs/survey/di
 node scripts/cmp_dumps.mjs <thư mục mốc> <id> open:390 ...   # chứng minh refactor không đổi số đo
 node scripts/editor-sync.mjs <id>   # sửa field → xem trước đổi; bật/tắt; tải lại giữ dữ liệu
 node scripts/audit.mjs <id>
-node scripts/clone/gen_riviera.cjs  # sinh lại block Riviera từ docs/survey/blocks/riviera_blue
+node scripts/clone/gen_riviera.cjs      # sinh lại block Riviera từ docs/survey/blocks/riviera_blue
+node scripts/clone/gen_traditional.cjs  # sinh lại block họ traditional (Long Phụng V4) — dùng scripts/clone/genkit.cjs
 ```
 Tiêu chí đạt một màn: lệch hình học **0** (dung sai 1px) và lệch kiểu 0, trừ phần tử đổi theo thời gian (đếm ngược, hạt rơi, ảnh lazy ở cuối trang). Mẫu Nâu không được đổi số đo (kiểm bằng `cmp_dumps`).
 
@@ -38,7 +39,7 @@ Tiêu chí đạt một màn: lệch hình học **0** (dung sai 1px) và lệch
 - **Không** nhập mật khẩu / tạo tài khoản / gửi form trên trang gốc; không vượt Cloudflare; ít request. Áp mẫu vào bản nháp tài khoản của chủ dự án (để đo editor) là thao tác thay đổi tài khoản: **hỏi chủ dự án trước**.
 - Ảnh/nhạc bản quyền của trang gốc chỉ để ở `public/assets/_reference/` (gitignore, chỉ localhost). Không đưa khóa API, mã tài khoản, email thật vào repo (dump thô đã che `AIzaSy_REDACTED`, `cdc-REDACTED`).
 - **Không commit/push khi chưa được chủ dự án duyệt.** Commit chia theo nhóm (xem lịch sử).
-- Sửa tay không phải cách làm với file sinh: `blocks/riviera/*` do `scripts/clone/gen_riviera.cjs` sinh; sửa bộ sinh rồi chạy lại.
+- Sửa tay không phải cách làm với file sinh: `blocks/riviera/*`, `blocks/traditional/*` do `scripts/clone/gen_*.cjs` sinh; sửa bộ sinh rồi chạy lại.
 
 ## 6. Bẫy đã gặp
 1. Công cụ shell có thể làm mất dấu `\` trong lệnh/heredoc (regex hỏng) → tạo file chứa backslash bằng công cụ ghi file, không dùng heredoc.

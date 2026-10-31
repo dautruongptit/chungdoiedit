@@ -9,9 +9,12 @@ export function CropModal({
   onClose,
   title = "Điều chỉnh ảnh đầu thiệp",
   aspect = 0.594595,
+  round = false,
 }: {
   title?: string;
   aspect?: number;
+  /** Khung cắt hình tròn (ảnh đầu thiệp của các mẫu khung tròn) */
+  round?: boolean;
   src: string;
   zoom0: number;
   x0: number;
@@ -61,7 +64,7 @@ export function CropModal({
           onPointerMove={move}
           onPointerUp={() => (start.current = null)}
         >
-          <div className="crop-frame" style={{ aspectRatio: String(aspect) }}>
+          <div className={"crop-frame" + (round ? " crop-frame-round" : "")} style={{ aspectRatio: String(aspect) }}>
             <img
               src={src}
               alt=""

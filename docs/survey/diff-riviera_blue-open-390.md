@@ -11,6 +11,6 @@ Ký hiệu: `thuộc tính: local→gốc`. Dung sai hình học 1px.
 - t:422 ngày 19 giờ 45 phút 9 giây#1
 
 ## Chỉ có ở local
-- t:421 ngày 18 giờ 26 phút 58 giây#1
+- t:419 ngày 20 giờ 59 phút 20 giây#1
 
 ## Lệch (theo vị trí dọc)

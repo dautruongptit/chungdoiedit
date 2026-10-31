@@ -26,7 +26,7 @@ const js = `(async () => {
   return JSON.stringify({ ev, removedAt, h: d.documentElement.scrollHeight });
 })()`;
 const r = JSON.parse(await c.eval(js));
-const names = (arr) => arr.filter((a) => a.name && !/^(ping$|ambient|mbFloat|igb|ienv|bounce-gentle|ping-slow|background|opacity|translate|border|box-shadow|set-page)/.test(a.name));
+const names = (arr) => arr.filter((a) => a.name && !/^(ping$|ambient|mbFloat|igb|ienv|bounce-gentle|ping-slow|rv-ienv|visibility|fade-in|background|opacity|translate|border|box-shadow|set-page)/.test(a.name));
 const realP = names(real.anims || []).map((a) => ({ name: a.name, at: a.at, dur: Math.round(a.dur) }));
 const locP = names(r.ev || []);
 const rows = [];

@@ -1,0 +1,1 @@
+<div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-20" style={{ backgroundImage: "url(\"/images/themes/longphung-v4-red/bg-texture.webp\")", backgroundSize: "154.8% auto", backgroundRepeat: "repeat", mixBlendMode: "multiply", opacity: "0.4" }}></div>

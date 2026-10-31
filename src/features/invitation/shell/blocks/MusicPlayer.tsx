@@ -8,6 +8,12 @@ export function MusicPlayer({ ctx }: { ctx: InvitationCtx }) {
             src={d.musicUrl || "/music/my-love-westlife.mp3"}
             loop
             preload="auto"
+            // Phát đúng đoạn đã cắt trong editor: bắt đầu từ musicStart, tới musicEnd thì quay lại đầu đoạn
+            onLoadedMetadata={(e) => { if (d.musicStart) e.currentTarget.currentTime = d.musicStart; }}
+            onTimeUpdate={(e) => {
+              const a = e.currentTarget;
+              if (d.musicEnd && a.currentTime >= d.musicEnd) a.currentTime = d.musicStart || 0;
+            }}
           /><div className="music-floating-wrap fixed top-4 right-4 z-50">
             <button
               className={`music-floating-btn ${isPlayingMusic ? "playing" : ""}`}

@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import type { Inv } from "@/types/invitation";
 import { defaultInv } from "@/features/editor/data/defaultData";
 import Preview from "@/features/invitation/components/Preview";
-import { createDraft } from "@/services/storage/store";
+import { useChooseTemplate } from "@/features/templates/components/DraftPrompt";
 import { Link, navigate } from "@/app/router";
 import { TEMPLATES, Tpl, TPL_CDN, introDefaultFor, templateByIdOrSlug } from "@/features/templates/data/templates";
 import { TEMPLATE_THEMES } from "@/features/invitation/config/templateThemes";
@@ -317,11 +317,7 @@ export default function Demo({ slug }: { slug: string }) {
   }, [isOpened]);
 
   // 4. Xử lý khi bấm nút "Tạo thiệp theo mẫu này"
-  const choose = () => {
-    if (!tpl) return;
-    const id = createDraft(tpl);
-    navigate(`/edit/${id}?template=${tpl.id}`);
-  };
+  const { choose, prompt } = useChooseTemplate();
 
   // 5. Nếu không tìm thấy template: hiển thị trang Not Found chuẩn UI, không crash, không fallback âm thầm
   if (!tpl) {
@@ -373,7 +369,7 @@ export default function Demo({ slug }: { slug: string }) {
           <button
             type="button"
             className="demo-float-btn choose"
-            onClick={choose}
+            onClick={() => tpl && choose(tpl)}
             title="Tạo thiệp theo mẫu này"
           >
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -385,6 +381,7 @@ export default function Demo({ slug }: { slug: string }) {
       )}
 
       {/* Invitation Preview Component */}
+      {prompt}
       <Preview
         d={d}
         set={(p) => setD((prev) => ({ ...prev, ...p }))}

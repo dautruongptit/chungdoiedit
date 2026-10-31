@@ -17,7 +17,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
   const dt = parseDate(d.date);
   const dateText = `${dt.getDate()} tháng ${dt.getMonth() + 1}, ${dt.getFullYear()}`;
 
-  const { isOpening, showBurst, triggerOpen } = useEnvelopeOpen(onOpen);
+  const { isOpening, showBurst, triggerOpen } = useEnvelopeOpen(onOpen, config.openFx === "dragon-fly" ? 780 : 500);
   // Trang gốc: hoa trang trí "bay về phía trước" chỉ khi hộp quà là hộp 3D (phong bì thì không)
   const flyDecor = getGiftboxConfig(d.templateId).giftboxType === "3d-box";
 
@@ -100,19 +100,21 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
             className="wax-seal absolute left-1/2 rounded-full flex items-center justify-center cursor-pointer"
             style={{
               top: config.sealTop !== undefined ? config.sealTop : 50,
-              width: 56,
-              height: 56,
+              width: config.sealSize ?? 56,
+              height: config.sealSize ?? 56,
               transform: "translate(-50%, -50%)",
-              background: sealBg,
+              background: config.sealImg ? "transparent" : sealBg,
               ["--shadow-color" as any]: `rgba(${config.rgb}, 0.5)`,
-              boxShadow: `0 4px 20px rgba(${config.rgb}, 0.5), inset 0 2px 4px rgba(255,255,255,0.3)`,
+              boxShadow: config.sealImg ? "none" : `0 4px 20px rgba(${config.rgb}, 0.5), inset 0 2px 4px rgba(255,255,255,0.3)`,
               zIndex: 30,
               animation: isOpening
                 ? "0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s 1 normal forwards running seal-break"
                 : "seal-pulse 2s ease-in-out infinite",
             }}
           >
-            {config.sealType === "xi" ? (
+            {config.sealImg ? (
+              <img src={config.sealImg} alt="" className="w-[52px] h-[52px] object-contain" style={{ transformOrigin: "center", animation: isOpening ? "0.36s ease-out 0s 1 normal forwards running seal-flower-bloom" : undefined }} />
+            ) : config.sealType === "xi" ? (
               <span
                 className="text-[26px] leading-none"
                 style={{
@@ -174,6 +176,19 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
               />
             ))}
           </div>
+
+          {/* Rồng phượng bay về phía trước khi mở thiệp: vẽ ngoài khung cắt như trang gốc (ảnh trong thẻ vẫn giữ nguyên bên dưới) */}
+          {isOpening && config.openFx === "dragon-fly" && config.imgs.map((img, i) => (
+            <div key={"fly" + i} className={img.className}>
+              <img
+                alt=""
+                aria-hidden="true"
+                src={img.src}
+                className="pointer-events-none block h-auto max-h-full w-full object-contain"
+                style={{ ["--fly-scale-x" as any]: 1, animation: "1.2s ease-in 0s 1 normal forwards running dragon-fly-forward" }}
+              />
+            </div>
+          ))}
 
           {/* Optional Extra Elements (e.g. background scenes, tiles) */}
           {cardExtra}
