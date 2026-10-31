@@ -1,0 +1,54 @@
+{
+  "id": "minimalism_darkred",
+  "family": "darkred",
+  "testId": "minimalism-darkred-template",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Family",
+    "Album",
+    "Banquet",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Thanks",
+    "Credit",
+    "RsvpDialogHost",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "hearts",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "box3d"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "counter",
+    "defaultLayout": "3d"
+  },
+  "countdown": true,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": true
+    }
+  },
+  "music": "la-anh.mp3"
+}

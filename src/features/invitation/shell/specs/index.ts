@@ -6,13 +6,16 @@ import rivDemo from "./riviera_blue/demo.json";
 import dpTheme from "./dragon_phoenix_v4_red/theme.json";
 import dpCaps from "./dragon_phoenix_v4_red/capabilities.json";
 import dpDemo from "./dragon_phoenix_v4_red/demo.json";
+import darkredTheme from "./minimalism_darkred/theme.json";
+import darkredCaps from "./minimalism_darkred/capabilities.json";
+import darkredDemo from "./minimalism_darkred/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional";
+  family: "minimalism" | "riviera" | "traditional" | "darkred";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   testId: string;
@@ -46,6 +49,7 @@ const SPECS: Record<string, TemplateSpec> = {
   minimalism_brown: { id: "minimalism_brown", theme: buildTheme(brownTheme as ThemeJson), capabilities: brownCaps as TemplateCapabilities },
   riviera_blue: { id: "riviera_blue", theme: buildTheme(rivTheme as ThemeJson), capabilities: rivCaps as unknown as TemplateCapabilities, demo: rivDemo as unknown as Partial<Inv> },
   dragon_phoenix_v4_red: { id: "dragon_phoenix_v4_red", theme: buildTheme(dpTheme as ThemeJson), capabilities: dpCaps as unknown as TemplateCapabilities, demo: dpDemo as unknown as Partial<Inv> },
+  minimalism_darkred: { id: "minimalism_darkred", theme: buildTheme(darkredTheme as ThemeJson), capabilities: darkredCaps as unknown as TemplateCapabilities, demo: darkredDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

@@ -1,0 +1,15 @@
+{
+  "assets": "/images/themes/minimalism-dark-red",
+  "colors": {
+    "ink": "rgb(81, 20, 25)",
+    "inkRgb": "81, 20, 25",
+    "sub": "rgba(81, 20, 25, 0.72)",
+    "muted": "rgba(81, 20, 25, 0.6)",
+    "paper": "rgb(255, 247, 235)",
+    "line": "rgba(81, 20, 25, 0.2)",
+    "accent": "#511419",
+    "edge": "#51141922",
+    "cream": "#FFFAF7",
+    "creamSoft": "#ece4d8"
+  }
+}

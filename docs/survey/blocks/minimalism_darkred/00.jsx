@@ -1,0 +1,1 @@
+<style>@keyframes drFloat&#123;0%,100%&#123;transform:translateY(0)&#125;50%&#123;transform:translateY(-8px)&#125;&#125;</style>

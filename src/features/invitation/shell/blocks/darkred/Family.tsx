@@ -1,0 +1,235 @@
+import React from "react";
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+import { parseDate, WEEKDAYS_FULL } from "@/utils/date";
+
+export function Family({ ctx }: { ctx: InvitationCtx }) {
+  const { d, t, fams, full1, full2, r1, r2 } = ctx;
+  if (!d.familyOn && !d.announceOn && (!d.ceremonies || d.ceremonies.length === 0)) return null;
+
+  return (
+    <section className="relative z-10 mx-auto w-[88%] max-w-[420px] md:max-w-[560px]">
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute block -right-[22%] bottom-[30%] z-20 w-[40%]"
+        style={{ willChange: "transform", transform: "translateY(40px)" }}
+      >
+        <span
+          className="block"
+          style={{ animation: "5.5s ease-in-out 0.6s infinite normal none running drFloat", willChange: "transform" }}
+        >
+          <img
+            alt=""
+            className="block w-full max-w-none object-contain drop-shadow-[3px_4px_3px_rgba(0,0,0,0.3)]"
+            src={`${t.assets}/flower2-decoration.webp`}
+          />
+        </span>
+      </span>
+
+      <div className="relative overflow-hidden rounded-[13px] px-5 pb-10 pt-9 text-center shadow-[4px_4px_10px_rgba(0,0,0,0.25)]">
+        <div aria-hidden="true" className="absolute inset-0 rounded-[13px]" style={{ backgroundColor: "rgb(81, 20, 25)" }} />
+        <img
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 size-full max-w-none object-cover mix-blend-multiply opacity-40 rounded-[13px]"
+          src={`${t.assets}/paper.webp`}
+        />
+
+        <div className="relative z-10 flex flex-col items-center gap-6">
+          <h2
+            className="uppercase text-center relative z-10"
+            style={{
+              color: "rgb(236, 228, 216)",
+              fontFamily: '"Times New Roman", ChungDoiIndic, serif',
+              fontWeight: 700,
+              letterSpacing: "0.03em",
+            }}
+          >
+            <span className="text-[20px]">{d.ceremonyTitle || "THÔNG TIN LỄ\u00a0CƯỚI"}</span>
+          </h2>
+
+          {d.familyOn && fams && fams.length > 0 && (
+            <div
+              className="relative grid grid-cols-[1fr_auto_1fr] grid-rows-[repeat(4,auto)] justify-center gap-x-8 gap-y-[3px] text-center"
+              style={{
+                color: "rgb(236, 228, 216)",
+                fontFamily: 'Baskerville, "Times New Roman", ChungDoiIndic, serif',
+              }}
+            >
+              {fams.map((fam, i) => (
+                <div key={i} style={{ display: "contents" }}>
+                  {i === 1 && (
+                    <div
+                      className="row-span-4 h-[50px] w-[1px] shrink-0 self-center"
+                      style={{ backgroundColor: "rgba(236, 228, 216, 0.4)" }}
+                    />
+                  )}
+                  <div className="row-span-4 grid min-w-0 grid-rows-subgrid justify-items-center">
+                    <span className="text-[12px]" style={{ color: "rgba(236, 228, 216, 0.7)" }}>
+                      <span>{fam.title}</span>
+                    </span>
+                    <span className="text-[12px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)", fontSize: "12px" }}>
+                      <span>{fam.f}</span>
+                    </span>
+                    <span className="text-[12px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)", fontSize: "12px" }}>
+                      <span>{fam.m}</span>
+                    </span>
+                    <div
+                      className={`whitespace-pre-line [overflow-wrap:anywhere] ${fam.addr ? "mt-1" : ""} flex w-full flex-col text-[10px] leading-tight`}
+                      style={{ color: "rgba(236, 228, 216, 0.7)" }}
+                    >
+                      <span>{fam.addr}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {d.announceOn && (
+            <div
+              className="relative flex flex-col gap-1 text-center text-[16px] md:text-[20px] mx-auto md:max-w-[560px]"
+              style={{
+                whiteSpace: "pre-line",
+                fontFamily: 'Baskerville, "Times New Roman", ChungDoiIndic, serif',
+                color: "rgb(236, 228, 216)",
+              }}
+            >
+              <span>
+                {d.announcementLine1 || "TRÂN TRỌNG BÁO TIN"}
+                {"\n"}
+                {d.announcementLine2 || "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI"}
+              </span>
+            </div>
+          )}
+
+          <div className="w-full min-w-0 relative flex flex-col items-center text-center gap-3 md:gap-4">
+            <h3
+              className="w-[80%] min-h-[80px] flex items-center justify-center leading-[52px] md:leading-[60px] whitespace-nowrap"
+              style={{
+                fontSize: "32px",
+                fontWeight: 400,
+                fontFamily: '"Viaoda Libre", "The Nautigal", ChungDoiIndic, cursive',
+                color: "rgb(236, 228, 216)",
+              }}
+            >
+              {full1}
+            </h3>
+            <div
+              className="text-[10px] uppercase"
+              style={{
+                color: "rgba(236, 228, 216, 0.7)",
+                fontFamily: 'Uchen, Baskerville, ChungDoiIndic, serif',
+                letterSpacing: "0.14em",
+              }}
+            >
+              <span>{r1}</span>
+            </div>
+            <div
+              className="text-[35px]"
+              style={{
+                color: "rgb(236, 228, 216)",
+                fontFamily: '"Ms Madi", ChungDoiIndic, cursive',
+              }}
+            >
+              &amp;
+            </div>
+            <h3
+              className="w-[80%] min-h-[80px] flex items-center justify-center leading-[52px] md:leading-[60px] whitespace-nowrap"
+              style={{
+                fontSize: "32px",
+                fontWeight: 400,
+                fontFamily: '"Viaoda Libre", "The Nautigal", ChungDoiIndic, cursive',
+                color: "rgb(236, 228, 216)",
+              }}
+            >
+              {full2}
+            </h3>
+            <div
+              className="text-[10px] uppercase"
+              style={{
+                color: "rgba(236, 228, 216, 0.7)",
+                fontFamily: 'Uchen, Baskerville, ChungDoiIndic, serif',
+                letterSpacing: "0.14em",
+              }}
+            >
+              <span>{r2}</span>
+            </div>
+          </div>
+
+          {(d.ceremonies || []).map((c, i) => {
+            const dt = parseDate(c.date || d.date);
+            const weekday = dt ? WEEKDAYS_FULL[dt.getDay()] : "";
+            const day = dt ? String(dt.getDate()).padStart(2, "0") : "";
+            const month = dt ? String(dt.getMonth() + 1).padStart(2, "0") : "";
+            const year = dt ? String(dt.getFullYear()) : "";
+            return (
+              <div
+                key={i}
+                className="relative flex flex-col items-center gap-4 md:gap-5 text-center"
+                style={{
+                  fontFamily: 'Baskerville, "Times New Roman", ChungDoiIndic, serif',
+                }}
+              >
+                <div style={{ color: "rgba(236, 228, 216, 0.7)" }}>
+                  <span className="whitespace-pre-line font-normal text-[16px] md:text-[20px] text-center">
+                    {c.title + (c.place ? "\nTƯ\u00a0GIA" : "")}
+                  </span>
+                </div>
+                <div
+                  className="flex w-full max-w-[180px] md:max-w-[210px] items-center justify-between px-0 text-[13px] md:text-[15px] uppercase whitespace-nowrap min-w-max gap-x-3"
+                  style={{ color: "rgba(236, 228, 216, 0.7)" }}
+                >
+                  <span>VÀO LÚC {c.time || "09:00"}</span>
+                  <span><span>{weekday ? weekday.toUpperCase() : ""}</span></span>
+                </div>
+                <div className="flex items-center justify-center gap-4" style={{ color: "rgb(236, 228, 216)" }}>
+                  <span
+                    className="text-[40px] md:text-[46px] leading-none"
+                    style={{
+                      fontFamily: '"Times New Roman", ChungDoiIndic, serif',
+                      color: "rgb(236, 228, 216)",
+                    }}
+                  >
+                    {day}
+                  </span>
+                  <div className="h-[46px] w-px" style={{ backgroundColor: "rgba(236, 228, 216, 0.45)" }} />
+                  <div className="flex flex-col items-start justify-center gap-1 text-left">
+                    <span
+                      className="text-[14px] md:text-[18px] uppercase"
+                      style={{
+                        fontFamily: '"Times New Roman", ChungDoiIndic, serif',
+                        color: "rgb(236, 228, 216)",
+                      }}
+                    >
+                      <span>THÁNG {month}</span>
+                    </span>
+                    <span
+                      className="text-[14px] md:text-[18px] uppercase"
+                      style={{
+                        fontFamily: '"Times New Roman", ChungDoiIndic, serif',
+                        color: "rgb(236, 228, 216)",
+                      }}
+                    >
+                      {year}
+                    </span>
+                  </div>
+                </div>
+                {c.lunar && (
+                  <div
+                    className="text-xs md:text-sm uppercase tracking-[0.12em] px-0"
+                    style={{
+                      color: "rgba(236, 228, 216, 0.7)",
+                      fontFamily: 'Baskerville, "Times New Roman", ChungDoiIndic, serif',
+                    }}
+                  >
+                    ({c.lunar})
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

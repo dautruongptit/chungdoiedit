@@ -1,0 +1,149 @@
+{
+  "_note": "Dữ liệu demo của trang gốc (Minimalism - Đỏ Đậm), đo ngày 2026-11-01. Ghi đè lên dữ liệu demo chung.",
+  "order": "groom",
+  "groomNick": "Hoàng Long",
+  "brideNick": "Bảo Ngọc",
+  "groomFull": "Đặng Hoàng Long",
+  "brideFull": "Vũ Bảo Ngọc",
+  "groomRole": "Trưởng Nam",
+  "brideRole": "Út Nữ",
+  "heroOn": true,
+  "heroPhoto": "/images/photo-library/design/cdecf6cfe2eeb3cfd63829abde62f1066f10a364ec27d4c997c0f51012c8803e.webp",
+  "introCustom": false,
+  "introText": "Save The Date",
+  "albumOn": true,
+  "photos": [
+    "/images/photo-library/design/abd329aeb24dfdb5db34be2cd39ccbe4b5b0f943f66a89f8c855b2d615cc4e24.webp",
+    "/images/photo-library/design/09c78712bd94460430a8a633a8e72a0576016ea56e183d89d97c551649ee9ece.webp",
+    "/images/photo-library/design/d7695e2fed94d3347e78455624c26164a088b3a365bce422de1ef752fdcab2c1.webp",
+    "/images/photo-library/design/07db56b959aa4410010132a54bfbedd0518e911389a0c6623b946096377bbb97.webp",
+    "/images/photo-library/design/a054d52f9d4d1ed606a4226463f555e359dee874ba7138eab94e10a18b39ddda.webp",
+    "/images/photo-library/design/1cfc881768c6a5c42054d40c4239f4f56b59a159692734f3deb8e79fc55499d2.webp",
+    "/images/photo-library/design/e13655d0de07f307824d9dd1ad5a399434ebc0c016d86aaa4c1bde7452a4abb1.webp"
+  ],
+  "familyOn": true,
+  "groomFamTitle": "Ông Bà",
+  "brideFamTitle": "Ông Bà",
+  "groomFather": "Đặng Văn Thắng",
+  "groomMother": "Bùi Thị Mai",
+  "groomAddr": "Quận 1, TP. Hồ Chí Minh",
+  "brideFather": "Vũ Đức Trung",
+  "brideMother": "Ngô Thị Hạnh",
+  "brideAddr": "Quận 3, TP. Hồ Chí Minh",
+  "announceOn": true,
+  "announcementLine1": "TRÂN TRỌNG BÁO TIN",
+  "announcementLine2": "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+  "ceremonyTitle": "THÔNG TIN LỄ CƯỚI",
+  "ceremonies": [
+    {
+      "title": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI",
+      "date": "2026-01-03",
+      "time": "09:00",
+      "place": "TƯ GIA",
+      "lunar": "Tức ngày 15 tháng 11 năm Ất Tỵ"
+    }
+  ],
+  "partyOn": true,
+  "banquetTitle": "THÔNG TIN TIỆC CƯỚI",
+  "date": "2026-01-03",
+  "time": "18:00",
+  "hideWelcomeTimes": false,
+  "welcomeTime": "17:30",
+  "locTitle": "Tiệc cưới sẽ tổ chức tại",
+  "address": "Trung Tâm Hội Nghị White Palace, 194 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh",
+  "showMap": true,
+  "dressOn": true,
+  "dressTitle": "DRESS CODE",
+  "dressText": "Trang phục dự tiệc",
+  "dressColors": ["#511419", "#8c3a3f", "#c9a24a", "#ece4d8"],
+  "schedOn": true,
+  "schedTitle": "LỊCH TRÌNH NGÀY CƯỚI",
+  "sched": [
+    { "time": "17:00", "text": "Đón khách" },
+    { "time": "18:00", "text": "Khai tiệc" },
+    { "time": "18:30", "text": "Nghi thức cưới" },
+    { "time": "19:00", "text": "Cắt bánh & nâng ly" },
+    { "time": "20:30", "text": "Kết thúc tiệc" }
+  ],
+  "guestOn": true,
+  "wishes": [
+    {
+      "name": "Duy Khang",
+      "msg": "Chúc mừng ngày vui của hai bạn, trăm năm hạnh phúc bền lâu!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Lan Chi",
+      "msg": "Đẹp đôi quá! Chúc hai bạn sống bên nhau đầu bạc răng long.",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Tuấn Anh",
+      "msg": "Mừng hạnh phúc hai bạn! Chúc gia đình nhỏ luôn đầy ắp tiếng cười.",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Khánh Vy",
+      "msg": "Chúc cô dâu chú rể luôn giữ được nụ cười này mãi mãi nhé!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Gia Bảo",
+      "msg": "Nhìn thiệp là thấy tình yêu rồi. Chúc hai bạn trăm năm viên mãn!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Phương Anh",
+      "msg": "Chúc đám cưới thật trọn vẹn và ấm áp. Hạnh phúc nhé hai bạn!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Minh Đức",
+      "msg": "Cuối cùng cũng tới ngày trọng đại, chúc mừng cặp đôi xứng lứa vừa đôi!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Thu Hà",
+      "msg": "Chúc hai bạn mãi mãi yêu thương và bên nhau trọn đời!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Hoàng Long",
+      "msg": "Mẫu thiệp đẹp quá, tông đỏ đô sang trọng ghê. Chúc mừng hai bạn!",
+      "at": "12:30:49 26/7/2026"
+    },
+    {
+      "name": "Ngọc Trâm",
+      "msg": "Chúc Tuấn Kiệt và Minh Anh trăm năm hạnh phúc, sớm sinh quý tử nhé!",
+      "at": "12:30:49 26/7/2026"
+    }
+  ],
+  "giftOn": true,
+  "giftTitle": "Hộp Quà Mừng",
+  "giftDisplayMode": "envelope",
+  "gifts": [
+    {
+      "id": "g1",
+      "who": "groom",
+      "bankName": "Vietcombank",
+      "bankCode": "VCB",
+      "bankBin": "970436",
+      "accountNumber": "1023456789",
+      "accountName": "TRAN TUAN KIET",
+      "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970436011010234567890208QRIBFTTA53037045802VN63049B81&ec=M"
+    },
+    {
+      "id": "g2",
+      "who": "bride",
+      "bankName": "Techcombank",
+      "bankCode": "TCB",
+      "bankBin": "970407",
+      "accountNumber": "9988776655",
+      "accountName": "LE MINH ANH",
+      "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970407011099887766550208QRIBFTTA53037045802VN63043DEB&ec=M"
+    }
+  ],
+  "thanksOn": true,
+  "thanks": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "rsvpOn": true
+}

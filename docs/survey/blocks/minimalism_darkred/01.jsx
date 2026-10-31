@@ -1,0 +1,1 @@
+<div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0" style={{ backgroundImage: "url(\"/images/themes/minimalism-dark-red/paper.webp\")", backgroundSize: "100% auto", backgroundPosition: "center top", mixBlendMode: "multiply", opacity: "0.5" }}></div>
