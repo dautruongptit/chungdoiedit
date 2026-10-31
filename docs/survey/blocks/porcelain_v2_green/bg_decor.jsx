@@ -1,0 +1,1 @@
+<div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0" style={{ backgroundImage: "url(\"/images/themes/porcelain-v2-green/floral-tile.webp\")", backgroundSize: "567px 1008px", backgroundRepeat: "repeat", backgroundPosition: "left top" }}></div>

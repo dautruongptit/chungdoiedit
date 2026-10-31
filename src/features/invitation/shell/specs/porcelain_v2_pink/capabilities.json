@@ -1,0 +1,50 @@
+{
+  "id": "porcelain_v2_pink",
+  "family": "porcelain_v2",
+  "testId": "porcelain-v2-pink-template",
+  "innerClass": "relative z-10 flex flex-col items-center gap-[23px] py-[34px] md:gap-[30px] md:py-[44px]",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Family",
+    "Album",
+    "Banquet",
+    "Dress",
+    "Venue",
+    "Schedule",
+    "Guestbook",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "flowers",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "text",
+    "introLine": false,
+    "shape": "none"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "family",
+    "cards": {
+      "hero": false,
+      "coupleHero": true,
+      "introLine": false
+    }
+  }
+}

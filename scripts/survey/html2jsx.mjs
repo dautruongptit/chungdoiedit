@@ -53,7 +53,7 @@ export function html2jsx(html) {
   return out;
 }
 
-if (import.meta.url === `file://${process.argv[1].replace(/\\/g, "/").replace(/^([A-Za-z]):/, "/$1:")}` || process.argv[1].endsWith("html2jsx.mjs")) {
+if (process.argv[1] && (import.meta.url === `file://${process.argv[1].replace(/\\/g, "/").replace(/^([A-Za-z]):/, "/$1:")}` || process.argv[1].endsWith("html2jsx.mjs"))) {
   const [file, key, idx] = process.argv.slice(2);
   if (file && key) {
     const o = JSON.parse(fs.readFileSync(`docs/survey/raw/${file}`, "utf8"));

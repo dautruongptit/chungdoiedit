@@ -30,13 +30,22 @@ import sgBlueDemo from "./spring_garden_blue/demo.json";
 import sgGreenTheme from "./spring_garden_green/theme.json";
 import sgGreenCaps from "./spring_garden_green/capabilities.json";
 import sgGreenDemo from "./spring_garden_green/demo.json";
+import p2GreenTheme from "./porcelain_v2_green/theme.json";
+import p2GreenCaps from "./porcelain_v2_green/capabilities.json";
+import p2GreenDemo from "./porcelain_v2_green/demo.json";
+import p2RedTheme from "./porcelain_v2_red/theme.json";
+import p2RedCaps from "./porcelain_v2_red/capabilities.json";
+import p2RedDemo from "./porcelain_v2_red/demo.json";
+import p2PinkTheme from "./porcelain_v2_pink/theme.json";
+import p2PinkCaps from "./porcelain_v2_pink/capabilities.json";
+import p2PinkDemo from "./porcelain_v2_pink/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   /** Class bọc các khối nội dung bên trong (khi decor nằm ngoài root thiệp) */
@@ -80,6 +89,9 @@ const SPECS: Record<string, TemplateSpec> = {
   spring_garden_red: { id: "spring_garden_red", theme: buildTheme(sgRedTheme as unknown as ThemeJson), capabilities: sgRedCaps as unknown as TemplateCapabilities, demo: sgRedDemo as unknown as Partial<Inv> },
   spring_garden_blue: { id: "spring_garden_blue", theme: buildTheme(sgBlueTheme as unknown as ThemeJson), capabilities: sgBlueCaps as unknown as TemplateCapabilities, demo: sgBlueDemo as unknown as Partial<Inv> },
   spring_garden_green: { id: "spring_garden_green", theme: buildTheme(sgGreenTheme as unknown as ThemeJson), capabilities: sgGreenCaps as unknown as TemplateCapabilities, demo: sgGreenDemo as unknown as Partial<Inv> },
+  porcelain_v2_green: { id: "porcelain_v2_green", theme: buildTheme(p2GreenTheme as unknown as ThemeJson), capabilities: p2GreenCaps as unknown as TemplateCapabilities, demo: p2GreenDemo as unknown as Partial<Inv> },
+  porcelain_v2_red: { id: "porcelain_v2_red", theme: buildTheme(p2RedTheme as unknown as ThemeJson), capabilities: p2RedCaps as unknown as TemplateCapabilities, demo: p2RedDemo as unknown as Partial<Inv> },
+  porcelain_v2_pink: { id: "porcelain_v2_pink", theme: buildTheme(p2PinkTheme as unknown as ThemeJson), capabilities: p2PinkCaps as unknown as TemplateCapabilities, demo: p2PinkDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

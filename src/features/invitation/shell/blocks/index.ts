@@ -19,6 +19,7 @@ import { TRADITIONAL_BLOCKS } from "./traditional";
 import { DARKRED_BLOCKS } from "./darkred";
 import { LONGPHUNG_V1_BLOCKS } from "./longphung_v1";
 import { SPRINGGARDEN_V1_BLOCKS } from "./springgarden_v1";
+import { PORCELAIN_V2_BLOCKS } from "./porcelain_v2";
 
 export type BlockComponent = ComponentType<{ ctx: InvitationCtx }>;
 
@@ -44,5 +45,7 @@ export const blocksForFamily = (family: string): Record<string, BlockComponent> 
       ? LONGPHUNG_V1_BLOCKS
       : family === "springgarden_v1"
       ? SPRINGGARDEN_V1_BLOCKS
+      : family === "porcelain_v2"
+      ? PORCELAIN_V2_BLOCKS
       : MINIMALISM_BLOCKS),
   });

@@ -1,0 +1,10 @@
+{
+  "paper": "#fefaf0",
+  "ink": "rgb(143, 38, 45)",
+  "edge": "#8f262d22",
+  "accent": "rgb(101, 78, 47)",
+  "buttonBg": "rgb(143, 38, 45)",
+  "buttonText": "rgb(222, 217, 215)",
+  "assets": "/images/themes/porcelain-v2-red",
+  "envelope": "/images/envelope/porcelain_v2_red.webp"
+}
