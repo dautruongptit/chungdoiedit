@@ -9,13 +9,25 @@ import dpDemo from "./dragon_phoenix_v4_red/demo.json";
 import darkredTheme from "./minimalism_darkred/theme.json";
 import darkredCaps from "./minimalism_darkred/capabilities.json";
 import darkredDemo from "./minimalism_darkred/demo.json";
+import dpRedTheme from "./dragon_phoenix_red/theme.json";
+import dpRedCaps from "./dragon_phoenix_red/capabilities.json";
+import dpRedDemo from "./dragon_phoenix_red/demo.json";
+import dpBlueTheme from "./dragon_phoenix_blue/theme.json";
+import dpBlueCaps from "./dragon_phoenix_blue/capabilities.json";
+import dpBlueDemo from "./dragon_phoenix_blue/demo.json";
+import dpGreenTheme from "./dragon_phoenix_green/theme.json";
+import dpGreenCaps from "./dragon_phoenix_green/capabilities.json";
+import dpGreenDemo from "./dragon_phoenix_green/demo.json";
+import dpBlackTheme from "./dragon_phoenix_black/theme.json";
+import dpBlackCaps from "./dragon_phoenix_black/capabilities.json";
+import dpBlackDemo from "./dragon_phoenix_black/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   testId: string;
@@ -23,7 +35,7 @@ export interface TemplateCapabilities {
   blocks: string[];
   cover: { seal: string; ambient: string; particle: string; skin: string };
   gift: { widget: "box3d" | "envelope" };
-  hero: { kind: "photo" | "couple" | "none"; introLine: boolean; /** Hình khung ảnh đầu thiệp: quyết định khung thu nhỏ và khung cắt trong editor */ shape?: "circle" | "portrait" };
+  hero: { kind: "photo" | "couple" | "watermark" | "none"; introLine: boolean; /** Hình khung ảnh đầu thiệp: quyết định khung thu nhỏ và khung cắt trong editor */ shape?: "circle" | "portrait" | "none" };
   album: { indicator: "counter" | "dots"; defaultLayout: string; };
   countdown: boolean;
   layout: { contentMaxMd: number; behaviorMd: "padded" | "fixed" | "stretch"; parallaxDecor: boolean };
@@ -50,6 +62,10 @@ const SPECS: Record<string, TemplateSpec> = {
   riviera_blue: { id: "riviera_blue", theme: buildTheme(rivTheme as ThemeJson), capabilities: rivCaps as unknown as TemplateCapabilities, demo: rivDemo as unknown as Partial<Inv> },
   dragon_phoenix_v4_red: { id: "dragon_phoenix_v4_red", theme: buildTheme(dpTheme as ThemeJson), capabilities: dpCaps as unknown as TemplateCapabilities, demo: dpDemo as unknown as Partial<Inv> },
   minimalism_darkred: { id: "minimalism_darkred", theme: buildTheme(darkredTheme as ThemeJson), capabilities: darkredCaps as unknown as TemplateCapabilities, demo: darkredDemo as unknown as Partial<Inv> },
+  dragon_phoenix_red: { id: "dragon_phoenix_red", theme: buildTheme(dpRedTheme as unknown as ThemeJson), capabilities: dpRedCaps as unknown as TemplateCapabilities, demo: dpRedDemo as unknown as Partial<Inv> },
+  dragon_phoenix_blue: { id: "dragon_phoenix_blue", theme: buildTheme(dpBlueTheme as unknown as ThemeJson), capabilities: dpBlueCaps as unknown as TemplateCapabilities, demo: dpBlueDemo as unknown as Partial<Inv> },
+  dragon_phoenix_green: { id: "dragon_phoenix_green", theme: buildTheme(dpGreenTheme as unknown as ThemeJson), capabilities: dpGreenCaps as unknown as TemplateCapabilities, demo: dpGreenDemo as unknown as Partial<Inv> },
+  dragon_phoenix_black: { id: "dragon_phoenix_black", theme: buildTheme(dpBlackTheme as unknown as ThemeJson), capabilities: dpBlackCaps as unknown as TemplateCapabilities, demo: dpBlackDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

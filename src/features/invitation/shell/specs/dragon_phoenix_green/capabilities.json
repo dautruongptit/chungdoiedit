@@ -1,0 +1,52 @@
+{
+  "id": "dragon_phoenix_green",
+  "family": "longphung_v1",
+  "testId": "green-v1-template",
+  "rootClass": "rounded",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Album",
+    "Family",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Footer",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "happiness",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "box3d"
+  },
+  "hero": {
+    "kind": "watermark",
+    "introLine": false,
+    "shape": "none"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": true
+  },
+  "editor": {
+    "albumCardAfter": "hero",
+    "cards": {
+      "hero": false,
+      "coupleHero": true,
+      "introLine": false
+    }
+  },
+  "music": "ngay-dau-tien.mp3"
+}

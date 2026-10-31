@@ -1,0 +1,66 @@
+{
+  "heroNames": [
+    "Hoài Nam",
+    "Ngọc Linh"
+  ],
+  "albumImgs": [
+    "https://assets.chungdoi.com/photo-library/design/ca9403892afa410dfd6fe38d7d2a3fd391fb151dae527f3a07c7288e8d09d44d.webp",
+    "https://assets.chungdoi.com/photo-library/design/6fe0dc2a01057e3d9fded1c0271c22311a0c89cad26345df5081f676b5d54404.webp",
+    "https://assets.chungdoi.com/photo-library/design/4c64536b5d554f25c05f609100e666deecb4eb37de96bc6469b6be2adc6ab2d3.webp",
+    "https://assets.chungdoi.com/photo-library/design/597a3b1cc78a0ccf22f802007de334e3f429e7fa122967f9f8fac8d217804957.webp",
+    "https://assets.chungdoi.com/photo-library/design/cdfa52665366792a09b0b8792f2ef6a5af8a9a869dc250ad3f2609bb11530655.webp"
+  ],
+  "schedItems": [
+    [
+      "17:30",
+      "Đón khách賓客迎接",
+      "Đón khách賓客迎接",
+      "Đón khách",
+      "賓客迎接"
+    ],
+    [
+      "18:30",
+      "Khai tiệc開席",
+      "Khai tiệc開席",
+      "Khai tiệc",
+      "開席"
+    ],
+    [
+      "18:45",
+      "Rót rượu, cắt bánh敬酒、切蛋糕",
+      "Rót rượu, cắt bánh敬酒、切蛋糕",
+      "Rót rượu, cắt bánh",
+      "敬酒、切蛋糕"
+    ],
+    [
+      "19:00",
+      "Phục vụ món chính上主菜",
+      "Phục vụ món chính上主菜",
+      "Phục vụ món chính",
+      "上主菜"
+    ],
+    [
+      "21:00",
+      "Kết thúc tiệc宴會結束",
+      "Kết thúc tiệc宴會結束",
+      "Kết thúc tiệc",
+      "宴會結束"
+    ]
+  ],
+  "qrImgs": [
+    {
+      "alt": "QR - Chú Rể / 新郎 - THIEP CUOI DEMO",
+      "src": "https://chungdoi.com/api/qr-png?d=00020101021238540010A00000072701240006970436011000000000000208QRIBFTTA53037045802VN63048C2A&ec=M"
+    },
+    {
+      "alt": "QR - Cô Dâu / 新娘 - Lê Ngọc Linh",
+      "src": "https://chungdoi.com/api/qr-png?d=00020101021238540010A00000072701240006970415011080848561450208QRIBFTTA53037045802VN63041BE3&ec=M"
+    }
+  ],
+  "bankTexts": [
+    "",
+    ""
+  ],
+  "rawCeremony": "THÔNG TIN LỄ CƯỚI / 婚禮資訊\nÔng Bà / 先生與女士\nPhan Tiến Minh\nVương Thị Hồng\nSố 85 Nguyễn Thái Sơn, Phường 4, Gò Vấp, TP. Hồ Chí Minh\n台北市大安區忠孝東路123號\nÔng Bà / 先生與女士\nLê Đăng Khoa\nNguyễn Kim Oanh\nNgõ 95 Láng Hạ, Láng Hạ, Đống Đa, Hà Nội\n台北市信義區信義路456號\nTRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI\n謹此敬告\n我們子女的婚禮\nPhan Hoài Nam\nÚT NAM / 幼子\n&\nLê Ngọc Linh\nÚT NỮ / 幼女\nLỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA\n婚禮儀式舉行地點\n自宅\n\nVÀO LÚC / 時間\n\n09:00\nCHỦ NHẬT\n星期日\n01\nTHÁNG 02\n2月\n2026\n(TỨC NGÀY 14 THÁNG 12 NĂM ẤT TỴ / 農曆乙巳年臘月十四)\nTHÔNG TIN TIỆC CƯỚI / 婚宴資訊\nTIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:\n婚宴將於以下時間舉行：\n10:30\nTHỨ BẢY\n星期六\n30\nTHÁNG 05\n5月\n2026\n(TỨC NGÀY 14 THÁNG 4 NĂM BÍNH NGỌ / 農曆丙午年四月十四)\nKHAI TIỆC\n開席\n10:30\nTháng 5 / 2026\nT2\nT3\nT4\nT5\nT6\nT7\nCN\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\nThêm vào lịch / 添加到日曆\nXÁC NHẬN / 確認出席",
+  "rawVenue": "TIỆC CƯỚI SẼ TỔ CHỨC TẠI\n婚宴地點\nTiệc cưới Trống Đồng Cảnh Hồ, 173 Trường Chinh, Quận Thanh Xuân, Hà Nội\n台北君悅酒店，台北市信義區松壽路2號\nChỉ đường"
+}

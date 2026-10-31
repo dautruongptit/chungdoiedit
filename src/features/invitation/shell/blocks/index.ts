@@ -17,6 +17,7 @@ import { Lightbox } from "./Lightbox";
 import { RIVIERA_BLOCKS } from "./riviera";
 import { TRADITIONAL_BLOCKS } from "./traditional";
 import { DARKRED_BLOCKS } from "./darkred";
+import { LONGPHUNG_V1_BLOCKS } from "./longphung_v1";
 
 export type BlockComponent = ComponentType<{ ctx: InvitationCtx }>;
 
@@ -30,4 +31,15 @@ export const COMMON_BLOCKS: Record<string, BlockComponent> = { Credit, RsvpDialo
 
 /** Họ bố cục -> bản đồ khối; `capabilities.family` chọn bản đồ, `capabilities.blocks` chọn khối & thứ tự. */
 export const blocksForFamily = (family: string): Record<string, BlockComponent> =>
-  ({ ...COMMON_BLOCKS, ...(family === "riviera" ? RIVIERA_BLOCKS : family === "traditional" ? TRADITIONAL_BLOCKS : family === "darkred" ? DARKRED_BLOCKS : MINIMALISM_BLOCKS) });
+  ({
+    ...COMMON_BLOCKS,
+    ...(family === "riviera"
+      ? RIVIERA_BLOCKS
+      : family === "traditional"
+      ? TRADITIONAL_BLOCKS
+      : family === "darkred"
+      ? DARKRED_BLOCKS
+      : family === "longphung_v1"
+      ? LONGPHUNG_V1_BLOCKS
+      : MINIMALISM_BLOCKS),
+  });

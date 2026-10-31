@@ -1,0 +1,11 @@
+{
+  "paper": "#0A202F",
+  "cardBg": "#0A202F",
+  "ink": "rgb(233, 206, 158)",
+  "text": "rgb(233, 206, 158)",
+  "muted": "rgb(217, 188, 134)",
+  "accent": "rgb(233, 206, 158)",
+  "edge": "rgba(233, 206, 158, 0.133)",
+  "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+  "assets": "/images/themes/red-v1"
+}
