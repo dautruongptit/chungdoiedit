@@ -1,0 +1,11 @@
+{
+  "paper": "#ffffff",
+  "cardBg": "#ffffff",
+  "ink": "#5d6a57",
+  "text": "#5d6a57",
+  "muted": "rgba(93, 106, 87, 0.7)",
+  "accent": "#697a62",
+  "edge": "rgba(105, 122, 98, 0.5)",
+  "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+  "assets": "/images/themes/nature"
+}

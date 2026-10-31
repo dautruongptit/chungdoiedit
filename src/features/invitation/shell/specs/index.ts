@@ -21,15 +21,26 @@ import dpGreenDemo from "./dragon_phoenix_green/demo.json";
 import dpBlackTheme from "./dragon_phoenix_black/theme.json";
 import dpBlackCaps from "./dragon_phoenix_black/capabilities.json";
 import dpBlackDemo from "./dragon_phoenix_black/demo.json";
+import sgRedTheme from "./spring_garden_red/theme.json";
+import sgRedCaps from "./spring_garden_red/capabilities.json";
+import sgRedDemo from "./spring_garden_red/demo.json";
+import sgBlueTheme from "./spring_garden_blue/theme.json";
+import sgBlueCaps from "./spring_garden_blue/capabilities.json";
+import sgBlueDemo from "./spring_garden_blue/demo.json";
+import sgGreenTheme from "./spring_garden_green/theme.json";
+import sgGreenCaps from "./spring_garden_green/capabilities.json";
+import sgGreenDemo from "./spring_garden_green/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
+  /** Class bọc các khối nội dung bên trong (khi decor nằm ngoài root thiệp) */
+  innerClass?: string;
   testId: string;
   /** Thứ tự và tập khối được vẽ (tên khớp `blocks/index.ts`) */
   blocks: string[];
@@ -66,6 +77,9 @@ const SPECS: Record<string, TemplateSpec> = {
   dragon_phoenix_blue: { id: "dragon_phoenix_blue", theme: buildTheme(dpBlueTheme as unknown as ThemeJson), capabilities: dpBlueCaps as unknown as TemplateCapabilities, demo: dpBlueDemo as unknown as Partial<Inv> },
   dragon_phoenix_green: { id: "dragon_phoenix_green", theme: buildTheme(dpGreenTheme as unknown as ThemeJson), capabilities: dpGreenCaps as unknown as TemplateCapabilities, demo: dpGreenDemo as unknown as Partial<Inv> },
   dragon_phoenix_black: { id: "dragon_phoenix_black", theme: buildTheme(dpBlackTheme as unknown as ThemeJson), capabilities: dpBlackCaps as unknown as TemplateCapabilities, demo: dpBlackDemo as unknown as Partial<Inv> },
+  spring_garden_red: { id: "spring_garden_red", theme: buildTheme(sgRedTheme as unknown as ThemeJson), capabilities: sgRedCaps as unknown as TemplateCapabilities, demo: sgRedDemo as unknown as Partial<Inv> },
+  spring_garden_blue: { id: "spring_garden_blue", theme: buildTheme(sgBlueTheme as unknown as ThemeJson), capabilities: sgBlueCaps as unknown as TemplateCapabilities, demo: sgBlueDemo as unknown as Partial<Inv> },
+  spring_garden_green: { id: "spring_garden_green", theme: buildTheme(sgGreenTheme as unknown as ThemeJson), capabilities: sgGreenCaps as unknown as TemplateCapabilities, demo: sgGreenDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

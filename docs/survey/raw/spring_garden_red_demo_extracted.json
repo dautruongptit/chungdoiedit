@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "groom": {
+      "name": "Hoài Nam"
+    },
+    "bride": {
+      "name": "Ngọc Linh"
+    }
+  },
+  "family": {
+    "groom": {
+      "name": "Ngô Xuân Trường",
+      "title": "Con Trai",
+      "father": "Ngô Văn Hải",
+      "mother": "Đinh Thị Lệ",
+      "address": "Xóm 5, Xã Nghi Phú, TP. Vinh, Nghệ An"
+    },
+    "bride": {
+      "name": "Phạm Thị Ngọc Hân",
+      "title": "Con Gái",
+      "father": "Phạm Văn Tân",
+      "mother": "Hoàng Thị Loan",
+      "address": "Số 30, Đường Lê Ninh, Phường Hưng Bình, TP. Vinh, Nghệ An"
+    }
+  },
+  "ceremony": {
+    "title": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+    "location": "TƯ GIA",
+    "time": "09:00",
+    "dayOfWeek": "CHỦ NHẬT",
+    "day": 21,
+    "month": 6,
+    "year": 2026,
+    "lunarText": "(Tức ngày 7 tháng 5 năm Bính Ngọ)",
+    "calendarUrl": "https://www.google.com/calendar/render?action=TEMPLATE&text=%C4%90%C3%A1m%20c%C6%B0%E1%BB%9Bi%20Ng%C3%B4%20Xu%C3%A2n%20Tr%C6%B0%E1%BB%9Dng%20%26%20Ph%E1%BA%A1m%20Th%E1%BB%8B%20Ng%E1%BB%8Dc%20H%C3%A2n&dates=20260621T043000Z/20260621T063000Z&ctz=Asia/Ho_Chi_Minh&details=Ti%E1%BB%87c%20c%C6%B0%E1%BB%9Bi%20c%E1%BB%A7a%20Ng%C3%B4%20Xu%C3%A2n%20Tr%C6%B0%E1%BB%9Dng%20%26%20Ph%E1%BA%A1m%20Th%E1%BB%8B%20Ng%E1%BB%8Dc%20H%C3%A2n%20t%E1%BA%A1i%20Summer%20Vinh%20Convention%20Center%2C%20343%20L%C3%AA%20Du%E1%BA%A9n%2C%20Tr%C6%B0%E1%BB%9Dng%20Thi%2C%20Th%C3%A0nh%20ph%E1%BB%91%20Vinh%2C%20Ngh%E1%BB%87%20An&location=Summer%20Vinh%20Convention%20Center%2C%20343%20L%C3%AA%20Du%E1%BA%A9n%2C%20Tr%C6%B0%E1%BB%9Dng%20Thi%2C%20Th%C3%A0nh%20ph%E1%BB%91%20Vinh%2C%20Ngh%E1%BB%87%20An"
+  },
+  "banquet": {
+    "time": "11:30",
+    "dayOfWeek": "CHỦ NHẬT",
+    "day": 21,
+    "month": 6,
+    "year": 2026,
+    "lunarText": "(Tức ngày 7 tháng 5 năm Bính Ngọ)",
+    "receptionTime": "11:00",
+    "feastTime": "11:30"
+  },
+  "venue": {
+    "title": "Tiệc cưới sẽ tổ chức tại",
+    "name": "Summer Vinh Convention Center, 343 Lê Duẩn, Trường Thi, Thành phố Vinh, Nghệ An",
+    "mapIframe": "https://www.google.com/maps/embed/v1/place?key=AIzaSyAY8WQxGig6axA_jZil94btO9G6dhsFEKg&q=Summer%20Vinh%20Convention%20Center%2C%20343%20L%C3%AA%20Du%E1%BA%A9n%2C%20Tr%C6%B0%E1%BB%9Dng%20Thi%2C%20Th%C3%A0nh%20ph%E1%BB%91%20Vinh%2C%20Ngh%E1%BB%87%20An",
+    "mapDirect": "https://www.google.com/maps/dir/?api=1&destination=Summer%20Vinh%20Convention%20Center%2C%20343%20L%C3%AA%20Du%E1%BA%A9n%2C%20Tr%C6%B0%E1%BB%9Dng%20Thi%2C%20Th%C3%A0nh%20ph%E1%BB%91%20Vinh%2C%20Ngh%E1%BB%87%20An"
+  },
+  "dressCode": {
+    "title": "DRESS CODE",
+    "subtitle": "Trang phục dự tiệc",
+    "colors": [
+      "#651212",
+      "#8D3A3A",
+      "#FFB2B2"
+    ]
+  },
+  "album": [
+    "https://assets.chungdoi.com/photo-library/design/8102d30e8cf644160e6090b269f388d3532ca8785dfdcca6ee9c713761514cb9.webp",
+    "https://assets.chungdoi.com/photo-library/design/ff0d6e79f3e3addc8e546463233f7f4ac5bce6d944ab7ee035342286e32c8e68.webp",
+    "https://assets.chungdoi.com/photo-library/design/b6daf3e4b84ca7525d256b1e687bfb7ca746a8c2a779947babee2f63a31f111f.webp",
+    "https://assets.chungdoi.com/photo-library/design/69e979f1a647785c1d4a5aeed43bfffb0c815c55a8974cebfe181cb3bd43a0d5.webp",
+    "https://assets.chungdoi.com/photo-library/design/70530e83f3bff7c688a1dfcc58a24e5dd24a2b9be43f6607f96438951fda46b3.webp"
+  ],
+  "schedule": [
+    {
+      "time": "17:30",
+      "title": "Đón khách"
+    },
+    {
+      "time": "18:30",
+      "title": "Khai tiệc"
+    },
+    {
+      "time": "18:45",
+      "title": "Rót rượu, cắt bánh"
+    },
+    {
+      "time": "19:00",
+      "title": "Phục vụ món chính"
+    },
+    {
+      "time": "21:00",
+      "title": "Kết thúc tiệc"
+    }
+  ],
+  "guestbook": {
+    "wishes": [
+      {
+        "author": "Anh Phước",
+        "time": "1:45:14 19/12/2025",
+        "content": "Chúc hai em trăm năm hạnh phúc"
+      },
+      {
+        "author": "Cậu Khanh",
+        "time": "1:44:49 19/12/2025",
+        "content": "Chúc hai cháu nên duyên vợ chồng, sống với nhau hòa thuận, hạnh phúc lâu dài"
+      },
+      {
+        "author": "Chị Mai",
+        "time": "1:44:12 19/12/2025",
+        "content": "Mừng ngày trọng đại, chúc hai đứa mãi mãi hạnh phúc bên nhau"
+      },
+      {
+        "author": "Bà Nội cô Dâu",
+        "time": "1:43:29 19/12/2025",
+        "content": "Chúc hai con sống bên nhau thuận hòa, hạnh phúc lâu dài, gia đình sum vầy"
+      },
+      {
+        "author": "Dì Minh",
+        "time": "1:42:59 19/12/2025",
+        "content": "Mong hai cháu luôn yêu thương, tôn trọng nhau, xây dựng gia đình hạnh phúc"
+      },
+      {
+        "author": "Dì Tâm",
+        "time": "1:42:47 19/12/2025",
+        "content": "Chúc hai cháu trăm năm hạnh phúc, vợ chồng hòa thuận, gia đình yên ấm"
+      },
+      {
+        "author": "Bé Diệu",
+        "time": "1:42:28 19/12/2025",
+        "content": "Chúc hai anh chị hạnh phúc viên mãn, gia đình êm ấm, vạn sự như ý"
+      },
+      {
+        "author": "Đình Trọng k22",
+        "time": "1:42:02 19/12/2025",
+        "content": "Chúc hai bạn trăm năm hạnh phúc, yêu thương nhau thật nhiều và sớm có tin vui"
+      },
+      {
+        "author": "Thương Thương",
+        "time": "1:41:39 19/12/2025",
+        "content": "Chúc vợ chồng son luôn vui vẻ, thuận hòa, cùng nhau xây dựng tổ ấm hạnh phúc"
+      },
+      {
+        "author": "Linh A4",
+        "time": "1:41:18 19/12/2025",
+        "content": "Chúc hai bạn trăm năm hạnh phúc, yêu thương nhau mãi mãi."
+      }
+    ]
+  },
+  "gifts": {
+    "envelopeImg": "/images/envelope/spring_garden_red.webp",
+    "bankAccounts": [
+      {
+        "role": "Cô Dâu - Phạm Thị Ngọc Hân",
+        "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970418011080848561450208QRIBFTTA53037045802VN63044CBC&amp;ec=M",
+        "bank": "BIDV",
+        "accountNumber": "8084856145",
+        "accountHolder": "Phạm Thị Ngọc Hân"
+      },
+      {
+        "role": "Chú Rể - THIEP CUOI DEMO",
+        "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970436011000000000000208QRIBFTTA53037045802VN63048C2A&amp;ec=M",
+        "bank": "Vietcombank",
+        "accountNumber": "0000000000",
+        "accountHolder": "THIEP CUOI DEMO"
+      }
+    ]
+  },
+  "footer": {
+    "text": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!"
+  }
+}

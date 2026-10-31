@@ -30,10 +30,29 @@ export function InvitationShell({ d, set, spec, active = true }: InvitationShell
           style={{ backgroundColor: t.paper, color: t.text ?? t.ink, ["--inv-edge" as string]: t.edge }}
         >
           <style>{`@keyframes mbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}`}</style>
-          {spec.capabilities.blocks.map((name) => {
-            const Block = BLOCKS[name];
-            return Block ? <Block key={name} ctx={ctx} /> : null;
-          })}
+          {spec.capabilities.innerClass ? (
+            <>
+              {spec.capabilities.blocks.filter((b) => b === "Paper").map((name) => {
+                const Block = BLOCKS[name];
+                return Block ? <Block key={name} ctx={ctx} /> : null;
+              })}
+              <div className={spec.capabilities.innerClass}>
+                {spec.capabilities.blocks.filter((b) => b !== "Paper" && b !== "Lightbox").map((name) => {
+                  const Block = BLOCKS[name];
+                  return Block ? <Block key={name} ctx={ctx} /> : null;
+                })}
+              </div>
+              {spec.capabilities.blocks.filter((b) => b === "Lightbox").map((name) => {
+                const Block = BLOCKS[name];
+                return Block ? <Block key={name} ctx={ctx} /> : null;
+              })}
+            </>
+          ) : (
+            spec.capabilities.blocks.map((name) => {
+              const Block = BLOCKS[name];
+              return Block ? <Block key={name} ctx={ctx} /> : null;
+            })
+          )}
         </div>
       </div>
     </div>

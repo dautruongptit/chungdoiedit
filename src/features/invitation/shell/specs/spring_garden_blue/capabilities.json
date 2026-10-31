@@ -1,0 +1,51 @@
+{
+  "id": "spring_garden_blue",
+  "family": "springgarden_v1",
+  "testId": "nature-template",
+  "innerClass": "relative z-10 px-4 sm:px-8 pt-24 sm:pt-32 pb-12 sm:pb-20",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Album",
+    "Family",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Footer",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "leaves",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "text",
+    "introLine": false,
+    "shape": "none"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": true
+  },
+  "editor": {
+    "albumCardAfter": "hero",
+    "cards": {
+      "hero": false,
+      "coupleHero": true,
+      "introLine": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "paper": "#ffffff",
+  "cardBg": "#ffffff",
+  "ink": "#486C7D",
+  "text": "#486C7D",
+  "muted": "rgba(72, 108, 125, 0.7)",
+  "accent": "#3a5666",
+  "edge": "rgba(58, 86, 102, 0.5)",
+  "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+  "assets": "/images/themes/vuon xuan blue"
+}
