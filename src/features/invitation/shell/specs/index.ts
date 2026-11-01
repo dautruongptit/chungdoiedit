@@ -39,13 +39,22 @@ import p2RedDemo from "./porcelain_v2_red/demo.json";
 import p2PinkTheme from "./porcelain_v2_pink/theme.json";
 import p2PinkCaps from "./porcelain_v2_pink/capabilities.json";
 import p2PinkDemo from "./porcelain_v2_pink/demo.json";
+import ddRedTheme from "./double_dragon_red/theme.json";
+import ddRedCaps from "./double_dragon_red/capabilities.json";
+import ddRedDemo from "./double_dragon_red/demo.json";
+import ddGreenTheme from "./double_dragon_green/theme.json";
+import ddGreenCaps from "./double_dragon_green/capabilities.json";
+import ddGreenDemo from "./double_dragon_green/demo.json";
+import ddBlueTheme from "./double_dragon_blue/theme.json";
+import ddBlueCaps from "./double_dragon_blue/capabilities.json";
+import ddBlueDemo from "./double_dragon_blue/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2" | "double_dragon";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   /** Class bọc các khối nội dung bên trong (khi decor nằm ngoài root thiệp) */
@@ -60,7 +69,7 @@ export interface TemplateCapabilities {
   countdown: boolean;
   layout: { contentMaxMd: number; behaviorMd: "padded" | "fixed" | "stretch"; parallaxDecor: boolean };
   editor: {
-    albumCardAfter: "hero" | "ceremony";
+    albumCardAfter: "hero" | "family" | "ceremony";
     cards: { hero: boolean; coupleHero: boolean; introLine: boolean };
     /** Đo thật từ editor trang gốc; chưa có ở mẫu này thì dùng ma trận 88 mẫu (`getEditorSections`). */
     sections?: EditorSections;
@@ -92,6 +101,9 @@ const SPECS: Record<string, TemplateSpec> = {
   porcelain_v2_green: { id: "porcelain_v2_green", theme: buildTheme(p2GreenTheme as unknown as ThemeJson), capabilities: p2GreenCaps as unknown as TemplateCapabilities, demo: p2GreenDemo as unknown as Partial<Inv> },
   porcelain_v2_red: { id: "porcelain_v2_red", theme: buildTheme(p2RedTheme as unknown as ThemeJson), capabilities: p2RedCaps as unknown as TemplateCapabilities, demo: p2RedDemo as unknown as Partial<Inv> },
   porcelain_v2_pink: { id: "porcelain_v2_pink", theme: buildTheme(p2PinkTheme as unknown as ThemeJson), capabilities: p2PinkCaps as unknown as TemplateCapabilities, demo: p2PinkDemo as unknown as Partial<Inv> },
+  double_dragon_red: { id: "double_dragon_red", theme: buildTheme(ddRedTheme as unknown as ThemeJson), capabilities: ddRedCaps as unknown as TemplateCapabilities, demo: ddRedDemo as unknown as Partial<Inv> },
+  double_dragon_green: { id: "double_dragon_green", theme: buildTheme(ddGreenTheme as unknown as ThemeJson), capabilities: ddGreenCaps as unknown as TemplateCapabilities, demo: ddGreenDemo as unknown as Partial<Inv> },
+  double_dragon_blue: { id: "double_dragon_blue", theme: buildTheme(ddBlueTheme as unknown as ThemeJson), capabilities: ddBlueCaps as unknown as TemplateCapabilities, demo: ddBlueDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

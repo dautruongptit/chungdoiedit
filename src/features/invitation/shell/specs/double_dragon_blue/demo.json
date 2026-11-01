@@ -1,0 +1,207 @@
+{
+  "_note": "Dữ liệu demo của Song Long blue (double_dragon_blue) đo từ chungdoi.com ngày 2026-11-01.",
+  "order": "groom",
+  "groomNick": "Đức Bảo",
+  "brideNick": "Thảo Vy",
+  "groomFull": "Phan Minh Khôi",
+  "brideFull": "Lý Thị Kim Ngân",
+  "groomOrder": "Út Nam",
+  "brideOrder": "Thứ Nữ",
+  "heroOn": true,
+  "groomAvatar": "https://assets.chungdoi.com/photo-library/design/8de881ba29457dd0092d00c8b4f44a0e4282e79c.webp",
+  "brideAvatar": "https://assets.chungdoi.com/photo-library/design/8a17b409adc889a55e470398a39581a4fadcd1e3.webp",
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/029e4cf2ae768a75f05dfdad81694dbe9f944778ba5757708c099a5d00e5fb7a.webp",
+    "https://assets.chungdoi.com/photo-library/design/d37d648314719235b97f64275a9c1c1f700324ccd525f5899dbc0960fca5c17d.webp",
+    "https://assets.chungdoi.com/photo-library/design/7199568a6ce8bc71ea83d323ba9d0ebd24a1fef6ee80db7ba730d893d66a22fd.webp",
+    "https://assets.chungdoi.com/photo-library/design/7e22e33da07cde6a5fcbd9ecf86b25f501ee3da85635765a8ea1a1782775a9ab.webp",
+    "https://assets.chungdoi.com/photo-library/design/e46bb1826bbba3f4213f4b8151ef353861728863fc6ac78f869f1ef76eb30b05.webp",
+    "https://assets.chungdoi.com/photo-library/design/5671d95ace893e495231d0ed4357936f28e806bb069afc2b08dcc60bbe579747.webp",
+    "https://assets.chungdoi.com/photo-library/design/3624d016c262383f08f710df21e98dd17ac32a4aaf6d324b7ad44d9952b69da7.webp",
+    "https://assets.chungdoi.com/photo-library/design/2ae5ed71050a6fb6988ee643628e0f5a3cf1cd390c68ee491a5650980de87248.webp"
+  ],
+  "familyOn": true,
+  "groomFamTitle": "Ông bà",
+  "brideFamTitle": "Ông bà",
+  "groomFather": "Phan Văn Lâm",
+  "groomMother": "Trịnh Thị Bảo",
+  "groomAddress": "58/3 Lê Văn Việt, Hiệp Phú, Quận 9, TP.HCM",
+  "brideFather": "Lý Văn Tài",
+  "brideMother": "Trương Thị Mộng",
+  "brideAddress": "11/0 Phan Văn Trị, Phường 10, Bình Thạnh, TP.HCM",
+  "ceremonyHeader": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+  "ceremonyDate": "2026-11-01",
+  "ceremonyTime": "08:00",
+  "partyOn": true,
+  "banquetTime": "11:00",
+  "guestReceptionTime": "10:30",
+  "date": "2025-11-01",
+  "address": "Riverside Palace, 360D Bến Vân Đồn, Phường Vĩnh Hội, Quận 4, Hồ Chí Minh",
+  "locTitle": "Riverside Palace, 360D Bến Vân Đồn, Phường Vĩnh Hội, Quận 4, Hồ Chí Minh",
+  "locAddress": "Riverside Palace, 360D Bến Vân Đồn, Phường Vĩnh Hội, Quận 4, Hồ Chí Minh",
+  "timelineEvents": [
+    {
+      "time": "17:30",
+      "text": "Đón khách"
+    },
+    {
+      "time": "18:30",
+      "text": "Khai tiệc"
+    },
+    {
+      "time": "18:45",
+      "text": "Rót rượu, cắt bánh"
+    },
+    {
+      "time": "19:00",
+      "text": "Phục vụ món chính"
+    },
+    {
+      "time": "21:00",
+      "text": "Kết thúc tiệc"
+    }
+  ],
+  "dresscodeColors": [
+    "#3a332c",
+    "#b9a48a",
+    "#f6f1e8"
+  ],
+  "guestbookEntries": [
+    {
+      "id": "4aa714b0-5c11-43f1-8874-8cff02ccba3f",
+      "name": "long",
+      "message": "Chính thức “có đôi có cặp”, chúc hai bạn hạnh phúc dài lâu, sớm có thêm thành viên mới nè",
+      "timestamp": "2025-12-18T19:05:11.150Z"
+    },
+    {
+      "id": "26b4874a-8578-4e95-816c-cee0bc43f485",
+      "name": "Bà",
+      "message": "Trăm năm tình viên mãn – bạc đầu nghĩa phu thê",
+      "timestamp": "2025-12-18T19:04:31.318Z"
+    },
+    {
+      "id": "1de68f40-1620-4a2c-a0ab-0c91a9b8181a",
+      "name": "Hoa",
+      "message": "Chúc vợ chồng son mãi yêu thương, sớm có tin vui.",
+      "timestamp": "2025-12-18T19:04:15.400Z"
+    },
+    {
+      "id": "b57a7b62-d0f1-48ef-a986-9161dad4a3e8",
+      "name": "Dì Thắm",
+      "message": "Mừng ngày vu quy, chúc đôi uyên ương hạnh phúc bền lâu.",
+      "timestamp": "2025-12-18T19:03:55.506Z"
+    },
+    {
+      "id": "58af1886-a291-45d9-a6a9-fbe362b3bf9f",
+      "name": "Phương 99",
+      "message": "Chúc anh chị trăm năm hạnh phúc, viên mãn yêu thương.",
+      "timestamp": "2025-12-18T19:03:43.001Z"
+    },
+    {
+      "id": "18d77db5-2123-42bc-b6f6-8f19e43a36a5",
+      "name": "Bạn Nam",
+      "message": "Chúc mừng hôn lễ! Kính chúc hai bạn trăm năm hạnh phúc, bách niên giai lão.",
+      "timestamp": "2025-12-11T18:58:44.222Z"
+    },
+    {
+      "id": "2e4c5ecc-b95c-401f-9b23-eadefc7a95f7",
+      "name": "Phước",
+      "message": "Chúc hai bạn hạnh phúc đến đầu bạc răng long.",
+      "timestamp": "2025-12-11T18:57:56.485Z"
+    },
+    {
+      "id": "6a97554d-a842-48bb-a562-aaa8db24bb09",
+      "name": "Dì Kiều",
+      "message": "Chúc hai con một cuộc đời sống chung hòa thuận, đủ đầy và êm ấm.",
+      "timestamp": "2025-12-11T18:57:39.025Z"
+    },
+    {
+      "id": "e1ef4865-294a-4127-a0f6-fb512ab14ece",
+      "name": "Anh Khang",
+      "message": "Chúc mừng ngày trọng đại, chúc 2 đứa bên nhau hạnh phúc",
+      "timestamp": "2025-12-11T18:55:22.854Z"
+    },
+    {
+      "id": "693b7ba8-6e95-46d2-b8a0-9a7dd70937c0",
+      "name": "Ngoại",
+      "message": "Chúc hai cháu sớm sinh quý tử, hạnh phúc bền lâu, thuận vợ thuận chồng.",
+      "timestamp": "2025-12-11T18:54:42.053Z"
+    }
+  ],
+  "giftMethods": [
+    {
+      "id": "g1",
+      "for": "groom",
+      "type": "vietqr",
+      "bankBin": "970436",
+      "bankCode": "VCB",
+      "bankName": "Vietcombank",
+      "accountName": "THIEP CUOI DEMO",
+      "accountNumber": "0000000000"
+    }
+  ],
+  "thankYouNote": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "wishes": [
+    {
+      "name": "long",
+      "time": "2:05:11 19/12/2025",
+      "msg": "Chính thức “có đôi có cặp”, chúc hai bạn hạnh phúc dài lâu, sớm có thêm thành viên mới nè"
+    },
+    {
+      "name": "Bà",
+      "time": "2:04:31 19/12/2025",
+      "msg": "Trăm năm tình viên mãn – bạc đầu nghĩa phu thê"
+    },
+    {
+      "name": "Hoa",
+      "time": "2:04:15 19/12/2025",
+      "msg": "Chúc vợ chồng son mãi yêu thương, sớm có tin vui."
+    },
+    {
+      "name": "Dì Thắm",
+      "time": "2:03:55 19/12/2025",
+      "msg": "Mừng ngày vu quy, chúc đôi uyên ương hạnh phúc bền lâu."
+    },
+    {
+      "name": "Phương 99",
+      "time": "2:03:43 19/12/2025",
+      "msg": "Chúc anh chị trăm năm hạnh phúc, viên mãn yêu thương."
+    },
+    {
+      "name": "Bạn Nam",
+      "time": "1:58:44 12/12/2025",
+      "msg": "Chúc mừng hôn lễ! Kính chúc hai bạn trăm năm hạnh phúc, bách niên giai lão."
+    },
+    {
+      "name": "Phước",
+      "time": "1:57:56 12/12/2025",
+      "msg": "Chúc hai bạn hạnh phúc đến đầu bạc răng long."
+    },
+    {
+      "name": "Dì Kiều",
+      "time": "1:57:39 12/12/2025",
+      "msg": "Chúc hai con một cuộc đời sống chung hòa thuận, đủ đầy và êm ấm."
+    },
+    {
+      "name": "Anh Khang",
+      "time": "1:55:22 12/12/2025",
+      "msg": "Chúc mừng ngày trọng đại, chúc 2 đứa bên nhau hạnh phúc"
+    },
+    {
+      "name": "Ngoại",
+      "time": "1:54:42 12/12/2025",
+      "msg": "Chúc hai cháu sớm sinh quý tử, hạnh phúc bền lâu, thuận vợ thuận chồng."
+    }
+  ],
+  "groomShortName": "Đức Bảo",
+  "brideShortName": "Thảo Vy",
+  "groomFullName": "Phan Minh Khôi",
+  "brideFullName": "Lý Thị Kim Ngân",
+  "groomBirthOrder": "Út Nam",
+  "brideBirthOrder": "Thứ Nữ",
+  "banquetDayName": "THỨ BẢY",
+  "banquetLunar": "( Tức ngày 12 tháng 9 năm Ất Tỵ)",
+  "ceremonyDayName": "CHỦ NHẬT",
+  "ceremonyLunar": "( Tức ngày 23 tháng 9 năm Bính Ngọ)",
+  "partyStart": "11:00"
+}

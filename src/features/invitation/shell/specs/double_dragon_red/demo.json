@@ -1,0 +1,280 @@
+{
+  "_note": "Dữ liệu demo của Song Long red (double_dragon_red) đo từ chungdoi.com ngày 2026-11-01.",
+  "order": "groom",
+  "groomNick": "Hoàng Nam",
+  "brideNick": "Thanh Tú",
+  "groomFull": "Trần Hoàng Nam",
+  "brideFull": "Lê Thanh Tú",
+  "groomOrder": "Trưởng Nam",
+  "brideOrder": "Út Nữ",
+  "heroOn": true,
+  "groomAvatar": "",
+  "brideAvatar": "",
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/e523eaddf90b9700235cbb63ce5f27a1a4fe795772b68d0a13d5271cb92c773b.webp",
+    "https://assets.chungdoi.com/photo-library/design/a878b637e33da8599edc016e3bd2164750ae7d839ea72f3ebeeefe9c74cbb595.webp",
+    "https://assets.chungdoi.com/photo-library/design/24017d76b67552fc03b87db62dfc545e506948e36759710879ecafea0e96f90f.webp",
+    "https://assets.chungdoi.com/photo-library/design/2b09f29a3701a3b015b497da90682826c71352968caf0b4353985e8597c12c40.webp",
+    "https://assets.chungdoi.com/photo-library/design/f4d3bf953b7429d6d94f351c0738ab0a49d8f3d0c5d3098e642daccec738c30b.webp",
+    "https://assets.chungdoi.com/photo-library/design/223c2ad83cd2ee02edf54f52e85d9e7a103b8c1415fb4c95cd893fc4b47f0c1f.webp",
+    "https://assets.chungdoi.com/photo-library/design/eb6d597051eb096bdfd352f1164298b3bdaebdb15e003206f1bebf3e6329a7a3.webp",
+    "https://assets.chungdoi.com/photo-library/design/00808e5c34131c224135f9cead6692d40b1ef457ff7d12bf8a8240858d9925c2.webp",
+    "https://assets.chungdoi.com/photo-library/design/c2ee0f7ad3220952ba32df1df099288ae57c2bab23fbbd55f1bb091ed6f3bb1f.webp",
+    "https://assets.chungdoi.com/photo-library/design/9ab5970787a8a6985809e56a9e4328f033e8d3154bf9b11b9e0aaedd2527cb35.webp",
+    "https://assets.chungdoi.com/photo-library/design/96ad5836c2edaa42c65e12bdeee209920e6a96c0fc5f4638d112bea717774c17.webp",
+    "https://assets.chungdoi.com/photo-library/design/86c838bfb18ec46de2bef1a31c746f6f9c021729cfe76ac30ffca1edf8b9a1cb.webp",
+    "https://assets.chungdoi.com/photo-library/design/551b8f5534d233bfedcb473258c0e3de20def36e1d9499f61236c31fd3bb705a.webp",
+    "https://assets.chungdoi.com/photo-library/design/8de4792ea7a8470b3116610a50bb02d012a8532ff5de32a22b8239af534ba4ad.webp",
+    "https://assets.chungdoi.com/photo-library/design/442dfbe73174b2750aa345bda5f2d3ce8d9ba8a4d0aecab9c627b0fb331f57f7.webp"
+  ],
+  "familyOn": true,
+  "groomFamTitle": "Ông bà",
+  "brideFamTitle": "Ông bà",
+  "groomFather": "Trần Văn Tuấn",
+  "groomMother": "Trần Thị Mai",
+  "groomAddress": "23 Đường Nguyễn Trãi, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+  "brideFather": "Lê Văn Hùng",
+  "brideMother": "Hồ Thị Lan",
+  "brideAddress": "68 Đường Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh",
+  "ceremonyHeader": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+  "ceremonyDate": "2026-02-01",
+  "ceremonyTime": "09:00",
+  "partyOn": true,
+  "banquetTime": "10:30",
+  "date": "2026-02-01",
+  "address": "Queen Plaza Kỳ Hòa, 16A Lê Hồng Phong, Phường 12, Quận 10, TP. Hồ Chí Minh",
+  "locTitle": "Queen Plaza Kỳ Hòa, 16A Lê Hồng Phong, Phường 12, Quận 10, TP. Hồ Chí Minh",
+  "locAddress": "Queen Plaza Kỳ Hòa, 16A Lê Hồng Phong, Phường 12, Quận 10, TP. Hồ Chí Minh",
+  "timelineEvents": [
+    {
+      "id": "demo-tl-don-khach",
+      "time": "17:30",
+      "label": {
+        "de": "Empfang",
+        "en": "Welcome",
+        "fr": "Accueil des invités",
+        "ja": "受付",
+        "ko": "하객 맞이",
+        "vi": "Đón khách",
+        "zh-Hant": "賓客迎接"
+      }
+    },
+    {
+      "id": "demo-tl-khai-tiec",
+      "time": "18:30",
+      "label": {
+        "de": "Feier",
+        "en": "Reception",
+        "fr": "Réception",
+        "ja": "披露宴",
+        "ko": "피로연",
+        "vi": "Khai tiệc",
+        "zh-Hant": "開席"
+      }
+    },
+    {
+      "id": "demo-tl-rot-ruou-cat-banh",
+      "time": "18:45",
+      "label": {
+        "de": "Anstoßen und Anschnitt",
+        "en": "Toasts & Cake",
+        "fr": "Toasts et gâteau",
+        "ja": "乾杯とケーキカット",
+        "ko": "건배 및 케이크 컷팅",
+        "vi": "Rót rượu, cắt bánh",
+        "zh-Hant": "敬酒、切蛋糕"
+      }
+    },
+    {
+      "id": "demo-tl-mon-chinh",
+      "time": "19:00",
+      "label": {
+        "de": "Hauptgang",
+        "en": "Main Course",
+        "fr": "Plat principal",
+        "ja": "メイン料理",
+        "ko": "메인 요리",
+        "vi": "Phục vụ món chính",
+        "zh-Hant": "上主菜"
+      }
+    },
+    {
+      "id": "demo-tl-ket-thuc",
+      "time": "21:00",
+      "label": {
+        "de": "Verabschiedung",
+        "en": "Farewell",
+        "fr": "Fin de la réception",
+        "ja": "お開き",
+        "ko": "환송",
+        "vi": "Kết thúc tiệc",
+        "zh-Hant": "宴會結束"
+      }
+    }
+  ],
+  "dresscodeColors": [
+    "#651212",
+    "#8d3a3a",
+    "#ffb2b2"
+  ],
+  "guestbookEntries": [
+    {
+      "id": "a136f28f-b56a-49d1-9780-3856d10f6242",
+      "name": "HOÀNG VĂN LỢI",
+      "message": "CHÚC 2 ANH CHỊ TRĂM NĂM HẠNH PHÚC",
+      "timestamp": "2026-01-27T21:50:34.603Z"
+    },
+    {
+      "id": "eed80af5-cefe-4fbf-b7d9-c5b4c89a65ca",
+      "name": "Thanh",
+      "message": "Chúc Hoàng Nam và Thanh Tú trọn đời bên nhau, cùng sẻ chia những niềm vui và nỗi buồn, vượt qua mọi chông gai.",
+      "timestamp": "2026-01-24T14:22:07.040Z"
+    },
+    {
+      "id": "3eff27e4-92b8-4f3e-9fd9-2e6b89f2938f",
+      "name": "An Thư Pháp",
+      "message": "Mừng ngày trọng đại! Chúc hai bạn cười nhiều hơn cãi, yêu nhiều hơn giận",
+      "timestamp": "2025-12-18T18:53:19.793Z"
+    },
+    {
+      "id": "6c40831f-b10b-4c4f-ab79-08b050ac7893",
+      "name": "Hoàng Thương M.U.A",
+      "message": "Từ nay có người để thương để lo rồi nhé, chúc cuộc sống hôn nhân lúc nào cũng ngọt ngào",
+      "timestamp": "2025-12-18T18:52:54.394Z"
+    },
+    {
+      "id": "c84b9266-2636-4a33-8566-370afe73651b",
+      "name": "Anh Thắng FPT",
+      "message": "Chúc hai đứa về chung một nhà thật hạnh phúc, yêu nhau hoài không chán nha",
+      "timestamp": "2025-12-18T18:52:00.177Z"
+    },
+    {
+      "id": "66c1fa0b-dcc7-4807-b902-5ada13dbaba0",
+      "name": "Toàn Honda",
+      "message": "Chúc vợ chồng son mãi yêu thương, sớm có tin vui",
+      "timestamp": "2025-12-18T18:51:32.937Z"
+    },
+    {
+      "id": "82273a5f-0797-4fc0-af10-fdd9dac12b2c",
+      "name": "Minh Lý CV",
+      "message": "Mừng ngày vu quy, chúc đôi uyên ương hạnh phúc bền lâu",
+      "timestamp": "2025-12-18T18:51:04.695Z"
+    },
+    {
+      "id": "aac63ff1-d1de-4445-a99f-ae58225bb738",
+      "name": "Thanh Khuê",
+      "message": "Chúc hai bạn trăm năm hạnh phúc, viên mãn yêu thương.",
+      "timestamp": "2025-12-18T18:50:44.646Z"
+    },
+    {
+      "id": "f79f0a2e-5840-49c8-8db4-2691fe4c0f8e",
+      "name": "Ngọc My",
+      "message": "Chúc hai bạn đi cùng nhau thật xa, thật lâu, và luôn vui như hôm nay.",
+      "timestamp": "2025-12-18T18:50:27.564Z"
+    },
+    {
+      "id": "a42ec39f-c7d6-4560-88d8-1d90effde969",
+      "name": "Vũ nè",
+      "message": "Vậy là bạn thân mình có vợ ròi, chúc 2 bạn trăm năm hạnh phúc, bạc đầu nghĩa phu thê",
+      "timestamp": "2025-12-11T18:23:56.030Z"
+    },
+    {
+      "id": "5d5f2f67-7969-4e0c-a181-2c6dcab00a41",
+      "name": "My",
+      "message": "Dì chúc hai con trăm năm hạnh phúc.",
+      "timestamp": "2025-12-11T18:22:23.483Z"
+    },
+    {
+      "id": "5bb5a473-53b4-41a1-8fc8-a26752958e5c",
+      "name": "Nghĩa",
+      "message": "Trăm năm hạnh phúc nha bạn tôi ơi",
+      "timestamp": "2025-12-11T18:05:52.320Z"
+    },
+    {
+      "id": "72f233ad-4a44-445f-a6e6-f26645820eef",
+      "name": "Thanh Trúc",
+      "message": "chúc hai bạn trăm năm hạnh phúc nhá🥰",
+      "timestamp": "2025-12-11T18:05:15.001Z"
+    }
+  ],
+  "giftMethods": [
+    {
+      "id": "g1",
+      "for": "groom",
+      "type": "vietqr",
+      "bankBin": "970436",
+      "bankCode": "VCB",
+      "bankName": "Vietcombank",
+      "accountName": "THIEP CUOI DEMO",
+      "accountNumber": "0000000000"
+    }
+  ],
+  "thankYouNote": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "wishes": [
+    {
+      "name": "HOÀNG VĂN LỢI",
+      "time": "4:50:34 28/1/2026",
+      "msg": "CHÚC 2 ANH CHỊ TRĂM NĂM HẠNH PHÚC"
+    },
+    {
+      "name": "Thanh",
+      "time": "21:22:07 24/1/2026",
+      "msg": "Chúc Hoàng Nam và Thanh Tú trọn đời bên nhau, cùng sẻ chia những niềm vui và nỗi buồn, vượt qua mọi chông gai."
+    },
+    {
+      "name": "An Thư Pháp",
+      "time": "1:53:19 19/12/2025",
+      "msg": "Mừng ngày trọng đại! Chúc hai bạn cười nhiều hơn cãi, yêu nhiều hơn giận"
+    },
+    {
+      "name": "Hoàng Thương M.U.A",
+      "time": "1:52:54 19/12/2025",
+      "msg": "Từ nay có người để thương để lo rồi nhé, chúc cuộc sống hôn nhân lúc nào cũng ngọt ngào"
+    },
+    {
+      "name": "Anh Thắng FPT",
+      "time": "1:52:00 19/12/2025",
+      "msg": "Chúc hai đứa về chung một nhà thật hạnh phúc, yêu nhau hoài không chán nha"
+    },
+    {
+      "name": "Toàn Honda",
+      "time": "1:51:32 19/12/2025",
+      "msg": "Chúc vợ chồng son mãi yêu thương, sớm có tin vui"
+    },
+    {
+      "name": "Minh Lý CV",
+      "time": "1:51:04 19/12/2025",
+      "msg": "Mừng ngày vu quy, chúc đôi uyên ương hạnh phúc bền lâu"
+    },
+    {
+      "name": "Thanh Khuê",
+      "time": "1:50:44 19/12/2025",
+      "msg": "Chúc hai bạn trăm năm hạnh phúc, viên mãn yêu thương."
+    },
+    {
+      "name": "Ngọc My",
+      "time": "1:50:27 19/12/2025",
+      "msg": "Chúc hai bạn đi cùng nhau thật xa, thật lâu, và luôn vui như hôm nay."
+    },
+    {
+      "name": "Vũ nè",
+      "time": "1:23:56 12/12/2025",
+      "msg": "Vậy là bạn thân mình có vợ ròi, chúc 2 bạn trăm năm hạnh phúc, bạc đầu nghĩa phu thê"
+    },
+    {
+      "name": "My",
+      "time": "1:22:23 12/12/2025",
+      "msg": "Dì chúc hai con trăm năm hạnh phúc."
+    },
+    {
+      "name": "Nghĩa",
+      "time": "1:05:52 12/12/2025",
+      "msg": "Trăm năm hạnh phúc nha bạn tôi ơi"
+    },
+    {
+      "name": "Thanh Trúc",
+      "time": "1:05:15 12/12/2025",
+      "msg": "chúc hai bạn trăm năm hạnh phúc nhá🥰"
+    }
+  ]
+}

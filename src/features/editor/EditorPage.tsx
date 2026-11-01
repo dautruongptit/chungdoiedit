@@ -171,6 +171,7 @@ export default function EditorPage() {
             {vis.heroPhoto && <HeroPhoto d={d} set={set} />}
             {albumAfter === "hero" && <AlbumV2 d={d} set={set} />}
             <V.Family d={d} set={set} />
+            {albumAfter === "family" && <AlbumV2 d={d} set={set} />}
             <V.Announce d={d} set={set} />
             <V.Ceremony d={d} set={set} />
             {albumAfter === "ceremony" && <AlbumV2 d={d} set={set} />}

@@ -1,0 +1,80 @@
+{
+  "theme": {
+    "background": "linear-gradient(to bottom right, #4a1212, #3a0e0e, #2a0808)",
+    "cardBg": "#a31d16",
+    "textPrimary": "#f0d497",
+    "textSecondary": "rgba(240, 212, 151, 0.85)",
+    "accent": "#f0d497",
+    "dividerFrom": "transparent",
+    "dividerTo": "rgba(240, 212, 151, 0.5)",
+    "buttonBg": "#f0d497",
+    "buttonText": "#4a1212",
+    "guestBoxBg": "rgba(0, 0, 0, 0.15)",
+    "guestBoxBorder": "rgba(240, 212, 151, 0.3)",
+    "particleColors": [
+      "#FFD700",
+      "#FFC107",
+      "#FF6B6B",
+      "#FFE066"
+    ],
+    "particleType": "happiness"
+  },
+  "fonts": {
+    "couple": "\"Playfair Display\", \"Baskerville\", \"Times New Roman\", ChungDoiIndic, serif"
+  },
+  "musicPlayerColor": "#CD5C5C",
+  "decorations": {
+    "cardImages": [
+      {
+        "src": "/images/themes/songlong-red/dragon_left.webp",
+        "className": "w-[220px] md:w-[300px] -top-[50px] -left-[95px] md:-top-[80px] md:-left-[100px] opacity-30 rotate-[30deg] md:rotate-[30deg]",
+        "flyOnOpen": true
+      },
+      {
+        "src": "/images/themes/songlong-red/dragon_right.webp",
+        "className": "w-[220px] md:w-[300px] -bottom-[30px] -right-[120px] md:-bottom-[80px] md:-right-[110px] opacity-30 -rotate-[-30deg] md:-rotate-[-30deg]",
+        "flyOnOpen": true
+      },
+      {
+        "src": "/images/themes/songlong-red/cloud_small.webp",
+        "className": "w-[50px] md:w-[70px] top-3 right-3 md:top-4 md:right-4 opacity-40"
+      },
+      {
+        "src": "/images/themes/songlong-red/cloud_big.webp",
+        "className": "w-[50px] md:w-[70px] bottom-3 left-3 md:bottom-4 md:left-4 opacity-40 -scale-x-100"
+      },
+      {
+        "src": "/images/themes/songlong-red/wave.webp",
+        "className": "w-[50px] md:w-[70px] bottom-2 left-1/2 -translate-x-1/2 opacity-20"
+      }
+    ],
+    "ogCardImages": [
+      {
+        "src": "/images/themes/songlong-red/dragon_left.webp",
+        "className": "w-[440px] -left-[70px] top-1/2 -translate-y-1/2 opacity-25"
+      },
+      {
+        "src": "/images/themes/songlong-red/dragon_right.webp",
+        "className": "w-[440px] -right-[70px] top-1/2 -translate-y-1/2 opacity-25"
+      },
+      {
+        "src": "/images/themes/songlong-red/cloud_small.webp",
+        "className": "w-[90px] top-6 right-6 opacity-40"
+      },
+      {
+        "src": "/images/themes/songlong-red/cloud_big.webp",
+        "className": "w-[90px] bottom-6 left-6 opacity-40 -scale-x-100"
+      },
+      {
+        "src": "/images/themes/songlong-red/wave.webp",
+        "className": "w-[110px] bottom-4 left-1/2 -translate-x-1/2 opacity-20"
+      }
+    ]
+  },
+  "ink": "rgb(136, 41, 37)",
+  "sub": "rgb(70, 70, 70)",
+  "paper": "rgb(236, 223, 214)",
+  "accent": "rgb(136, 41, 37)",
+  "edge": "#a31d1622",
+  "assets": "songlong-red"
+}

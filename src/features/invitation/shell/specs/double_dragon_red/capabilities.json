@@ -1,0 +1,42 @@
+{
+  "id": "double_dragon_red",
+  "family": "double_dragon",
+  "testId": "classic-template",
+  "rootClass": "classic-template",
+  "innerClass": "relative w-full max-w-[480px] md:max-w-[900px] md:mx-auto overflow-hidden md:border md:border-[#a31d1622] flex flex-col",
+  "innerStyle": {
+    "backgroundColor": "rgb(var(--color-z-linen))",
+    "padding": "0px"
+  },
+  "blocks": [
+    "headerDecor",
+    "hero",
+    "ceremonyTitle",
+    "family",
+    "albumTitle",
+    "album",
+    "banquetTitle",
+    "banquet",
+    "venue",
+    "dressSchedule",
+    "guestbookTitle",
+    "guestbook",
+    "gifts",
+    "footerDecor",
+    "footer"
+  ],
+  "cover": {
+    "hasCover": true,
+    "seal": "happiness",
+    "particle": "happiness"
+  },
+  "gift": {
+    "type": "box"
+  },
+  "hero": {
+    "style": "avatar"
+  },
+  "album": {
+    "type": "3d"
+  }
+}

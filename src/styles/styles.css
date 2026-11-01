@@ -1729,8 +1729,8 @@ menu {
 }
 
 @keyframes igbShadowPulse {
-  0%, 100% { transform: scaleX(1); opacity: 0.35; }
-  50% { transform: scaleX(0.88); opacity: 0.2; }
+  0%, 100% { transform: scaleX(1); opacity: 0.3; }
+  50% { transform: scaleX(0.9); opacity: 0.18; }
 }
 
 @keyframes igbSparkleAnim {

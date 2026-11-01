@@ -13,16 +13,20 @@ const dumpSrc = fs.readFileSync(new URL("./dump.js", import.meta.url), "utf8");
 
 const c = new ChromeController();
 try {
-  await c.start({ headless: true });
+  await c.start({ headless: false });
   await c.newPage();
   await c.setViewport({ width, height: width === 390 ? 844 : 900 });
 
   const url = `https://chungdoi.com/vi/mau-thiep/${slug}/demo` + (state === "cover" ? "?autoscroll=0" : "?open=1&autoscroll=0");
   console.log("Navigating to", url);
-  await c.navigate(url, 8000);
+  await c.navigate(url, 10000);
 
-  const title = await c.eval("document.title");
-  console.log("Page title:", title);
+  for (let i = 0; i < 10; i++) {
+    const title = await c.eval("document.title");
+    console.log(`[${i * 1}s] Page title:`, title);
+    if (!title.includes("Just a moment")) break;
+    await new Promise((r) => setTimeout(r, 1000));
+  }
 
   // Chờ trang render ổn định
   await new Promise((r) => setTimeout(r, 2000));
@@ -44,10 +48,13 @@ try {
   });
 
   if (res.n && !res.err) {
-    fs.mkdirSync("docs/survey/raw", { recursive: true });
-    const outPath = `docs/survey/raw/${id}_dump_${state}_${width}.json`;
-    fs.writeFileSync(outPath, JSON.stringify(res, null, 2));
-    console.log("Wrote", outPath);
+    const outRel = `docs/survey/raw/${id}_dump_${state}_${width}.json`;
+    const dirs = ["docs/survey/raw", "web/docs/survey/raw"];
+    for (const d of dirs) {
+      fs.mkdirSync(d, { recursive: true });
+      fs.writeFileSync(`${d}/${id}_dump_${state}_${width}.json`, JSON.stringify(res, null, 2));
+    }
+    console.log("Wrote", outRel, "and web/" + outRel);
   } else {
     console.error("Dump failed:", res);
   }
