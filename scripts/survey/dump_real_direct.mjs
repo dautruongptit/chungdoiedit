@@ -34,7 +34,27 @@ try {
   await c.eval(dumpSrc);
   await new Promise((r) => setTimeout(r, 1000));
 
-  const opts = state === "cover" ? { rootSel: "body" } : {};
+  if (state === "open") {
+    console.log("Scrolling page to trigger lazy loading...");
+    const preScroll = `(async()=>{
+      const highestId = window.setInterval(() => {}, 1000);
+      for (let i = 0; i <= highestId; i++) {
+        window.clearInterval(i);
+      }
+      const sl = (ms) => new Promise(r => setTimeout(r, ms));
+      for (let y = 0; y < document.documentElement.scrollHeight; y += 400) {
+        window.scrollTo(0, y);
+        await sl(150);
+      }
+      window.scrollTo(0, document.documentElement.scrollHeight);
+      await sl(1500);
+      window.scrollTo(0, 0);
+      await sl(1000);
+    })()`;
+    await c.eval(preScroll);
+  }
+
+  const opts = state === "cover" ? { rootSel: "body" } : { rootSel: "[data-testid*='-template']" };
   const resStr = await c.eval(`JSON.stringify(window.__dump(${JSON.stringify(opts)}))`);
   const res = JSON.parse(resStr);
 

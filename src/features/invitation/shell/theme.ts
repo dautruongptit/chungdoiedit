@@ -18,4 +18,4 @@ export interface ThemeJson {
 /** Mọi khối đọc chủ đề qua đối tượng này (t.ink, t.assets...). */
 export type ThemeTokens = { assets: string } & Record<string, string>;
 
-export const buildTheme = (j: ThemeJson): ThemeTokens => ({ assets: j.assets, ...j.colors, ...(j.tokens ?? {}) });
+export const buildTheme = (j: any): ThemeTokens => ({ assets: j.assets, ...(j.colors ?? {}), ...j, ...(j.tokens ?? {}) });

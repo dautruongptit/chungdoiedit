@@ -29,7 +29,7 @@ const pre = {
 }[state];
 if (pre) await c.eval(pre);
 await new Promise((r) => setTimeout(r, 900));
-const opts = { openfull: {}, editor: { rootSel: "body" }, cover: { rootSel: "body" }, open: {}, gift: { rootSel: "dialog[open] .modal-box, dialog.modal-open .modal-box, dialog[open]" }, rsvp: { rootSel: "[role=dialog],dialog[open],.modal-open .modal-box,.fixed.inset-0" } }[state];
+const opts = { openfull: {}, editor: { rootSel: "body" }, cover: { rootSel: "body" }, open: { rootSel: "[data-testid*='-template']" }, gift: { rootSel: "dialog[open] .modal-box, dialog.modal-open .modal-box, dialog[open]" }, rsvp: { rootSel: "[role=dialog],dialog[open],.modal-open .modal-box,.fixed.inset-0" } }[state];
 const out = JSON.parse(await c.eval(`JSON.stringify(window.__dump(${JSON.stringify(opts)}))`));
 fs.mkdirSync("docs/survey/raw", { recursive: true });
 fs.writeFileSync(`docs/survey/raw/local_${id}_dump_${state}_${width}${process.argv.includes("--css") ? "_exp" : ""}.json`, JSON.stringify(out));

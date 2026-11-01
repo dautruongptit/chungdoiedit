@@ -1,0 +1,122 @@
+[
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(0.194779 * var(--cfr-cw) + var(--cfr-garland) + 0 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(0.194779 * var(--cfr-cw) + var(--cfr-garland) + 0 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(0.194779 * var(--cfr-cw) + var(--cfr-garland) + 0 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(0.194779 * var(--cfr-cw) + var(--cfr-garland) + 0 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(2.068823 * var(--cfr-cw) + var(--cfr-garland) + 2 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(2.068823 * var(--cfr-cw) + var(--cfr-garland) + 2 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(2.068823 * var(--cfr-cw) + var(--cfr-garland) + 2 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(2.068823 * var(--cfr-cw) + var(--cfr-garland) + 2 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(3.942867 * var(--cfr-cw) + var(--cfr-garland) + 4 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(3.942867 * var(--cfr-cw) + var(--cfr-garland) + 4 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(3.942867 * var(--cfr-cw) + var(--cfr-garland) + 4 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(3.942867 * var(--cfr-cw) + var(--cfr-garland) + 4 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(5.816911 * var(--cfr-cw) + var(--cfr-garland) + 6 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(5.816911 * var(--cfr-cw) + var(--cfr-garland) + 6 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(5.816911 * var(--cfr-cw) + var(--cfr-garland) + 6 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(5.816911 * var(--cfr-cw) + var(--cfr-garland) + 6 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(7.690955 * var(--cfr-cw) + var(--cfr-garland) + 8 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(7.690955 * var(--cfr-cw) + var(--cfr-garland) + 8 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(7.690955 * var(--cfr-cw) + var(--cfr-garland) + 8 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(7.690955 * var(--cfr-cw) + var(--cfr-garland) + 8 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(9.564999 * var(--cfr-cw) + var(--cfr-garland) + 10 * var(--cfr-gap) + 0px);"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(9.564999 * var(--cfr-cw) + var(--cfr-garland) + 10 * var(--cfr-gap) + var(--cfr-off2));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -left-[10%] rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower2.webp",
+    "style": "top: calc(9.564999 * var(--cfr-cw) + var(--cfr-garland) + 10 * var(--cfr-gap) + 0.958716 * var(--cfr-cw) + var(--cfr-gap));"
+  },
+  {
+    "cls": "pointer-events-none absolute w-[50%] h-auto object-contain opacity-[0.07] -right-[10%] scale-x-[-1] -rotate-[20deg]",
+    "src": "/images/themes/crystal-floral-red/flower3.webp",
+    "style": "top: calc(9.564999 * var(--cfr-cw) + var(--cfr-garland) + 10 * var(--cfr-gap) + var(--cfr-off2) + 0.915328 * var(--cfr-cw) + var(--cfr-gap));"
+  }
+]

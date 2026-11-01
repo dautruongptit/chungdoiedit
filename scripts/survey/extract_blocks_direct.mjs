@@ -26,7 +26,7 @@ try {
 
   const infoStr = await c.eval(`
     (() => {
-      const templateRoot = document.querySelector("[data-testid]");
+      const templateRoot = document.querySelector("[data-testid*='-template']") || document.querySelector("[data-testid]");
       if (!templateRoot) return JSON.stringify({ error: "No data-testid found" });
 
       const innerWrapper = templateRoot.firstElementChild;

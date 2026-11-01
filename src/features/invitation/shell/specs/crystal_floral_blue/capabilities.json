@@ -1,0 +1,46 @@
+{
+  "id": "crystal_floral_blue",
+  "family": "crystal_floral",
+  "testId": "crystal-floral-blue-template",
+  "rootClass": "!overflow-visible md:!overflow-hidden",
+  "blocks": [
+    "TopDecor",
+    "WatermarkStyle",
+    "Watermark",
+    "Hero",
+    "Ceremony",
+    "Venue",
+    "DressCode",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "ThankYou",
+    "Footer",
+    "BottomDecor",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "seal-gold",
+    "ambient": "sparkles",
+    "particle": "sparkles",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  }
+}

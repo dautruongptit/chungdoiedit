@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Chú Rể - LE HOANG NAM",
+    "bank": "BIDV",
+    "accNum": "21510009988776",
+    "name": "LE HOANG NAM",
+    "qrSrc": "/api/qr-png?d=00020101021238580010A000000727012800069704180114215100099887760208QRIBFTTA53037045802VN63041679&amp;ec=M"
+  },
+  {
+    "title": "Cô Dâu - TRAN THUY DUONG",
+    "bank": "MB Bank",
+    "accNum": "0908776655",
+    "name": "TRAN THUY DUONG",
+    "qrSrc": "/api/qr-png?d=00020101021238540010A00000072701240006970422011009087766550208QRIBFTTA53037045802VN63041C95&amp;ec=M"
+  }
+]

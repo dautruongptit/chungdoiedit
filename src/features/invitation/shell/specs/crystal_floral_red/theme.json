@@ -1,0 +1,11 @@
+{
+  "paper": "rgb(251, 248, 243)",
+  "ink": "rgb(86, 2, 7)",
+  "text": "rgb(86, 2, 7)",
+  "edge": "#9c1f2c22",
+  "accent": "rgb(156, 31, 44)",
+  "buttonBg": "rgb(156, 31, 44)",
+  "buttonText": "rgb(255, 255, 255)",
+  "assets": "/images/themes/crystal-floral-red",
+  "envelope": "/images/envelope/crystal_floral_red.webp"
+}

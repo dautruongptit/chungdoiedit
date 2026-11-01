@@ -57,13 +57,22 @@ import b2GreenDemo from "./baroque_v2_darkgreen/demo.json";
 import b2BlueTheme from "./baroque_v2_darkblue/theme.json";
 import b2BlueCaps from "./baroque_v2_darkblue/capabilities.json";
 import b2BlueDemo from "./baroque_v2_darkblue/demo.json";
+import cfBlueTheme from "./crystal_floral_blue/theme.json";
+import cfBlueCaps from "./crystal_floral_blue/capabilities.json";
+import cfBlueDemo from "./crystal_floral_blue/demo.json";
+import cfGreenTheme from "./crystal_floral_green/theme.json";
+import cfGreenCaps from "./crystal_floral_green/capabilities.json";
+import cfGreenDemo from "./crystal_floral_green/demo.json";
+import cfRedTheme from "./crystal_floral_red/theme.json";
+import cfRedCaps from "./crystal_floral_red/capabilities.json";
+import cfRedDemo from "./crystal_floral_red/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2" | "double_dragon" | "baroque_v2";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2" | "double_dragon" | "baroque_v2" | "crystal_floral";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   /** Class bọc các khối nội dung bên trong (khi decor nằm ngoài root thiệp) */
@@ -116,6 +125,9 @@ const SPECS: Record<string, TemplateSpec> = {
   baroque_v2_darkred: { id: "baroque_v2_darkred", theme: buildTheme(b2RedTheme as unknown as ThemeJson), capabilities: b2RedCaps as unknown as TemplateCapabilities, demo: b2RedDemo as unknown as Partial<Inv> },
   baroque_v2_darkgreen: { id: "baroque_v2_darkgreen", theme: buildTheme(b2GreenTheme as unknown as ThemeJson), capabilities: b2GreenCaps as unknown as TemplateCapabilities, demo: b2GreenDemo as unknown as Partial<Inv> },
   baroque_v2_darkblue: { id: "baroque_v2_darkblue", theme: buildTheme(b2BlueTheme as unknown as ThemeJson), capabilities: b2BlueCaps as unknown as TemplateCapabilities, demo: b2BlueDemo as unknown as Partial<Inv> },
+  crystal_floral_blue: { id: "crystal_floral_blue", theme: buildTheme(cfBlueTheme as unknown as ThemeJson), capabilities: cfBlueCaps as unknown as TemplateCapabilities, demo: cfBlueDemo as unknown as Partial<Inv> },
+  crystal_floral_green: { id: "crystal_floral_green", theme: buildTheme(cfGreenTheme as unknown as ThemeJson), capabilities: cfGreenCaps as unknown as TemplateCapabilities, demo: cfGreenDemo as unknown as Partial<Inv> },
+  crystal_floral_red: { id: "crystal_floral_red", theme: buildTheme(cfRedTheme as unknown as ThemeJson), capabilities: cfRedCaps as unknown as TemplateCapabilities, demo: cfRedDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */
