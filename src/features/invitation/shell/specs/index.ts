@@ -48,13 +48,22 @@ import ddGreenDemo from "./double_dragon_green/demo.json";
 import ddBlueTheme from "./double_dragon_blue/theme.json";
 import ddBlueCaps from "./double_dragon_blue/capabilities.json";
 import ddBlueDemo from "./double_dragon_blue/demo.json";
+import b2RedTheme from "./baroque_v2_darkred/theme.json";
+import b2RedCaps from "./baroque_v2_darkred/capabilities.json";
+import b2RedDemo from "./baroque_v2_darkred/demo.json";
+import b2GreenTheme from "./baroque_v2_darkgreen/theme.json";
+import b2GreenCaps from "./baroque_v2_darkgreen/capabilities.json";
+import b2GreenDemo from "./baroque_v2_darkgreen/demo.json";
+import b2BlueTheme from "./baroque_v2_darkblue/theme.json";
+import b2BlueCaps from "./baroque_v2_darkblue/capabilities.json";
+import b2BlueDemo from "./baroque_v2_darkblue/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
 
 export interface TemplateCapabilities {
   id: string;
-  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2" | "double_dragon";
+  family: "minimalism" | "riviera" | "traditional" | "darkred" | "longphung_v1" | "springgarden_v1" | "porcelain_v2" | "double_dragon" | "baroque_v2";
   /** Class thêm vào khung ngoài của thiệp (vd "st-card" để đặt biến --st-w) */
   rootClass?: string;
   /** Class bọc các khối nội dung bên trong (khi decor nằm ngoài root thiệp) */
@@ -104,6 +113,9 @@ const SPECS: Record<string, TemplateSpec> = {
   double_dragon_red: { id: "double_dragon_red", theme: buildTheme(ddRedTheme as unknown as ThemeJson), capabilities: ddRedCaps as unknown as TemplateCapabilities, demo: ddRedDemo as unknown as Partial<Inv> },
   double_dragon_green: { id: "double_dragon_green", theme: buildTheme(ddGreenTheme as unknown as ThemeJson), capabilities: ddGreenCaps as unknown as TemplateCapabilities, demo: ddGreenDemo as unknown as Partial<Inv> },
   double_dragon_blue: { id: "double_dragon_blue", theme: buildTheme(ddBlueTheme as unknown as ThemeJson), capabilities: ddBlueCaps as unknown as TemplateCapabilities, demo: ddBlueDemo as unknown as Partial<Inv> },
+  baroque_v2_darkred: { id: "baroque_v2_darkred", theme: buildTheme(b2RedTheme as unknown as ThemeJson), capabilities: b2RedCaps as unknown as TemplateCapabilities, demo: b2RedDemo as unknown as Partial<Inv> },
+  baroque_v2_darkgreen: { id: "baroque_v2_darkgreen", theme: buildTheme(b2GreenTheme as unknown as ThemeJson), capabilities: b2GreenCaps as unknown as TemplateCapabilities, demo: b2GreenDemo as unknown as Partial<Inv> },
+  baroque_v2_darkblue: { id: "baroque_v2_darkblue", theme: buildTheme(b2BlueTheme as unknown as ThemeJson), capabilities: b2BlueCaps as unknown as TemplateCapabilities, demo: b2BlueDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

@@ -1,0 +1,56 @@
+{
+  "id": "baroque_v2_darkred",
+  "family": "baroque_v2",
+  "testId": "baroque-v2-dark-red-template",
+  "innerClass": "relative z-10 flex flex-col items-center gap-[23px] py-[34px] md:gap-[30px] md:py-[44px]",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Ceremony",
+    "Album",
+    "Banquet",
+    "RsvpAction",
+    "Venue",
+    "DressCode",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "ThankYou",
+    "Footer",
+    "BottomDecor",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "seal-gold",
+    "ambient": "sparkles",
+    "particle": "sparkles",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": true,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": true,
+      "introLine": true
+    }
+  },
+  "music": "wedding-song"
+}

@@ -21,6 +21,7 @@ import { LONGPHUNG_V1_BLOCKS } from "./longphung_v1";
 import { SPRINGGARDEN_V1_BLOCKS } from "./springgarden_v1";
 import { PORCELAIN_V2_BLOCKS } from "./porcelain_v2";
 import { DOUBLE_DRAGON_BLOCKS } from "./double_dragon";
+import { BAROQUE_V2_BLOCKS } from "./baroque_v2";
 
 export type BlockComponent = ComponentType<{ ctx: InvitationCtx }>;
 
@@ -50,5 +51,7 @@ export const blocksForFamily = (family: string): Record<string, BlockComponent> 
       ? PORCELAIN_V2_BLOCKS
       : family === "double_dragon"
       ? DOUBLE_DRAGON_BLOCKS
+      : family === "baroque_v2"
+      ? BAROQUE_V2_BLOCKS
       : MINIMALISM_BLOCKS),
   });

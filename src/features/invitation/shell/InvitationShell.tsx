@@ -37,11 +37,15 @@ export function InvitationShell({ d, set, spec, active = true }: InvitationShell
                 return Block ? <Block key={name} ctx={ctx} /> : null;
               })}
               <div className={spec.capabilities.innerClass}>
-                {spec.capabilities.blocks.filter((b) => b !== "Paper" && b !== "Lightbox").map((name) => {
+                {spec.capabilities.blocks.filter((b) => b !== "Paper" && b !== "BottomDecor" && b !== "Lightbox").map((name) => {
                   const Block = BLOCKS[name];
                   return Block ? <Block key={name} ctx={ctx} /> : null;
                 })}
               </div>
+              {spec.capabilities.blocks.filter((b) => b === "BottomDecor").map((name) => {
+                const Block = BLOCKS[name];
+                return Block ? <Block key={name} ctx={ctx} /> : null;
+              })}
               {spec.capabilities.blocks.filter((b) => b === "Lightbox").map((name) => {
                 const Block = BLOCKS[name];
                 return Block ? <Block key={name} ctx={ctx} /> : null;

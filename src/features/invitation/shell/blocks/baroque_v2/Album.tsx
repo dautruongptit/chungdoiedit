@@ -1,0 +1,154 @@
+import React, { useState } from "react";
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+import { getBaroqueV2Theme } from "./themeVars";
+
+export function Album({ ctx }: { ctx: InvitationCtx }) {
+  const theme = getBaroqueV2Theme(ctx);
+  const d = ctx.d as any;
+
+  const rawPhotos =
+    d.galleryImages && d.galleryImages.length > 0
+      ? d.galleryImages.map((img: any) => (typeof img === "string" ? img : img.url))
+      : d.photos && d.photos.length > 0
+      ? d.photos
+      : ctx.albumPhotos && ctx.albumPhotos.length > 0
+      ? ctx.albumPhotos
+      : [];
+
+  const photos: string[] = rawPhotos;
+  const total = photos.length || 7;
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  const isDots = total <= 7;
+
+  const nextPhoto = () => setCurrentIdx((p) => (p + 1) % total);
+  const prevPhoto = () => setCurrentIdx((p) => (p - 1 + total) % total);
+
+  const getAspect = (index: number) => {
+    if (theme.variant === "darkred") {
+      const arr = ["0.666875 / 1", "0.66625 / 1", "0.666875 / 1", "0.666875 / 1", "0.71375 / 1", "0.666875 / 1", "0.666875 / 1"];
+      return arr[index] || "0.666875 / 1";
+    }
+    if (theme.variant === "darkgreen") {
+      const arr = ["0.666504 / 1", "1.2 / 1", "0.666504 / 1", "0.666504 / 1", "0.666504 / 1", "0.666504 / 1", "0.666504 / 1"];
+      return arr[index] || "0.666504 / 1";
+    }
+    if (theme.variant === "darkblue") {
+      const arr = ["0.666992 / 1", "0.666992 / 1", "0.666992 / 1", "0.666992 / 1", "1.2 / 1", "1.2 / 1", "0.666992 / 1", "1.2 / 1", "0.666992 / 1"];
+      return arr[index] || "0.666992 / 1";
+    }
+    return "0.666667 / 1";
+  };
+
+  const getSlideStyle = (index: number): React.CSSProperties => {
+    let diff = index - currentIdx;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+
+    const absDiff = Math.abs(diff);
+    const sign = diff >= 0 ? 1 : -1;
+
+    const tx = sign * (absDiff * 60);
+    const tz = -absDiff * 150;
+    const ry = sign * (absDiff * 45);
+    const scale = absDiff === 0 ? 1 : absDiff === 1 ? 0.85 : 0.7;
+    const op = absDiff === 0 ? 1 : absDiff === 1 ? 0.75 : absDiff === 2 ? 0.5 : 0.3;
+    const zIndex = 100 - absDiff;
+
+    return {
+      aspectRatio: getAspect(index),
+      transitionDuration: "1100ms",
+      transform: `translateX(${tx}%) translateZ(${tz}px) rotateY(${ry}deg) scale(${scale})`,
+      opacity: op,
+      zIndex,
+    };
+  };
+
+  return (
+    <div className="relative z-10 flex w-full flex-col items-center px-6 pt-[19px] pb-2">
+      <h2
+        className="uppercase text-center relative z-10 text-[20px] md:text-[24px]"
+        style={{
+          color: theme.goldColor,
+          fontFamily: '"Times New Roman", ChungDoiIndic, serif',
+          fontWeight: 700,
+        }}
+      >
+        <span dir="auto">Album Ảnh</span>
+      </h2>
+
+      <div className="relative z-10 mt-5 w-full max-w-[334px] md:max-w-[560px]">
+        <div className="relative h-[340px] md:h-[520px] touch-pan-y">
+          <button
+            type="button"
+            aria-label="Previous photo"
+            onClick={prevPhoto}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-[200] w-8 h-8 items-center justify-center rounded-full bg-base-200/60 hover:bg-base-200 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Next photo"
+            onClick={nextPhoto}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-[200] w-8 h-8 items-center justify-center rounded-full bg-base-200/60 hover:bg-base-200 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
+          <div className="relative w-full h-full flex items-center justify-center" style={{ perspective: "1000px" }}>
+            {photos.map((src, index) => {
+              const active = index === currentIdx;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setCurrentIdx(index)}
+                  className={`absolute h-[92%] rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all ease-in-out ${
+                    active ? "ring-2 ring-white/30" : ""
+                  }`}
+                  style={getSlideStyle(index)}
+                >
+                  <img
+                    alt={`Wedding photo ${index + 1}`}
+                    className="h-full w-full object-cover"
+                    src={src}
+                    style={{ objectPosition: "50% 50%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {isDots ? (
+          <div className="flex justify-center gap-1.5 mt-3">
+            {photos.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to photo ${i + 1}`}
+                onClick={() => setCurrentIdx(i)}
+                className={`rounded-full transition-all duration-300 ${
+                  i === currentIdx
+                    ? "w-6 h-2 bg-current opacity-70"
+                    : "w-2 h-2 bg-current opacity-25 hover:opacity-40"
+                }`}
+                style={{ backgroundColor: "rgb(255, 239, 214)" }}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="flex justify-center mt-3">
+            <span className="text-sm tabular-nums opacity-60" style={{ color: "rgb(255, 239, 214)" }}>
+              {currentIdx + 1} / {total}
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

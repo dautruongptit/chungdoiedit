@@ -1,0 +1,11 @@
+{
+  "paper": "rgb(0, 26, 58)",
+  "ink": "rgb(255, 223, 175)",
+  "text": "rgb(255, 239, 214)",
+  "edge": "#ffdfaf33",
+  "accent": "rgb(255, 223, 175)",
+  "buttonBg": "rgb(255, 223, 175)",
+  "buttonText": "rgb(81, 20, 25)",
+  "assets": "/images/themes/baroque-v2-dark-blue",
+  "envelope": "/images/envelope/baroque_v2_darkblue.webp"
+}
