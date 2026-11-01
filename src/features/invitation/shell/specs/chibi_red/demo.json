@@ -1,0 +1,32 @@
+{
+  "_note": "Dữ liệu demo của chibi_red đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/b779896e150b38e807ad0f6d28107008d6249fbd0c31d61f96b8eac503d0de97.webp",
+    "https://assets.chungdoi.com/photo-library/design/f35be905529f66a76da9d5c7081a7eaa511c0deaef2629177e90b242ec5f91c8.webp",
+    "https://assets.chungdoi.com/photo-library/design/e0c7d0646d5a03b5746148f99663c538d65caabfbfef7cafc1884f3f44f8fe85.webp",
+    "https://assets.chungdoi.com/photo-library/design/14de455b827730598b4935d35054cb365e3fc20d2193945a203f0b90e8898dec.webp",
+    "https://assets.chungdoi.com/photo-library/design/7299932288a2ec6710a2cf41e39c88245ff5478a33cb981e8724d433dec6b3dc.webp",
+    "https://assets.chungdoi.com/photo-library/design/ad250afb44e63b676337f028989d76386ef358cf1b7c7b9d7323690ae19801e0.webp",
+    "https://assets.chungdoi.com/photo-library/design/df783114acd16c236ecd5b43eb97f7e47181edd59505bcbd1cfba8ba35c00d18.webp",
+    "https://assets.chungdoi.com/photo-library/design/ede67bcd65ff00e9bbedd89ecf14b078c25059ed5ba97736795c6c28796f294e.webp",
+    "https://assets.chungdoi.com/photo-library/design/6ce732ca77a287ce4e80e77ed1511121dda66e76883c44bcdf1e648be8c1aa2f.webp",
+    "https://assets.chungdoi.com/photo-library/design/6e65338c0ad5e69bd7c77a0d1f7b8eeee482df3261a8ab258a1fdc5fe65d6fec.webp",
+    "https://assets.chungdoi.com/photo-library/design/3503aff623b64b8b65fdf37385f1f1ff24a18ac47d9ba0d58b2276efa448c26f.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/a4ff34f28245dd56d68dbeb1c98083fab5e603903f89984a8073a25088944363.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/a3b7218405990166b37eba83ba9960ded1d875a12bba20e82fb76f5a55455ba5.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

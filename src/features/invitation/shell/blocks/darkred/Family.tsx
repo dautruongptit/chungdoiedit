@@ -67,10 +67,10 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
                     <span className="text-[12px]" style={{ color: "rgba(236, 228, 216, 0.7)" }}>
                       <span>{fam.title}</span>
                     </span>
-                    <span className="text-[12px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)", fontSize: "12px" }}>
+                    <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)" }}>
                       <span>{fam.f}</span>
                     </span>
-                    <span className="text-[12px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)", fontSize: "12px" }}>
+                    <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: "rgb(236, 228, 216)" }}>
                       <span>{fam.m}</span>
                     </span>
                     <div
@@ -104,9 +104,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
 
           <div className="w-full min-w-0 relative flex flex-col items-center text-center gap-3 md:gap-4">
             <h3
-              className="w-[80%] min-h-[80px] flex items-center justify-center leading-[52px] md:leading-[60px] whitespace-nowrap"
+              className="w-[80%] min-h-[80px] flex items-center justify-center text-[32px] md:text-[46px] leading-[52px] md:leading-[60px] whitespace-nowrap"
               style={{
-                fontSize: "32px",
                 fontWeight: 400,
                 fontFamily: '"Viaoda Libre", "The Nautigal", ChungDoiIndic, cursive',
                 color: "rgb(236, 228, 216)",
@@ -134,9 +133,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
               &amp;
             </div>
             <h3
-              className="w-[80%] min-h-[80px] flex items-center justify-center leading-[52px] md:leading-[60px] whitespace-nowrap"
+              className="w-[80%] min-h-[80px] flex items-center justify-center text-[32px] md:text-[46px] leading-[52px] md:leading-[60px] whitespace-nowrap"
               style={{
-                fontSize: "32px",
                 fontWeight: 400,
                 fontFamily: '"Viaoda Libre", "The Nautigal", ChungDoiIndic, cursive',
                 color: "rgb(236, 228, 216)",

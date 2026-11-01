@@ -1,0 +1,27 @@
+{
+  "_note": "Dữ liệu demo của santorini_blue đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/07b45baca0b47ef22e78a21efe6f84ec3a756eac00fd2a87d45200c5fbfbc6e0.webp",
+    "https://assets.chungdoi.com/photo-library/design/0ed0e672822b3ce9ca223de632c39a072b45d38c23edc16cb3489d5d523664aa.webp",
+    "https://assets.chungdoi.com/photo-library/design/2b82e53408041e6f8a2fce6b0b7e3878548d7c3497a899d61701162cf59e8b64.webp",
+    "https://assets.chungdoi.com/photo-library/design/69be8c4ea18a763a73d792f78ebd49d93a64061707397f233ea718992f6bf65b.webp",
+    "https://assets.chungdoi.com/photo-library/design/706d2716057f458225e72b414efb63999905e8d5ee1ef67f43c8616815dd844a.webp",
+    "https://assets.chungdoi.com/photo-library/design/05f7d67884f3cdfaad1c36d0d3c3b7183173b85cd61a45b483051e5fcea2b5cb.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/4bf8988d6d1f64a2c446e7da2e52318ea02d093605aa91379c91ae9d2330c144.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/78df2e0d4325eadd420385898599b142bc57f0b0d0983e5ad18543428d0c91c0.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

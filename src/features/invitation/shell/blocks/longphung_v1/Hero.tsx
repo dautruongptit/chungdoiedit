@@ -20,8 +20,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
         <div className="font-pinyon w-full" style={{ color: ink, fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive' }}>
           <div className="flex w-full justify-center">
             <span
-              className="whitespace-nowrap leading-[75px] md:leading-[105px]"
-              style={{ fontSize: "50px", fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive' }}
+              className="whitespace-nowrap text-[50px] md:text-[70px] leading-[75px] md:leading-[105px]"
+              style={{ fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive' }}
             >
               {first}
             </span>
@@ -29,8 +29,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           <div className="font-ampersand mt-1 text-[37px] md:text-[50px] leading-[56px] md:leading-[75px]" style={{ color: ink }}>&amp;</div>
           <div className="flex w-full justify-center">
             <span
-              className="whitespace-nowrap leading-[75px] md:leading-[105px]"
-              style={{ fontSize: "50px", fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive' }}
+              className="whitespace-nowrap text-[50px] md:text-[70px] leading-[75px] md:leading-[105px]"
+              style={{ fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive' }}
             >
               {second}
             </span>

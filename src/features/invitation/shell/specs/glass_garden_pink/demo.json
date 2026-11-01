@@ -1,0 +1,30 @@
+{
+  "_note": "Dữ liệu demo của glass_garden_pink đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/801c2167cf82b84c63642823a3370a86e08ef799dca6e8197a6b5fdd4df59960.webp",
+    "https://assets.chungdoi.com/photo-library/design/285f6677a5d96b80c99a8462e07f36f23cf6edd3a29df47c2736f866ebff1b78.webp",
+    "https://assets.chungdoi.com/photo-library/design/ed61cc222bc31c62c9a575f3283cd3ba911fe8e2e92747b568fac46888c5dc2f.webp",
+    "https://assets.chungdoi.com/photo-library/design/aa0096276b2c4a28c65dba76b689fd4596967c1da8c9b8822109f1d2f2635adb.webp",
+    "https://assets.chungdoi.com/photo-library/design/d9fa4ec65d18d375cc4dfad71c86c547e1833ad7cd1ff21b36d1e7bba0794df3.webp",
+    "https://assets.chungdoi.com/photo-library/design/a5ea6f1c9d64023e32a74dc0460da807368ac377e70883619da25c4a7e076e46.webp",
+    "https://assets.chungdoi.com/photo-library/design/bdf3b4cd92bf5ee3b0d7e1d7f5f69794fae94081a2b144bcae4b4ae7ac1df776.webp",
+    "https://assets.chungdoi.com/photo-library/design/10eb57c349f7fbb5002ec30cb42ada43bb542ce8d0e0548fb2229622534b507e.webp",
+    "https://assets.chungdoi.com/photo-library/design/e6835654ab717a6fb1788f92908adf45ac1be6f11556b19d017b6ab05e4475bd.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/541aec386bf9b9aa11e3c4da7949a08f256b9c48f40b0ecd42f2d55c2fc83ec8.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/8e284119aa6e04e036384440d8f7f4578dbfdc9b89dc563a534c9a16adc88fa2.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

@@ -1,0 +1,25 @@
+{
+  "_note": "Dữ liệu demo của royal_v2_purple đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/73101a683df8fc9806f669504f8f870f541a118110ef75fc4560b6b22af9a10f.webp",
+    "https://assets.chungdoi.com/photo-library/design/67cbd57a1d0df632a6a58020449d3b2ea96cbb0ef8ce7796a7d71269550877e4.webp",
+    "https://assets.chungdoi.com/photo-library/design/e13573fc9fec877c3bcba1c031c06430ee5c915dd9f327bbd85334a05de75e4c.webp",
+    "https://assets.chungdoi.com/photo-library/design/f0c1e97510213e847e6912250c4f3ad3a55224ae9ed18d4b4d3c84d79c5a6a51.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/fbeecdcb0c5946ee08167f142d4a3d6c3760c7273f016364670c7e521e18262e.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/fa39e41fb2bdad1cea2f8342e513755dd407c6f6a2145474dcc7903472ab569a.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

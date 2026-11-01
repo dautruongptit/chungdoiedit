@@ -7,8 +7,12 @@ import { ChromeController } from "../cdp_helper.mjs";
 const [id, state, widthArg] = process.argv.slice(2);
 if (!id || !state || !widthArg) { console.error("Cách dùng: node scripts/survey/local_dump.mjs <templateId> <cover|open|gift|rsvp> <width>"); process.exit(1); }
 const width = Number(widthArg);
-const meta = JSON.parse(fs.readFileSync("docs/survey/_meta75.json", "utf8")).find((m) => m.id === id);
-const slug = process.argv.includes("--slug") ? process.argv[process.argv.indexOf("--slug") + 1] : meta.slug;
+let slug = process.argv.includes("--slug") ? process.argv[process.argv.indexOf("--slug") + 1] : "";
+if (!slug) {
+  const tplContent = fs.readFileSync(new URL("../../src/features/templates/data/templates.ts", import.meta.url), "utf8");
+  const m = tplContent.match(new RegExp(`"slug":\\s*"([^"]+)",\\s*"id":\\s*"${id}"`));
+  if (m) slug = m[1];
+}
 const src = fs.readFileSync(new URL("./dump.js", import.meta.url), "utf8");
 
 const c = new ChromeController();
@@ -16,6 +20,7 @@ await c.start({ headless: true });
 await c.newPage();
 await c.setViewport({ width, height: width === 390 ? 844 : 900 });
 const url = state === "editor" ? `http://localhost:5173/edit/dump-${id}-${width}?template=${id}` : `http://localhost:5173/vi/mau-thiep/${slug}/demo` + (state === "cover" ? "?autoscroll=0" : "?open=1&autoscroll=0");
+console.log("Navigating local:", url);
 await c.navigate(url, state === "cover" ? 4500 : 6500);
 if (process.argv.includes("--css")) { const css = fs.readFileSync(process.argv[process.argv.indexOf("--css") + 1], "utf8"); await c.eval(`(()=>{const s=document.createElement("style");s.textContent=${JSON.stringify(css)};document.head.appendChild(s)})()`); await new Promise((r) => setTimeout(r, 400)); }
 await c.eval(src);
@@ -29,7 +34,11 @@ const pre = {
 }[state];
 if (pre) await c.eval(pre);
 await new Promise((r) => setTimeout(r, 900));
-const opts = { openfull: {}, editor: { rootSel: "body" }, cover: { rootSel: "body" }, open: { rootSel: "[data-testid*='-template']" }, gift: { rootSel: "dialog[open] .modal-box, dialog.modal-open .modal-box, dialog[open]" }, rsvp: { rootSel: "[role=dialog],dialog[open],.modal-open .modal-box,.fixed.inset-0" } }[state];
+// Khuôn chung (InvitationShell) đặt data-showcase-root trên div đã cắt max-width thật;
+// data-testid nằm ở div bọc ngoài rộng hơn (chỉ còn đúng với mẫu cũ chưa lên khuôn chung).
+// querySelector trên chuỗi gộp dấu phẩy trả về phần tử ĐẦU THEO THỨ TỰ DOM (tổ tiên data-testid đứng trước) nên phải chọn tay, không gộp selector.
+const rootSelOpen = await c.eval(`document.querySelector('[data-showcase-root]') ? '[data-showcase-root]' : "[data-testid*='-template']"`);
+const opts = { openfull: {}, editor: { rootSel: "body" }, cover: { rootSel: "body" }, open: { rootSel: rootSelOpen }, gift: { rootSel: "dialog[open] .modal-box, dialog.modal-open .modal-box, dialog[open]" }, rsvp: { rootSel: "[role=dialog],dialog[open],.modal-open .modal-box,.fixed.inset-0" } }[state];
 const out = JSON.parse(await c.eval(`JSON.stringify(window.__dump(${JSON.stringify(opts)}))`));
 fs.mkdirSync("docs/survey/raw", { recursive: true });
 fs.writeFileSync(`docs/survey/raw/local_${id}_dump_${state}_${width}${process.argv.includes("--css") ? "_exp" : ""}.json`, JSON.stringify(out));

@@ -1,0 +1,26 @@
+{
+  "_note": "Dữ liệu demo của porcelain_red đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/a39e91a16c1ccee48614263d66329da4e9f74161dcdcf1663e0a5817b600145d.webp",
+    "https://assets.chungdoi.com/photo-library/design/f4c75ef657dc3e39b46e8d0d9c2650e138a3fb65959c3340b77bf60e62f85260.webp",
+    "https://assets.chungdoi.com/photo-library/design/3ac0ac20c552fca45de09834feb7b8c48afe27269e1ce611a1c8b46feba4d0ed.webp",
+    "https://assets.chungdoi.com/photo-library/design/8b3363a0ed3668f96ac8b94740aeed2db547a4f9b5c7781080b8c58e83f06d3c.webp",
+    "https://assets.chungdoi.com/photo-library/design/70a06c14cf04d06cde7b67ea63d85a426e76c746d71428981dda02b68204ff57.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/3408b63d4775347efaefa803aca17296e0ff2e42af093be24a5a3c3b278aa503.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/2da21468b5df4593edd6d0c98ff7e59e97be6e4feca3d70b770896bea42af60e.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/baroque-gold",
+  "colors": {
+    "ink": "rgb(0, 0, 0)",
+    "inkRgb": "0, 0, 0",
+    "sub": "rgba(0, 0, 0, 0.6)",
+    "muted": "rgb(0, 0, 0)",
+    "paper": "#ffffff",
+    "line": "rgba(0, 0, 0, 0.2)",
+    "accent": "#ffffff",
+    "edge": "rgba(0, 0, 0, 0.1)"
+  }
+}

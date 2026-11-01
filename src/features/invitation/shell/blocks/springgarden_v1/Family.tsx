@@ -34,11 +34,10 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
     <section className="relative flex flex-col gap-16 md:gap-20 px-3 md:px-6 pb-12 md:pb-16 z-10">
       {/* 1. Tiêu đề Lễ cưới */}
       <h2
-        className="uppercase font-normal text-[20px] md:text-[26px] text-center"
+        className="uppercase font-normal text-[20px] text-center"
         style={{
           color: ink,
           fontFamily: fontFam,
-          fontSize: "20px",
           letterSpacing: "0.05em",
         }}
       >
@@ -54,14 +53,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
         <div className="row-span-4 grid grid-rows-subgrid min-w-0 justify-items-center">
           <span style={{ color: muted }}><span>Ông Bà</span></span>
           <span
-            className="[overflow-wrap:anywhere]"
-            style={{ color: muted, fontFamily: fontFam, fontSize: "13px" }}
+            className="[overflow-wrap:anywhere] text-[13px] md:text-[23px]"
+            style={{ color: muted, fontFamily: fontFam }}
           >
             <span>{brideFather}</span>
           </span>
           <span
-            className="[overflow-wrap:anywhere]"
-            style={{ color: muted, fontFamily: fontFam, fontSize: "13px" }}
+            className="[overflow-wrap:anywhere] text-[13px] md:text-[23px]"
+            style={{ color: muted, fontFamily: fontFam }}
           >
             <span>{brideMother}</span>
           </span>
@@ -77,14 +76,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
         <div className="row-span-4 grid grid-rows-subgrid min-w-0 justify-items-center">
           <span style={{ color: muted }}><span>Ông Bà</span></span>
           <span
-            className="[overflow-wrap:anywhere]"
-            style={{ color: muted, fontFamily: fontFam, fontSize: "13px" }}
+            className="[overflow-wrap:anywhere] text-[13px] md:text-[23px]"
+            style={{ color: muted, fontFamily: fontFam }}
           >
             <span>{groomFather}</span>
           </span>
           <span
-            className="[overflow-wrap:anywhere]"
-            style={{ color: muted, fontFamily: fontFam, fontSize: "13px" }}
+            className="[overflow-wrap:anywhere] text-[13px] md:text-[23px]"
+            style={{ color: muted, fontFamily: fontFam }}
           >
             <span>{groomMother}</span>
           </span>
@@ -111,9 +110,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
       {/* 4. Tên Cô Dâu Chú Rể */}
       <div className="w-full min-w-0 relative flex flex-col items-center text-center gap-3 md:gap-4">
         <h3
-          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap"
+          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center text-[27px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
           style={{
-            fontSize: "27px",
             color: ink,
             fontWeight: 400,
             fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
@@ -134,9 +132,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
           &amp;
         </div>
         <h3
-          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap"
+          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center text-[27px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
           style={{
-            fontSize: "27px",
             color: ink,
             fontWeight: 400,
             fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
@@ -195,11 +192,10 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
 
       {/* 6. Tiêu đề Tiệc cưới */}
       <h2
-        className="uppercase font-normal text-[20px] md:text-[26px] text-center"
+        className="uppercase font-normal text-[20px] text-center"
         style={{
           color: ink,
           fontFamily: fontFam,
-          fontSize: "20px",
           letterSpacing: "0.05em",
         }}
       >

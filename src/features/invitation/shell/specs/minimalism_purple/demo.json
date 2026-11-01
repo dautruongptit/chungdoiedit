@@ -1,0 +1,484 @@
+{
+  "_note": "Dữ liệu demo của trang gốc (Minimalism - Đỏ Đậm), đo ngày 2026-11-01. Ghi đè lên dữ liệu demo chung.",
+  "order": "groom",
+  "groomNick": "Quốc Bảo",
+  "brideNick": "Diệu Linh",
+  "groomFull": "Lý Quốc Bảo",
+  "brideFull": "Đinh Diệu Linh",
+  "groomRole": "Trưởng Nam",
+  "brideRole": "Út Nữ",
+  "heroOn": true,
+  "heroPhoto": "https://assets.chungdoi.com/photo-library/design/f9fa4856eabe1fdbef93ea3149f595d5b0b0a61400cdf1ebde7248c8a2eac441.webp",
+  "introCustom": false,
+  "introText": "Save The Date",
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/a0c54713c1b4d116eb38767a25b6866668b7de90f1dde33b786b9e071b4c4447.webp",
+    "https://assets.chungdoi.com/photo-library/design/18d14524417bf49b6c8695a179ac7ec96289cfbf29b69263f3ae255d8adeefe1.webp",
+    "https://assets.chungdoi.com/photo-library/design/9efd59d14dc864e3f95291698b52b5e3392ac93665a43539d35b9d88b3958615.webp",
+    "https://assets.chungdoi.com/photo-library/design/bbecb4f103023ba59ae9ea19b6bcb62c49519ba26a998f88c80f1b225bd10984.webp",
+    "https://assets.chungdoi.com/photo-library/design/69c1de1437cfca1807a0f44dd4238abcae9b4cd77acc79fc598e668b55fa3099.webp",
+    "https://assets.chungdoi.com/photo-library/design/f9fa4856eabe1fdbef93ea3149f595d5b0b0a61400cdf1ebde7248c8a2eac441.webp",
+    "https://assets.chungdoi.com/photo-library/design/c029bacf7bdd173b0244534558d4e0c49df0f9b88555c0648773398e692b1d2d.webp",
+    "https://assets.chungdoi.com/photo-library/design/6f6476d8c2c994dc2f06ec018d3ba595af7af9ba73338485ad3e2ccb62567dd2.webp"
+  ],
+  "familyOn": true,
+  "groomFamTitle": "Ông Bà",
+  "brideFamTitle": "Ông Bà",
+  "groomFather": "Lý Văn Hoà",
+  "groomMother": "Trịnh Thị Bích Vân",
+  "groomAddr": "Phường Tân Định, Quận 1, TP. Hồ Chí Minh",
+  "brideFather": "Đinh Hữu Nam",
+  "brideMother": "Phan Thị Kim Yến",
+  "brideAddr": "Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+  "announceOn": true,
+  "announcementLine1": "TRÂN TRỌNG BÁO TIN",
+  "announcementLine2": "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+  "ceremonyTitle": "THÔNG TIN LỄ CƯỚI",
+  "ceremonies": [
+    {
+      "title": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI",
+      "date": "2026-12-19",
+      "time": "10:00",
+      "place": "TƯ GIA",
+      "lunar": "Tức ngày 11 tháng 11 năm Bính Ngọ"
+    }
+  ],
+  "partyOn": true,
+  "banquetTitle": "THÔNG TIN TIỆC CƯỚI",
+  "date": "2026-12-19",
+  "time": "18:30",
+  "hideWelcomeTimes": false,
+  "welcomeTime": "17:30",
+  "locTitle": "Tiệc cưới sẽ tổ chức tại",
+  "address": "Nhà Hàng Tiệc Cưới Riverside Palace, 360D Bến Vân Đồn, Phường 1, Quận 4, TP. Hồ Chí Minh",
+  "showMap": true,
+  "dressOn": true,
+  "dressTitle": "DRESS CODE",
+  "dressText": "Trang phục dự tiệc",
+  "dressColors": [
+    "#787a6c",
+    "#7869a0",
+    "#c4b5dd"
+  ],
+  "schedOn": true,
+  "schedTitle": "LỊCH TRÌNH NGÀY CƯỚI",
+  "sched": [
+    {
+      "time": "17:30",
+      "text": "Đón khách"
+    },
+    {
+      "time": "18:30",
+      "text": "Khai tiệc"
+    },
+    {
+      "time": "18:45",
+      "text": "Rót rượu, cắt bánh"
+    },
+    {
+      "time": "19:00",
+      "text": "Phục vụ món chính"
+    },
+    {
+      "time": "21:00",
+      "text": "Kết thúc tiệc"
+    }
+  ],
+  "guestOn": true,
+  "wishes": [
+    {
+      "name": "Ngọc Trâm",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc mừng Quốc Bảo và Diệu Linh! Chúc hai bạn trăm năm hạnh phúc, đầu bạc răng long nhé!"
+    },
+    {
+      "name": "Minh Khang",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Nhìn ảnh cưới mà xúc động ghê. Chúc hai bạn mãi bên nhau thật hạnh phúc!"
+    },
+    {
+      "name": "Thu Hà",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc đôi bạn một đám cưới thật trọn vẹn và một cuộc sống hôn nhân ngập tràn tiếng cười."
+    },
+    {
+      "name": "Gia Bảo",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Nhất định mình sẽ có mặt đúng giờ để chung vui."
+    },
+    {
+      "name": "Phương Anh",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Thiệp đẹp quá trời luôn. Chúc Bảo và Linh sớm có tin vui nha!"
+    },
+    {
+      "name": "Hoàng Vũ",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc hai bạn luôn yêu thương và thấu hiểu nhau như ngày đầu. Hạnh phúc nhé!"
+    },
+    {
+      "name": "Bảo Châu",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc mừng ngày trọng đại của hai bạn. Mong mọi điều tốt đẹp nhất sẽ đến với gia đình nhỏ."
+    },
+    {
+      "name": "Đức Thịnh",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc anh chị trăm năm hạnh phúc, con đàn cháu đống, vạn sự như ý!"
+    },
+    {
+      "name": "Kim Ngân",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chờ mãi mới tới ngày này. Chúc hai bạn thật nhiều sức khoẻ và hạnh phúc bền lâu!"
+    },
+    {
+      "name": "Tuấn Kiệt",
+      "at": "16:32:14 19/8/2026",
+      "msg": "Chúc mừng cặp đôi đẹp nhất! Chúc hai bạn một hành trình mới thật rực rỡ."
+    }
+  ],
+  "giftOn": true,
+  "giftTitle": "Hộp Quà Mừng",
+  "giftDisplayMode": "envelope",
+  "gifts": [
+    {
+      "id": "groom",
+      "who": "groom",
+      "bankName": "Vietcombank",
+      "bankCode": "VCB",
+      "accountNumber": "1017788990",
+      "accountName": "LY QUOC BAO",
+      "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970436011010177889900208QRIBFTTA53037045802VN630426BF&ec=M"
+    },
+    {
+      "id": "bride",
+      "who": "bride",
+      "bankName": "Techcombank",
+      "bankCode": "TCB",
+      "accountNumber": "1904455660",
+      "accountName": "DINH DIEU LINH",
+      "qrUrl": "/api/qr-png?d=00020101021238540010A00000072701240006970407011019044556600208QRIBFTTA53037045802VN63049D40&ec=M"
+    }
+  ],
+  "thanksOn": true,
+  "thanks": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "rsvpOn": true,
+  "groomShortName": "Quốc Bảo",
+  "brideShortName": "Diệu Linh",
+  "groomFullName": "Lý Quốc Bảo",
+  "brideFullName": "Đinh Diệu Linh",
+  "groomBirthOrder": "Trưởng Nam",
+  "brideBirthOrder": "Út Nữ",
+  "weddingTitle": "Happy Wedding",
+  "groomParentTitle": "Ông Bà",
+  "brideParentTitle": "Ông Bà",
+  "groomAddress": "Phường Tân Định, Quận 1, TP. Hồ Chí Minh",
+  "brideAddress": "Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+  "showSponsors": false,
+  "sponsorTitle": "Người Đỡ Đầu",
+  "sponsorNames": [
+    "Họ tên cha đỡ đầu",
+    "Họ tên mẹ đỡ đầu"
+  ],
+  "ceremonyDate": "2026-12-19",
+  "ceremonyTime": "10:00",
+  "ceremonyHeader": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+  "guestReceptionTime": "17:30",
+  "banquetTime": "18:30",
+  "showReceptionTimes": true,
+  "timeFormat": "24h",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "customAnnouncementText": "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+  "showFamilyInfo": true,
+  "thankYouNote": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "guestbook": "Sổ lưu bút",
+  "countdown": "Cùng đếm ngược",
+  "weddingAlbum": "Album Ảnh",
+  "addToCalendar": "Thêm vào lịch",
+  "giftBox": "Hộp Mừng Cưới",
+  "guestReception": "Đón khách",
+  "partyStart": "Khai tiệc",
+  "receptionAt": "Tiệc cưới sẽ diễn ra vào lúc:",
+  "atTime": "VÀO LÚC",
+  "partyVenueTitle": "Tiệc cưới sẽ tổ chức tại",
+  "mapTitle": "BẢN ĐỒ",
+  "ceremonyInfoTitle": "THÔNG TIN LỄ CƯỚI",
+  "receptionInfoTitle": "THÔNG TIN TIỆC CƯỚI",
+  "timelineTitle": "LỊCH TRÌNH NGÀY CƯỚI",
+  "heroTitle": "Câu Chuyện Tình Yêu",
+  "noWishesYet": "Chưa có lời chúc nào. Hãy là người đầu tiên!",
+  "submitWishText": "GỬI LỜI CHÚC",
+  "submittingText": "ĐANG GỬI...",
+  "wishSavedText": "Cảm ơn bạn! Lời chúc đã được lưu.",
+  "guestNamePlaceholder": "Nhập tên*",
+  "guestWishPlaceholder": "Nhập lời chúc*",
+  "rsvpButton": "XÁC NHẬN",
+  "rsvpTitle": "Xác nhận tham dự",
+  "rsvpSubtitle": "Sự hiện diện của {{salutation}} là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất.",
+  "rsvpNameLabel": "Tên của {{salutation}}",
+  "rsvpNamePlaceholder": "Nhập tên của {{salutation}}",
+  "rsvpAttendQuestion": "{{Salutation}} sẽ đến chứ?",
+  "rsvpAttendYes": "Tôi sẽ đến",
+  "rsvpAttendNo": "Rất tiếc, tôi không thể đến",
+  "rsvpGuestCountLabel": "Số lượng khách (bao gồm {{salutation}})",
+  "rsvpGuestCountMaxHint": "Tối đa {{max}} người",
+  "rsvpMessageLabel": "Lời nhắn cho cô dâu chú rể",
+  "rsvpMessagePlaceholder": "Để lại lời nhắn (không bắt buộc)",
+  "rsvpTextAnswerPlaceholder": "Nhập câu trả lời của bạn...",
+  "rsvpQuestionYes": "Có",
+  "rsvpQuestionNo": "Không",
+  "rsvpSendingText": "Đang gửi...",
+  "rsvpSubmitText": "Gửi xác nhận",
+  "rsvpThankYouTitle": "Cảm ơn {{salutation}}!",
+  "rsvpConfirmationReceivedText": "Chúng tôi đã nhận được xác nhận của {{salutation}}.",
+  "rsvpLookForwardText": "Rất mong được gặp {{salutation}} trong ngày trọng đại!",
+  "rsvpDeclineMessageText": "Cảm ơn {{salutation}} đã hồi âm. Chúc {{salutation}} thật nhiều niềm vui và sức khỏe!",
+  "rsvpCloseText": "Đóng",
+  "rsvpErrorText": "Có lỗi xảy ra. Vui lòng thử lại.",
+  "guestSalutation": "bạn",
+  "groomLabel": "Chú Rể",
+  "brideLabel": "Cô Dâu",
+  "giftBoxThankYou": "Cảm ơn bạn đã đồng hành cùng chúng mình trong ngày trọng đại!",
+  "tapToOpen": "Nhấn để mở",
+  "saveQR": "Lưu QR",
+  "saveQRFallback": "Nhấn giữ vào mã QR để lưu ảnh nhé",
+  "giftBoxLegacyLabel": "Mừng Cưới",
+  "groomNamePlaceholder": "Tên chú rể",
+  "brideNamePlaceholder": "Tên cô dâu",
+  "envelopeGreeting": "Thân Mời",
+  "envelopeInviteMessage": "Đến dự buổi tiệc chung vui cùng gia đình",
+  "envelopeOpenButton": "Mở thiệp",
+  "qrScanText": "Quét mã để gửi mừng cưới",
+  "quote": "Hạnh phúc không phải là điểm đến, mà là con đường chúng ta đi cùng nhau.",
+  "groomBankBin": "",
+  "groomBankCode": "",
+  "groomBankName": "",
+  "groomBankLogo": "",
+  "groomAccountNumber": "",
+  "groomAccountName": "",
+  "brideBankBin": "",
+  "brideBankCode": "",
+  "brideBankName": "",
+  "brideBankLogo": "",
+  "brideAccountNumber": "",
+  "brideAccountName": "",
+  "giftMethods": [
+    {
+      "id": "g1",
+      "for": "groom",
+      "type": "vietqr",
+      "bankBin": "970436",
+      "bankCode": "VCB",
+      "bankName": "Vietcombank",
+      "accountName": "LY QUOC BAO",
+      "accountNumber": "1017788990"
+    },
+    {
+      "id": "g2",
+      "for": "bride",
+      "type": "vietqr",
+      "bankBin": "970407",
+      "bankCode": "TCB",
+      "bankName": "Techcombank",
+      "accountName": "DINH DIEU LINH",
+      "accountNumber": "1904455660"
+    }
+  ],
+  "galleryImages": [
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/a0c54713c1b4d116eb38767a25b6866668b7de90f1dde33b786b9e071b4c4447.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/18d14524417bf49b6c8695a179ac7ec96289cfbf29b69263f3ae255d8adeefe1.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/9efd59d14dc864e3f95291698b52b5e3392ac93665a43539d35b9d88b3958615.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/bbecb4f103023ba59ae9ea19b6bcb62c49519ba26a998f88c80f1b225bd10984.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/69c1de1437cfca1807a0f44dd4238abcae9b4cd77acc79fc598e668b55fa3099.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/f9fa4856eabe1fdbef93ea3149f595d5b0b0a61400cdf1ebde7248c8a2eac441.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/c029bacf7bdd173b0244534558d4e0c49df0f9b88555c0648773398e692b1d2d.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/6f6476d8c2c994dc2f06ec018d3ba595af7af9ba73338485ad3e2ccb62567dd2.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": "2b259bbd-7371-4f15-b28d-34f8ad6aee39",
+      "name": "Ngọc Trâm",
+      "message": "Chúc mừng Quốc Bảo và Diệu Linh! Chúc hai bạn trăm năm hạnh phúc, đầu bạc răng long nhé!",
+      "timestamp": "2026-08-19T09:32:14.885Z"
+    },
+    {
+      "id": "f82e59c8-1a7b-4c3f-a6ae-09996610a484",
+      "name": "Minh Khang",
+      "message": "Nhìn ảnh cưới mà xúc động ghê. Chúc hai bạn mãi bên nhau thật hạnh phúc!",
+      "timestamp": "2026-08-19T09:32:14.884Z"
+    },
+    {
+      "id": "1df231ff-89c3-4541-bacf-dff6b94a743b",
+      "name": "Thu Hà",
+      "message": "Chúc đôi bạn một đám cưới thật trọn vẹn và một cuộc sống hôn nhân ngập tràn tiếng cười.",
+      "timestamp": "2026-08-19T09:32:14.883Z"
+    },
+    {
+      "id": "bb009b9c-d95f-4bbe-9981-30790ed851a7",
+      "name": "Gia Bảo",
+      "message": "Chúc mừng hạnh phúc hai bạn! Nhất định mình sẽ có mặt đúng giờ để chung vui.",
+      "timestamp": "2026-08-19T09:32:14.881Z"
+    },
+    {
+      "id": "2ffb3744-0759-4c5f-b430-006389ec76b2",
+      "name": "Phương Anh",
+      "message": "Thiệp đẹp quá trời luôn. Chúc Bảo và Linh sớm có tin vui nha!",
+      "timestamp": "2026-08-19T09:32:14.874Z"
+    },
+    {
+      "id": "8277fb4c-e71b-4b50-8581-225623c9667b",
+      "name": "Hoàng Vũ",
+      "message": "Chúc hai bạn luôn yêu thương và thấu hiểu nhau như ngày đầu. Hạnh phúc nhé!",
+      "timestamp": "2026-08-19T09:32:14.873Z"
+    },
+    {
+      "id": "e10124c7-154f-4edf-b966-e3a8b0290ace",
+      "name": "Bảo Châu",
+      "message": "Chúc mừng ngày trọng đại của hai bạn. Mong mọi điều tốt đẹp nhất sẽ đến với gia đình nhỏ.",
+      "timestamp": "2026-08-19T09:32:14.872Z"
+    },
+    {
+      "id": "9ce1d784-5f05-4bf4-8484-07008ff4e814",
+      "name": "Đức Thịnh",
+      "message": "Chúc anh chị trăm năm hạnh phúc, con đàn cháu đống, vạn sự như ý!",
+      "timestamp": "2026-08-19T09:32:14.871Z"
+    },
+    {
+      "id": "595b9f41-0261-4d18-aa22-b948621f3e65",
+      "name": "Kim Ngân",
+      "message": "Chờ mãi mới tới ngày này. Chúc hai bạn thật nhiều sức khoẻ và hạnh phúc bền lâu!",
+      "timestamp": "2026-08-19T09:32:14.869Z"
+    },
+    {
+      "id": "d5dad04d-5c97-476e-a011-a363d440f20c",
+      "name": "Tuấn Kiệt",
+      "message": "Chúc mừng cặp đôi đẹp nhất! Chúc hai bạn một hành trình mới thật rực rỡ.",
+      "timestamp": "2026-08-19T09:32:14.866Z"
+    }
+  ],
+  "showGuestbook": true,
+  "showRsvp": true,
+  "rsvpDisplayMode": "button",
+  "rsvpQuestions": [],
+  "timelineEvents": [
+    {
+      "id": "t1",
+      "time": "17:30",
+      "label": {
+        "en": "Welcome guests",
+        "vi": "Đón khách",
+        "zh-Hant": "賓客入場"
+      }
+    },
+    {
+      "id": "t2",
+      "time": "18:30",
+      "label": {
+        "en": "Banquet begins",
+        "vi": "Khai tiệc",
+        "zh-Hant": "婚宴開席"
+      }
+    },
+    {
+      "id": "t3",
+      "time": "18:45",
+      "label": {
+        "en": "Champagne and cake",
+        "vi": "Rót rượu, cắt bánh",
+        "zh-Hant": "倒香檳、切蛋糕"
+      }
+    },
+    {
+      "id": "t4",
+      "time": "19:00",
+      "label": {
+        "en": "Main course served",
+        "vi": "Phục vụ món chính",
+        "zh-Hant": "上主菜"
+      }
+    },
+    {
+      "id": "t5",
+      "time": "21:00",
+      "label": {
+        "en": "Celebration ends",
+        "vi": "Kết thúc tiệc",
+        "zh-Hant": "婚宴圓滿結束"
+      }
+    }
+  ],
+  "showTimeline": true,
+  "showThankYou": true,
+  "showParty": true,
+  "partyType": "wedding",
+  "showBank": true,
+  "brideFirst": false,
+  "ogImageMode": "envelope",
+  "activeLocales": [
+    "vi"
+  ],
+  "dresscodeTitle": "DRESS CODE",
+  "dresscodeSubtitle": "Trang phục dự tiệc",
+  "templateId": "minimalism_purple",
+  "showGallery": true,
+  "showQRInline": false,
+  "galleryLayout": "cards",
+  "showDresscode": true,
+  "dresscodeColors": [
+    "#787A6C",
+    "#7869A0",
+    "#C4B5DD"
+  ],
+  "invitationId": "bb457d33-a875-495f-8125-0586c6875af0",
+  "invitationSlug": "quocbao-dieulinh-minipurple",
+  "startTime": "18:30"
+}

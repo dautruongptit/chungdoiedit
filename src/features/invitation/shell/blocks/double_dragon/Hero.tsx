@@ -69,7 +69,7 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           </div>
           <div
             className="text-2xl sm:text-3xl md:text-4xl font-playfair whitespace-nowrap"
-            style={{ color: `rgb(var(${theme.primaryVar}))`, fontSize: "24px" }}
+            style={{ color: `rgb(var(${theme.primaryVar}))` }}
           >
             {groomName}
           </div>
@@ -89,7 +89,7 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           </div>
           <div
             className="text-2xl sm:text-3xl md:text-4xl font-playfair whitespace-nowrap"
-            style={{ color: `rgb(var(${theme.primaryVar}))`, fontSize: "24px" }}
+            style={{ color: `rgb(var(${theme.primaryVar}))` }}
           >
             {brideName}
           </div>

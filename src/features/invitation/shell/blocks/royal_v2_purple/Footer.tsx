@@ -1,0 +1,7 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Footer({ ctx }: { ctx: InvitationCtx }) {
+  return (
+    <footer className="relative z-10 flex flex-col items-center px-6 pt-4 text-center"><span className="whitespace-pre-line flex flex-col items-center gap-1 text-[12px] md:text-[14px] mx-auto md:max-w-[560px]" style={{ color: "rgb(255, 255, 255)", fontFamily: "&quot;EB Garamond&quot;, &quot;Times New Roman&quot;, ChungDoiIndic, serif" }}><span>Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</span></span><div className="mt-4 flex items-center justify-center"><a href="https://chungdoi.com" target="_blank" rel="noopener noreferrer" className="text-xs opacity-50 hover:opacity-70 transition-opacity block mt-4" style={{ color: "rgb(255, 255, 255)" }}>♡ chungdoi.com</a></div><img alt="" aria-hidden="true" className="pointer-events-none mx-auto mt-6 block w-[45%] max-w-[176px] object-contain" src="/images/themes/royal-v2-purple/decorframe.webp" /><div className="pointer-events-none relative mt-6 flex w-full justify-center"><div className="pointer-events-none relative w-[124%] md:w-[86%] max-w-none shrink-0 overflow-hidden" style={{ aspectRatio: "1200 / 350", willChange: "transform", transform: "translateY(22px)" }}><img alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-top" src="/images/themes/royal-v2-purple/flowerbottom-decoration.webp" /></div></div></footer>
+  );
+}

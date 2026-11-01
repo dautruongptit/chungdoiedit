@@ -140,7 +140,7 @@ export default function EditorPage() {
     setShareOpen(true);
   };
 
-  const albumAfter = getCapabilities(d.templateId)?.editor.albumCardAfter ?? albumCardAfter(d.templateId);
+  const albumAfter = getCapabilities(d.templateId)?.editor?.albumCardAfter ?? albumCardAfter(d.templateId);
   const vis = getEditorSections(d.templateId);
   return (
     <div className="editor-page-root">

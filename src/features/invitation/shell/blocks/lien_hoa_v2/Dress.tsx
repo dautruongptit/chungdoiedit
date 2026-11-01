@@ -1,0 +1,7 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Dress({ ctx }: { ctx: InvitationCtx }) {
+  return (
+    <div className="relative z-10 flex flex-col items-center gap-5 px-6 md:px-10 py-10 md:py-12 pt-4 pb-4 md:pt-4 md:pb-4"><div className="flex flex-col items-center gap-1"><h2 className="uppercase text-center relative z-10 text-[20px] md:text-[24px]" style={{ color: "rgb(94, 129, 60)", fontFamily: "\"Times New Roman\", ChungDoiIndic, serif", fontWeight: "700" }}><span>DRESS CODE</span></h2><p className="whitespace-pre-line text-sm md:text-base text-center" style={{ color: "rgb(18, 77, 0)", fontFamily: "\"Times New Roman\", ChungDoiIndic, serif" }}><span>Trang phục dự tiệc</span></p></div><div className="flex flex-wrap justify-center gap-4 md:gap-6"><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(18, 77, 0)", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "none" }}></div><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(94, 129, 60)", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "none" }}></div><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(243, 223, 195)", border: "1.5px solid rgba(94, 129, 60, 0.19)" }}></div></div></div>
+  );
+}

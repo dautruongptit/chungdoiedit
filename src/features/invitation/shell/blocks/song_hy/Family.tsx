@@ -71,14 +71,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
               <span dir="auto">Ông Bà</span>
             </span>
             <span
-              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: vars.primaryColor, fontSize: "14px" }}
+              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere] text-[14px] md:text-[15px]"
+              style={{ color: vars.primaryColor }}
             >
               <span dir="auto">{groomFather}</span>
             </span>
             <span
-              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: vars.primaryColor, fontSize: "14px" }}
+              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere] text-[14px] md:text-[15px]"
+              style={{ color: vars.primaryColor }}
             >
               <span dir="auto">{groomMother}</span>
             </span>
@@ -100,14 +100,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
               <span dir="auto">Ông Bà</span>
             </span>
             <span
-              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: vars.primaryColor, fontSize: "14px" }}
+              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere] text-[14px] md:text-[15px]"
+              style={{ color: vars.primaryColor }}
             >
               <span dir="auto">{brideFather}</span>
             </span>
             <span
-              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: vars.primaryColor, fontSize: "14px" }}
+              className="font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere] text-[14px] md:text-[15px]"
+              style={{ color: vars.primaryColor }}
             >
               <span dir="auto">{brideMother}</span>
             </span>
@@ -136,9 +136,9 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
           className="w-full min-w-0 relative flex flex-col items-center text-center gap-3 md:gap-4 mt-4 mb-6"
         >
           <h3
-            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[42px] leading-[50px] md:leading-[100px] whitespace-nowrap"
+            className={`font-eb-garamond w-[80%] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap ${vars.fullNameFontSizeClass || ""}`}
             style={{
-              fontSize: vars.fullNameFontSize,
+              fontSize: vars.fullNameFontSizeClass ? undefined : vars.fullNameFontSize,
               color: vars.primaryColor,
               fontFamily: '"EB Garamond", serif',
               fontWeight: 400,
@@ -166,9 +166,9 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             &amp;
           </div>
           <h3
-            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[42px] leading-[50px] md:leading-[100px] whitespace-nowrap"
+            className={`font-eb-garamond w-[80%] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap ${vars.fullNameFontSizeClass || ""}`}
             style={{
-              fontSize: vars.fullNameFontSize,
+              fontSize: vars.fullNameFontSizeClass ? undefined : vars.fullNameFontSize,
               color: vars.primaryColor,
               fontFamily: '"EB Garamond", serif',
               fontWeight: 400,

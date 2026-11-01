@@ -19,6 +19,8 @@ export interface SongHyThemeVars {
   heartColor: string;
   hintColor: string;
   fullNameFontSize: string;
+  /** Đo thật desktop 1440px (bản đỏ): 36px→64px. Bản xanh chưa đo, để trống thì giữ cố định như trước. */
+  fullNameFontSizeClass?: string;
   miniDecor: string[];
   sparkleColor: string;
   confettiC2: string;
@@ -115,6 +117,7 @@ export function getSongHyTheme(ctx: InvitationCtx): SongHyThemeVars {
     heartColor: "rgb(128, 0, 0)",
     hintColor: "rgb(70, 70, 70)",
     fullNameFontSize: "36px",
+    fullNameFontSizeClass: "text-[36px] md:text-[64px]",
     miniDecor: [
       "/images/giftbox/mini/folk_floral_blue.webp",
       "/images/giftbox/mini/glass_garden_green.webp",

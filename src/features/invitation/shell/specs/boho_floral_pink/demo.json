@@ -1,0 +1,317 @@
+{
+  "groomShortName": "Hoàng Nam",
+  "brideShortName": "Thanh Tú",
+  "groomFullName": "Trần Thanh Vũ",
+  "brideFullName": "Lê Phương Nhã",
+  "groomBirthOrder": "Trưởng Nam",
+  "brideBirthOrder": "Út Nữ",
+  "weddingTitle": "Happy Wedding",
+  "groomParentTitle": "Ông bà",
+  "brideParentTitle": "Ông bà",
+  "groomFather": "Trần Văn Tuấn ",
+  "groomMother": "Trần Thị Mai",
+  "groomAddress": "23 Đường Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM",
+  "brideFather": "Lê Văn Nam ",
+  "brideMother": "Nguyễn Thị Hoa",
+  "brideAddress": "45 Đường Lê Lợi, Phường Bến Nghé, Quận 1, TP.HCM\n",
+  "showSponsors": false,
+  "sponsorTitle": "Người Đỡ Đầu",
+  "sponsorNames": [
+    "Họ tên cha đỡ đầu",
+    "Họ tên mẹ đỡ đầu"
+  ],
+  "ceremonyDate": "2026-02-01",
+  "ceremonyTime": "09:00",
+  "ceremonyHeader": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+  "date": "2026-02-01",
+  "time": "10:30",
+  "banquetTime": "10:30",
+  "showReceptionTimes": true,
+  "timeFormat": "24h",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "address": "Queen Plaza Kỳ Hòa, 16A Lê Hồng Phong, Phường 12, Quận 10, TP. Hồ Chí Minh",
+  "customAnnouncementText": "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+  "showFamilyInfo": true,
+  "thankYouNote": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+  "guestbook": "Sổ lưu bút",
+  "countdown": "Cùng đếm ngược",
+  "weddingAlbum": "Album Ảnh",
+  "addToCalendar": "Thêm vào lịch",
+  "giftBox": "Hộp Mừng Cưới",
+  "guestReception": "17:30",
+  "partyStart": "10:30",
+  "receptionAt": "Tiệc cưới sẽ diễn ra vào lúc:",
+  "atTime": "VÀO LÚC",
+  "partyVenueTitle": "Tiệc cưới sẽ tổ chức tại",
+  "mapTitle": "BẢN ĐỒ",
+  "ceremonyInfoTitle": "THÔNG TIN LỄ CƯỚI",
+  "receptionInfoTitle": "THÔNG TIN TIỆC CƯỚI",
+  "timelineTitle": "LỊCH TRÌNH NGÀY CƯỚI",
+  "heroTitle": "Câu Chuyện Tình Yêu",
+  "noWishesYet": "Chưa có lời chúc nào. Hãy là người đầu tiên!",
+  "submitWishText": "GỬI LỜI CHÚC",
+  "submittingText": "ĐANG GỬI...",
+  "wishSavedText": "Cảm ơn bạn! Lời chúc đã được lưu.",
+  "guestNamePlaceholder": "Nhập tên của bạn*",
+  "guestWishPlaceholder": "Nhập lời chúc của bạn*",
+  "rsvpButton": "XÁC NHẬN",
+  "rsvpTitle": "Xác nhận tham dự",
+  "rsvpSubtitle": "Sự hiện diện của {{salutation}} là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất.",
+  "rsvpNameLabel": "Tên của {{salutation}}",
+  "rsvpNamePlaceholder": "Nhập tên của {{salutation}}",
+  "rsvpAttendQuestion": "{{Salutation}} sẽ đến chứ?",
+  "rsvpAttendYes": "Tôi sẽ đến",
+  "rsvpAttendNo": "Rất tiếc, tôi không thể đến",
+  "rsvpGuestCountLabel": "Số lượng khách (bao gồm {{salutation}})",
+  "rsvpGuestCountMaxHint": "Tối đa {{max}} người",
+  "rsvpMessageLabel": "Lời nhắn cho cô dâu chú rể",
+  "rsvpMessagePlaceholder": "Để lại lời nhắn (không bắt buộc)",
+  "rsvpTextAnswerPlaceholder": "Nhập câu trả lời của bạn...",
+  "rsvpQuestionYes": "Có",
+  "rsvpQuestionNo": "Không",
+  "rsvpSendingText": "Đang gửi...",
+  "rsvpSubmitText": "Gửi xác nhận",
+  "rsvpThankYouTitle": "Cảm ơn {{salutation}}!",
+  "rsvpConfirmationReceivedText": "Chúng tôi đã nhận được xác nhận của {{salutation}}.",
+  "rsvpLookForwardText": "Rất mong được gặp {{salutation}} trong ngày trọng đại!",
+  "rsvpDeclineMessageText": "Cảm ơn {{salutation}} đã hồi âm. Chúc {{salutation}} thật nhiều niềm vui và sức khỏe!",
+  "rsvpCloseText": "Đóng",
+  "rsvpErrorText": "Có lỗi xảy ra. Vui lòng thử lại.",
+  "guestSalutation": "bạn",
+  "groomLabel": "Trưởng Nam",
+  "brideLabel": "Út Nữ",
+  "giftBoxThankYou": "Cảm ơn bạn đã đồng hành cùng chúng mình trong ngày trọng đại!",
+  "tapToOpen": "Nhấn để mở",
+  "saveQR": "Lưu QR",
+  "saveQRFallback": "Nhấn giữ vào mã QR để lưu ảnh nhé",
+  "giftBoxLegacyLabel": "Mừng Cưới",
+  "groomNamePlaceholder": "Tên chú rể",
+  "brideNamePlaceholder": "Tên cô dâu",
+  "envelopeGreeting": "Thân Mời",
+  "envelopeInviteMessage": "đến dự buổi tiệc chung vui cùng gia đình",
+  "envelopeOpenButton": "Mở thiệp",
+  "qrScanText": "Quét mã để gửi mừng cưới",
+  "quote": "Hạnh phúc không phải là điểm đến, mà là con đường chúng ta đi cùng nhau.",
+  "groomBankBin": "970436",
+  "groomBankCode": "VCB",
+  "groomBankName": "Vietcombank",
+  "groomBankLogo": "https://api.vietqr.io/img/VCB.png",
+  "groomAccountNumber": "6868686868",
+  "groomAccountName": "Trần Thanh Vũ",
+  "brideBankBin": "970423",
+  "brideBankCode": "TPB",
+  "brideBankName": "TPBank",
+  "brideBankLogo": "https://api.vietqr.io/img/TPB.png",
+  "brideAccountNumber": "83868386",
+  "brideAccountName": "Lê Phương Nhã",
+  "giftMethods": [
+    {
+      "id": "g1",
+      "for": "groom",
+      "type": "vietqr",
+      "bankBin": "970436",
+      "bankCode": "VCB",
+      "bankName": "Vietcombank",
+      "accountName": "THIEP CUOI DEMO",
+      "accountNumber": "0000000000"
+    }
+  ],
+  "galleryImages": [
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/5e017041b9011bb8714c67e0475e25f6a05b1ded4e112e764b9702739fb6243c.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/d7d51af88f8a2f0620420efd751d002a9d1fe1337fb8649176ffd5b699bbfb0b.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "url": "https://assets.chungdoi.com/photo-library/design/e2f6f2c37a5be6d96ba9eb122f579defdcd185c33bae8f7bfabbe7d23d49c88a.webp",
+      "position": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": "454bdb75-468a-4b55-9551-88fc07e109ae",
+      "name": "Gia đình cô Lan",
+      "message": "Chúc hai cháu trăm năm hạnh phúc, sớm sinh quý tử!",
+      "timestamp": "2026-07-30T03:58:41.294Z"
+    },
+    {
+      "id": "38b7e61b-2f2a-4912-99d1-36a2ce080cf2",
+      "name": "Bạn thân của cô dâu",
+      "message": "Chúc mừng hai bạn về chung một nhà. Mong hai bạn luôn yêu thương nhau như ngày đầu!",
+      "timestamp": "2026-07-29T03:58:41.294Z"
+    },
+    {
+      "id": "7a604041-139a-4821-be51-499560e99685",
+      "name": "Anh Minh",
+      "message": "Nhìn thiệp mà thấy ấm áp ghê. Chúc đám cưới thật trọn vẹn nhé!",
+      "timestamp": "2026-07-28T03:58:41.294Z"
+    },
+    {
+      "id": "e73cc3cb-07c2-4208-b2ff-4c1794e582fc",
+      "name": "Chị Hương",
+      "message": "Chúc cô dâu chú rể trăm năm hảo hợp, gia đình luôn đầm ấm.",
+      "timestamp": "2026-07-27T03:58:41.294Z"
+    },
+    {
+      "id": "682903f0-5e6e-43c8-829c-b1e37269647d",
+      "name": "Tập thể lớp 12A",
+      "message": "Mừng hạnh phúc hai bạn! Chúc hai bạn luôn nắm tay nhau đi hết chặng đường dài.",
+      "timestamp": "2026-07-26T03:58:41.294Z"
+    },
+    {
+      "id": "04954de2-894b-4715-ac4b-26ab27cd70a7",
+      "name": "Bác Tuấn",
+      "message": "Chúc hai cháu một đám cưới thật vui và một cuộc sống thật bình yên.",
+      "timestamp": "2026-07-25T03:58:41.294Z"
+    }
+  ],
+  "showGuestbook": true,
+  "showRsvp": true,
+  "rsvpDisplayMode": "button",
+  "rsvpQuestions": [
+    {
+      "id": "0aeeb2ef",
+      "type": "yesno",
+      "label": "Tôi sẽ đi chung xe"
+    },
+    {
+      "id": "fa58ba61",
+      "type": "yesno",
+      "label": "Tôi có ăn chay"
+    }
+  ],
+  "ceremonies": [
+    {
+      "id": "k1tqk1is",
+      "date": "2026-02-01",
+      "time": "09:00",
+      "header": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA"
+    }
+  ],
+  "timelineEvents": [
+    {
+      "id": "demo-tl-don-khach",
+      "time": "17:30",
+      "label": "Đón khách"
+    },
+    {
+      "id": "demo-tl-khai-tiec",
+      "time": "18:30",
+      "label": "Khai tiệc"
+    },
+    {
+      "id": "demo-tl-rot-ruou-cat-banh",
+      "time": "18:45",
+      "label": "Rót rượu, cắt bánh"
+    },
+    {
+      "id": "demo-tl-mon-chinh",
+      "time": "19:00",
+      "label": "Phục vụ món chính"
+    },
+    {
+      "id": "demo-tl-ket-thuc",
+      "time": "21:00",
+      "label": "Kết thúc tiệc"
+    }
+  ],
+  "showTimeline": true,
+  "showMap": true,
+  "showThankYou": true,
+  "showParty": true,
+  "partyType": "wedding",
+  "showBank": true,
+  "brideFirst": false,
+  "ogImageMode": "envelope",
+  "activeLocales": [
+    "vi"
+  ],
+  "dresscodeTitle": "DRESS CODE",
+  "dresscodeSubtitle": "Trang phục dự tiệc",
+  "bankBin": "",
+  "placeId": "0x31752f2f53a8f12b:0x2166a074ded68eee",
+  "bankCode": "",
+  "bankLogo": "",
+  "bankName": "",
+  "latitude": 10.7799574,
+  "heroPhoto": "https://assets.chungdoi.com/photo-library/design/eb107c431fdd4c8d8e292f587e30bf3532753b3b4562fd7f21fa1254a42363b1.webp",
+  "longitude": 106.682232,
+  "mapAddress": "Queen Plaza Kỳ Hòa, 16A Lê Hồng Phong, Phường 12, Quận 10, TP. Hồ Chí Minh",
+  "templateId": "boho_floral_pink",
+  "accountName": "",
+  "engagementAt": "LỄ NẠP TÀI ĐƯỢC CỬ HÀNH TẠI",
+  "mapPlaceName": "Metropole Wedding & Convention Center",
+  "musicEndTime": 229,
+  "showCeremony": true,
+  "accountNumber": "",
+  "showDresscode": true,
+  "mapDisplayMode": "placeId",
+  "musicStartTime": 13,
+  "brideLinePayUrl": "",
+  "ceremonyAddress": "TƯ GIA",
+  "dresscodeColors": [
+    "#651212",
+    "#8d3a3a",
+    "#ffb2b2"
+  ],
+  "groomLinePayUrl": "",
+  "announcementLine1": "TRÂN TRỌNG BÁO TIN",
+  "announcementLine2": "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+  "engagementAddress": "TƯ GIA",
+  "giftDisplayMode": "gift_box",
+  "galleryLayout": "cards",
+  "invitationId": "d985ef1b-f0d5-4f27-a2d7-0c0e0a0755fd",
+  "invitationSlug": "thanhvu-phuongnha-forever",
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/5e017041b9011bb8714c67e0475e25f6a05b1ded4e112e764b9702739fb6243c.webp",
+    "https://assets.chungdoi.com/photo-library/design/d7d51af88f8a2f0620420efd751d002a9d1fe1337fb8649176ffd5b699bbfb0b.webp",
+    "https://assets.chungdoi.com/photo-library/design/e2f6f2c37a5be6d96ba9eb122f579defdcd185c33bae8f7bfabbe7d23d49c88a.webp"
+  ],
+  "wishes": [
+    {
+      "name": "Gia đình cô Lan",
+      "time": "10:58:41 30/7/2026",
+      "msg": "Chúc hai cháu trăm năm hạnh phúc, sớm sinh quý tử!"
+    },
+    {
+      "name": "Bạn thân của cô dâu",
+      "time": "10:58:41 29/7/2026",
+      "msg": "Chúc mừng hai bạn về chung một nhà. Mong hai bạn luôn yêu thương nhau như ngày đầu!"
+    },
+    {
+      "name": "Anh Minh",
+      "time": "10:58:41 28/7/2026",
+      "msg": "Nhìn thiệp mà thấy ấm áp ghê. Chúc đám cưới thật trọn vẹn nhé!"
+    },
+    {
+      "name": "Chị Hương",
+      "time": "10:58:41 27/7/2026",
+      "msg": "Chúc cô dâu chú rể trăm năm hảo hợp, gia đình luôn đầm ấm."
+    },
+    {
+      "name": "Tập thể lớp 12A",
+      "time": "10:58:41 26/7/2026",
+      "msg": "Mừng hạnh phúc hai bạn! Chúc hai bạn luôn nắm tay nhau đi hết chặng đường dài."
+    },
+    {
+      "name": "Bác Tuấn",
+      "time": "10:58:41 25/7/2026",
+      "msg": "Chúc hai cháu một đám cưới thật vui và một cuộc sống thật bình yên."
+    }
+  ],
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/75a2233917e5a0c905f5f1094d7bed67cd0b648ffa0634f13376aec8357bc96e.webp",
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/a0666f1639ce05b0a9478c751fbb2d7c00986fe850d2107b1caf49710ac9e5cf.webp",
+  "showQRInline": false
+}

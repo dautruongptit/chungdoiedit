@@ -21,7 +21,7 @@ export const REFERENCE_COUPLES: Record<string, { groom: string; bride: string }>
   "dragon_phoenix_v4_red": { groom: "Quốc Bảo", bride: "Khánh Vy" },
   "dragon_phoenix_red": { groom: "Hoài Nam", bride: "Ngọc Linh" },
   "minimalism_darkblue": { groom: "Tuấn Kiệt", bride: "Minh Anh" },
-  "lien_hoa_v2_green": { groom: "Bảo Duy", bride: "Khánh Vy" },
+  "lien_hoa_v2_green": { groom: "Trịnh Bảo Duy", bride: "Mai Khánh Vy" },
   "minimalism_red": { groom: "Đức Anh", bride: "Thanh Mai" },
   "song_hac_red": { groom: "Quang Duy", bride: "Hà Linh" },
   "chibi_red": { groom: "Ngọc Ánh", bride: "Thế Bảo" },

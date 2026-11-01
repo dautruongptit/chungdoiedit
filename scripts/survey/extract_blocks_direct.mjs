@@ -38,7 +38,7 @@ try {
       const sections = container ? Array.from(container.children).map((s, i) => ({
         idx: i,
         tag: s.tagName,
-        cls: s.className,
+        cls: typeof s.className === "string" ? s.className : "",
         id: s.id,
         testId: s.getAttribute("data-testid"),
         html: s.outerHTML,
@@ -97,7 +97,8 @@ try {
     const fn = String(s.idx).padStart(2, "0") + ".html";
     fs.writeFileSync(`${dir}/${fn}`, s.html);
     fs.writeFileSync(`web/${dir}/${fn}`, s.html);
-    console.log(`[Section ${s.idx}] <${s.tag}> class="${s.cls.slice(0, 50)}" text="${s.textPreview.slice(0, 40)}" (${s.html.length} bytes)`);
+    const clsStr = typeof s.cls === "string" ? s.cls : (s.cls?.baseVal || "");
+    console.log(`[Section ${s.idx}] <${s.tag}> class="${clsStr.slice(0, 50)}" text="${(s.textPreview || "").slice(0, 40)}" (${s.html.length} bytes)`);
   });
 
   if (info.demoData) {

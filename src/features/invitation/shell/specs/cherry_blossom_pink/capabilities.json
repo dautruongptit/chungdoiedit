@@ -1,0 +1,56 @@
+{
+  "id": "cherry_blossom_pink",
+  "family": "cherry_blossom_pink",
+  "testId": "cherry-blossom-pink-template",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Album",
+    "Ceremony",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Footer",
+    "Credit",
+    "Section11",
+    "Section12",
+    "Section13",
+    "Section14",
+    "Section15",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "petal",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "counter",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": true
+    }
+  }
+}

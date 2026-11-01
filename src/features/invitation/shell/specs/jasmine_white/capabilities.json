@@ -1,0 +1,51 @@
+{
+  "id": "jasmine_white",
+  "family": "jasmine_white",
+  "testId": "jasmine-white-template",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Ceremony",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Footer",
+    "Section9",
+    "Credit",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "petal",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "counter",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": true
+    }
+  }
+}

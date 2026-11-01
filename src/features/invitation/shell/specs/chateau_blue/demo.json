@@ -1,0 +1,24 @@
+{
+  "_note": "Dữ liệu demo của chateau_blue đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+    "https://assets.chungdoi.com/photo-library/design/30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+    "https://assets.chungdoi.com/photo-library/design/5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

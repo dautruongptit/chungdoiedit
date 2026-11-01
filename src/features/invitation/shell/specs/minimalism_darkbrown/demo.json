@@ -1,0 +1,29 @@
+{
+  "_note": "Dữ liệu demo của minimalism_darkbrown đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/a92a1025b101a2217a444cdc6aecf6718ff892783b908146cf28386912cf2435.webp",
+    "https://assets.chungdoi.com/photo-library/design/6033e6f7c6e24e8d9857bada2788cb635d54980d3ec23a7eb756ef1538eac281.webp",
+    "https://assets.chungdoi.com/photo-library/design/ef62d93bb58034c5db7c44b33989118e9877278736d0a89f1b381bc2d4d49bcf.webp",
+    "https://assets.chungdoi.com/photo-library/design/5aff7301ce8bc21fcc7df0e39adcb23f0cee493320df61974d075274081ae475.webp",
+    "https://assets.chungdoi.com/photo-library/design/73401aa6f0c5d1b8ecb061cb3bd640a8e29d2373acf99ee452d76d3617560863.webp",
+    "https://assets.chungdoi.com/photo-library/design/1fbc918ebb6e67dd496026c61ebc5ab1c9ca38dc95acb281e147ee43c8c1a2d2.webp",
+    "https://assets.chungdoi.com/photo-library/design/4ac98aa3591c6777b5f73947b07c5b8bdfb2ddffca904142ffb929e81d0cbe5f.webp",
+    "https://assets.chungdoi.com/photo-library/design/b14b7beed16c3cab8b6968dc0318a43e3c51479e85080eff895b62912938154a.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/79dc077bef4e992fb165a6e36d82ce4cde0db0222ad6b66e419bd7850e02e730.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/4c6ec3c1661bf7e37a6676948335722ce695cd9dc85dd90baf67542a13328fef.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

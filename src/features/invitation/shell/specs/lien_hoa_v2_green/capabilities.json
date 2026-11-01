@@ -1,0 +1,56 @@
+{
+  "id": "lien_hoa_v2_green",
+  "family": "lien_hoa_v2",
+  "testId": "lien-hoa-v2-green-template",
+  "innerClass": "relative z-10 flex flex-col items-center gap-[23px]",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Family",
+    "Album",
+    "Banquet",
+    "Rsvp",
+    "Venue",
+    "Dress",
+    "Schedule",
+    "Guestbook",
+    "Gifts",
+    "Footer",
+    "Credit",
+    "BottomDecor",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "petal",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": false,
+    "shape": "none"
+  },
+  "album": {
+    "indicator": "dots",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": false
+    }
+  },
+  "music": ""
+}

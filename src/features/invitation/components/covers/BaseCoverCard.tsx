@@ -178,7 +178,7 @@ export function BaseCoverCard({ d, onOpen, config, cardExtra }: BaseCoverCardPro
           </div>
 
           {/* Rồng phượng bay về phía trước khi mở thiệp: vẽ ngoài khung cắt như trang gốc (ảnh trong thẻ vẫn giữ nguyên bên dưới) */}
-          {isOpening && config.openFx === "dragon-fly" && config.imgs.map((img, i) => (
+          {isOpening && (config.flyCorners ?? config.openFx === "dragon-fly") && config.imgs.map((img, i) => (
             <div key={"fly" + i} className={img.className}>
               <img
                 alt=""

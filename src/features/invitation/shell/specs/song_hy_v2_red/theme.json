@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/song-hy-v2-red",
+  "colors": {
+    "ink": "rgb(140, 0, 0)",
+    "inkRgb": "140, 0, 0",
+    "sub": "rgba(140, 0, 0, 0.7)",
+    "muted": "rgb(140, 0, 0)",
+    "paper": "rgb(255, 249, 230)",
+    "line": "rgba(140, 0, 0, 0.2)",
+    "accent": "#ffe8a4",
+    "edge": "rgba(140, 0, 0, 0.1)"
+  }
+}

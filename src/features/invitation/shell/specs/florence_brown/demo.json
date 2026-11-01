@@ -1,0 +1,29 @@
+{
+  "_note": "Dữ liệu demo của florence_brown đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/89b589d467e27d6bc25176781bea6ca13ee3318a4b5ed7409a25a186c60b0d97.webp",
+    "https://assets.chungdoi.com/photo-library/design/ca978bec665f3192386cad2b9edf9fdf3605e4f4f9195d29fba8dc09d0a4ee9f.webp",
+    "https://assets.chungdoi.com/photo-library/design/1014679f4b68597d1ce79ab5cc96c0a7b039c53106cd1ac8fbf369976f5e998c.webp",
+    "https://assets.chungdoi.com/photo-library/design/8f9192b73a1393c7cac97c9b56b7f1771f063f1fa2c0c52e61f91faccffe7e39.webp",
+    "https://assets.chungdoi.com/photo-library/design/80de7aca11dc36b635946d59e3897fcfd1fd46d3c929ca47e12e144da830d92d.webp",
+    "https://assets.chungdoi.com/photo-library/design/9c1c61b16fa1ff694846b781f371bc3b437a49a092300a1778bdd9ed56ff81d9.webp",
+    "https://assets.chungdoi.com/photo-library/design/454f856986dc4e94052eee2148f9c0006732d70700ff963c796fc737dfc84839.webp",
+    "https://assets.chungdoi.com/photo-library/design/2e908b38ac8ab90f23135996c5ebea3dd4e606b3d083af762944a2f8651104b0.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/336ce24b0315c3da67f82a3e82be1dd9d391033e33cbccec5bb4ee1e22d1dab7.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/ab456240b5a4c17b74751d8b4d16350a7e364a6d220660d8a7e4e79dac0e85d3.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

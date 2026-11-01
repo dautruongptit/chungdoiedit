@@ -1,0 +1,29 @@
+{
+  "_note": "Dữ liệu demo của silk_ribbon_pink đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/11928f048523c23ff3a4820b8036114fc1979900e864ee85141b420e1928a8ab.webp",
+    "https://assets.chungdoi.com/photo-library/design/b3acc465f64f3ec0ce14fbb2aa6fcac0feeee24a3e839b34be5c75aa591bd6c1.webp",
+    "https://assets.chungdoi.com/photo-library/design/afe22679ba0288fc20610a942db532910708fdc51c67de39b5dce94f0fe55067.webp",
+    "https://assets.chungdoi.com/photo-library/design/e7cfe35a3af7f66f72673b9e9a5c1b30d5ea3c99818557511a5ef3999c79f708.webp",
+    "https://assets.chungdoi.com/photo-library/design/bf3e4e9faa3dab29f5cc7d9ae73a9c332a5e8ffbdff795cea739fec75d30847c.webp",
+    "https://assets.chungdoi.com/photo-library/design/76c3a7424749e8dc0bceeb35eaaa456b025a595768f11dbb1ed374e4ba7a2513.webp",
+    "https://assets.chungdoi.com/photo-library/design/3d5f4a8f8a421148c280f33318146a5b4cb2baa3b10fc24a2ce6d7f75564c884.webp",
+    "https://assets.chungdoi.com/photo-library/design/7094fe9f26c04fac0ee9a3fbd2ca38ddac450f21a4c298e5f842904412482531.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/19431d16485197443c800decf9f663df18119371e73ff6b5eb1602d760926782.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/e94e03440262b432313146b46b0442a5b0620ab15dbe91745427d462b53f63f2.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

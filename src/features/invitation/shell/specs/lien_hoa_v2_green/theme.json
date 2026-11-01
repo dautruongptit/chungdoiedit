@@ -1,0 +1,10 @@
+{
+  "assets": "/images/themes/lien-hoa-v2-green",
+  "paper": "rgb(255, 251, 237)",
+  "text": "rgb(18, 77, 0)",
+  "ink": "rgb(94, 129, 60)",
+  "inkRgb": "94, 129, 60",
+  "edge": "#5e813c33",
+  "buttonBg": "rgb(94, 129, 60)",
+  "buttonText": "rgb(255, 255, 255)"
+}

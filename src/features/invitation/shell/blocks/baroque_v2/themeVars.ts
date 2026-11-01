@@ -30,6 +30,8 @@ export interface BaroqueV2ThemeConfig {
     namesMarginClass: string;
     namesFont: string;
     namesSize: string;
+    /** Lớp Tailwind đáp ứng (thay cho namesSize cố định) khi đã đo thật ở desktop; chưa đo thì để trống, dùng namesSize như cũ. */
+    namesSizeClass?: string;
   };
   ceremony: {
     goldenLineWidthClass: string;
@@ -37,6 +39,7 @@ export interface BaroqueV2ThemeConfig {
     ptClass: string;
     namesFont: string;
     namesSize: string;
+    namesSizeClass?: string;
     ceremonyHeading: string;
   };
   banquet: {
@@ -91,6 +94,7 @@ export const THEME_DARKRED: BaroqueV2ThemeConfig = {
     namesMarginClass: "mt-[42px] md:mt-[52px]",
     namesFont: '"Viaoda Libre", "EB Garamond", ChungDoiIndic, serif',
     namesSize: "45px",
+    namesSizeClass: "text-[45px] md:text-[52px]",
   },
   ceremony: {
     goldenLineWidthClass: "w-[74.5%] max-w-[309px] md:max-w-[420px]",
@@ -107,6 +111,7 @@ export const THEME_DARKRED: BaroqueV2ThemeConfig = {
     ptClass: "pt-[46px] md:pt-[56px]",
     namesFont: '"Cormorant Garamond", "EB Garamond", "Times New Roman", ChungDoiIndic, serif',
     namesSize: "39px",
+    namesSizeClass: "text-[39px] md:text-[48px]",
     ceremonyHeading: "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ\u00A0GIA",
   },
   banquet: {

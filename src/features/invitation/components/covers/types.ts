@@ -35,6 +35,10 @@ export interface CoverConfig {
   nameFromSm?: boolean;
   /** Hiệu ứng chuyển cảnh riêng khi bấm "Mở thiệp" (mặc định: hạt tuôn từ dấu sáp + 2 vòng sóng). */
   openFx?: "center-hearts" | "dragon-fly";
+  /** Ảnh trang trí 2 góc bay vào khi mở thiệp (đo thật: xảy ra ở nhiều mẫu không có hiệu ứng rồng bay riêng).
+   * Mặc định suy ra từ `openFx === "dragon-fly"`; đặt riêng khi mẫu cần bay góc nhưng dùng burst kiểu khác
+   * (ví dụ vừa cần "center-hearts" vừa cần ảnh góc bay — hai field độc lập nhau). */
+  flyCorners?: boolean;
   /** Màu chữ ngày/khách mời khi trang gốc không dùng mặc định chung (mặc định: textColor + opacity 0.85 / nâu 0.72). */
   dateColor?: string;
   guestColor?: string;

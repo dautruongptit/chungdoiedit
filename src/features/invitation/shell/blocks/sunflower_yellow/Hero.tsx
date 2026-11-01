@@ -1,0 +1,11 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Hero({ ctx }: { ctx: InvitationCtx }) {
+  const anyD = ctx.d as any;
+  const groomPhoto = anyD.groomPhoto || ctx.d.photos?.[0] || ctx.heroSrc;
+  const bridePhoto = anyD.bridePhoto || ctx.d.photos?.[1] || ctx.heroSrc;
+
+  return (
+    <header className="relative isolate z-10 flex min-h-[730px] flex-col items-center overflow-x-clip px-8 pb-4 pt-14 text-center md:min-h-[820px] md:pt-20"><img alt="" aria-hidden="true" className="pointer-events-none absolute max-w-none object-contain right-[-18%] top-[2%] w-[62%]" src="/images/themes/sunflower/flower2.webp" style={{ opacity: "0.07", transform: "rotate(-23.8deg)" }} /><span aria-hidden="true" className="pointer-events-none absolute block -left-[20%] md:left-[10%] bottom-[10%] z-0 w-[80%] md:w-[46%]" style={{ willChange: "transform", transform: "translateY(85.8px)" }}><span className="block"><img alt="" className="block w-full max-w-none object-contain drop-shadow-[3px_4px_5px_rgba(113,112,42,0.22)] rotate-[-25deg]" src="/images/themes/sunflower/flower4.webp" /></span></span><p className="relative z-20 whitespace-pre-line text-[13px] uppercase md:text-[15px]" style={{ fontFamily: "&quot;Playfair Display&quot;, &quot;Times New Roman&quot;, ChungDoiIndic, serif", fontWeight: "600", color: "rgb(220, 130, 3)", letterSpacing: "0.22em" }}>THE WEDDING OF</p><div className="relative z-20 mt-10 ml-auto flex w-[86%] max-w-[330px] flex-col items-end gap-[10px] md:mt-14 md:max-w-[400px]"><div className="flex w-full justify-end"><span className="whitespace-nowrap uppercase italic leading-tight" style={{ fontFamily: "&quot;Times New Roman&quot;, ChungDoiIndic, serif", color: "rgb(220, 130, 3)", fontSize: "40px" }}>Văn Hoàng</span></div><span aria-hidden="true" className=" mr-[5%] text-[30px] leading-none md:text-[34px]" style={{ fontFamily: "\"Vujahday Script\", &quot;The Nautigal&quot;, ChungDoiIndic, cursive", color: "rgb(113, 112, 42)" }}>and</span><div className="flex w-full justify-end"><span className="whitespace-nowrap uppercase italic leading-tight" style={{ fontFamily: "&quot;Times New Roman&quot;, ChungDoiIndic, serif", color: "rgb(220, 130, 3)", fontSize: "40px" }}>Mỹ Ngọc</span></div></div></header>
+  );
+}

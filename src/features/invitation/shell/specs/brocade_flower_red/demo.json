@@ -1,0 +1,27 @@
+{
+  "_note": "Dữ liệu demo của brocade_flower_red đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/07e8c3900db4c71c2e032f1f394598dd7fec6e89944d5fd98d460c28b1ea5e9c.webp",
+    "https://assets.chungdoi.com/photo-library/design/eea31561af67b361b07c74a5edcc43d40bed36315b562edcc71607620ad49293.webp",
+    "https://assets.chungdoi.com/photo-library/design/f69d52c7bfeadfe284631051adadf43381334e051f4fddddb97bfa3821afe1df.webp",
+    "https://assets.chungdoi.com/photo-library/design/e1fbb356fc938ca105458c018cc7efa8b25a6a967176fd756d294bca8bd5d3f2.webp",
+    "https://assets.chungdoi.com/photo-library/design/07feab11f94d7b5bda86361dede0e45dafdb449c2831c2373accd478a7a0474e.webp",
+    "https://assets.chungdoi.com/photo-library/design/0c61a0c7360e1ee108635c00f7315ebe86e698c8a97257cc2d2f2e63777363e4.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/a99878c68915ea017811d86db5930f01ede631ca6334dcc1125243da38f43057.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/b62c19234c4be5c6ed3ae19efab7fce13b8e9d24a307fa5aa29d2f80ccf9801d.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

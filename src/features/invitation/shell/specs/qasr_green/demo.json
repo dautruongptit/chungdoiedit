@@ -1,0 +1,26 @@
+{
+  "_note": "Dữ liệu demo của qasr_green đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/a100c92a30e0340929c7f37a748c12262b485c3e64b47d5e13d26f9f5b36bac7.webp",
+    "https://assets.chungdoi.com/photo-library/design/11e3bf590ea9a9002031f3d6dc2fc8d44ab38f5bd4f81b71b59375e8cf933bb2.webp",
+    "https://assets.chungdoi.com/photo-library/design/bfaa9116e65ac520bfe971803ea47e3bd8337c19b49527a7823b2675ba67629b.webp",
+    "https://assets.chungdoi.com/photo-library/design/14329c0a357f6d63d4f04a20a90bc82543392bbd10583555b7bc90af26f0b828.webp",
+    "https://assets.chungdoi.com/photo-library/design/34eb7c0f5fac2bc1ac42eb91fec828decbcfed0ab3de4f53a08ecf3492c1433c.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/5b832c34ab2b1f6ed1e4d04cb223e2e9eb76b7dcda555b66d0ffaad0d529c7da.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/0fb6daf1f4914f384b549a1d533195d77eb1061a7210e672b4edec701fa5d8a1.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

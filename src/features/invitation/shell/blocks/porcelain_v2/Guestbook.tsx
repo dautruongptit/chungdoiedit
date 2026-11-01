@@ -101,12 +101,11 @@ export function Guestbook({ ctx }: { ctx: InvitationCtx }) {
         >
           <div className="text-center">
             <h2
-              className="uppercase font-bold text-[20px] md:text-[24px] text-center"
+              className="uppercase font-bold text-[20px] text-center"
               style={{
                 color: isRed ? accentColor : textColor,
                 fontFamily: '"Times New Roman", ChungDoiIndic, serif',
                 fontWeight: "700",
-                fontSize: "20px",
               }}
             >
               <span>Sổ lưu bút</span>

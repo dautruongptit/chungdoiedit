@@ -31,7 +31,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
         style={{
           color: ink,
           fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-          fontSize: "20px",
           letterSpacing: "0.05em",
         }}
       >
@@ -49,7 +48,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             style={{
               color: muted,
               fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-              fontSize: "13px",
             }}
           >
             <span className="flex flex-col items-center">
@@ -61,7 +59,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             style={{
               color: muted,
               fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-              fontSize: "13px",
             }}
           >
             <span className="flex flex-col items-center">
@@ -94,7 +91,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             style={{
               color: muted,
               fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-              fontSize: "13px",
             }}
           >
             <span className="flex flex-col items-center">
@@ -106,7 +102,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             style={{
               color: muted,
               fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-              fontSize: "13px",
             }}
           >
             <span className="flex flex-col items-center">
@@ -148,9 +143,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
       {/* Tên cô dâu chú rể */}
       <div className="w-full min-w-0 relative flex w-full min-w-0 flex-col items-center text-center gap-3 md:gap-4">
         <h3
-          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap"
+          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center text-[38px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
           style={{
-            fontSize: "38px",
             fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
             fontWeight: 400,
             color: ink,
@@ -174,9 +168,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
           &amp;
         </div>
         <h3
-          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px] whitespace-nowrap"
+          className="font-pinyon w-[80%] min-h-[80px] flex items-center justify-center text-[38px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
           style={{
-            fontSize: "38px",
             fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
             fontWeight: 400,
             color: ink,
@@ -289,7 +282,6 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
         style={{
           color: ink,
           fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-          fontSize: "20px",
           letterSpacing: "0.05em",
         }}
       >
@@ -480,7 +472,7 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
           className="inline-flex items-center justify-center rounded-full px-6 py-2 font-semibold transition-transform hover:scale-[1.03]"
           style={{
             backgroundColor: ink,
-            color: t.cardBg || "rgb(85, 63, 24)",
+            color: "rgb(85, 63, 24)",
             fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
           }}
         >

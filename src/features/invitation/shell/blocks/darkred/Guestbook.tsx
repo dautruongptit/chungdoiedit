@@ -19,12 +19,11 @@ export function Guestbook({ ctx }: { ctx: InvitationCtx }) {
       >
         <div className="text-center">
           <h2
-            className="uppercase font-bold text-[20px] md:text-[24px] relative -translate-y-[-16px]"
+            className="uppercase font-bold text-[20px] relative -translate-y-[-16px]"
             style={{
               color: t.ink,
               fontFamily: '"Times New Roman", ChungDoiIndic, serif',
               fontWeight: 700,
-              fontSize: "20px",
               letterSpacing: "0.03em",
             }}
           >

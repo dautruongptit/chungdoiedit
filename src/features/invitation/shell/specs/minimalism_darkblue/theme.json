@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/minimalism-darkblue",
+  "colors": {
+    "ink": "rgb(0, 34, 76)",
+    "inkRgb": "0, 34, 76",
+    "sub": "rgba(0, 34, 76, 0.6)",
+    "muted": "rgb(0, 34, 76)",
+    "paper": "#f7f5ee",
+    "line": "rgba(0, 34, 76, 0.2)",
+    "accent": "#f7f5ee",
+    "edge": "rgba(0, 34, 76, 0.1)"
+  }
+}

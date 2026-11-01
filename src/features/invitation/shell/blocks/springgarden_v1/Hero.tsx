@@ -21,9 +21,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
         >
           <div className="flex w-full justify-center">
             <span
-              className="whitespace-nowrap leading-[75px] md:leading-[105px]"
+              className="whitespace-nowrap text-[50px] md:text-[70px] leading-[75px] md:leading-[105px]"
               style={{
-                fontSize: "50px",
                 fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
               }}
             >
@@ -38,9 +37,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           </div>
           <div className="flex w-full justify-center">
             <span
-              className="whitespace-nowrap leading-[75px] md:leading-[105px]"
+              className="whitespace-nowrap text-[50px] md:text-[70px] leading-[75px] md:leading-[105px]"
               style={{
-                fontSize: "50px",
                 fontFamily: '"Pinyon Script", "Great Vibes", ChungDoiIndic, cursive',
               }}
             >

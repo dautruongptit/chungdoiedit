@@ -136,10 +136,12 @@ export function useEnvelopeOpen(onOpen: () => void, burstDelay = 500) {
       setShowBurst(true);
     }, burstDelay);
 
-    // Phase 3: Transition finishes at 1300ms -> mount opened invitation
+    // Phase 3: gắn với lúc envelope-away (800ms, xem particle-burst/envelope-away ở trang gốc) chạy xong
+    // thay vì một mốc cố định — mẫu có burstDelay khác (vd rồng phượng bay 780ms) sẽ mở đúng lúc phong bì
+    // bay hết thay vì luôn cùng một mốc 1300ms.
     setTimeout(() => {
       onOpen();
-    }, 1300);
+    }, burstDelay + 800);
   }, [isOpening, onOpen, burstDelay]);
 
   return { isOpening, showBurst, triggerOpen };

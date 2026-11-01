@@ -11,15 +11,17 @@ const DROP = (n) => /^data-(showcase|landing|bot|state|headlessui|nimg)/.test(n)
 const camel = (s) => s.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 const styleObj = (v) => {
   const o = [];
+  let hasCustom = false;
   for (const part of v.split(";")) {
     const i = part.indexOf(":");
     if (i < 0) continue;
     const k = part.slice(0, i).trim(), val = part.slice(i + 1).trim();
     if (!k) continue;
+    if (k.startsWith("--")) hasCustom = true;
     const key = k.startsWith("--") ? JSON.stringify(k) : camel(k);
     o.push(`${key}: ${JSON.stringify(val)}`);
   }
-  return `{{ ${o.join(", ")} }}`;
+  return hasCustom ? `{{ ${o.join(", ")} } as any}` : `{{ ${o.join(", ")} }}`;
 };
 const esc = (t) => t.replace(/\{/g, "&#123;").replace(/\}/g, "&#125;");
 const decode = (t) => t.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");

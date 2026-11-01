@@ -102,10 +102,10 @@ export function Ceremony({ ctx }: { ctx: InvitationCtx }) {
             <span className="text-[12px] md:text-[14px]" style={{ color: theme.textColor }}>
               <span dir="auto">Ông Bà</span>
             </span>
-            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor, fontSize: "12px" }}>
+            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor }}>
               <span dir="auto">{groomFather}</span>
             </span>
-            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor, fontSize: "12px" }}>
+            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor }}>
               <span dir="auto">{groomMother}</span>
             </span>
             <div
@@ -132,10 +132,10 @@ export function Ceremony({ ctx }: { ctx: InvitationCtx }) {
             <span className="text-[12px] md:text-[14px]" style={{ color: theme.textColor }}>
               <span dir="auto">Ông Bà</span>
             </span>
-            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor, fontSize: "12px" }}>
+            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor }}>
               <span dir="auto">{brideFather}</span>
             </span>
-            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor, fontSize: "12px" }}>
+            <span className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere]" style={{ color: theme.goldColor }}>
               <span dir="auto">{brideMother}</span>
             </span>
             <div
@@ -174,9 +174,9 @@ export function Ceremony({ ctx }: { ctx: InvitationCtx }) {
 
         <div data-showcase-keep="" className="w-full min-w-0 relative flex w-full min-w-0 flex-col items-center text-center gap-3 md:gap-4">
           <h3
-            className="w-[80%] min-h-[80px] flex items-center justify-center leading-[54px] md:leading-[62px] whitespace-nowrap font-normal"
+            className={`w-[80%] min-h-[80px] flex items-center justify-center leading-[54px] md:leading-[62px] whitespace-nowrap font-normal ${theme.ceremony.namesSizeClass || ""}`}
             style={{
-              fontSize: theme.ceremony.namesSize,
+              fontSize: theme.ceremony.namesSizeClass ? undefined : theme.ceremony.namesSize,
               fontFamily: theme.ceremony.namesFont,
               color: theme.goldColor,
               fontWeight: 400,
@@ -204,9 +204,9 @@ export function Ceremony({ ctx }: { ctx: InvitationCtx }) {
             &amp;
           </div>
           <h3
-            className="w-[80%] min-h-[80px] flex items-center justify-center leading-[54px] md:leading-[62px] whitespace-nowrap font-normal"
+            className={`w-[80%] min-h-[80px] flex items-center justify-center leading-[54px] md:leading-[62px] whitespace-nowrap font-normal ${theme.ceremony.namesSizeClass || ""}`}
             style={{
-              fontSize: theme.ceremony.namesSize,
+              fontSize: theme.ceremony.namesSizeClass ? undefined : theme.ceremony.namesSize,
               fontFamily: theme.ceremony.namesFont,
               color: theme.goldColor,
               fontWeight: 400,

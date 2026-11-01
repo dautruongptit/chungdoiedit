@@ -1,0 +1,24 @@
+{
+  "_note": "Dữ liệu demo của mandap_darkred đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/b6daf3e4b84ca7525d256b1e687bfb7ca746a8c2a779947babee2f63a31f111f.webp",
+    "https://assets.chungdoi.com/photo-library/design/69e979f1a647785c1d4a5aeed43bfffb0c815c55a8974cebfe181cb3bd43a0d5.webp",
+    "https://assets.chungdoi.com/photo-library/design/70530e83f3bff7c688a1dfcc58a24e5dd24a2b9be43f6607f96438951fda46b3.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/ff0d6e79f3e3addc8e546463233f7f4ac5bce6d944ab7ee035342286e32c8e68.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/8102d30e8cf644160e6090b269f388d3532ca8785dfdcca6ee9c713761514cb9.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

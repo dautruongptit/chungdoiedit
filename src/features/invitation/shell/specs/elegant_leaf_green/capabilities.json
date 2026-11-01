@@ -1,0 +1,47 @@
+{
+  "id": "elegant_leaf_green",
+  "family": "elegant_leaf_green",
+  "testId": "elegant-leaf-green-template",
+  "blocks": [
+    "Paper",
+    "Hero",
+    "Album",
+    "Ceremony",
+    "Venue",
+    "Guestbook",
+    "Credit",
+    "Lightbox"
+  ],
+  "cover": {
+    "seal": "heart",
+    "ambient": "fall",
+    "particle": "petal",
+    "skin": "card"
+  },
+  "gift": {
+    "widget": "envelope"
+  },
+  "hero": {
+    "kind": "photo",
+    "introLine": true,
+    "shape": "portrait"
+  },
+  "album": {
+    "indicator": "counter",
+    "defaultLayout": "3d"
+  },
+  "countdown": false,
+  "layout": {
+    "contentMaxMd": 900,
+    "behaviorMd": "padded",
+    "parallaxDecor": false
+  },
+  "editor": {
+    "albumCardAfter": "ceremony",
+    "cards": {
+      "hero": true,
+      "coupleHero": false,
+      "introLine": true
+    }
+  }
+}

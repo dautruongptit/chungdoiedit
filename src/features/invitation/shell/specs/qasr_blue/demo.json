@@ -1,0 +1,29 @@
+{
+  "_note": "Dữ liệu demo của qasr_blue đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/19ccffd735cc059cb063f974d11873b24177c7f471a300be154305ab854f7c8c.webp",
+    "https://assets.chungdoi.com/photo-library/design/52daa41c3194cd0aa38e3bf450b85e278880985b18183ccba12219cfad83856d.webp",
+    "https://assets.chungdoi.com/photo-library/design/4efbc74b554479efba920f0de56480883d2e91fdc4bf49ef160be354cd39d6d0.webp",
+    "https://assets.chungdoi.com/photo-library/design/3766cfe3e41c60fcf7b6ca0e12a215ce52d58f1c7afbef4c6ac50e3e6a1fc103.webp",
+    "https://assets.chungdoi.com/photo-library/design/8cb66d452a7c378e2d5a85034402beda334371cb04a9ec02ca1984ce56bbc209.webp",
+    "https://assets.chungdoi.com/photo-library/design/59b876e7bcb3c0b18835611aac47c82edba02c8b7ac0912dd860da27868273b8.webp",
+    "https://assets.chungdoi.com/photo-library/design/57eda4859c2b3397d2a07aea609d22035e941872e14b22d75e28a5b4550c753a.webp",
+    "https://assets.chungdoi.com/photo-library/design/87b3826418198ff4d0e187b380473afeca9ec4e61c5872d3bae393321924389d.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/9c0c4bb0d1b76b933009a5685e53a27f15b4420f74e911b2ad445e886377b6c6.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/8ecf768caef0c922c67e3aa20ed0357633c5d69ba865c61dcd6ec46abb0827d5.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

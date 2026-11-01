@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/minimalism-green",
+  "colors": {
+    "ink": "rgb(107, 123, 79)",
+    "inkRgb": "107, 123, 79",
+    "sub": "rgba(107, 123, 79, 0.15)",
+    "muted": "rgb(135, 161, 114)",
+    "paper": "rgb(255, 255, 255)",
+    "line": "rgb(205, 217, 189)",
+    "accent": "rgb(233, 239, 225)",
+    "edge": "rgba(108, 128, 78, 0.1)"
+  }
+}

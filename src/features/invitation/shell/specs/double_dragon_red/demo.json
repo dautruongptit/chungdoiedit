@@ -49,67 +49,27 @@
     {
       "id": "demo-tl-don-khach",
       "time": "17:30",
-      "label": {
-        "de": "Empfang",
-        "en": "Welcome",
-        "fr": "Accueil des invités",
-        "ja": "受付",
-        "ko": "하객 맞이",
-        "vi": "Đón khách",
-        "zh-Hant": "賓客迎接"
-      }
+      "label": "Đón khách"
     },
     {
       "id": "demo-tl-khai-tiec",
       "time": "18:30",
-      "label": {
-        "de": "Feier",
-        "en": "Reception",
-        "fr": "Réception",
-        "ja": "披露宴",
-        "ko": "피로연",
-        "vi": "Khai tiệc",
-        "zh-Hant": "開席"
-      }
+      "label": "Khai tiệc"
     },
     {
       "id": "demo-tl-rot-ruou-cat-banh",
       "time": "18:45",
-      "label": {
-        "de": "Anstoßen und Anschnitt",
-        "en": "Toasts & Cake",
-        "fr": "Toasts et gâteau",
-        "ja": "乾杯とケーキカット",
-        "ko": "건배 및 케이크 컷팅",
-        "vi": "Rót rượu, cắt bánh",
-        "zh-Hant": "敬酒、切蛋糕"
-      }
+      "label": "Rót rượu, cắt bánh"
     },
     {
       "id": "demo-tl-mon-chinh",
       "time": "19:00",
-      "label": {
-        "de": "Hauptgang",
-        "en": "Main Course",
-        "fr": "Plat principal",
-        "ja": "メイン料理",
-        "ko": "메인 요리",
-        "vi": "Phục vụ món chính",
-        "zh-Hant": "上主菜"
-      }
+      "label": "Phục vụ món chính"
     },
     {
       "id": "demo-tl-ket-thuc",
       "time": "21:00",
-      "label": {
-        "de": "Verabschiedung",
-        "en": "Farewell",
-        "fr": "Fin de la réception",
-        "ja": "お開き",
-        "ko": "환송",
-        "vi": "Kết thúc tiệc",
-        "zh-Hant": "宴會結束"
-      }
+      "label": "Kết thúc tiệc"
     }
   ],
   "dresscodeColors": [

@@ -21,11 +21,10 @@ export function Schedule({ ctx }: { ctx: InvitationCtx }) {
   return (
     <div className="relative z-10 flex flex-col gap-6 md:gap-8 px-4 mt-10 md:mt-12 mb-10 md:mb-12">
       <h2
-        className="uppercase font-normal text-[20px] md:text-[26px] text-center"
+        className="uppercase font-normal text-[20px] text-center"
         style={{
           color: ink,
           fontFamily: fontFam,
-          fontSize: "20px",
           letterSpacing: "0.05em",
         }}
       >

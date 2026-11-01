@@ -96,12 +96,11 @@ export function Venue({ ctx }: { ctx: InvitationCtx }) {
         <div className="relative z-10 flex flex-col items-center gap-5 px-6 md:px-10 py-10 md:py-12 ">
           <div className="flex flex-col items-center gap-1">
             <h2
-              className="uppercase font-normal text-[20px] md:text-[26px] text-center"
+              className="uppercase font-normal text-[20px] text-center"
               style={{
                 color: accentColor,
                 fontFamily: '"Times New Roman", ChungDoiIndic, serif',
                 fontWeight: "700",
-                fontSize: "20px",
               }}
             >
               <span>DRESS CODE</span>

@@ -1,0 +1,23 @@
+{
+  "_note": "Dữ liệu demo của dragon_phoenix_v2_red đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/a277b0164f5fa8e28aef07b3077418098767273a8f46f75bcda90e123557ad7c.webp",
+    "https://assets.chungdoi.com/photo-library/design/fe753f131f794f09aee4410d4263a740ea31602cbd4402e068e867e0cc4bd7aa.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/fd01729893ce023ac894c8302b8d16cead8f4c89ce8c7e492d10ce4cea6593f0.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/b8a157fcf5347aa5338ddd1f4b0e42573470d239cd52cb8ed2363836c4c2873e.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

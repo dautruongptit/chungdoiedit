@@ -79,7 +79,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
     };
   }
 
-  const coupleFontSize = isRed ? "40px" : isPink ? "35px" : "30px";
+  // Đo thật (desktop 1440px, bản xanh): 30px→44px. Bản đỏ/hồng chưa đo lại ở desktop, giữ cố định như trước.
+  const coupleFontSizeClass = isRed ? "text-[40px]" : isPink ? "text-[35px]" : "text-[30px] md:text-[44px]";
   const ampersandFont = isRed || isPink ? "Ms Madi, ChungDoiIndic, cursive" : 'Parisienne, "The Nautigal", ChungDoiIndic, cursive';
 
   return (
@@ -118,14 +119,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
               <span>{groomFamTitle}</span>
             </span>
             <span
-              className="text-[12px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: textColor, fontSize: "12px" }}
+              className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
+              style={{ color: textColor }}
             >
               <span>{groomFather}</span>
             </span>
             <span
-              className="text-[12px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: textColor, fontSize: "12px" }}
+              className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
+              style={{ color: textColor }}
             >
               <span>{groomMother}</span>
             </span>
@@ -150,14 +151,14 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
               <span>{brideFamTitle}</span>
             </span>
             <span
-              className="text-[12px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: textColor, fontSize: "12px" }}
+              className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
+              style={{ color: textColor }}
             >
               <span>{brideFather}</span>
             </span>
             <span
-              className="text-[12px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
-              style={{ color: textColor, fontSize: "12px" }}
+              className="text-[12px] md:text-[14px] font-semibold [overflow-wrap:anywhere] [overflow-wrap:anywhere]"
+              style={{ color: textColor }}
             >
               <span>{brideMother}</span>
             </span>
@@ -186,9 +187,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
 
         <div className="w-full min-w-0 relative flex w-full min-w-0 flex-col items-center text-center gap-3 md:gap-4">
           <h3
-            className="w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[58px] whitespace-nowrap"
+            className={`w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[58px] whitespace-nowrap ${coupleFontSizeClass}`}
             style={{
-              fontSize: coupleFontSize,
               fontFamily: 'Carattere, "The Nautigal", ChungDoiIndic, cursive',
               color: textColor,
               fontWeight: 400,
@@ -216,9 +216,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             &amp;
           </div>
           <h3
-            className="w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[58px] whitespace-nowrap"
+            className={`w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[58px] whitespace-nowrap ${coupleFontSizeClass}`}
             style={{
-              fontSize: coupleFontSize,
               fontFamily: 'Carattere, "The Nautigal", ChungDoiIndic, cursive',
               color: textColor,
               fontWeight: 400,

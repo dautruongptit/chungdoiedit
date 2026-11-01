@@ -1,0 +1,29 @@
+{
+  "_note": "Dữ liệu demo của double_phoenix_green đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/ce4e18bcacf554982c59863fd615faaddb84df91a555932c2c8d509218afe54b.webp",
+    "https://assets.chungdoi.com/photo-library/design/77aa12baccb4d5c5bec286fb39fc8556e04705404a6f930882be6488d0e38da5.webp",
+    "https://assets.chungdoi.com/photo-library/design/a15cd91af6982334d292f884338d6f6305bacf002b19ea6d49de4e052a5c9400.webp",
+    "https://assets.chungdoi.com/photo-library/design/6c06777c0e3a820f38af5be4a11a67e9b8069c673a2458af1475176026fb7e1f.webp",
+    "https://assets.chungdoi.com/photo-library/design/e886e654dcc10df287f810dde224e6fdc978779abef94e63344613a827f0812c.webp",
+    "https://assets.chungdoi.com/photo-library/design/a783f7b38ddb6f58141ef5280fe79af65b0729ef6bd8582198cabe4ec3c2e007.webp",
+    "https://assets.chungdoi.com/photo-library/design/e1f52324ade0e362bcf11284bc0c1c2d292c239434e0c8d7496e27060a68558a.webp",
+    "https://assets.chungdoi.com/photo-library/design/bbc367f4d8d32958d5c090ed6f59ebd7573efbcca005a4466fea0bc9b875be7e.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/e67ecbbdb74a172693809cc3fb68775289e0ad272c62df949a704ad8b3200562.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/a4d3d311aa2ff549699ae325addc0013b915cbf579e5647eba8d2eabcdd8d359.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

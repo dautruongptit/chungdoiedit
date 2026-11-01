@@ -1,0 +1,40 @@
+{
+  "id": "boho_floral_green",
+  "family": "boho_floral",
+  "testId": "boho-floral-green-template",
+  "rootClass": "boho-floral-green-template",
+  "blocks": [
+    "hero",
+    "topDecor",
+    "ceremonyTitle",
+    "family",
+    "midDecor",
+    "album",
+    "banquetTitle",
+    "banquet",
+    "rsvp",
+    "venueDecor",
+    "venue",
+    "dresscode",
+    "schedule",
+    "guestbook",
+    "gifts",
+    "footer",
+    "credit",
+    "lightbox"
+  ],
+  "cover": {
+    "hasCover": true,
+    "seal": "happiness",
+    "particle": "happiness"
+  },
+  "gift": {
+    "type": "box"
+  },
+  "hero": {
+    "style": "avatar"
+  },
+  "album": {
+    "type": "3d"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "paper": "rgb(255, 250, 247)",
+  "ink": "rgb(48, 83, 15)",
+  "text": "rgb(48, 83, 15)",
+  "sub": "rgb(70, 70, 70)",
+  "accent": "rgb(255, 250, 247)",
+  "edge": "#30530F22",
+  "buttonBg": "rgb(48, 83, 15)",
+  "buttonText": "rgb(255, 255, 255)",
+  "assets": "boho-floral-green"
+}

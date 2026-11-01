@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { introDefaultFor } from "@/features/templates/data/templates";
 import { TEMPLATE_THEMES } from "@/features/invitation/config/templateThemes";
 import { LongPhungHeader } from "@/features/invitation/components/LongPhungV2";
@@ -6,7 +6,6 @@ import { getCoverComponent } from "@/features/invitation/components/covers";
 import { getGiftboxConfig } from "@/features/invitation/config/giftboxConfigs";
 import { GENERATED_HEADERS } from "@/features/invitation/components/generated/headers";
 import AlbumGallery from "@/features/invitation/components/AlbumGallery";
-import { HoaMocXanh } from "@/features/invitation/components/HoaMocXanh";
 import { InvitationShell } from "@/features/invitation/shell/InvitationShell";
 import { getTemplateSpec } from "@/features/invitation/shell/specs";
 import { DarkRedAlbum, DarkRedBanquet, DarkRedGuestbook, DarkRedHeader, DarkRedInfoFrame, DarkRedSchedule, DarkRedVenue } from "@/features/invitation/components/MinimalismDarkRed";
@@ -102,20 +101,33 @@ export default function Preview({
   const brideFirst = d.order === "bride";
   const [n1, n2] = brideFirst ? [bName, gName] : [gName, bName];
   const [r1, r2] = brideFirst ? [d.brideRole, d.groomRole] : [d.groomRole, d.brideRole];
+  // lien_hoa_v2_green: khối "TRÂN TRỌNG BÁO TIN" dùng họ tên đầy đủ (đo thật), không dùng tên gọi tắt như mặc định.
+  // Khi chưa nhập, trang gốc hiện chữ giữ chỗ "Họ Tên Chú Rể"/"Họ Tên Cô Dâu" thay vì để trống.
+  const [n1FullRaw, n2FullRaw] = brideFirst ? [d.brideFull, d.groomFull] : [d.groomFull, d.brideFull];
+  const n1Full = n1FullRaw || (d.templateId === "lien_hoa_v2_green" ? (brideFirst ? "Họ Tên Cô Dâu" : "Họ Tên Chú Rể") : n1FullRaw);
+  const n2Full = n2FullRaw || (d.templateId === "lien_hoa_v2_green" ? (brideFirst ? "Họ Tên Chú Rể" : "Họ Tên Cô Dâu") : n2FullRaw);
+  // lien_hoa_v2_green: viền khung bo tròn quanh tiêu đề mục (đo thật trên trang gốc là background-image SVG,
+  // ở đây xấp xỉ bằng border CSS cùng màu/kích thước).
+  const lienHoaBadgeStyle: CSSProperties | undefined =
+    d.templateId === "lien_hoa_v2_green"
+      ? { display: "inline-flex", alignItems: "center", justifyContent: "center", margin: "0 auto", border: "1.5px solid #5e813c", borderRadius: "9999px", padding: "15px 16px" }
+      : undefined;
 
+  // lien_hoa_v2_green: khi chưa nhập, trang gốc hiện chữ giữ chỗ "Họ Tên Cha/Mẹ Chú Rể/Cô Dâu" thay vì để trống.
+  const isLienHoaV2Green = d.templateId === "lien_hoa_v2_green";
   const fams = [
     {
       label: "Nhà Gái",
       title: d.brideFamTitle,
-      f: d.brideFather,
-      m: d.brideMother,
+      f: d.brideFather || (isLienHoaV2Green ? "Họ Tên Cha Cô Dâu" : ""),
+      m: d.brideMother || (isLienHoaV2Green ? "Họ Tên Mẹ Cô Dâu" : ""),
       addr: d.brideAddr,
     },
     {
       label: "Nhà Trai",
       title: d.groomFamTitle,
-      f: d.groomFather,
-      m: d.groomMother,
+      f: d.groomFather || (isLienHoaV2Green ? "Họ Tên Cha Chú Rể" : ""),
+      m: d.groomMother || (isLienHoaV2Green ? "Họ Tên Mẹ Chú Rể" : ""),
       addr: d.groomAddr,
     },
   ];
@@ -347,9 +359,7 @@ export default function Preview({
 
       {/* ==================== 2. NỘI DUNG THIỆP ĐÃ MỞ (OPENED) ==================== */}
       {isOpen && (
-        d.templateId === "boho_floral_green" ? (
-          <HoaMocXanh d={d} set={set} standalone={standalone} />
-        ) : shellSpec ? null : (
+        shellSpec ? null : (
         <div
           className={`songphung-template ${isDarkRed ? "is-minimalism-darkred-body" : isMinimalismBrown ? "is-minimalism-body" : isSongHy ? "is-songhy-body" : ""}`}
           style={undefined}
@@ -605,7 +615,12 @@ export default function Preview({
 
               {d.familyOn && (
                 <div className="sp-family-block">
-                  <h2 className="sp-sec-title">{d.ceremonyTitle || "THÔNG TIN LỄ CƯỚI"}</h2>
+                  <h2
+                    className="sp-sec-title"
+                    style={lienHoaBadgeStyle}
+                  >
+                    {d.ceremonyTitle || "THÔNG TIN LỄ CƯỚI"}
+                  </h2>
 
                   <div className="sp-family-grid">
                     {/* Left Column */}
@@ -639,11 +654,11 @@ export default function Preview({
                   </div>
 
                   <div className="sp-couple-call">
-                    <div className="sp-person-name">{n1}</div>
-                    <div className="sp-person-role">({r1})</div>
-                    <div className="sp-person-amp">&amp;</div>
-                    <div className="sp-person-name">{n2}</div>
-                    <div className="sp-person-role">({r2})</div>
+                    <div className="sp-person-name" style={d.templateId === "lien_hoa_v2_green" ? { fontFamily: '"Carattere", ChungDoiIndic, cursive', color: "#5e813c", fontWeight: 400 } : undefined}>{d.templateId === "lien_hoa_v2_green" ? n1Full : n1}</div>
+                    <div className="sp-person-role" style={d.templateId === "lien_hoa_v2_green" ? { fontStyle: "normal" } : undefined}>{d.templateId === "lien_hoa_v2_green" ? r1.toUpperCase() : `(${r1})`}</div>
+                    <div className="sp-person-amp" style={d.templateId === "lien_hoa_v2_green" ? { fontFamily: '"Ms Madi", ChungDoiIndic, cursive', color: "#5e813c" } : undefined}>&amp;</div>
+                    <div className="sp-person-name" style={d.templateId === "lien_hoa_v2_green" ? { fontFamily: '"Carattere", ChungDoiIndic, cursive', color: "#5e813c", fontWeight: 400 } : undefined}>{d.templateId === "lien_hoa_v2_green" ? n2Full : n2}</div>
+                    <div className="sp-person-role" style={d.templateId === "lien_hoa_v2_green" ? { fontStyle: "normal" } : undefined}>{d.templateId === "lien_hoa_v2_green" ? r2.toUpperCase() : `(${r2})`}</div>
                   </div>
                 </div>
               )}
@@ -653,7 +668,7 @@ export default function Preview({
                 <div className="sp-ceremonies-block">
                   {!d.familyOn && d.ceremonyTitle && <h2 className="sp-sec-title">{d.ceremonyTitle}</h2>}
                   {d.ceremonies.map((c, i) => (
-                    <div className="sp-ceremony-card" key={i}>
+                    <div className="sp-ceremony-card" key={i} style={d.templateId === "lien_hoa_v2_green" ? { background: "none", border: "none", boxShadow: "none", padding: 0 } : undefined}>
                       <h3 className="sp-ceremony-header">{c.title}</h3>
                       <div className="sp-time-badge">
                         <span>VÀO LÚC {formatTime(c.time, d.clock)}</span>
@@ -686,7 +701,7 @@ export default function Preview({
           )}
           {d.albumOn && d.photos.length > 0 && !isDarkRed && (
             <section className="sp-section sp-gallery-sec">
-              <h2 className="sp-sec-title">ALBUM HÌNH CƯỚI</h2>
+              <h2 className="sp-sec-title" style={lienHoaBadgeStyle}>{d.templateId === "lien_hoa_v2_green" ? "Album Ảnh" : "ALBUM HÌNH CƯỚI"}</h2>
               <AlbumGallery
                 photos={d.photos}
                 photoCrops={d.photoCrops}
@@ -727,7 +742,7 @@ export default function Preview({
                   src="/images/themes/minimalism-dark-red/castle-background.webp"
                 />
               )}
-              {d.banquetTitle.trim() && <h2 className="sp-sec-title">{d.banquetTitle}</h2>}
+              {d.banquetTitle.trim() && <h2 className="sp-sec-title" style={lienHoaBadgeStyle}>{d.banquetTitle}</h2>}
               <p className="sp-lead">Tiệc cưới được tổ chức vào lúc:</p>
 
               <div className="sp-banquet-date">
@@ -841,7 +856,7 @@ export default function Preview({
                   src="/images/themes/minimalism-dark-red/castle-background.webp"
                 />
               )}
-              <h2 className="sp-sec-title">{d.locTitle || "ĐỊA ĐIỂM TIỆC CƯỚI"}</h2>
+              <h2 className="sp-sec-title" style={lienHoaBadgeStyle}>{d.locTitle || "ĐỊA ĐIỂM TIỆC CƯỚI"}</h2>
               <div className="sp-address-box">
                 <p className="sp-address-txt">{d.address}</p>
                 {d.showMap && (
@@ -910,7 +925,7 @@ export default function Preview({
           )}
           {d.schedOn && d.sched.length > 0 && !isDarkRed && (
             <section className="sp-section sp-timeline-sec">
-              <h2 className="sp-sec-title">{d.schedTitle || "LỊCH TRÌNH NGÀY CƯỚI"}</h2>
+              <h2 className="sp-sec-title" style={lienHoaBadgeStyle}>{d.schedTitle || "LỊCH TRÌNH NGÀY CƯỚI"}</h2>
               <div className="sp-timeline">
                 {d.sched.map((item, i) => (
                   <div className="sp-tl-item" key={i}>

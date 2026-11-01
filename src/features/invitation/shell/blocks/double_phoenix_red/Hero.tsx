@@ -1,0 +1,11 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Hero({ ctx }: { ctx: InvitationCtx }) {
+  const anyD = ctx.d as any;
+  const groomPhoto = anyD.groomPhoto || ctx.d.photos?.[0] || ctx.heroSrc;
+  const bridePhoto = anyD.bridePhoto || ctx.d.photos?.[1] || ctx.heroSrc;
+
+  return (
+    <header className="relative flex flex-col items-center justify-center text-center z-10 pt-12 md:pt-16 pb-[200px] md:pb-[220px] lg:pb-[240px]"><div className="w-full text-[36px] md:text-[44px] lg:text-[52px] mb-6 md:mb-8 text-left pl-6 md:pl-8 md:ml-[80px] lg:ml-[80px] uppercase" style={{ color: "rgb(113, 0, 1)", fontFamily: "&quot;Playfair Display&quot;, ChungDoiIndic, serif", lineHeight: "1.11", fontWeight: "400" }}><div className="ml-[15px]">Ngọc Ánh</div><div className="ml-[50px] mt-[10px]">Thế Bảo</div></div><div className="relative w-full flex items-center justify-center mb-4 md:mb-6 h-[260px] md:h-[488px] lg:h-[488px]"><div className="absolute w-full h-[110px] md:h-[206px] lg:h-[206px] z-0" style={{ backgroundColor: "rgb(113, 0, 1)", top: "50%", transform: "translateY(0px)" }}></div><div className="absolute left-[-90px] md:left-[-169px] lg:left-[-169px] top-0 w-[230px] md:w-[431px] lg:w-[431px] h-[480px] md:h-[900px] lg:h-[900px] z-10" style={{ willChange: "transform", backfaceVisibility: "hidden", transform: "translateY(-107.4px)" }}><img alt="Phoenix Left" className="w-full h-full object-contain" src="/images/themes/songphung-red/Phuong 2.webp" style={{ objectPosition: "left center" }} /></div><div className="relative z-20 w-[155px] h-[155px] md:w-[291px] md:h-[291px] lg:w-[291px] lg:h-[291px]"><img alt="Chữ Hỷ" className="w-full h-full object-contain" src="/images/themes/songphung-red/CHU HY.webp" /></div><div className="absolute left-[calc(50%+77.5px)] md:left-[calc(50%+145.5px)] lg:left-[calc(50%+145.5px)] top-[-120px] md:top-[-225px] lg:top-[-225px] w-[155px] md:w-[291px] lg:w-[291px] h-[320px] md:h-[600px] lg:h-[600px] z-10" style={{ willChange: "transform", backfaceVisibility: "hidden", transform: "scaleX(-1) translateY(107.4px)" }}><img alt="Phoenix Right" className="w-full h-full object-contain" src="/images/themes/songphung-red/Phuong.webp" style={{ objectPosition: "right center" }} /></div></div></header>
+  );
+}

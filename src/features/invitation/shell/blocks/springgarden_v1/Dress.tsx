@@ -14,11 +14,10 @@ export function Dress({ ctx }: { ctx: InvitationCtx }) {
     <div className="relative z-10 flex flex-col items-center gap-5 px-6 md:px-10 py-10 md:py-12">
       <div className="flex flex-col items-center gap-1">
         <h2
-          className="uppercase font-normal text-[20px] md:text-[26px] text-center"
+          className="uppercase font-normal text-[20px] text-center"
           style={{
             color: ink,
             fontFamily: fontFam,
-            fontSize: "20px",
             letterSpacing: "0.05em",
           }}
         >

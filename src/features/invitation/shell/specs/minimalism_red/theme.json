@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/minimalism-red",
+  "colors": {
+    "ink": "rgb(124, 21, 26)",
+    "inkRgb": "124, 21, 26",
+    "sub": "rgba(124, 21, 26, 0.6)",
+    "muted": "rgb(124, 21, 26)",
+    "paper": "#FFFAF7",
+    "line": "rgba(124, 21, 26, 0.2)",
+    "accent": "#FFFAF7",
+    "edge": "rgba(124, 21, 26, 0.1)"
+  }
+}

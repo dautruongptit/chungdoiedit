@@ -29,15 +29,42 @@ function buildDemoInv(tpl: Tpl): Inv {
   const isDarkRed = tpl.id === "minimalism_darkred";
   const isBrown = tpl.id === "minimalism_brown";
 
-  // Phân bổ ảnh đại diện cô dâu - chú rể
-  let heroPhoto = defaultInv.heroPhoto;
+  // Phân bổ ảnh đại diện cô dâu - chú rể.
+  // Mặc định dùng ảnh cưới trung tính (không gắn với phong cách truyền thống/đỏ) cho mọi mẫu chưa
+  // có ảnh riêng — defaultInv.heroPhoto là ảnh áo dài đỏ + chữ 囍, lệch tông với đa số mẫu không
+  // truyền thống (vd các mẫu hoa/vườn/tối giản), nên không dùng làm mặc định ở màn demo.
+  let heroPhoto = "/images/photo-library/design/1e0986014ff4206f135df254987fb52eb45ae964e8cce6f0dba29a905e0e0b67.webp";
   if (isBrown) {
     heroPhoto = "/images/photo-library/design/1e0986014ff4206f135df254987fb52eb45ae964e8cce6f0dba29a905e0e0b67.webp";
   } else if (isDarkRed) {
     heroPhoto = assetUrl("/images/photo-library/design/cdecf6cfe2eeb3cfd63829abde62f1066f10a364ec27d4c997c0f51012c8803e.webp");
   } else if (tpl.id === "dragon_phoenix_v2_red") {
     heroPhoto = assetUrl("/images/photo-library/design/c0c85699ec961efa2db8747663ff1a34ad9237b8f5c4bc9c18db8e5c33e16f76.webp");
+  } else if (tpl.id === "lien_hoa_v2_green") {
+    // Ảnh thật của mẫu này lấy từ trang gốc (đã có sẵn trong thư viện local).
+    heroPhoto = assetUrl("/images/photo-library/design/455c1838dfc39d415f9919e861f56a1435b9a63ed1137db92328d0d9ed732129.webp");
   }
+
+  // Album ảnh: defaultInv.photos cũng là bộ ảnh gắn với phong cách đỏ/truyền thống (dùng chung ảnh
+  // với heroPhoto cũ) — cùng lý do, không dùng làm mặc định cho mẫu không truyền thống ở màn demo.
+  const neutralPhotos = [
+    "/images/photo-library/design/1e0986014ff4206f135df254987fb52eb45ae964e8cce6f0dba29a905e0e0b67.webp",
+    "/images/photo-library/design/cea4d58014368af2908a492045ec39a91ab5ed17d4544eb6520733a40beb078a.webp",
+    "/images/photo-library/design/6c5d0a317cc97ce46cf6798f0248ceb3d97739840e1f27fc5040798c21ad55c6.webp",
+    "/images/photo-library/design/3f8b94b89026dc3738bb80e625b8ee993ce93949e595ef9539b9c41d17898671.webp",
+    "/images/photo-library/design/6f6851cc63126158d802563c047297dd76ba3f532c1e3809a556ab617c312000.webp",
+    "/images/photo-library/design/1c177f9721cd1802abf4fa62e6f22113bb477130cbc30b138c7a42cd995bb670.webp",
+  ].map((p) => assetUrl(p));
+
+  // Ảnh thật riêng của lien_hoa_v2_green (lấy từ trang gốc, đã có sẵn trong thư viện local).
+  const lienHoaV2GreenPhotos = [
+    "/images/photo-library/design/2e18f7158e300d1feb550991f463cbffcb83018ab5bcddd9a524b21b4d6dcaed.webp",
+    "/images/photo-library/design/00c617c45a73695442601570d9f51aa94890f5add8081a0015acc9f0722f25bc.webp",
+    "/images/photo-library/design/9bbeffd8cb524b61bb935d9fe3d3fa1f212bf32edb038e62a22ccbc3ad21b975.webp",
+    "/images/photo-library/design/c89cc0304c63d99c6a85ac4aa4f449e1572c642c652dab6f73812be500d23074.webp",
+    "/images/photo-library/design/e5fd18dbf058fc4b6dc43ba0178fc4651558908b352315057531c22c90ee2256.webp",
+    "/images/photo-library/design/0563a8254c022cf22e3053d416460a1ff5451fd8a8bc73d9f215ae1b03eadefe.webp",
+  ].map((p) => assetUrl(p));
 
   // Tên cặp đôi chính xác theo từng mẫu từ website gốc
   const refCouple = REFERENCE_COUPLES[tpl.id];
@@ -59,89 +86,6 @@ function buildDemoInv(tpl: Tpl): Inv {
   const coverGuest = refCover?.envelopeGuestBadge || refCover?.envelopeGuest || "Thân Mời";
   const coverInviteMsg = refCover?.envelopeInviteMessage ?? "đến dự buổi tiệc chung vui cùng gia đình chúng tôi";
 
-  if (tpl.id === "boho_floral_green") {
-    return {
-      ...defaultInv,
-      templateId: "boho_floral_green",
-      templateName: "Hoa Mộc - Xanh",
-      templateThumb: TPL_CDN + tpl.img,
-      heroOn: true,
-      heroPhoto: "/images/photo-library/design/5b2fafb74f1aa84ca843acded191b5e4629c62f9b73820281864f27167312b06.webp",
-      groomFull: "Trần Minh Quân",
-      groomNick: "Minh Quân",
-      groomRole: "Trưởng Nam",
-      brideFull: "Nguyễn Thu Hà",
-      brideNick: "Thu Hà",
-      brideRole: "Út Nữ",
-      groomFamTitle: "Ông Bà",
-      groomFather: "Trần Văn Hùng",
-      groomMother: "Hạm Thị Lan",
-      groomAddr: "25 Ngõ 12 Đặng Văn Ngữ, Đống Đa, Hà Nội",
-      brideFamTitle: "Ông Bà",
-      brideFather: "Nguyễn Văn Bình",
-      brideMother: "Phan Thị Hương",
-      brideAddr: "18 Ngõ 86 Chùa Hà, Cầu Giấy, Hà Nội",
-      announcementLine1: "TRÂN TRỌNG BÁO TIN",
-      announcementLine2: "LỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
-      date: "2026-05-24",
-      time: "18:00",
-      welcomeTime: "17:30",
-      startTime: "18:00",
-      locTitle: "TIỆC CƯỚI SẼ TỔ CHỨC TẠI",
-      address: "Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội",
-      dressColors: ["#224327", "#4a6b4f", "#c2e3c7", "#fffaf7"],
-      envelopeGuest: "Thân Mời",
-      envelopeInviteMessage: "",
-      musicUrl: "/music/my-love-westlife.mp3",
-      musicName: "My Love - Westlife",
-      musicAutoPlay: true,
-      albumLayout: "3d",
-      photos: [
-        "/images/photo-library/design/5019eadee002f02ce6f39d9c5bdb7304d4da683b4e109c41e7ed14e63391d9b0.webp",
-        "/images/photo-library/design/1f83fb78c75b96a05661eca4cbc50dd771fc37411920623d6d9729eea1daa7c8.webp",
-        "/images/photo-library/design/a4bacc8760315d26e8660bcd2943d479c968e7e92892d2e367cfab6facb63017.webp",
-        "/images/photo-library/design/655375b2b2c6edb9772053c6a2150a6247ccf7002f69a1b733f682fa05d6309f.webp",
-        "/images/photo-library/design/fb57414f47aa2c9189bc9fa20f34d557dd1a4cd13a908fd30633275ca5abaf6d.webp",
-        "/images/photo-library/design/76763999ecb5db3569cea7991a2ea4fdf32e4a2639daeb28c6f2a9b5fdf6f313.webp",
-        "/images/photo-library/design/da4ca736067f9572362cd90a28e95274e985ffa76cc58e3c36b23219ebf4f6f7.webp",
-        "/images/photo-library/design/107e38d720d04da6442122cbe91d47eda6ebc8c962579a14b345ba3ad6dd49a4.webp",
-        "/images/photo-library/design/5b2fafb74f1aa84ca843acded191b5e4629c62f9b73820281864f27167312b06.webp",
-        "/images/photo-library/design/3fcfad216695abf4dbd4198edb2ba4d451546d5e1231aafbc66559e164daad27.webp",
-      ],
-      gifts: [
-        {
-          id: "g1",
-          who: "groom",
-          bankName: "Vietcombank",
-          bankCode: "VCB",
-          bankBin: "970436",
-          bankLogo: "",
-          accountNumber: "0000000000",
-          accountName: "THIEP CUOI DEMO",
-          qrUrl: "/images/qr/boho_floral_green_groom.png",
-        },
-        {
-          id: "g2",
-          who: "bride",
-          bankName: "Vietcombank",
-          bankCode: "VCB",
-          bankBin: "970436",
-          bankLogo: "",
-          accountNumber: "6665558888",
-          accountName: "NGUYEN THU HA",
-          qrUrl: "/images/qr/boho_floral_green_bride.png",
-        },
-      ],
-      wishes: [
-        { name: "Bạn Hoàng dev", msg: "Chúc 2 bạn mãi yêu nhau, đầu bạc răng long", at: "13:44:27 7/4/2026" },
-        { name: "Hoài Nam", msg: "Chúc hai bạn luôn nắm tay nhau qua mọi chặng đường!!!", at: "13:43:31 7/4/2026" },
-        { name: "Bạn Linh", msg: "Mừng ngày trọng đại! Chúc hai bạn cười nhiều hơn cãi, yêu nhiều hơn giận nhen!", at: "13:42:43 7/4/2026" },
-        { name: "Chị Hạnh", msg: "Chúc hai em trăm năm hạnh phúc, sớm sinh quý tử nhé!", at: "12:15:00 7/4/2026" },
-      ],
-      ceremonies: [],
-    };
-  }
-
   const giftConfig = getGiftboxConfig(tpl.id);
 
   const base: Inv = {
@@ -151,6 +95,8 @@ function buildDemoInv(tpl: Tpl): Inv {
     templateThumb: TPL_CDN + tpl.img,
     heroOn: true,
     heroPhoto,
+    photos: tpl.id === "lien_hoa_v2_green" ? lienHoaV2GreenPhotos : neutralPhotos,
+    ...(tpl.id === "lien_hoa_v2_green" ? { order: "groom" as const, groomRole: "Trưởng Nam", brideRole: "Út Nữ" } : {}),
     introCustom: false,
     introText: "",
     groomFull: gFull,
@@ -263,14 +209,29 @@ function buildDemoInv(tpl: Tpl): Inv {
         { id: "g2", who: "bride" as const, bankName: "Techcombank", bankCode: "TCB", bankBin: "970407", accountNumber: "9988776655", accountName: "LE MINH ANH", qrUrl: "/images/qr/boho_floral_green_groom.png" },
       ],
     } : {}),
+    // lien_hoa_v2_green: dress code, lịch trình ngày cưới đo thật từ trang gốc (chungdoi.com/vi/mau-thiep/lien-hoa-v2-xanh/demo).
+    ...(tpl.id === "lien_hoa_v2_green" ? {
+      dressText: "Trang phục dự tiệc",
+      dressColors: ["#124d00", "#5e813c", "#f3dfc3"],
+      schedOn: true,
+      sched: [
+        { time: "17:30", text: "Đón khách" },
+        { time: "18:30", text: "Khai tiệc" },
+        { time: "18:45", text: "Rót rượu, cắt bánh" },
+        { time: "19:15", text: "Phục vụ món chính" },
+        { time: "21:00", text: "Kết thúc tiệc" },
+      ],
+    } : {}),
     giftDisplayMode: giftConfig.giftboxType === "envelope" ? "envelope" : "gift_box",
     date: coverDate,
     time: "18:00",
     welcomeTime: "17:30",
-    startTime: "18:00",
-    locTitle: isDarkRed || isBrown ? "Tiệc cưới sẽ tổ chức tại" : "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:",
+    startTime: tpl.id === "lien_hoa_v2_green" ? "18:30" : "18:00",
+    locTitle: isDarkRed || isBrown || tpl.id === "lien_hoa_v2_green" ? "Tiệc cưới sẽ tổ chức tại" : "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:",
     address: isDarkRed || isBrown
       ? "Trung Tâm Hội Nghị White Palace, 194 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh"
+      : tpl.id === "lien_hoa_v2_green"
+      ? "Nhà hàng Sen Hồng, 145 Hùng Vương, phường 2, TP Sa Đéc, Đồng Tháp"
       : "Trung tâm Hội nghị Tiệc cưới Riverside Palace, 360D Bến Vân Đồn, Phường 1, Quận 4, TP. Hồ Chí Minh",
   };
   return { ...base, ...(getTemplateDemo(tpl.id) ?? {}) } as Inv;

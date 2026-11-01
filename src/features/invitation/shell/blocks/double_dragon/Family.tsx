@@ -187,8 +187,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
           className="w-full min-w-0 relative flex flex-col items-center text-center gap-3 md:gap-4 mt-4 mb-6"
         >
           <h3
-            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[42px] leading-[50px] md:leading-[100px] whitespace-nowrap"
-            style={{ fontSize: d.fullNameFontSize || theme.fullNameFontSize || "35px", color: `rgb(var(${theme.primaryVar}))`, fontWeight: 400 }}
+            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
+            style={{ color: `rgb(var(${theme.primaryVar}))`, fontWeight: 400 }}
           >
             {groomFullName}
           </h3>
@@ -208,8 +208,8 @@ export function Family({ ctx }: { ctx: InvitationCtx }) {
             &amp;
           </div>
           <h3
-            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[42px] leading-[50px] md:leading-[100px] whitespace-nowrap"
-            style={{ fontSize: d.fullNameFontSize || theme.fullNameFontSize || "35px", color: `rgb(var(${theme.primaryVar}))`, fontWeight: 400 }}
+            className="font-eb-garamond w-[80%] flex items-center justify-center text-[32px] md:text-[64px] leading-[50px] md:leading-[100px] whitespace-nowrap"
+            style={{ color: `rgb(var(${theme.primaryVar}))`, fontWeight: 400 }}
           >
             {brideFullName}
           </h3>

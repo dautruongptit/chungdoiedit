@@ -14,7 +14,6 @@ export function Dress({ ctx }: { ctx: InvitationCtx }) {
           style={{
             color: ink,
             fontFamily: "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
-            fontSize: "20px",
             letterSpacing: "0.05em",
           }}
         >

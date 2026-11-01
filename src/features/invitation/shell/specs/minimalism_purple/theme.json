@@ -1,0 +1,11 @@
+{
+  "assets": "/images/themes/minimalism-purple",
+  "paper": "rgb(255, 255, 255)",
+  "ink": "rgb(120, 105, 160)",
+  "inkRgb": "120, 105, 160",
+  "sub": "rgba(120, 105, 160, 0.75)",
+  "line": "rgba(120, 105, 160, 0.2)",
+  "edge": "#7869a022",
+  "buttonBg": "rgb(120, 105, 160)",
+  "buttonText": "rgb(255, 255, 255)"
+}

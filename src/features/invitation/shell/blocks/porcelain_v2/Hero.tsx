@@ -17,31 +17,32 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
   let headerPadding = "pb-[125px] pt-[69px] md:pb-[145px] md:pt-[80px]";
   let frameWidthClass = "w-[80%]";
   let frameInnerClass = "relative z-10 flex aspect-[354/531] flex-col items-center px-[13%] pt-[36.7%] text-center";
-  let stdFontSize = "13px";
   let stdLetterSpacing = "0.14em";
-  let coupleFontSize = "35px";
   let mtGroom = "mt-[10.9%]";
   let mtAmpersand = "mt-[10.2%]";
   let mtBride = "mt-[10.2%]";
+  // Đo thật (desktop 1440px, bản xanh): 35px→38px, "Save The Date" 13px→15px. Bản đỏ/hồng chưa đo lại ở desktop, giữ cố định như trước.
+  let coupleFontSizeClass = "text-[35px] md:text-[38px]";
+  let stdFontSizeClass = "text-[13px] md:text-[15px]";
 
   if (isRed) {
     headerPadding = "pt-[93px] pb-[93px] md:pt-[110px] md:pb-[110px]";
     frameWidthClass = "w-[71.9%]";
     frameInnerClass = "relative z-10 flex aspect-[900/1530] flex-col items-center px-[10%] pt-[39.4%] text-center";
-    stdFontSize = "15px";
-    coupleFontSize = "35px";
     mtGroom = "mt-[17.8%]";
     mtAmpersand = "mt-[12.4%]";
     mtBride = "mt-[12.4%]";
+    coupleFontSizeClass = "text-[35px]";
+    stdFontSizeClass = "text-[15px]";
   } else if (isPink) {
     headerPadding = "pt-[94px] pb-[94px] md:pt-[110px] md:pb-[110px]";
     frameWidthClass = "w-[68%]";
     frameInnerClass = "relative z-10 flex aspect-[831/1491] flex-col items-center px-[10%] pt-[35%] text-center";
-    stdFontSize = "13px";
-    coupleFontSize = "31px";
     mtGroom = "mt-[12.1%]";
     mtAmpersand = "mt-[11.4%]";
     mtBride = "mt-[11.4%]";
+    coupleFontSizeClass = "text-[31px]";
+    stdFontSizeClass = "text-[13px]";
   }
 
   return (
@@ -58,24 +59,22 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           style={isPink ? { aspectRatio: "831 / 1487.4" } : undefined}
         >
           <p
-            className={`whitespace-pre-line text-[${stdFontSize}] uppercase md:text-[17px]`}
+            className={`whitespace-pre-line uppercase ${stdFontSizeClass}`}
             style={{
               fontFamily: '"Playfair Display", "Times New Roman", ChungDoiIndic, serif',
               fontWeight: "600",
               color: accentColor,
               letterSpacing: stdLetterSpacing,
-              fontSize: stdFontSize,
             }}
           >
             Save The Date
           </p>
           <div className={`${mtGroom} flex w-full justify-center`}>
             <span
-              className="whitespace-nowrap italic uppercase leading-none"
+              className={`whitespace-nowrap italic uppercase leading-none ${coupleFontSizeClass}`}
               style={{
                 fontFamily: '"Times New Roman", ChungDoiIndic, serif',
                 color: textColor,
-                fontSize: coupleFontSize,
               }}
             >
               {groomNick}
@@ -93,11 +92,10 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
           </span>
           <div className={`${mtBride} flex w-full justify-center`}>
             <span
-              className="whitespace-nowrap italic uppercase leading-none"
+              className={`whitespace-nowrap italic uppercase leading-none ${coupleFontSizeClass}`}
               style={{
                 fontFamily: '"Times New Roman", ChungDoiIndic, serif',
                 color: textColor,
-                fontSize: coupleFontSize,
               }}
             >
               {brideNick}

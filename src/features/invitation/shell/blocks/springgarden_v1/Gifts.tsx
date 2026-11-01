@@ -180,7 +180,7 @@ export function Gifts({ ctx }: { ctx: InvitationCtx }) {
               </svg>
             </button>
             <h2
-              className="uppercase font-normal text-[20px] md:text-[26px]"
+              className="uppercase font-normal text-[20px]"
               style={{
                 textShadow: "rgba(0, 0, 0, 0.2) 1px 1px 2px",
                 fontFamily: fontFam,

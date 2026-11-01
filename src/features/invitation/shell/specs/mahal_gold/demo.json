@@ -1,0 +1,28 @@
+{
+  "_note": "Dữ liệu demo của mahal_gold đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/426d75b69fd3bd0d1e714b6d1e5eea2fb2b9794301539d3a4963837f427f3a94.webp",
+    "https://assets.chungdoi.com/photo-library/design/6652e5d1abe2d8bb3699567490cd437d4ca89562513ca89baedd09fe10394e55.webp",
+    "https://assets.chungdoi.com/photo-library/design/ff37d5c9206502102df93dea592ef498b359398e38a5370d5bd7bf06d2b82fc9.webp",
+    "https://assets.chungdoi.com/photo-library/design/1ca47988fe0403b115e8c15b331e9685d9c860a04f6b69c8ccbc5255e520fac6.webp",
+    "https://assets.chungdoi.com/photo-library/design/eda05ae50caf225892588b7acdb0f53c9ba7667a478b530e246ac10158bbaf09.webp",
+    "https://assets.chungdoi.com/photo-library/design/a3df7a999ad2a83edd620443fdde285d1adebcc89932af95998bf654a326f487.webp",
+    "https://assets.chungdoi.com/photo-library/design/a481705b3f37548e7bcfcf76481cb1a11c8a2e3e7535d8f3302572d3cae5d119.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/4b2ffc55f0be4772c0cfbd1691531e2542c64f159bb977f9d0c75e177fe5d5cb.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/19eba65a0981ee0799bd879d4c40e50b6c649b7df20f4039568af0d18d0f43a6.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

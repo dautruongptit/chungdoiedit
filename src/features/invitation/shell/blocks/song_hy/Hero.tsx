@@ -58,9 +58,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
             <span dir="auto">{groomBirthOrder}</span>
           </p>
           <p
-            className="whitespace-nowrap uppercase"
+            className="whitespace-nowrap uppercase text-[18px] md:text-[23px]"
             style={{
-              fontSize: "18px",
               color: vars.accentColor,
               fontFamily: '"Big Caslon", Baskerville, "Times New Roman", ChungDoiIndic, serif',
               textShadow: vars.textShadow,
@@ -91,9 +90,8 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
             <span dir="auto">{brideBirthOrder}</span>
           </p>
           <p
-            className="whitespace-nowrap uppercase"
+            className="whitespace-nowrap uppercase text-[18px] md:text-[23px]"
             style={{
-              fontSize: "18px",
               color: vars.accentColor,
               fontFamily: '"Big Caslon", Baskerville, "Times New Roman", ChungDoiIndic, serif',
               textShadow: vars.textShadow,

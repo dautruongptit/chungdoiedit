@@ -1,0 +1,13 @@
+{
+  "assets": "/images/themes/minimalism-darkbrown",
+  "colors": {
+    "ink": "rgb(89, 61, 44)",
+    "inkRgb": "89, 61, 44",
+    "sub": "rgba(89, 61, 44, 0.6)",
+    "muted": "rgb(89, 61, 44)",
+    "paper": "#f7f5ee",
+    "line": "rgba(89, 61, 44, 0.2)",
+    "accent": "#f7f5ee",
+    "edge": "rgba(89, 61, 44, 0.1)"
+  }
+}

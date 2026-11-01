@@ -1,0 +1,7 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Dress({ ctx }: { ctx: InvitationCtx }) {
+  return (
+    <div className="relative z-10 flex flex-col items-center gap-5 px-6 md:px-10 py-10 md:py-12 "><div className="flex flex-col items-center gap-1"><h2 className="uppercase font-normal text-[20px] md:text-[26px] text-center" style={{ color: "rgb(174, 76, 81)", fontFamily: "Baskerville, &quot;Times New Roman&quot;, ChungDoiIndic, serif", fontSize: "20px", letterSpacing: "0.05em" }}><span>DRESS CODE</span></h2><p className="whitespace-pre-line text-sm md:text-base text-center opacity-70" style={{ color: "rgb(186, 74, 89)", fontFamily: "Baskerville, &quot;Times New Roman&quot;, ChungDoiIndic, serif" }}><span>Trang phục dự tiệc</span></p></div><div className="flex flex-wrap justify-center gap-4 md:gap-6"><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(101, 18, 18)", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "none" }}></div><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(141, 58, 58)", borderWidth: "medium", borderStyle: "none", borderColor: "currentcolor", borderImage: "none" }}></div><div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-md" style={{ backgroundColor: "rgb(255, 178, 178)", border: "1.5px solid rgba(186, 74, 89, 0.19)" }}></div></div></div>
+  );
+}

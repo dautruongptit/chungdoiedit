@@ -1,0 +1,22 @@
+{
+  "_note": "Dữ liệu demo của lien_hoa_pink đo từ chungdoi.com",
+  "order": "groom",
+  "heroOn": true,
+  "albumOn": true,
+  "photos": [
+    "https://assets.chungdoi.com/photo-library/design/e2f6f2c37a5be6d96ba9eb122f579defdcd185c33bae8f7bfabbe7d23d49c88a.webp"
+  ],
+  "groomPhoto": "https://assets.chungdoi.com/photo-library/design/5e017041b9011bb8714c67e0475e25f6a05b1ded4e112e764b9702739fb6243c.webp",
+  "bridePhoto": "https://assets.chungdoi.com/photo-library/design/d7d51af88f8a2f0620420efd751d002a9d1fe1337fb8649176ffd5b699bbfb0b.webp",
+  "familyOn": true,
+  "announceOn": true,
+  "partyOn": true,
+  "wishes": [
+    {
+      "name": "Minh Tuấn",
+      "msg": "Chúc mừng hạnh phúc hai bạn! Trăm năm gắn kết!",
+      "at": "18:31:14 9/7/2026"
+    }
+  ],
+  "gifts": []
+}

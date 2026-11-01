@@ -53,11 +53,11 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
         </span>
         <div className="relative z-10 flex w-full justify-center">
           <span
-            className="whitespace-nowrap uppercase leading-none"
+            className={`whitespace-nowrap uppercase leading-none ${theme.hero.namesSizeClass || ""}`}
             style={{
               fontFamily: theme.hero.namesFont,
               color: theme.goldColor,
-              fontSize: theme.hero.namesSize,
+              fontSize: theme.hero.namesSizeClass ? undefined : theme.hero.namesSize,
             }}
           >
             {groomName}
@@ -65,11 +65,11 @@ export function Hero({ ctx }: { ctx: InvitationCtx }) {
         </div>
         <div className="relative z-10 flex w-full justify-center">
           <span
-            className="whitespace-nowrap uppercase leading-none"
+            className={`whitespace-nowrap uppercase leading-none ${theme.hero.namesSizeClass || ""}`}
             style={{
               fontFamily: theme.hero.namesFont,
               color: theme.goldColor,
-              fontSize: theme.hero.namesSize,
+              fontSize: theme.hero.namesSizeClass ? undefined : theme.hero.namesSize,
             }}
           >
             {brideName}

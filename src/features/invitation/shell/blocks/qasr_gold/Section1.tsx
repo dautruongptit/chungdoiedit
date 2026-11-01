@@ -1,0 +1,7 @@
+import type { InvitationCtx } from "@/features/invitation/shell/useInvitationCtx";
+
+export function Section1({ ctx }: { ctx: InvitationCtx }) {
+  return (
+    <section className="relative isolate w-full pb-[160px] md:pb-[210px]"><header className="relative z-20 flex w-full flex-col items-center px-4 pt-[70px] md:pt-[92px] pb-2"><div className="flex h-[52px] md:h-[68px] w-full items-center justify-center gap-5 md:gap-7 text-center leading-none" style={{ color: "rgb(84, 78, 39)" }}><span className="whitespace-nowrap" style={{ fontFamily: "&quot;Viaoda Libre&quot;, &quot;EB Garamond&quot;, ChungDoiIndic, cursive", fontSize: "29px" }}>Đăng Khoa</span><span className="whitespace-nowrap" style={{ fontFamily: "\"Alex Brush\", &quot;The Nautigal&quot;, ChungDoiIndic, cursive", fontSize: "22px", opacity: "0.9" }}>&amp;</span><span className="whitespace-nowrap" style={{ fontFamily: "&quot;Viaoda Libre&quot;, &quot;EB Garamond&quot;, ChungDoiIndic, cursive", fontSize: "29px" }}>Mỹ Duyên</span></div></header><div className="relative z-10 mt-[-6px] flex w-full justify-center"><div className="relative w-full max-w-[540px]"><img alt="" aria-hidden="true" className="relative left-1/2 -translate-x-1/2 block w-[117.2%] max-w-none h-auto object-contain" src="/images/themes/qasr-gold/castle.webp" /><img alt="" aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[56%] w-[58.5%] max-w-none h-auto object-contain" src="/images/themes/qasr-gold/couple.webp" /></div></div></section>
+  );
+}
