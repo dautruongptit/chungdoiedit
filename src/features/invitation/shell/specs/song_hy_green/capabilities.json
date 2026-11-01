@@ -1,0 +1,40 @@
+{
+  "id": "song_hy_green",
+  "family": "song_hy",
+  "testId": "song-hy-green-template",
+  "rootClass": "song-hy-green-template",
+  "innerClass": "relative w-full max-w-[480px] md:max-w-[900px] md:mx-auto overflow-hidden md:border md:border-[#1F3A2522] isolate flex flex-col overflow-x-clip",
+  "innerStyle": {
+    "backgroundColor": "rgb(255, 247, 235)",
+    "padding": "0px"
+  },
+  "blocks": [
+    "hero",
+    "ceremonyTitle",
+    "family",
+    "albumTitle",
+    "album",
+    "banquetTitle",
+    "banquet",
+    "venue",
+    "dressSchedule",
+    "guestbookTitle",
+    "guestbook",
+    "gifts",
+    "footer"
+  ],
+  "cover": {
+    "hasCover": true,
+    "seal": "happiness",
+    "particle": "happiness"
+  },
+  "gift": {
+    "type": "box"
+  },
+  "hero": {
+    "style": "avatar"
+  },
+  "album": {
+    "type": "3d"
+  }
+}

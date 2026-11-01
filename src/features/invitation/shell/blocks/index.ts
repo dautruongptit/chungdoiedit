@@ -23,6 +23,7 @@ import { PORCELAIN_V2_BLOCKS } from "./porcelain_v2";
 import { DOUBLE_DRAGON_BLOCKS } from "./double_dragon";
 import { BAROQUE_V2_BLOCKS } from "./baroque_v2";
 import { CRYSTAL_FLORAL_BLOCKS } from "./crystal_floral";
+import { SONG_HY_BLOCKS } from "./song_hy";
 
 export type BlockComponent = ComponentType<{ ctx: InvitationCtx }>;
 
@@ -56,5 +57,7 @@ export const blocksForFamily = (family: string): Record<string, BlockComponent> 
       ? BAROQUE_V2_BLOCKS
       : family === "crystal_floral"
       ? CRYSTAL_FLORAL_BLOCKS
+      : family === "song_hy"
+      ? SONG_HY_BLOCKS
       : MINIMALISM_BLOCKS),
   });

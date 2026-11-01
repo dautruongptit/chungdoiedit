@@ -66,6 +66,12 @@ import cfGreenDemo from "./crystal_floral_green/demo.json";
 import cfRedTheme from "./crystal_floral_red/theme.json";
 import cfRedCaps from "./crystal_floral_red/capabilities.json";
 import cfRedDemo from "./crystal_floral_red/demo.json";
+import songHyGreenTheme from "./song_hy_green/theme.json";
+import songHyGreenCaps from "./song_hy_green/capabilities.json";
+import songHyGreenDemo from "./song_hy_green/demo.json";
+import songHyRedTheme from "./song_hy_red/theme.json";
+import songHyRedCaps from "./song_hy_red/capabilities.json";
+import songHyRedDemo from "./song_hy_red/demo.json";
 import type { Inv } from "@/types/invitation";
 import { buildTheme, type ThemeJson, type ThemeTokens } from "../theme";
 import { editorSections, type EditorSections } from "@/features/editor/config/editorSections";
@@ -128,6 +134,8 @@ const SPECS: Record<string, TemplateSpec> = {
   crystal_floral_blue: { id: "crystal_floral_blue", theme: buildTheme(cfBlueTheme as unknown as ThemeJson), capabilities: cfBlueCaps as unknown as TemplateCapabilities, demo: cfBlueDemo as unknown as Partial<Inv> },
   crystal_floral_green: { id: "crystal_floral_green", theme: buildTheme(cfGreenTheme as unknown as ThemeJson), capabilities: cfGreenCaps as unknown as TemplateCapabilities, demo: cfGreenDemo as unknown as Partial<Inv> },
   crystal_floral_red: { id: "crystal_floral_red", theme: buildTheme(cfRedTheme as unknown as ThemeJson), capabilities: cfRedCaps as unknown as TemplateCapabilities, demo: cfRedDemo as unknown as Partial<Inv> },
+  song_hy_green: { id: "song_hy_green", theme: buildTheme(songHyGreenTheme as unknown as ThemeJson), capabilities: songHyGreenCaps as unknown as TemplateCapabilities, demo: songHyGreenDemo as unknown as Partial<Inv> },
+  song_hy_red: { id: "song_hy_red", theme: buildTheme(songHyRedTheme as unknown as ThemeJson), capabilities: songHyRedCaps as unknown as TemplateCapabilities, demo: songHyRedDemo as unknown as Partial<Inv> },
 };
 
 /** Mẫu đã có khuôn chung (null = vẫn dùng đường dựng cũ). */

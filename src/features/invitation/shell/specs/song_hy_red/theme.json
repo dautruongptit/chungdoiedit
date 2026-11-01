@@ -1,0 +1,11 @@
+{
+  "paper": "rgb(255, 247, 235)",
+  "ink": "rgb(128, 0, 0)",
+  "text": "rgb(128, 0, 0)",
+  "sub": "rgb(102, 102, 102)",
+  "accent": "rgb(255, 238, 210)",
+  "edge": "#80000022",
+  "buttonBg": "rgb(128, 0, 0)",
+  "buttonText": "rgb(255, 238, 210)",
+  "assets": "song-hy-red"
+}
